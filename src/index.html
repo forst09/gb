@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+"title": "Главная"
+})
+
+<body>
+    <main class="main">
+        <div class="wrapper">
+            <div class="title-wrapper">
+                <h1>Откуда забрать</h1>
+                <div class="filters">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#filters"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="view-btn">
+                <div class="view-btn__item tab active" data-id="view" data-tab="viewTiles">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#tiles"></use>
+                    </svg>
+                    <div class="view-btn__item-text letter-spacing">Плитка</div>
+                </div>
+                <div class="view-btn__item tab" data-id="view" data-tab="viewMap">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#map"></use>
+                    </svg>
+                    <div class="view-btn__item-text letter-spacing">На карте</div>
+                </div>
+            </div>
+            <div class="tab-content active" data-id="view" data-tab="viewTiles">
+                <div class="tiles">
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-1.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                                медоваренного завода
+                                Ивана Дурдина</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, снеки, б/а пиво, мясо</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-2.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-2.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-3.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">60 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-cost">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#%"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-3.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-1.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                                медоваренного завода
+                                Ивана Дурдина</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, снеки, б/а пиво, мясо</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-2.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-2.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-3.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">60 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-cost">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#%"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-3.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-1.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                                медоваренного завода
+                                Ивана Дурдина</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, снеки, б/а пиво, мясо</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-2.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-2.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-3.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">60 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-cost">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#%"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-3.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-1.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                                медоваренного завода
+                                Ивана Дурдина</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, снеки, б/а пиво, мясо</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-2.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-2.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-3.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">60 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-cost">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#%"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-3.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-1.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                                медоваренного завода
+                                Ивана Дурдина</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, снеки, б/а пиво, мясо</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-2.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-2.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-3.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">60 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-cost">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#%"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-3.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-1.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                                медоваренного завода
+                                Ивана Дурдина</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, снеки, б/а пиво, мясо</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-2.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-2.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-3.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">60 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-cost">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#%"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-3.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-1.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                                медоваренного завода
+                                Ивана Дурдина</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, снеки, б/а пиво, мясо</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-2.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">5 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-2.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                    <div class="tiles__item">
+                        <div class="tiles__item-img">
+                            <img src="img/cards/cards-3.jpg" alt="">
+                            <div class="tiles__item-road letter-spacing">60 мин пешком</div>
+                        </div>
+                        <div class="tiles__item-heart">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-cost">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#%"></use>
+                            </svg>
+                        </div>
+                        <div class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-3.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Пиво и рыба</div>
+                        </div>
+                        <div class="tiles__item-range letter-spacing ellipsis">Пиво, рыба</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
