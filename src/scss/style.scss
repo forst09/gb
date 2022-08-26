@@ -26,6 +26,7 @@ body {
     font-weight: 400;
     color: var(--gray);
     overflow-x: hidden;
+    position: relative;
 }
 
 h1 {
@@ -38,6 +39,10 @@ h1 {
 
 svg {
     fill: transparent;
+}
+
+.scroll-hidden {
+    overflow: hidden !important;
 }
 
 .wrapper {
@@ -335,6 +340,26 @@ svg {
         height: 1.3rem;
         fill: var(--white);
     }
+}
+
+.block {
+    position: fixed;
+    bottom: 0;
+
+    transition: bottom 1s ease-in-out;
+
+    &-btn {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        margin: 0 auto;
+        transform: translateY(-20px);
+    }
+}
+
+.swiped {
+    // position: absolute;
+    bottom: -10%;
 }
 
 /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/

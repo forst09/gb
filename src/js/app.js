@@ -47,4 +47,30 @@ $(document).ready(function () {
     $(document).on('click', '.tiles__item-heart', function () {
         $(this).toggleClass('active');
     });
+
+
+    $(document).on("click", ".filters__mobile-btn", function () {
+        $(".block").removeClass("swiped");
+        $("html").addClass("scroll-hidden");
+    })
+
+
+    let touchstartY = 0;
+    let touchendY = 0;
+
+    function checkDirection() {
+        if (touchendY > touchstartY) {
+            $(".block").addClass("swiped");
+            $("html").removeClass("scroll-hidden");
+        }
+    }
+
+    document.querySelector('.block').addEventListener('touchstart', e => {
+        touchstartY = e.changedTouches[0].screenY;
+    })
+
+    document.querySelector('.block').addEventListener('touchend', e => {
+        touchendY = e.changedTouches[0].screenY;
+        checkDirection();
+    })
 });
