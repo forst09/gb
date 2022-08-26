@@ -25,12 +25,26 @@
 
     .view-btn__item {
         padding: 1rem 2.4rem;
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    .view-btn__item.active {
+        box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
     }
 
     .tiles {
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 2rem;
         grid-column-gap: 1.2rem;
+    }
+
+    .tiles__item-img-wrapper {
+        position: relative;
+        max-height: 13.2rem;
     }
 
     .tiles__item-img {
@@ -70,11 +84,286 @@
 
 /*НАЧАЛО АДАПТИВА 1024*/
 @media(min-width: 1024px) {
+
     /*НАЧАЛО ОБЩИХ СТИЛЕЙ 1024*/
+    html {
+        font-size: 0.9765625vw;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+        line-height: 3.2rem;
+    }
+
+    .title-wrapper {
+        margin-bottom: 3.2rem;
+    }
+
+    .wrapper {
+        padding: 0 6.4rem;
+    }
+
+    .view-btn {
+        margin: 0;
+    }
+
+    .view-btn__item {
+        padding: 0 0.8rem;
+
+        &+& {
+            margin-left: 0.8rem;
+        }
+
+        svg {
+            width: 1.6rem;
+            height: 1.6rem;
+            margin: 0;
+            transition: 0.3s ease;
+        }
+
+        &:not(.active):hover {
+            svg {
+                stroke: var(--gray);
+            }
+        }
+    }
+
+    .view-btn__item.active {
+        box-shadow: none;
+    }
+
+    .view-btn__item-text {
+        display: none;
+    }
+
+    .filters__mobile-btn {
+        display: none;
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
+    .tiles {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2.8rem;
+        grid-row-gap: 1.6rem;
+    }
+
+    .tiles__item-img-wrapper {
+        position: relative;
+        max-height: 14rem;
+    }
+
+    .tiles__item-img {
+        height: 14rem;
+    }
+
+    .tiles__item-road {
+        font-size: 1.2rem;
+        padding: 0.2rem 0.8rem;
+
+        &:hover {
+            background: rgba(25, 42, 62, 1);
+
+            .tiles__item-road-window-wrapper {
+                visibility: visible;
+                opacity: 1;
+                z-index: 10;
+            }
+        }
+    }
+
+    .tiles__item-heart {
+        width: 3.7rem;
+        height: 3.7rem;
+
+        svg {
+            width: 1.9rem;
+            height: 1.7rem;
+        }
+    }
+
+    .tiles__item-logo {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .tiles__item-name-text {
+        line-height: 2rem;
+    }
+
+    .tiles__item-range {
+        margin-top: 0.2rem;
+        font-size: 1.2rem;
+    }
+
+    .filters {
+        background-color: #F0F3F8;
+        padding: 1.2rem 1.6rem;
+        border-radius: 1.2rem;
+        display: flex;
+        gap: 1.4rem;
+    }
+
+    .filters__items {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .filters__item {
+        display: inline-block;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        padding: 0.4rem 1.2rem;
+        transition: 0.3s ease;
+
+        &+& {
+            margin-left: 1.4rem;
+        }
+
+        &:hover {
+            color: var(--gray-dark);
+        }
+    }
+
+    .filters__item.active {
+        background-color: var(--white);
+        border-radius: 0.6rem;
+    }
+
+    .filters__dots {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-left: 1.4rem;
+        cursor: pointer;
+        position: relative;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--gray-medium);
+            object-fit: contain;
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            svg {
+                stroke: var(--black-blue);
+            }
+
+            .filters__dots-window-wrapper {
+                visibility: visible;
+                opacity: 1;
+                z-index: 10;
+            }
+        }
+    }
+
+    .filters__dots-window-wrapper {
+        position: absolute;
+        left: 0;
+        min-width: 19.4rem;
+        padding-top: 0.4rem;
+        top: 100%;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        transition: 0.3s ease;
+    }
+
+    .filters__dots-window {
+        background-color: var(--white);
+        box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
+        border-radius: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .filters__dots-window-item {
+        display: inline-block;
+        padding: 0.8rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        font-weight: 500;
+        position: relative;
+        transition: 0.3s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: calc(100% - 1.6rem);
+            left: 0.8rem;
+            bottom: 0;
+            height: 1px;
+            background-color: var(--gray-extralight);
+        }
+
+        &:nth-last-of-type(1) {
+            &::after {
+                content: none;
+            }
+        }
+
+        &:hover {
+            background-color: var(--gray-extralight);
+        }
+    }
+
+    .filters__dots-window-item.active {
+        background-color: var(--gray-light);
+    }
+
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/
+
+/*НАЧАЛО АДАПТИВА 1500*/
+
+@media(min-width: 1500px) {
+
+    /*НАЧАЛО ОБЩИХ СТИЛЕЙ 1500*/
+    html {
+        font-size: 0.666668vw;
+    }
+
+    h1 {
+        font-size: 3.2rem;
+        line-height: 4.4rem;
+    }
+
+    .wrapper {
+        padding: 0 8rem;
+    }
+
+
+    /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
+
+    /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1500*/
+    .tiles {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 3rem;
+    }
+
+    .tiles__item-img-wrapper {
+        position: relative;
+        max-height: 15.6rem;
+    }
+
+    .tiles__item-img {
+        height: 15.6rem;
+    }
+
+    .tiles__item-logo {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+
+
+    /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1500*/
+}
+
+/*КОНЕЦ АДАПТИВА 1500*/
