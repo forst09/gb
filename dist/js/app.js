@@ -85,6 +85,12 @@ $(document).ready(function () {
         }
     });
 
+    $(document).on('click', '.block-swipe__btn', function () {
+        $(".block-swipe").removeClass("active");
+        $(".block-swipe__background").removeClass("active");
+        $("html").removeClass("scroll-hidden");
+    });
+
     //НАПОЛНЕНИЕ ФИЛЬТРОВ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
     if ($(".filters").length !== 0) {
         const linksArr = [...$(".filters__item")];
@@ -126,4 +132,162 @@ $(document).ready(function () {
             });
         }
     }
+
+    // ПОДКЛЮЧЕНИЕ КАРТЫ
+    let isMapLoaded = false;
+    const jsMap = document.querySelector("#map");
+    const renderMap = function (mapId = "map") {
+        if ($("#map").length !== 0) {
+            ymaps.ready(function () {
+                let myMap = new ymaps.Map(`${mapId}`, {
+                    center: [$(`#${mapId}`).attr("data-coords").split(",")[0],
+                    $(`#${mapId}`).attr("data-coords").split(",")[1]],
+                    zoom: $(window).width() > 667 ? 17 : 14,
+                }),
+
+                    // Создаём макет содержимого ГЕОЛОКАЦИЯ.
+                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                        '<div class="icon-map">$[properties.iconContent]</div>'
+                    ),
+                    myPlacemarkWithContent = new ymaps.Placemark(
+                        [$(`#${mapId}`).attr("data-coords").split(",")[0],
+                        $(`#${mapId}`).attr("data-coords").split(",")[1]],
+                        {},
+                        {
+                            // Опции.
+                            // Необходимо указать данный тип макета.
+                            iconLayout: "default#imageWithContent",
+                            // Своё изображение иконки метки.
+                            iconImageHref: "img/icons/map-geo.svg",
+                            // Размеры метки.
+                            iconImageSize: [82, 51],
+                            // Смещение левого верхнего угла иконки относительно
+                            // её "ножки" (точки привязки).
+                            iconImageOffset: [-48, -51],
+
+                            // Макет содержимого.
+                            iconContentLayout: MyIconContentLayout,
+                        }
+                    ),
+
+                    // Создаём макет содержимого ЗАГЛУШКА.
+                    MyIconContentLayoutPlug = ymaps.templateLayoutFactory.createClass(
+                        '<div class="icon-map">$[properties.iconContent]</div>'
+                    ),
+                    myPlacemarkWithContentPlug = new ymaps.Placemark(
+                        [56.320438, 44.006256],
+                        {},
+                        {
+                            // Опции.
+                            // Необходимо указать данный тип макета.
+                            iconLayout: "default#imageWithContent",
+                            // Своё изображение иконки метки.
+                            iconImageHref: "img/icons/map-plug.png",
+                            // Размеры метки.
+                            iconImageSize: [60, 66],
+                            // Смещение левого верхнего угла иконки относительно
+                            // её "ножки" (точки привязки).
+                            iconImageOffset: [-30, -50],
+
+                            // Макет содержимого.
+                            iconContentLayout: MyIconContentLayoutPlug,
+                        }
+                    ),
+
+                    // Создаём макет содержимого ТОЧКА.
+                    MyIconContentLayoutDot = ymaps.templateLayoutFactory.createClass(
+                        '<div class="icon-map">$[properties.iconContent]</div>'
+                    ),
+                    myPlacemarkWithContentDot = new ymaps.Placemark(
+                        [56.320759, 44.006145],
+                        {},
+                        {
+                            // Опции.
+                            // Необходимо указать данный тип макета.
+                            iconLayout: "default#imageWithContent",
+                            // Своё изображение иконки метки.
+                            iconImageHref: "img/icons/map-dot.png",
+                            // Размеры метки.
+                            iconImageSize: [39, 39],
+                            // Смещение левого верхнего угла иконки относительно
+                            // её "ножки" (точки привязки).
+                            iconImageOffset: [-18, -30],
+
+                            // Макет содержимого.
+                            iconContentLayout: MyIconContentLayoutDot,
+                        }
+                    ),
+
+                    // Создаём макет содержимого КОМПАНИЯ.
+                    MyIconContentLayout1 = ymaps.templateLayoutFactory.createClass(
+                        '<div class="icon-map">$[properties.iconContent]</div>'
+                    ),
+                    myPlacemarkWithContent1 = new ymaps.Placemark(
+                        [56.320463, 44.006858],
+                        {},
+                        {
+                            // Опции.
+                            // Необходимо указать данный тип макета.
+                            iconLayout: "default#imageWithContent",
+                            // Своё изображение иконки метки.
+                            iconImageHref: "img/icons/map-store.svg",
+                            // Размеры метки.
+                            iconImageSize: [60, 66],
+                            // Смещение левого верхнего угла иконки относительно
+                            // её "ножки" (точки привязки).
+                            iconImageOffset: [-30, -50],
+
+                            // Макет содержимого.
+                            iconContentLayout: MyIconContentLayout1,
+                        }
+                    );
+
+                myMap.controls.remove("zoomControl");
+                myMap.controls.remove("rulerControl");
+                myMap.controls.remove("trafficControl");
+                myMap.controls.remove("typeSelector");
+                myMap.controls.remove("fullscreenControl");
+                myMap.controls.remove("geolocationControl");
+                myMap.controls.remove("searchControl");
+                myMap.geoObjects
+                    .add(myPlacemarkWithContent);
+                myMap.geoObjects
+                    .add(myPlacemarkWithContent1);
+                myMap.geoObjects
+                    .add(myPlacemarkWithContentPlug);
+                myMap.geoObjects
+                    .add(myPlacemarkWithContentDot);
+            });
+        }
+    };
+    const creatMapsScript = function (id) {
+        let scriptYMAPS = document.createElement("script");
+        scriptYMAPS.src =
+            "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<ваш API-ключ>";
+        scriptYMAPS.setAttribute("async", "");
+        document
+            .querySelector("body")
+            .insertAdjacentElement("beforeend", scriptYMAPS);
+        scriptYMAPS.onload = function () {
+            renderMap(id);
+        };
+    };
+
+    const revealMapBlock = function (entries, observer) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+
+
+        if (!isMapLoaded) {
+            creatMapsScript();
+            isMapLoaded = true;
+        }
+        observer.unobserve(entry.target);
+    };
+
+    const mapObserver = new IntersectionObserver(revealMapBlock, {
+        root: null,
+        threshold: 0.15,
+    });
+    if (jsMap) mapObserver.observe(jsMap);
 });
