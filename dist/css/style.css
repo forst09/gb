@@ -319,21 +319,99 @@ svg {
   fill: var(--white);
 }
 
-.block {
+.block-swipe {
   position: fixed;
-  bottom: 0;
+  bottom: -100%;
   transition: bottom 1s ease-in-out;
-}
-.block-btn {
-  width: 30px;
-  height: 30px;
-  background-color: red;
-  margin: 0 auto;
-  transform: translateY(-20px);
+  padding: 2.4rem 0;
+  background-color: var(--white);
+  width: 100%;
 }
 
-.swiped {
-  bottom: -10%;
+.block-swipe.active {
+  bottom: 0;
+}
+
+.block-swipe__background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(25, 42, 62, 0);
+  visibility: hidden;
+  transition: 0.7s ease-in-out;
+  z-index: 10;
+}
+
+.block-swipe__background.active {
+  visibility: visible;
+  background-color: rgba(25, 42, 62, 0.2);
+}
+
+.block-swipe__title {
+  font-weight: 800;
+  color: var(--black-text);
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.block-swipe__links {
+  display: flex;
+  flex-direction: column;
+  max-height: 40rem;
+  overflow-y: auto;
+}
+
+.block-swipe__link {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: var(--gray);
+  padding: 1.6rem;
+  position: relative;
+  border-radius: 1.2rem;
+}
+.block-swipe__link::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 3.2rem);
+  left: 1.6rem;
+  bottom: 0;
+  height: 1px;
+  background-color: var(--gray-extralight);
+}
+.block-swipe__link:nth-last-of-type(1)::after {
+  content: none;
+}
+.block-swipe__link:hover {
+  background-color: var(--gray-extralight);
+}
+
+.block-swipe__link.active {
+  background-color: var(--gray-extralight);
+  color: var(--black-blue);
+}
+
+.block-swipe__btn {
+  position: absolute;
+  bottom: calc(100% - 2.4rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6.4rem;
+  height: 1px;
+  padding: 3.2rem;
+}
+.block-swipe__btn::after {
+  content: "";
+  position: absolute;
+  width: 6.4rem;
+  height: 0.4rem;
+  background-color: var(--white);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 15%;
 }
 
 /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
