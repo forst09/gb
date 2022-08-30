@@ -126,6 +126,9 @@
   .filters__mobile-btn {
     display: none;
   }
+  .ss-scroll {
+    opacity: 0;
+  }
   /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1024*/
   .footer {
     margin-top: 4.8rem;
@@ -233,11 +236,11 @@
   .tiles__item-img {
     height: 14rem;
   }
-  .tiles__item-road {
+  .tiles__item-road span {
     font-size: 1.2rem;
     padding: 0.2rem 0.8rem;
   }
-  .tiles__item-road:hover {
+  .tiles__item-road:hover span {
     background: rgb(25, 42, 62);
   }
   .tiles__item-road:hover .tiles__item-road-window-wrapper {
@@ -361,6 +364,80 @@
   .filters__dots-window-item.active {
     background-color: var(--gray-light);
   }
+  .map-view {
+    display: flex;
+    justify-content: space-between;
+  }
+  .map-view__stores {
+    display: block;
+  }
+  .tiles__item-road--map {
+    position: static;
+    width: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .tiles__item-road--map:hover span {
+    background-color: var(--gray-extralight);
+  }
+  .tiles__item-road--map span {
+    background-color: var(--gray-extralight);
+    color: var(--gray-dark);
+    width: fit-content;
+    margin-top: 0.8rem;
+  }
+  .tiles__item-road--map .tiles__item-road-window-wrapper {
+    padding: 0;
+    margin-top: 0.8rem;
+    left: unset;
+    transform: unset;
+    position: static;
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+  }
+  .tiles__item-road--map .tiles__item-road-window {
+    box-shadow: none;
+    padding: 0;
+    border-radius: unset;
+  }
+  .tiles__item-road-window-title {
+    display: none;
+  }
+  .tiles__item-road-window-address {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+  .map-view__stores-item .tiles__item-name {
+    margin: 0;
+  }
+  .map-view__stores {
+    max-width: 30.4rem;
+    width: 100%;
+    max-height: 46.2rem;
+  }
+  .map-view__map {
+    width: 57.8rem;
+    height: 46.2rem;
+    margin-left: 1.4rem;
+  }
+  .map-view__stores-item {
+    padding: 1.6rem 0;
+    position: relative;
+  }
+  .map-view__stores-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--gray-extralight);
+  }
+  .map-view__stores-item:nth-last-of-type(1)::after {
+    content: none;
+  }
   /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
@@ -393,6 +470,12 @@
   .tiles__item-logo {
     width: 2.4rem;
     height: 2.4rem;
+  }
+  .map-view__map {
+    width: 102rem;
+  }
+  .map-view__stores {
+    max-width: 30.6rem;
   }
   /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1500*/
 }
