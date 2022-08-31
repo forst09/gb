@@ -157,6 +157,7 @@ svg {
 }
 
 .header__search {
+    border-radius: 1.2rem;
     position: absolute;
     bottom: 0;
     width: calc(100% - 3.2rem);
@@ -192,6 +193,7 @@ svg {
     font-size: 1.3rem;
     line-height: 2rem;
     margin-bottom: 0.2rem;
+    font-weight: 500;
 }
 
 .place__address {

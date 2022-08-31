@@ -182,7 +182,7 @@ $(document).ready(function () {
                             // Необходимо указать данный тип макета.
                             iconLayout: "default#imageWithContent",
                             // Своё изображение иконки метки.
-                            iconImageHref: "img/icons/map-plug.png",
+                            iconImageHref: "img/icons/map-plug.svg",
                             // Размеры метки.
                             iconImageSize: [60, 66],
                             // Смещение левого верхнего угла иконки относительно
@@ -206,7 +206,7 @@ $(document).ready(function () {
                             // Необходимо указать данный тип макета.
                             iconLayout: "default#imageWithContent",
                             // Своё изображение иконки метки.
-                            iconImageHref: "img/icons/map-dot.png",
+                            iconImageHref: "img/icons/map-dot.svg",
                             // Размеры метки.
                             iconImageSize: [39, 39],
                             // Смещение левого верхнего угла иконки относительно
