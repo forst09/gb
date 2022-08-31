@@ -264,6 +264,21 @@
             width: 2.2rem;
             height: 2.2rem;
             stroke: var(--gray-dark);
+            transition: stroke 0.3s ease;
+        }
+
+        &:not(.header__icons-item--personal):hover {
+            svg {
+                stroke: var(--black-blue);
+            }
+        }
+
+        &:not(.header__icons-item--personal):active,
+        &:not(.header__icons-item--personal):focus,
+        &:not(.header__icons-item--personal):focus-within {
+            svg {
+                stroke: var(--gray);
+            }
         }
     }
 
@@ -385,6 +400,14 @@
         font-weight: 500;
         font-size: 1.2rem;
         line-height: 1.8rem;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+            color: var(--black-blue);
+        }
     }
 
     .footer__links-item {

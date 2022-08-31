@@ -229,10 +229,20 @@ svg {
         stroke: var(--gray-dark);
         width: 2.4rem;
         height: 2.4rem;
+        transition: stroke 0.3s ease;
     }
 
     &+& {
         margin-left: 2.4rem;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+        svg {
+            stroke: var(--orange);
+        }
     }
 }
 
@@ -247,6 +257,29 @@ svg {
     font-weight: 600;
     margin-bottom: 2rem;
     display: inline-block;
+    transition: 0.3s ease;
+
+    svg {
+        transition: 0.3s ease;
+    }
+
+    &:hover {
+        color: var(--gray);
+
+        svg {
+            stroke: var(--gray);
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        color: var(--black-blue);
+
+        svg {
+            stroke: var(--black-blue);
+        }
+    }
 }
 
 .footer__socials-copy {

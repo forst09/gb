@@ -225,9 +225,13 @@ svg {
   stroke: var(--gray-dark);
   width: 2.4rem;
   height: 2.4rem;
+  transition: stroke 0.3s ease;
 }
 .footer__socials-links-item + .footer__socials-links-item {
   margin-left: 2.4rem;
+}
+.footer__socials-links-item:hover svg, .footer__socials-links-item:active svg, .footer__socials-links-item:focus svg, .footer__socials-links-item:focus-within svg {
+  stroke: var(--orange);
 }
 
 .footer-socials__info {
@@ -241,6 +245,22 @@ svg {
   font-weight: 600;
   margin-bottom: 2rem;
   display: inline-block;
+  transition: 0.3s ease;
+}
+.footer__sosials-feedback svg {
+  transition: 0.3s ease;
+}
+.footer__sosials-feedback:hover {
+  color: var(--gray);
+}
+.footer__sosials-feedback:hover svg {
+  stroke: var(--gray);
+}
+.footer__sosials-feedback:active, .footer__sosials-feedback:focus, .footer__sosials-feedback:focus-within {
+  color: var(--black-blue);
+}
+.footer__sosials-feedback:active svg, .footer__sosials-feedback:focus svg, .footer__sosials-feedback:focus-within svg {
+  stroke: var(--black-blue);
 }
 
 .footer__socials-copy {
