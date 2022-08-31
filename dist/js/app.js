@@ -41,7 +41,15 @@ $(document).ready(function () {
             })
         }
 
-    })
+    });
+
+    //ПОИСК НА 1024 В ШАПКЕ
+    $(document).on('input', '.header .form-input', function () {
+        $(this).parents('.input-wrapper').find('.input-submit').addClass('active');
+        if ($(this).val() == '') {
+            $(this).parents('.input-wrapper').find('.input-submit').removeClass('active');
+        }
+    });
 
     //ДОБАВИТЬ В ИЗБРАННОЕ
     $(document).on('click', '.tiles__item-heart', function () {

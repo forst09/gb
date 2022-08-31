@@ -109,6 +109,7 @@ svg {
   font-family: "Manrope";
   letter-spacing: 0.02em;
   color: var(--gray-dark);
+  transition: color 0.3s ease;
 }
 
 .form-input__label {
@@ -125,6 +126,7 @@ svg {
   height: 100%;
   object-fit: contain;
   stroke: var(--gray-medium);
+  transition: stroke 0.3s ease;
 }
 
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
