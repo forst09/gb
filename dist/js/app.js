@@ -56,14 +56,25 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
-    //ПО СВАЙПУ УБРАТЬ POP-UP
+    //ОТКРЫТЬ ВСПЛЫВАШКУ ФИЛЬТРОВ
     $(document).on("click", ".filters__mobile-btn", function () {
-        $(".block-swipe").addClass("active");
-        $(".block-swipe__background").addClass("active");
+        $(".block-swipe-filters").addClass("active");
+        $(".block-swipe__background-filters").addClass("active");
         $("html").addClass("scroll-hidden");
     });
 
+    //ОТКРЫТЬ ВСПЛЫВАШКУ С ВЫБОРОМ ГОРОДА
+    $(document).on("click", ".place", function () {
+        $(".block-swipe__background-city").addClass("active");
+        $(".block-swipe-city").addClass("active");
+        $("html").addClass("scroll-hidden");
+    });
 
+    if ($('.block-swipe__background').hasClass('active')) {
+        $("html").addClass("scroll-hidden");
+    }
+
+    //ПО СВАЙПУ УБРАТЬ POP-UP
     let touchstartY = 0;
     let touchendY = 0;
 
@@ -74,16 +85,40 @@ $(document).ready(function () {
             $("html").removeClass("scroll-hidden");
         }
     }
+    function checkDirectionBottom() {
+        if (touchendY < touchstartY) {
+            $(".block-swipe").removeClass("active");
+            $(".block-swipe__background").removeClass("active");
+            $("html").removeClass("scroll-hidden");
+        }
+    }
 
-    document.querySelector('.block-swipe__btn').addEventListener('touchstart', e => {
-        touchstartY = e.changedTouches[0].screenY;
+    document.querySelectorAll('.block-swipe__btn').forEach(item => {
+        item.addEventListener('touchend', e => {
+            touchendY = e.changedTouches[0].screenY;
+            if (item.classList.contains('block-swipe__btn--top')) {
+                checkDirectionBottom();
+            }
+            else {
+                checkDirection();
+            }
+        });
     });
-
-    document.querySelector('.block-swipe__btn').addEventListener('touchend', e => {
-        touchendY = e.changedTouches[0].screenY;
-        checkDirection();
+    document.querySelectorAll('.block-swipe__btn').forEach(item => {
+        item.addEventListener('touchstart', e => {
+            touchstartY = e.changedTouches[0].screenY;
+        });
     });
+    // document.querySelector('.block-swipe__btn').addEventListener('touchstart', e => {
+    //     touchstartY = e.changedTouches[0].screenY;
+    // });
 
+    // document.querySelector('.block-swipe__btn').addEventListener('touchend', e => {
+    //     touchendY = e.changedTouches[0].screenY;
+    //     checkDirection();
+    // });
+
+    //ЗАКРЫТЬ ВСПЛЫВАШКУ ПО КЛИКУ НА ФОН
     $(document).mouseup(function (e) {
         let container = $(".block-swipe");
         if (container.hasClass('active') && container.has(e.target).length === 0) {
@@ -93,6 +128,7 @@ $(document).ready(function () {
         }
     });
 
+    //ПО КЛИКУ НА ПАЛОЧКУ ЗАКРЫТЬ ВСПЛЫВАШКУ
     $(document).on('click', '.block-swipe__btn', function () {
         $(".block-swipe").removeClass("active");
         $(".block-swipe__background").removeClass("active");

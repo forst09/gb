@@ -272,6 +272,170 @@ svg {
 }
 
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
+/*ВСПЛЫВАШКИ*/
+.block-swipe {
+  position: fixed;
+  bottom: -100%;
+  transition: bottom 1s ease-in-out;
+  padding: 2.4rem 0 0;
+  background-color: var(--white);
+  width: 100%;
+  height: 90%;
+}
+.block-swipe .wrapper {
+  height: 100%;
+}
+
+.block-swipe.active {
+  bottom: 0;
+}
+
+.block-swipe__background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(25, 42, 62, 0);
+  visibility: hidden;
+  transition: background-color 0.7s ease-in-out;
+  z-index: 10;
+}
+
+.block-swipe__background.active {
+  visibility: visible;
+  background-color: rgba(25, 42, 62, 0.2);
+}
+
+.block-swipe__title {
+  font-weight: 800;
+  color: var(--black-text);
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.block-swipe__links {
+  display: flex;
+  flex-direction: column;
+  max-height: 88%;
+  overflow-y: auto;
+}
+
+.block-swipe__link {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: var(--gray);
+  padding: 1.6rem;
+  position: relative;
+  border-radius: 1.2rem;
+}
+.block-swipe__link::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 3.2rem);
+  left: 1.6rem;
+  bottom: 0;
+  height: 1px;
+  background-color: var(--gray-extralight);
+}
+.block-swipe__link:nth-last-of-type(1)::after {
+  content: none;
+}
+.block-swipe__link:hover {
+  background-color: var(--gray-extralight);
+}
+
+.block-swipe__link.active {
+  background-color: var(--gray-extralight);
+  color: var(--black-blue);
+}
+
+.block-swipe__btn {
+  position: absolute;
+  bottom: calc(100% - 2.4rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6.4rem;
+  height: 1px;
+  padding: 3.2rem;
+}
+.block-swipe__btn::after {
+  content: "";
+  position: absolute;
+  width: 6.4rem;
+  height: 0.4rem;
+  background-color: var(--white);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 15%;
+}
+
+/*КОНЕЦ ВСПЛЫВАШЕК */
+/*ВСПЛЫВАШКА ВЫБОР ГОРОДА*/
+.block-swipe-city {
+  bottom: unset;
+  top: -100%;
+  height: fit-content !important;
+  padding: 1.6rem 0;
+  border-radius: 0 0 3.4rem 3.4rem;
+  transition: top 1s ease-in-out;
+}
+
+.block-swipe-city.active {
+  top: 0%;
+  bottom: unset;
+}
+
+.choice-city__text {
+  font-weight: 500;
+  color: var(--gray-dark);
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.choice-city__address {
+  margin-top: 0.2rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: var(--black-text);
+}
+
+.choice-city__buttons {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.block-swipe__btn--top {
+  bottom: unset;
+  top: calc(100% - 2.4rem);
+}
+
+/*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА*/
+.btn-text {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  display: inline-block;
+  border-radius: 1.2rem;
+}
+.btn-text--orange {
+  color: var(--orange);
+  transition: box-shadow 0.3s ease;
+}
+.btn-text--orange:hover {
+  box-shadow: 0px 4px 15px rgba(226, 236, 249, 0.6);
+}
+.btn-text--orange:active, .btn-text--orange:focus, .btn-text--orange:focus-within {
+  box-shadow: inset 0px 4px 10px rgba(226, 236, 249, 0.3);
+}
+.btn-text + .btn-text {
+  margin-left: 3.9rem;
+}
+
 /* ymaps*/
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-gototaxi,
@@ -527,105 +691,6 @@ svg {
   width: 1.4rem;
   height: 1.3rem;
   fill: var(--white);
-}
-
-.block-swipe {
-  position: fixed;
-  bottom: -100%;
-  transition: bottom 1s ease-in-out;
-  padding: 2.4rem 0 0;
-  background-color: var(--white);
-  width: 100%;
-  height: 90%;
-}
-.block-swipe .wrapper {
-  height: 100%;
-}
-
-.block-swipe.active {
-  bottom: 0;
-}
-
-.block-swipe__background {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(25, 42, 62, 0);
-  visibility: hidden;
-  transition: 0.7s ease-in-out;
-  z-index: 10;
-}
-
-.block-swipe__background.active {
-  visibility: visible;
-  background-color: rgba(25, 42, 62, 0.2);
-}
-
-.block-swipe__title {
-  font-weight: 800;
-  color: var(--black-text);
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  margin-bottom: 1.6rem;
-}
-
-.block-swipe__links {
-  display: flex;
-  flex-direction: column;
-  max-height: 88%;
-  overflow-y: auto;
-}
-
-.block-swipe__link {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  color: var(--gray);
-  padding: 1.6rem;
-  position: relative;
-  border-radius: 1.2rem;
-}
-.block-swipe__link::after {
-  content: "";
-  position: absolute;
-  width: calc(100% - 3.2rem);
-  left: 1.6rem;
-  bottom: 0;
-  height: 1px;
-  background-color: var(--gray-extralight);
-}
-.block-swipe__link:nth-last-of-type(1)::after {
-  content: none;
-}
-.block-swipe__link:hover {
-  background-color: var(--gray-extralight);
-}
-
-.block-swipe__link.active {
-  background-color: var(--gray-extralight);
-  color: var(--black-blue);
-}
-
-.block-swipe__btn {
-  position: absolute;
-  bottom: calc(100% - 2.4rem);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 6.4rem;
-  height: 1px;
-  padding: 3.2rem;
-}
-.block-swipe__btn::after {
-  content: "";
-  position: absolute;
-  width: 6.4rem;
-  height: 0.4rem;
-  background-color: var(--white);
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 15%;
 }
 
 .map-view__stores {

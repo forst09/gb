@@ -938,8 +938,8 @@
     </main>
 
     <!-- ВСПЛЫВАШКА ФИЛЬТР НА МОБИЛКАХ -->
-    <div class="block-swipe__background">
-        <div class="block-swipe">
+    <div class="block-swipe__background block-swipe__background-filters">
+        <div class="block-swipe block-swipe-filters">
             <div class="wrapper">
                 <div class="block-swipe__title">По типу пива</div>
                 <div class="block-swipe__links">
@@ -962,6 +962,23 @@
         </div>
     </div>
     <!-- КОНЕЦ ВСПЛЫВАШКА ФИЛЬТР НА МОБИЛКАХ -->
+
+    <!-- ВСПЛЫВАШКА ВЫБОР ГОРОДА -->
+    <div class="block-swipe__background block-swipe__background-top block-swipe__background-city active">
+        <div class="block-swipe block-swipe-top block-swipe-city active">
+            <div class="wrapper">
+                <div class="choice-city__text letter-spacing">Вы находитесь:</div>
+                <div class="choice-city__address letter-spacing">ул. Центральный проезд Хорошёвского Серебряного Бора,
+                    3А</div>
+                <div class="choice-city__buttons">
+                    <a class="btn-text btn-text--gray letter-spacing" href="javascript:void(0)">Нет, другой</a>
+                    <a class="btn-text btn-text--orange letter-spacing" href="javascript:void(0)">Да, верно</a>
+                </div>
+            </div>
+            <div class="block-swipe__btn block-swipe__btn--top choice-city__btn"></div>
+        </div>
+    </div>
+    <!-- КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА -->
 
     @@include('html/footer.html',{})
 

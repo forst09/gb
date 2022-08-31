@@ -87,6 +87,45 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ФУТЕРА 668*/
+    .btn-text {
+        font-size: 1.4rem;
+    }
+
+    /*ВСПЛЫВАШКИ 668*/
+    .block-swipe {
+        height: 64%;
+    }
+
+    .block-swipe__links {
+        padding-bottom: 2.4rem;
+    }
+
+    /*КОНЕЦ ВСПЛЫВАШЕК 668*/
+
+    /*ВСПЛЫВАШКА ВЫБОР ГОРОДА 668*/
+    .choice-city__text,
+    .choice-city__address {
+        max-width: 32.8rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .choice-city__text {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    .choice-city__address {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-top: 0.2rem;
+    }
+
+    .choice-city__buttons {
+        margin-top: 1.8rem;
+    }
+
+    /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 668*/
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
 
@@ -147,14 +186,6 @@
     .tiles__item-name-text {
         font-size: 1.6rem;
         line-height: 2.4rem;
-    }
-
-    .block-swipe {
-        height: 64%;
-    }
-
-    .block-swipe__links {
-        padding-bottom: 2.4rem;
     }
 
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
@@ -474,6 +505,51 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1024*/
+
+    .block-swipe__btn {
+        display: none;
+    }
+
+    /*ВСПЛЫВАШКА 1024*/
+    .block-swipe {
+        bottom: unset;
+        top: unset;
+        transition: unset;
+    }
+
+    .block-swipe__background {
+        transition: background-color 0.3s ease;
+    }
+
+    /*КОНЕЦ ВСПЛЫВАШКА  1024*/
+
+    /*ВСПЛЫВАШКА ВЫБОР ГОРОДА 1024*/
+    .block-swipe-city {
+        top: 0.5rem;
+        width: fit-content;
+        border-radius: 2.4rem;
+        right: 13.3rem;
+        padding: 1.6rem 2.3rem;
+
+        .wrapper {
+            padding: 0;
+        }
+    }
+
+    .block-swipe-city.active {
+        top: 0.5rem;
+    }
+
+    .choice-city__text,
+    .choice-city__address {
+        text-align: left;
+    }
+
+    .choice-city__address {
+        line-height: 2rem;
+    }
+
+    /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 1024*/
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
 
@@ -798,6 +874,16 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
+    .btn-text {
+        padding: 0.6rem 0.8rem;
+    }
+
+    /*ВСПЛЫВАШКА ВЫБОР ГОРОДА 1500*/
+    .block-swipe-city {
+        right: 20.4rem;
+    }
+
+    /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 1500*/
 
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
 
