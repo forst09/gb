@@ -191,7 +191,7 @@ $(document).ready(function () {
 
                     // Создаём макет содержимого ГЕОЛОКАЦИЯ.
                     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                        '<div class="icon-map">$[properties.iconContent]</div>'
+                        '<div class="icon-map">1</div>'
                     ),
                     myPlacemarkWithContent = new ymaps.Placemark(
                         [$(`#${mapId}`).attr("data-coords").split(",")[0],
@@ -216,7 +216,7 @@ $(document).ready(function () {
 
                     // Создаём макет содержимого ЗАГЛУШКА.
                     MyIconContentLayoutPlug = ymaps.templateLayoutFactory.createClass(
-                        '<div class="icon-map">$[properties.iconContent]</div>'
+                        '<div class="icon-map1" style="width: 60px; height:66px;"></div>'
                     ),
                     myPlacemarkWithContentPlug = new ymaps.Placemark(
                         [56.320438, 44.006256],
@@ -240,7 +240,7 @@ $(document).ready(function () {
 
                     // Создаём макет содержимого ТОЧКА.
                     MyIconContentLayoutDot = ymaps.templateLayoutFactory.createClass(
-                        '<div class="icon-map">$[properties.iconContent]</div>'
+                        '<div class="icon-map">3</div>'
                     ),
                     myPlacemarkWithContentDot = new ymaps.Placemark(
                         [56.320759, 44.006145],
@@ -264,7 +264,7 @@ $(document).ready(function () {
 
                     // Создаём макет содержимого КОМПАНИЯ.
                     MyIconContentLayout1 = ymaps.templateLayoutFactory.createClass(
-                        '<div class="icon-map">$[properties.iconContent]</div>'
+                        '<div class="icon-map">4</div>'
                     ),
                     myPlacemarkWithContent1 = new ymaps.Placemark(
                         [56.320463, 44.006858],
@@ -301,9 +301,20 @@ $(document).ready(function () {
                     .add(myPlacemarkWithContentPlug);
                 myMap.geoObjects
                     .add(myPlacemarkWithContentDot);
+
+                // СДЕЛАТЬ ЦИКЛ ДЛЯ ФОРМИРОВАНИЯ МЕТКИ!!!!!!!!!!!
+                myPlacemarkWithContentPlug.events.add('mouseenter', function () {
+                    $('.icon-map1').parents('.ymaps-2-1-79-image-with-content').css('transform', 'scale(2)');
+                },
+                );
+                myPlacemarkWithContentPlug.events.add('mouseleave', function () {
+                    $('.icon-map1').parents('.ymaps-2-1-79-image-with-content').css('transform', '');
+                },
+                );
             });
         }
     };
+
     const creatMapsScript = function (id) {
         let scriptYMAPS = document.createElement("script");
         scriptYMAPS.src =
@@ -334,4 +345,6 @@ $(document).ready(function () {
         threshold: 0.15,
     });
     if (jsMap) mapObserver.observe(jsMap);
+
+    console.log($('.icon-map'));
 });

@@ -66,6 +66,9 @@ svg {
 }
 
 .title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 2.4rem;
 }
 
@@ -91,25 +94,46 @@ svg {
   width: 0.2rem;
 }
 
+.center {
+  text-align: center;
+}
+
 .input-wrapper {
   position: relative;
 }
 
-.form-input {
-  border: none;
-  border-radius: 1.2rem;
-  padding: 1.2rem 1.2rem 1.2rem 3.8rem;
+.form-input,
+.search-input {
+  width: 100%;
   font-size: 1.4rem;
   line-height: 2rem;
+  border-radius: 1.2rem;
   font-family: "Manrope";
-  width: 100%;
   color: var(--black-text);
 }
-.form-input::placeholder {
+.form-input::placeholder,
+.search-input::placeholder {
   font-family: "Manrope";
-  letter-spacing: 0.02em;
-  color: var(--gray-dark);
   transition: color 0.3s ease;
+}
+
+.form-input {
+  border: 1px solid var(--gray-medium);
+  padding: 1rem 1.6rem;
+  max-height: 4rem;
+}
+.form-input::placeholder {
+  color: var(--gray-medium);
+  font-weight: 500;
+}
+
+.search-input {
+  padding: 1.2rem 1.2rem 1.2rem 3.8rem;
+  border: none;
+}
+.search-input::placeholder {
+  color: var(--gray-dark);
+  letter-spacing: 0.02em;
 }
 
 .form-input__label {
@@ -127,6 +151,47 @@ svg {
   object-fit: contain;
   stroke: var(--gray-medium);
   transition: stroke 0.3s ease;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.tab-underline {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--gray-dark);
+  position: relative;
+}
+.tab-underline + .tab-underline {
+  margin-left: 4.8rem;
+}
+.tab-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.2rem;
+  background-color: var(--black-blue);
+  transition: width 0.3s ease;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.8rem;
+  border-radius: 10%;
+}
+
+.tab-underline.active {
+  color: var(--black-blue);
+}
+.tab-underline.active::after {
+  width: 2.1rem;
 }
 
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
@@ -445,14 +510,16 @@ svg {
   display: none !important;
 }
 
-/*КОНЕЦ ОБЩИХ СТИЛЕЙ */
-/*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
-.title-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.ymaps-2-1-79-image-with-content {
+  transition: transform 0.3s ease;
 }
 
+.icon-map1:hover {
+  transform: scale(3);
+}
+
+/*КОНЕЦ ОБЩИХ СТИЛЕЙ */
+/*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {
   width: 3.2rem;
   height: 3.2rem;

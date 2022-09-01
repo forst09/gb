@@ -15,10 +15,10 @@
   .input-wrapper:hover .form-input::placeholder {
     color: var(--gray);
   }
-  .input-wrapper:hover label svg {
+  .input-wrapper:hover .form-input__label svg {
     stroke: var(--gray-dark);
   }
-  .form-input {
+  .input-search {
     padding-left: 4.2rem;
   }
   .form-input__label {
@@ -193,7 +193,7 @@
   .ss-scroll {
     opacity: 0;
   }
-  .form-input {
+  .search-input {
     padding: 1rem 9.4rem 1rem 4.2rem;
   }
   .transition-show {
@@ -654,7 +654,7 @@
   .wrapper {
     padding: 0 8rem;
   }
-  .form-input {
+  .search-input {
     padding: 0.9rem 1.2rem 0.9rem 4.2rem;
   }
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/

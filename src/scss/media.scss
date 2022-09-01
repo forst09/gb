@@ -21,13 +21,13 @@
                 color: var(--gray);
             }
 
-            label svg {
+            .form-input__label svg {
                 stroke: var(--gray-dark);
             }
         }
     }
 
-    .form-input {
+    .input-search {
         padding-left: 4.2rem;
     }
 
@@ -257,7 +257,7 @@
         opacity: 0;
     }
 
-    .form-input {
+    .search-input {
         padding: 1rem 9.4rem 1rem 4.2rem;
     }
 
@@ -850,7 +850,7 @@
         padding: 0 8rem;
     }
 
-    .form-input {
+    .search-input {
         padding: 0.9rem 1.2rem 0.9rem 4.2rem;
     }
 

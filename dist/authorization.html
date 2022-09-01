@@ -19,24 +19,91 @@
 </head>
 
 <body>
+    <!-- НАЧАЛО ШАПКИ -->
+<header class="header">
+    <div class="wrapper">
+        <div class="header-container">
+            <a href="#" class="header__logo">
+                <picture>
+                    <source srcset="img/logos/gb-logo-long.svg" type="image/svg+xml" media="(min-width: 1500px)">
+                    <source srcset="img/logos/gb-logo.svg" type="image/svg+xml" media="(min-width: 1024px)">
+                    <source srcset="img/logos/gb-logo-white.svg" type="image/svg+xml" media="(min-width: 0px)">
+                    <img src="img/logos/gb-logo-white.svg" alt="logo">
+                </picture>
+            </a>
+            <div class="search header__search">
+                <form action="">
+                    <div class="input-wrapper">
+                        <input type="text" class="search-input" id="searchHeader" placeholder="Поиск по каталогу">
+                        <label for="searchHeader" class="form-input__label">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#search"></use>
+                            </svg>
+                        </label>
+                        <input type="submit" value="Найти"
+                            class="input-submit display-none letter-spacing transition-show">
+                    </div>
+                </form>
+            </div>
+            <a class="place" href="javascript:void(0)">
+                <div class="place__text letter-spacing">Вы находитесь:</div>
+                <div class="place__address ellipsis letter-spacing">ул. Центральный проезд Хорошёвско, 3А</div>
+            </a>
+            <div class="header__icons display-none">
+                <a href="javascript:void(0)" class="header__icons-item">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#box"></use>
+                    </svg>
+                </a>
+                <a href="javascript:void(0)" class="header__icons-item">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#cart"></use>
+                    </svg>
+                </a>
+                <a href="javascript:void(0)" class="header__icons-item">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#heart"></use>
+                    </svg>
+                </a>
+                <a href="javascript:void(0)" class="header__icons-item header__icons-item--personal">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#personal"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- КОНЕЦ ШАПКИ -->
+    <!-- НАЧАЛО СЕКЦИИ АВТОРИЗАЦИЯ -->
     <section class="authorization">
         <div class="wrapper">
-            <h1>Авторизуйтесь</h1>
+            <div class="title-wrapper jc-center">
+                <h1>Авторизуйтесь</h1>
+            </div>
             <div class="tabs">
-                <a href="javascript:void(0)" class="tab tab-underline active" data-tab="authorizationLogin"
-                    data-id="authorization">Вход</a>
-                <a href="javascript:void(0)" class="tab tab-underline" data-tab="authorizationRegistration"
-                    data-id="authorization">Регистрация</a>
+                <a href="javascript:void(0)" class="tab tab-underline letter-spacing active"
+                    data-tab="authorizationLogin" data-id="authorization">Вход</a>
+                <a href="javascript:void(0)" class="tab tab-underline letter-spacing"
+                    data-tab="authorizationRegistration" data-id="authorization">Регистрация</a>
             </div>
 
             <div class="tab-content active" data-tab="authorizationLogin" data-id="authorization">
                 <form action="">
                     <div class="login__wrapper">
                         <div class="input-wrapper">
-                            <input type="text" id="loginEmail">
+                            <input class="form-input" type="text" id="loginEmail" placeholder="email@mail.ru">
                         </div>
                         <div class="input-wrapper">
-                            <input type="text" id="loginPassword">
+                            <input class="form-input" type="text" id="loginPassword" placeholder="Пароль">
+                            <label for="loginPassword" class="label-eye">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                                </svg>
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                                </svg>
+                            </label>
                         </div>
                     </div>
                 </form>
@@ -47,6 +114,7 @@
             </div>
         </div>
     </section>
+    <!-- КОНЕЦ СЕКЦИИ АВТОРИЗАЦИЯ -->
 
     <!-- НАЧАЛО ФУТЕРА -->
 <footer class="footer">
