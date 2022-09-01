@@ -280,7 +280,12 @@
     justify-content: center;
   }
   .header__icons-item {
-    padding: 0.8rem 1rem 1rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
   }
   .header__icons-item + .header__icons-item {
     margin-left: 0.8rem;
@@ -299,18 +304,46 @@
   }
   .header__icons-item--personal {
     position: relative;
-  }
-  .header__icons-item--personal svg {
-    stroke: var(--orange);
+    transition: background-color 0.3s ease;
   }
   .header__icons-item--personal .filters__dots-window-wrapper {
     left: unset;
     right: 0;
   }
+  .header__icons-item--personal:hover .icon-personal__head {
+    animation: head 0.5s;
+    transform-origin: center center;
+  }
   .header__icons-item--personal:hover .filters__dots-window-wrapper {
     visibility: visible;
     opacity: 1;
     z-index: 10;
+  }
+  .header__icons-item--personal:active, .header__icons-item--personal:focus, .header__icons-item--personal:focus-within {
+    background-color: var(--orange);
+  }
+  .header__icons-item--personal:active svg path, .header__icons-item--personal:focus svg path, .header__icons-item--personal:focus-within svg path {
+    stroke: var(--white);
+  }
+  .header__icons-item--personal-unauthorized svg path {
+    stroke: var(--gray);
+  }
+  .header__icons-item--personal-unauthorized:active, .header__icons-item--personal-unauthorized:focus, .header__icons-item--personal-unauthorized:focus-within {
+    background-color: var(--gray-medium);
+  }
+  @keyframes head {
+    25% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1.07);
+    }
+    75% {
+      transform: scale(0.72);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   .header__logo {
     width: 4.7rem;
