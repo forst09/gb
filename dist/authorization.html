@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="html-content">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,8 +18,9 @@
     <title>Авторизация</title>
 </head>
 
-<body>
-    <!-- НАЧАЛО ШАПКИ -->
+<body class="body-content">
+    <div class="content">
+        <!-- НАЧАЛО ШАПКИ -->
 <header class="header">
     <div class="wrapper">
         <div class="header-container">
@@ -49,73 +50,151 @@
                 <div class="place__text letter-spacing">Вы находитесь:</div>
                 <div class="place__address ellipsis letter-spacing">ул. Центральный проезд Хорошёвско, 3А</div>
             </a>
-            <div class="header__icons display-none">
-                <a href="javascript:void(0)" class="header__icons-item">
-                    <svg>
-                        <use xlink:href="img/icons/sprite.svg#box"></use>
-                    </svg>
-                </a>
-                <a href="javascript:void(0)" class="header__icons-item">
-                    <svg>
-                        <use xlink:href="img/icons/sprite.svg#cart"></use>
-                    </svg>
-                </a>
-                <a href="javascript:void(0)" class="header__icons-item">
-                    <svg>
-                        <use xlink:href="img/icons/sprite.svg#heart"></use>
-                    </svg>
-                </a>
-                <a href="javascript:void(0)" class="header__icons-item header__icons-item--personal">
-                    <svg>
-                        <use xlink:href="img/icons/sprite.svg#personal"></use>
-                    </svg>
-                </a>
-            </div>
+            <ul class="header__icons display-none">
+                <li class="header__icons-item">
+                    <a href="javascript:void(0)">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__icons-item">
+                    <a href="javascript:void(0)">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#cart"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__icons-item">
+                    <a href="javascript:void(0)">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#heart"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__icons-item header__icons-item--personal">
+                    <a href="javascript:void(0)">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#personal"></use>
+                        </svg>
+                    </a>
+                    <div class="filters__dots-window-wrapper">
+                        <div class="filters__dots-window">
+                            <a class="filters__dots-window-item letter-spacing" href="javascript:void(0)">Личные
+                                данные</a>
+                            <a class="filters__dots-window-item letter-spacing" href="javascript:void(0)">Избранные
+                                точки</a>
+                            <a class="filters__dots-window-item letter-spacing" href="javascript:void(0)">Заказы</a>
+                            <a class="filters__dots-window-item letter-spacing"
+                                href="javascript:void(0)">Безопасность</a>
+                            <a class="filters__dots-window-item letter-spacing header__icons-item-logout"
+                                href="javascript:void(0)">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#logout"></use>
+                                </svg>
+                                <span>Выйти</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
         </div>
+    </div>
     </div>
 </header>
 <!-- КОНЕЦ ШАПКИ -->
-    <!-- НАЧАЛО СЕКЦИИ АВТОРИЗАЦИЯ -->
-    <section class="authorization">
-        <div class="wrapper">
-            <div class="title-wrapper jc-center">
-                <h1>Авторизуйтесь</h1>
-            </div>
-            <div class="tabs">
-                <a href="javascript:void(0)" class="tab tab-underline letter-spacing active"
-                    data-tab="authorizationLogin" data-id="authorization">Вход</a>
-                <a href="javascript:void(0)" class="tab tab-underline letter-spacing"
-                    data-tab="authorizationRegistration" data-id="authorization">Регистрация</a>
-            </div>
+        <!-- НАЧАЛО СЕКЦИИ АВТОРИЗАЦИЯ -->
+        <section class="authorization">
+            <div class="wrapper">
+                <a class="back" href="javascript:void(0)">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#back"></use>
+                    </svg>
+                </a>
+                <div class="title-wrapper jc-center">
+                    <h1>Авторизуйтесь</h1>
+                </div>
+                <div class="tabs">
+                    <a href="javascript:void(0)" class="tab tab-underline letter-spacing active"
+                        data-tab="authorizationLogin" data-id="authorization">Вход</a>
+                    <a href="javascript:void(0)" class="tab tab-underline letter-spacing"
+                        data-tab="authorizationRegistration" data-id="authorization">Регистрация</a>
+                </div>
 
-            <div class="tab-content active" data-tab="authorizationLogin" data-id="authorization">
-                <form action="">
-                    <div class="login__wrapper">
-                        <div class="input-wrapper">
-                            <input class="form-input" type="text" id="loginEmail" placeholder="email@mail.ru">
+                <div class="tab-content active" data-tab="authorizationLogin" data-id="authorization">
+                    <form action="">
+                        <div class="login__wrapper">
+                            <div class="input-wrapper">
+                                <input class="form-input" type="text" id="loginEmail" placeholder="email@mail.ru">
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="password" id="loginPassword" placeholder="Пароль">
+                                <label for="loginPassword" class="label-eye">
+                                    <svg class="eye-open">
+                                        <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                                    </svg>
+                                    <svg class="eye-close">
+                                        <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                                    </svg>
+                                </label>
+                            </div>
                         </div>
-                        <div class="input-wrapper">
-                            <input class="form-input" type="text" id="loginPassword" placeholder="Пароль">
-                            <label for="loginPassword" class="label-eye">
-                                <svg>
-                                    <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
-                                </svg>
-                                <svg>
-                                    <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
-                                </svg>
-                            </label>
+                        <div class="authorization__submit-wrapper">
+                            <input type="submit" id="loginSubmit" value="Войти"
+                                class="authorization__submit letter-spacing">
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
+
+                <div class="tab-content" data-tab="authorizationRegistration" data-id="authorization">
+                    <form action="">
+                        <div class="login__wrapper">
+                            <div class="input-wrapper">
+                                <input class="form-input" type="text" id="authorizationName" placeholder="Имя*"
+                                    required>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="text" id="authorizationSurame" placeholder="Фамилия*"
+                                    required>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="text" id="authorizationEmail" placeholder="Почта*"
+                                    required>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="password" id="authorizationPassword"
+                                    placeholder="Пароль*" required>
+                                <label for="authorizationPassword" class="label-eye">
+                                    <svg class="eye-open">
+                                        <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                                    </svg>
+                                    <svg class="eye-close">
+                                        <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="password" id="authorizationRepeatPassword"
+                                    placeholder="Подтвердите пароль*" required>
+                                <label for="authorizationRepeatPassword" class="label-eye">
+                                    <svg class="eye-open">
+                                        <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                                    </svg>
+                                    <svg class="eye-close">
+                                        <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="authorization__submit-wrapper">
+                            <input type="submit" id="authorizationSubmit" value="Зарегистрироваться"
+                                class="authorization__submit letter-spacing">
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="tab-content" data-tab="authorizationLogin" data-id="authorization">
-
-            </div>
-        </div>
-    </section>
-    <!-- КОНЕЦ СЕКЦИИ АВТОРИЗАЦИЯ -->
-
+        </section>
+        <!-- КОНЕЦ СЕКЦИИ АВТОРИЗАЦИЯ -->
+    </div>
     <!-- НАЧАЛО ФУТЕРА -->
 <footer class="footer">
     <div class="wrapper">

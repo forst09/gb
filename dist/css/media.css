@@ -12,6 +12,13 @@
   .wrapper {
     padding: 0 4.4rem;
   }
+  .back {
+    margin-bottom: 3.2rem;
+  }
+  .tab-underline {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
   .input-wrapper:hover .form-input::placeholder {
     color: var(--gray);
   }
@@ -145,6 +152,17 @@
     line-height: 2.4rem;
   }
   /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
+  /*######################################################################################################################################*/
+  /*АВТОРИЗАЦИЯ*/
+  /*НАЧАЛО СТИЛЕЙ АВТОРИЗАЦИЯ 668*/
+  .login__wrapper {
+    grid-template-columns: repeat(1, 40.2rem);
+  }
+  .authorization__submit {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  /*КОНЕЦ СТИЛЕЙ АВТОРИЗАЦИЯ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
 /*НАЧАЛО АДАПТИВА 1024*/
@@ -225,11 +243,18 @@
   .input-submit:hover {
     background-color: var(--gray-light);
   }
+  .back {
+    margin: 0;
+    position: absolute;
+    top: 12rem;
+    left: 6.4rem;
+  }
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
   .header {
     background-color: var(--white);
     padding: 2.1rem 0 2.5rem;
     margin-bottom: 3.2rem;
+    min-height: unset;
   }
   .header-container {
     flex-direction: row;
@@ -272,8 +297,20 @@
   .header__icons-item:not(.header__icons-item--personal):active svg, .header__icons-item:not(.header__icons-item--personal):focus svg, .header__icons-item:not(.header__icons-item--personal):focus-within svg {
     stroke: var(--gray);
   }
+  .header__icons-item--personal {
+    position: relative;
+  }
   .header__icons-item--personal svg {
     stroke: var(--orange);
+  }
+  .header__icons-item--personal .filters__dots-window-wrapper {
+    left: unset;
+    right: 0;
+  }
+  .header__icons-item--personal:hover .filters__dots-window-wrapper {
+    visibility: visible;
+    opacity: 1;
+    z-index: 10;
   }
   .header__logo {
     width: 4.7rem;
@@ -288,6 +325,19 @@
     font-size: 1.2rem;
     line-height: 2rem;
     font-weight: 600;
+  }
+  .header__icons-item-logout {
+    display: inline-flex !important;
+    align-items: center;
+  }
+  .header__icons-item-logout span {
+    color: var(--gray-dark);
+  }
+  .header__icons-item-logout svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    stroke: var(--gray-medium);
+    margin-right: 0.8rem;
   }
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
   /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1024*/
@@ -681,6 +731,9 @@
     right: 20.4rem;
   }
   /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 1500*/
+  .btn-catalog {
+    display: inline-flex;
+  }
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1500*/
   .tiles {
@@ -705,5 +758,16 @@
     max-width: 30.6rem;
   }
   /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1500*/
+  /*######################################################################################################################################*/
+  /*АВТОРИЗАЦИЯ*/
+  /*НАЧАЛО СТИЛЕЙ АВТОРИЗАЦИЯ 1500*/
+  .authorization__submit-wrapper {
+    margin-top: 2.4rem;
+  }
+  .authorization__submit {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  /*КОНЕЦ СТИЛЕЙ АВТОРИЗАЦИЯ 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/

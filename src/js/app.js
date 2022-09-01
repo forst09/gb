@@ -128,6 +128,13 @@ $(document).ready(function () {
         }
     });
 
+    //ЗАКРЫТЬ ВСПЛЫВАШКУ ВЫБОРА ГОРОДА ПО КЛИКУ НА КНОПКУ ДА, ВЕРНО
+    $(document).on('click', '.block-swipe-city .btn-text--orange', function () {
+        $(".block-swipe-city").removeClass("active");
+        $(".block-swipe__background-city").removeClass("active");
+        $("html").removeClass("scroll-hidden");
+    });
+
     //ПО КЛИКУ НА ПАЛОЧКУ ЗАКРЫТЬ ВСПЛЫВАШКУ
     $(document).on('click', '.block-swipe__btn', function () {
         $(".block-swipe").removeClass("active");
@@ -157,7 +164,7 @@ $(document).ready(function () {
                                 <use xlink:href="img/icons/sprite.svg#dots"></use>
                             </svg>
                             <div class="filters__dots-window-wrapper">
-                                <div class="filters__dots-window">
+                                <div class="filters__dots-window filters__dots-window-js">
                                 </div>
                             </div>
                         </div>
@@ -170,12 +177,24 @@ $(document).ready(function () {
                         <a href="javascript:void(0)"
                         class="filters__dots-window-item letter-spacing filters__item-js">${$(item).text()}</a>
                     `;
-                    $(".filters__dots-window").append(htmlLink);
+                    $(".filters__dots-window-js").append(htmlLink);
                 }
 
             });
         }
     }
+
+    //ПОКАЗАТЬ/СКРЫТЬ ПАРОЛЬ
+    $(document).on('click', '.label-eye', function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).parents('.input-wrapper').find('.form-input').attr('type', 'password');
+        }
+        else {
+            $(this).addClass('active');
+            $(this).parents('.input-wrapper').find('.form-input').attr('type', 'text');
+        }
+    });
 
     // ПОДКЛЮЧЕНИЕ КАРТЫ
     let isMapLoaded = false;

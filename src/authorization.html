@@ -1,52 +1,105 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="html-content">
 @@include('html/head.html', {
 "title": "Авторизация"
 })
 
-<body>
-    @@include('html/header.html',{})
-    <!-- НАЧАЛО СЕКЦИИ АВТОРИЗАЦИЯ -->
-    <section class="authorization">
-        <div class="wrapper">
-            <div class="title-wrapper jc-center">
-                <h1>Авторизуйтесь</h1>
-            </div>
-            <div class="tabs">
-                <a href="javascript:void(0)" class="tab tab-underline letter-spacing active"
-                    data-tab="authorizationLogin" data-id="authorization">Вход</a>
-                <a href="javascript:void(0)" class="tab tab-underline letter-spacing"
-                    data-tab="authorizationRegistration" data-id="authorization">Регистрация</a>
-            </div>
+<body class="body-content">
+    <div class="content">
+        @@include('html/header.html',{})
+        <!-- НАЧАЛО СЕКЦИИ АВТОРИЗАЦИЯ -->
+        <section class="authorization">
+            <div class="wrapper">
+                <a class="back" href="javascript:void(0)">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#back"></use>
+                    </svg>
+                </a>
+                <div class="title-wrapper jc-center">
+                    <h1>Авторизуйтесь</h1>
+                </div>
+                <div class="tabs">
+                    <a href="javascript:void(0)" class="tab tab-underline letter-spacing active"
+                        data-tab="authorizationLogin" data-id="authorization">Вход</a>
+                    <a href="javascript:void(0)" class="tab tab-underline letter-spacing"
+                        data-tab="authorizationRegistration" data-id="authorization">Регистрация</a>
+                </div>
 
-            <div class="tab-content active" data-tab="authorizationLogin" data-id="authorization">
-                <form action="">
-                    <div class="login__wrapper">
-                        <div class="input-wrapper">
-                            <input class="form-input" type="text" id="loginEmail" placeholder="email@mail.ru">
+                <div class="tab-content active" data-tab="authorizationLogin" data-id="authorization">
+                    <form action="">
+                        <div class="login__wrapper">
+                            <div class="input-wrapper">
+                                <input class="form-input" type="text" id="loginEmail" placeholder="email@mail.ru">
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="password" id="loginPassword" placeholder="Пароль">
+                                <label for="loginPassword" class="label-eye">
+                                    <svg class="eye-open">
+                                        <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                                    </svg>
+                                    <svg class="eye-close">
+                                        <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                                    </svg>
+                                </label>
+                            </div>
                         </div>
-                        <div class="input-wrapper">
-                            <input class="form-input" type="text" id="loginPassword" placeholder="Пароль">
-                            <label for="loginPassword" class="label-eye">
-                                <svg>
-                                    <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
-                                </svg>
-                                <svg>
-                                    <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
-                                </svg>
-                            </label>
+                        <div class="authorization__submit-wrapper">
+                            <input type="submit" id="loginSubmit" value="Войти"
+                                class="authorization__submit letter-spacing">
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
+
+                <div class="tab-content" data-tab="authorizationRegistration" data-id="authorization">
+                    <form action="">
+                        <div class="login__wrapper">
+                            <div class="input-wrapper">
+                                <input class="form-input" type="text" id="authorizationName" placeholder="Имя*"
+                                    required>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="text" id="authorizationSurame" placeholder="Фамилия*"
+                                    required>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="text" id="authorizationEmail" placeholder="Почта*"
+                                    required>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="password" id="authorizationPassword"
+                                    placeholder="Пароль*" required>
+                                <label for="authorizationPassword" class="label-eye">
+                                    <svg class="eye-open">
+                                        <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                                    </svg>
+                                    <svg class="eye-close">
+                                        <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input" type="password" id="authorizationRepeatPassword"
+                                    placeholder="Подтвердите пароль*" required>
+                                <label for="authorizationRepeatPassword" class="label-eye">
+                                    <svg class="eye-open">
+                                        <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                                    </svg>
+                                    <svg class="eye-close">
+                                        <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="authorization__submit-wrapper">
+                            <input type="submit" id="authorizationSubmit" value="Зарегистрироваться"
+                                class="authorization__submit letter-spacing">
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="tab-content" data-tab="authorizationLogin" data-id="authorization">
-
-            </div>
-        </div>
-    </section>
-    <!-- КОНЕЦ СЕКЦИИ АВТОРИЗАЦИЯ -->
-
+        </section>
+        <!-- КОНЕЦ СЕКЦИИ АВТОРИЗАЦИЯ -->
+    </div>
     @@include('html/footer.html',{})
 
 

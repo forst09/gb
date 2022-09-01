@@ -15,6 +15,15 @@
         padding: 0 4.4rem;
     }
 
+    .back {
+        margin-bottom: 3.2rem;
+    }
+
+    .tab-underline {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
     .input-wrapper {
         &:hover {
             .form-input::placeholder {
@@ -189,6 +198,20 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
+
+    /*######################################################################################################################################*/
+    /*АВТОРИЗАЦИЯ*/
+    /*НАЧАЛО СТИЛЕЙ АВТОРИЗАЦИЯ 668*/
+    .login__wrapper {
+        grid-template-columns: repeat(1, 40.2rem);
+    }
+
+    .authorization__submit {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ АВТОРИЗАЦИЯ 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
@@ -294,11 +317,19 @@
         }
     }
 
+    .back {
+        margin: 0;
+        position: absolute;
+        top: 12rem;
+        left: 6.4rem;
+    }
+
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
     .header {
         background-color: var(--white);
         padding: 2.1rem 0 2.5rem;
         margin-bottom: 3.2rem;
+        min-height: unset;
     }
 
     .header-container {
@@ -359,8 +390,23 @@
     }
 
     .header__icons-item--personal {
+        position: relative;
+
         svg {
             stroke: var(--orange);
+        }
+
+        .filters__dots-window-wrapper {
+            left: unset;
+            right: 0;
+        }
+
+        &:hover {
+            .filters__dots-window-wrapper {
+                visibility: visible;
+                opacity: 1;
+                z-index: 10;
+            }
         }
     }
 
@@ -379,6 +425,22 @@
         font-size: 1.2rem;
         line-height: 2rem;
         font-weight: 600;
+    }
+
+    .header__icons-item-logout {
+        display: inline-flex !important;
+        align-items: center;
+
+        span {
+            color: var(--gray-dark);
+        }
+
+        svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            stroke: var(--gray-medium);
+            margin-right: 0.8rem;
+        }
     }
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
@@ -885,6 +947,10 @@
 
     /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 1500*/
 
+    .btn-catalog {
+        display: inline-flex;
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1500*/
@@ -916,6 +982,20 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1500*/
+
+    /*######################################################################################################################################*/
+    /*АВТОРИЗАЦИЯ*/
+    /*НАЧАЛО СТИЛЕЙ АВТОРИЗАЦИЯ 1500*/
+    .authorization__submit-wrapper {
+        margin-top: 2.4rem;
+    }
+
+    .authorization__submit {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
+
+    /*КОНЕЦ СТИЛЕЙ АВТОРИЗАЦИЯ 1500*/
 }
 
 /*КОНЕЦ АДАПТИВА 1500*/
