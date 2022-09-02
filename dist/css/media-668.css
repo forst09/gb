@@ -38,6 +38,50 @@
     width: 2rem;
     height: 2rem;
   }
+  /*КОНТЕНТНЫЕ СТИЛИ 668*/
+  .content-style h2,
+.content-style h3,
+.content-style h4,
+.content-style h5,
+.content-style h6 {
+    margin-top: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+  .content-style h2 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+  .content-style h3 {
+    font-size: 2.1rem;
+    line-height: 3rem;
+  }
+  .content-style h4 {
+    font-size: 2rem;
+  }
+  .content-style h5 {
+    font-size: 1.8rem;
+  }
+  .content-style ul,
+.content-style ol {
+    margin-top: 1.6rem;
+  }
+  .content-style ul li ul,
+.content-style ol li ol {
+    margin-top: 0.8rem;
+  }
+  .content-style p + p {
+    margin-top: 1.6rem;
+  }
+  .content-style .wrapper-iframe {
+    width: 38.8rem;
+    height: 20.2rem;
+  }
+  .content-img {
+    margin: 1.6rem auto;
+    width: 38.8rem;
+    height: 26.6rem;
+  }
+  /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 668*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
   .header__logo {
     width: 5.6rem;

@@ -55,6 +55,64 @@
         height: 2rem;
     }
 
+    /*КОНТЕНТНЫЕ СТИЛИ 668*/
+    .content-style {
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 2.4rem;
+            margin-bottom: 1.6rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            line-height: 3rem;
+        }
+
+        h3 {
+            font-size: 2.1rem;
+            line-height: 3rem;
+        }
+
+        h4 {
+            font-size: 2rem;
+        }
+
+        h5 {
+            font-size: 1.8rem;
+        }
+
+        ul,
+        ol {
+            margin-top: 1.6rem;
+        }
+
+        ul li ul,
+        ol li ol {
+            margin-top: 0.8rem;
+        }
+
+        p+p {
+            margin-top: 1.6rem;
+        }
+
+        .wrapper-iframe {
+            width: 38.8rem;
+            height: 20.2rem;
+        }
+    }
+
+    .content-img {
+        margin: 1.6rem auto;
+        width: 38.8rem;
+        height: 26.6rem;
+    }
+
+    /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 668*/
+
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
     .header__logo {
         width: 5.6rem;
