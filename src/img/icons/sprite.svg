@@ -161,4 +161,15 @@
         <path d="M4 3.5L1.5 6L4 8.5" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M1.5 6L7.5 6" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
+    <symbol viewBox="0 0 24 24" id="home">
+        <path
+            d="M4 9.3L12 3L20 9.3V19.2C20 19.6774 19.8127 20.1352 19.4793 20.4728C19.1459 20.8104 18.6937 21 18.2222 21H5.77778C5.30628 21 4.8541 20.8104 4.5207 20.4728C4.1873 20.1352 4 19.6774 4 19.2V9.3Z"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M9 21.0001V11.5264H15V21.0001" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="heartMini">
+        <path
+            d="M19.572 5.41114C19.1209 4.96386 18.5848 4.60896 17.9945 4.36681C17.4042 4.12465 16.7714 4 16.1322 4C15.4931 4 14.8602 4.12465 14.27 4.36681C13.6797 4.60896 13.1436 4.96386 12.6925 5.41114L12 6.10415L11.3075 5.41114C10.8564 4.96386 10.3203 4.60896 9.73003 4.36681C9.13976 4.12465 8.5069 4 7.86776 4C7.22863 4 6.59577 4.12465 6.0055 4.36681C5.41522 4.60896 4.87914 4.96386 4.42798 5.41114C2.52149 7.29472 2.40458 10.4755 4.80568 12.8922L12 20L19.1943 12.8922C21.5954 10.4755 21.4785 7.29472 19.572 5.41114Z"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
 </svg>

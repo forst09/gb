@@ -26,6 +26,7 @@ body {
     color: var(--gray);
     overflow-x: hidden;
     position: relative;
+    padding-bottom: 5.6rem;
 }
 
 h1 {
@@ -428,6 +429,63 @@ svg {
 }
 
 /*КОНЕЦ СТИЛЕЙ ФУТЕРА*/
+
+/*НАЧАЛО СТИЛЕЙ ТАББАРА*/
+.tabbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
+    border-radius: 1.2rem 1.2rem 0 0;
+    background-color: var(--white);
+    z-index: 1000;
+}
+
+.tabbar__container {
+    padding: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tabbar__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 4.8rem;
+    height: 4rem;
+
+    svg {
+        stroke: var(--gray-dark);
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+}
+
+.tabbar__item-quantity {
+    span {
+        position: absolute;
+        right: 0.25rem;
+        top: 0.2rem;
+        font-size: 1rem;
+        line-height: 2rem;
+        font-weight: 600;
+        color: var(--white);
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: var(--black-blue);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ ТАББАРА*/
 
 /*ВСПЛЫВАШКИ*/
 .block-swipe {

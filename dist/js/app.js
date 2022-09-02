@@ -366,4 +366,12 @@ $(document).ready(function () {
     if (jsMap) mapObserver.observe(jsMap);
 
     console.log($('.icon-map'));
+    // const ajax = new XMLHttpRequest();
+    // ajax.open("GET", "img/icons/sprite.svg", true);
+    // ajax.send();
+    // ajax.onload = function (e) {
+    //     let div = document.createElement("div");
+    //     div.innerHTML = ajax.responseText;
+    //     document.body.insertBefore(div, document.body.childNodes[0]);
+    // }
 });
