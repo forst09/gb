@@ -12,8 +12,8 @@
     margin-bottom: 4.8rem;
   }
   h1 {
-    font-size: 2.6rem;
-    line-height: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
   }
   .tabbar {
     display: none;
@@ -95,6 +95,18 @@
     top: 12rem;
     left: 6.4rem;
   }
+  /*КОНТЕНТНЫЕ СТИЛИ 1024*/
+  .wrapper-iframe {
+    width: 58.6rem;
+    height: 30.6rem;
+    margin: 3.2rem auto;
+  }
+  .content-img {
+    margin: 1.6rem auto;
+    width: 45.6rem;
+    height: 31.2rem;
+  }
+  /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 1024*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
   .header {
     background-color: var(--white);
