@@ -28,6 +28,13 @@ body {
   overflow-x: hidden;
   position: relative;
   padding-bottom: 5.6rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+section:nth-last-of-type(1) {
+  margin-bottom: 2.4rem;
 }
 
 h1 {
@@ -50,6 +57,199 @@ svg {
   padding: 0 1.6rem;
 }
 
+/*КОНТЕНТНЫЕ СТИЛИ*/
+.content-style h1 {
+  margin-bottom: 2.4rem;
+}
+.content-style h2,
+.content-style h3,
+.content-style h4,
+.content-style h5,
+.content-style h6 {
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--black-text);
+}
+.content-style h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+.content-style h3 {
+  font-size: 1.9rem;
+  line-height: 2.6rem;
+  font-weight: 600;
+}
+.content-style h4 {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+}
+.content-style h5 {
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+}
+.content-style h6 {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+}
+.content-style p,
+.content-style b,
+.content-style a,
+.content-style i,
+.content-style li {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.02em;
+}
+.content-style p {
+  font-weight: 500;
+  margin-top: 0.8rem;
+}
+.content-style b {
+  font-weight: 800;
+}
+.content-style i {
+  font-style: italic;
+}
+.content-style a {
+  font-weight: 500;
+  position: relative;
+  color: var(--black-text);
+  display: inline-block;
+}
+.content-style a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black-text);
+  transition: width 0.3s ease;
+}
+.content-style ul,
+.content-style ol {
+  margin-top: 0.8rem;
+}
+.content-style ul li {
+  padding-left: 1.6rem;
+}
+.content-style ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--gray-medium);
+  border-radius: 50%;
+}
+.content-style ul li ul li {
+  margin-top: 0.4rem;
+  padding-left: 1.4rem;
+}
+.content-style ul li ul li:nth-of-type(1) {
+  margin-top: 0;
+}
+.content-style ul li ul li::before {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.content-style ol {
+  counter-reset: section;
+}
+.content-style ol li {
+  padding-left: 3.3rem;
+}
+.content-style ol li::before {
+  content: counters(section, ".") ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  counter-increment: section;
+  color: var(--gray-dark);
+}
+.content-style ol li ol li {
+  padding-left: 2.8rem;
+}
+.content-style ol li ol li::before {
+  content: counters(section, ".") "";
+}
+.content-style li {
+  position: relative;
+  font-weight: 500;
+}
+.content-style li + li {
+  margin-top: 0.8rem;
+}
+.content-style td {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+.content-style tr {
+  border-bottom: 1px solid var(--gray-medium);
+}
+.content-style tr td {
+  padding: 0.4rem 0 0.4rem 2.4rem;
+}
+.content-style tr td:nth-of-type(1) {
+  padding-left: 0.8rem;
+}
+.content-style tr td:nth-last-of-type(1) {
+  padding-right: 0.8rem;
+}
+.content-style tr:nth-of-type(1) {
+  background-color: var(--gray-extralight);
+}
+.content-style tr:nth-of-type(1) td {
+  padding: 0.8rem 0 0.8rem 2.4rem;
+}
+.content-style tr:nth-of-type(1) td:nth-of-type(1) {
+  padding-left: 0.8rem;
+}
+.content-style tr:nth-of-type(1) td:nth-last-of-type(1) {
+  padding-right: 0.8rem;
+}
+
+.scroll-table {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+.scroll-table::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.wrapper-iframe {
+  margin: 2.4rem auto;
+  width: 28.8rem;
+  height: 15rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.content-img {
+  width: 28.8rem;
+  height: 19.8rem;
+  margin: 0.8rem auto;
+}
+.content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ*/
 .letter-spacing {
   letter-spacing: 0.02em;
 }
@@ -197,6 +397,7 @@ svg {
   line-height: 2rem;
   color: var(--gray-dark);
   position: relative;
+  transition: 0.3s ease;
 }
 .tab-underline + .tab-underline {
   margin-left: 4.8rem;
@@ -228,33 +429,24 @@ svg {
   margin-bottom: 2.4rem;
 }
 .back svg {
-  fill: var(--gray-medium);
+  fill: var(--black-blue);
   width: 100%;
   height: 100%;
   object-fit: contain;
   transition: fill 0.3s ease;
 }
+.back:hover svg {
+  fill: var(--orange-light);
+}
+.back:active svg, .back:focus svg, .back:focus-within svg {
+  fill: var(--orange);
+}
 
 /*ЕСЛИ НУЖНО ПРИЖАТЬ ФУТЕР К НИЗУ СТРАНИЦЫ - НА BODY - .body-content, НА ОБЕРТКУ ДЛЯ КОНТЕНТА - .content, НА HTML - .html-content*/
-.html-content {
-  height: 100%;
-}
-
-.body-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-}
-
 .content {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 5.6rem);
 }
 
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
@@ -335,11 +527,15 @@ svg {
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
 /*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
 .footer {
-  margin-top: 2.4rem;
+  margin-top: auto;
   padding: 1.6rem 0;
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   border-radius: 1.2rem;
   background-color: var(--white);
+}
+
+.footer-bottom {
+  margin-top: auto;
 }
 
 .footer__socials-links {
@@ -461,6 +657,8 @@ svg {
   background-color: var(--white);
   width: 100%;
   height: 90%;
+  z-index: 11;
+  border-radius: 3.4rem 3.4rem 0px 0px;
 }
 .block-swipe .wrapper {
   height: 100%;
@@ -477,14 +675,13 @@ svg {
   width: 100vw;
   height: 100vh;
   background-color: rgba(25, 42, 62, 0);
-  visibility: hidden;
   transition: background-color 0.7s ease-in-out;
-  z-index: 10;
+  pointer-events: none;
 }
 
 .block-swipe__background.active {
-  visibility: visible;
   background-color: rgba(25, 42, 62, 0.2);
+  pointer-events: all;
 }
 
 .block-swipe__title {

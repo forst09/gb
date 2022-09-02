@@ -15,6 +15,12 @@
         padding-bottom: 7.2rem;
     }
 
+    section {
+        &:nth-last-of-type(1) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
     .wrapper {
         padding: 0 4.4rem;
     }
@@ -82,9 +88,9 @@
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 668*/
 
     /*НАЧАЛО СТИЛЕЙ ФУТЕРА 668*/
-    .footer {
-        margin-top: 3.2rem;
-    }
+    // .footer {
+    //     margin-top: 3.2rem;
+    // }
 
     .footer-socials__info {
         margin-top: 2.4rem;

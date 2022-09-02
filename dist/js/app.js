@@ -196,6 +196,58 @@ $(document).ready(function () {
         }
     });
 
+    console.log($('iframe'));
+
+    //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
+    let content = document.querySelector('.content-style');
+    let imgs = document.querySelectorAll('.content-style img');
+
+    if (content != null) {
+
+        let allEltsInContent = [...content.querySelectorAll('*')];
+        let allTagInContent = [];
+        allEltsInContent.forEach(elt => {
+            allTagInContent.push(elt.tagName.toLocaleLowerCase())
+
+        });
+        if (allTagInContent.includes('table')) {
+            let tables = content.querySelectorAll('table');
+            tables.forEach(table => {
+                $(table).wrap('<div class="scroll-table" />');
+                // let wrapper = document.createElement('div');
+                // let content = document.createElement('div');
+                // wrapper.classList.add('scroll');
+                // content.classList.add('scroll-content');
+                // let parent = table.parentNode
+                // parent.replaceChild(wrapper, table)
+                // content.appendChild(table)
+                // wrapper.appendChild(content)
+            })
+        };
+        imgs.forEach(img => {
+            let imgParentClass = img.parentNode.className;
+            if (!imgParentClass.includes('__img')) {
+                let div = document.createElement('div');
+                div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
+                div.classList.add('content-img');
+                img.parentNode.replaceChild(div, img);
+            }
+        });
+
+        if (allTagInContent.includes('iframe')) {
+            let iframes = content.querySelectorAll('iframe');
+
+            iframes.forEach(iframe => {
+                let wrapper = document.createElement('div')
+                let iframeSrc = iframe.src
+                wrapper.classList.add('wrapper-iframe');
+                let parent = iframe.parentNode;
+                parent.replaceChild(wrapper, iframe);
+                wrapper.appendChild(iframe);
+            })
+        }
+    };
+
     // ПОДКЛЮЧЕНИЕ КАРТЫ
     let isMapLoaded = false;
     const jsMap = document.querySelector("#map");

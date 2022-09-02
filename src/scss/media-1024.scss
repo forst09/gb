@@ -10,6 +10,12 @@
         padding-bottom: 0;
     }
 
+    section {
+        &:nth-last-of-type(1) {
+            margin-bottom: 4.8rem;
+        }
+    }
+
     h1 {
         font-size: 2.6rem;
         line-height: 3.2rem;
@@ -29,6 +35,12 @@
 
     .view-btn {
         margin: 0;
+    }
+
+    .tab-underline {
+        &:hover {
+            color: var(--black-blue);
+        }
     }
 
     .view-btn__item {
@@ -282,7 +294,7 @@
 
     /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1024*/
     .footer {
-        margin-top: 4.8rem;
+        // margin-top: 4.8rem;
         padding: 3.2rem 0;
     }
 

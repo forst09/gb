@@ -27,6 +27,15 @@ body {
     overflow-x: hidden;
     position: relative;
     padding-bottom: 5.6rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+section {
+    &:nth-last-of-type(1) {
+        margin-bottom: 2.4rem;
+    }
 }
 
 h1 {
@@ -48,6 +57,245 @@ svg {
 .wrapper {
     padding: 0 1.6rem;
 }
+
+/*КОНТЕНТНЫЕ СТИЛИ*/
+.content-style {
+    h1 {
+        margin-bottom: 2.4rem;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 1.6rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.02em;
+        color: var(--black-text);
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+
+    h3 {
+        font-size: 1.9rem;
+        line-height: 2.6rem;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        font-weight: 500;
+    }
+
+    h5 {
+        font-size: 1.7rem;
+        line-height: 2.4rem;
+        font-weight: 500;
+    }
+
+    h6 {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-weight: 500;
+    }
+
+    p,
+    b,
+    a,
+    i,
+    li {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.02em;
+    }
+
+    p {
+        font-weight: 500;
+        margin-top: 0.8rem;
+    }
+
+    b {
+        font-weight: 800;
+    }
+
+    i {
+        font-style: italic;
+    }
+
+    a {
+        font-weight: 500;
+        position: relative;
+        color: var(--black-text);
+        display: inline-block;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -0.2rem;
+            width: 100%;
+            height: 1px;
+            background-color: var(--black-text);
+            transition: width 0.3s ease;
+        }
+    }
+
+    ul,
+    ol {
+        margin-top: 0.8rem;
+    }
+
+    ul {
+        li {
+            padding-left: 1.6rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.9rem;
+                width: 0.4rem;
+                height: 0.4rem;
+                background-color: var(--gray-medium);
+                border-radius: 50%;
+            }
+
+
+            ul {
+                li {
+                    margin-top: 0.4rem;
+                    padding-left: 1.4rem;
+
+                    &:nth-of-type(1) {
+                        margin-top: 0;
+                    }
+
+                    &::before {
+                        width: 0.2rem;
+                        height: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    ol {
+        counter-reset: section;
+
+        li {
+            padding-left: 3.3rem;
+
+            &::before {
+                content: counters(section, ".") ".";
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-family: 'Manrope';
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                counter-increment: section;
+                color: var(--gray-dark);
+            }
+
+            ol {
+                li {
+                    padding-left: 2.8rem;
+
+                    &::before {
+                        content: counters(section, ".") "";
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        position: relative;
+        font-weight: 500;
+
+        &+li {
+            margin-top: 0.8rem;
+        }
+    }
+
+    td {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 500;
+    }
+
+    tr {
+        border-bottom: 1px solid var(--gray-medium);
+
+        td {
+            padding: 0.4rem 0 0.4rem 2.4rem;
+
+            &:nth-of-type(1) {
+                padding-left: 0.8rem;
+            }
+
+            &:nth-last-of-type(1) {
+                padding-right: 0.8rem;
+            }
+        }
+
+        &:nth-of-type(1) {
+            background-color: var(--gray-extralight);
+
+            td {
+                padding: 0.8rem 0 0.8rem 2.4rem;
+
+                &:nth-of-type(1) {
+                    padding-left: 0.8rem;
+                }
+
+                &:nth-last-of-type(1) {
+                    padding-right: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+.scroll-table {
+    margin: 1rem 0;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+}
+
+.wrapper-iframe {
+    margin: 2.4rem auto;
+    width: 28.8rem;
+    height: 15rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+}
+
+.content-img {
+    width: 28.8rem;
+    height: 19.8rem;
+    margin: 0.8rem auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ*/
 
 .letter-spacing {
     letter-spacing: 0.02em;
@@ -204,6 +452,7 @@ svg {
     line-height: 2rem;
     color: var(--gray-dark);
     position: relative;
+    transition: 0.3s ease;
 
     &+& {
         margin-left: 4.8rem;
@@ -238,34 +487,33 @@ svg {
     margin-bottom: 2.4rem;
 
     svg {
-        fill: var(--gray-medium);
+        fill: var(--black-blue);
         width: 100%;
         height: 100%;
         object-fit: contain;
         transition: fill 0.3s ease;
     }
+
+    &:hover {
+        svg {
+            fill: var(--orange-light);
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        svg {
+            fill: var(--orange);
+        }
+    }
 }
 
 /*ЕСЛИ НУЖНО ПРИЖАТЬ ФУТЕР К НИЗУ СТРАНИЦЫ - НА BODY - .body-content, НА ОБЕРТКУ ДЛЯ КОНТЕНТА - .content, НА HTML - .html-content*/
-.html-content {
-    height: 100%;
-}
-
-.body-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: 100%;
-}
-
 .content {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 5.6rem);
 }
 
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
@@ -349,11 +597,16 @@ svg {
 
 /*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
 .footer {
-    margin-top: 2.4rem;
+    // margin-top: 2.4rem;
+    margin-top: auto;
     padding: 1.6rem 0;
     box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
     border-radius: 1.2rem;
     background-color: var(--white);
+}
+
+.footer-bottom {
+    margin-top: auto;
 }
 
 .footer__socials-links {
@@ -496,6 +749,8 @@ svg {
     background-color: var(--white);
     width: 100%;
     height: 90%;
+    z-index: 11;
+    border-radius: 3.4rem 3.4rem 0px 0px;
 
     .wrapper {
         height: 100%;
@@ -513,14 +768,13 @@ svg {
     width: 100vw;
     height: 100vh;
     background-color: rgba(25, 42, 62, 0);
-    visibility: hidden;
     transition: background-color 0.7s ease-in-out;
-    z-index: 10;
+    pointer-events: none;
 }
 
 .block-swipe__background.active {
-    visibility: visible;
     background-color: rgba(25, 42, 62, 0.2);
+    pointer-events: all;
 }
 
 .block-swipe__title {
