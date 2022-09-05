@@ -110,13 +110,13 @@
     line-height: 2.2rem;
   }
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 668*/
+  /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ 668*/
   .header-white .header__logo {
     width: 9.7rem;
   }
   .header-white .input-wrapper {
     height: 2.4rem;
   }
-  /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ 668*/
   /*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ 668*/
   /*НАЧАЛО СТИЛЕЙ ФУТЕРА 668*/
   .footer-socials__info {

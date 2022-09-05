@@ -178,6 +178,7 @@
     color: var(--gray);
     padding: 0;
     max-width: 16.9rem;
+    width: 100%;
   }
   .place::after {
     content: none;
@@ -281,6 +282,37 @@
     margin-right: 0.8rem;
   }
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
+  /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ 1024*/
+  .header-white .back {
+    position: static;
+  }
+  .header-white .header__logo {
+    width: 4.7rem;
+    height: 4.2rem;
+  }
+  .header-white .header__search {
+    box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
+    width: 40.8rem;
+  }
+  .header-white .header__search .search-input {
+    display: block;
+  }
+  .header-white .header__search .form-input__label {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+  }
+  .header-white .header__search .form-input__label svg {
+    stroke: var(--gray-medium);
+  }
+  .header-white .input-wrapper {
+    height: fit-content;
+  }
+  .header-white .place {
+    display: block;
+  }
+  /*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ 1024*/
   /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1024*/
   .footer {
     padding: 3.2rem 0;

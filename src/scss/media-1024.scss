@@ -228,6 +228,7 @@
         color: var(--gray);
         padding: 0;
         max-width: 16.9rem;
+        width: 100%;
 
         &::after {
             content: none;
@@ -371,6 +372,48 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
+
+    /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ 1024*/
+    .header-white {
+        .back {
+            position: static;
+        }
+
+        .header__logo {
+            width: 4.7rem;
+            height: 4.2rem;
+        }
+
+        .header__search {
+            box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
+            width: 40.8rem;
+
+            .search-input {
+                display: block;
+            }
+
+            .form-input__label {
+                position: absolute;
+                transform: translateY(-50%);
+                width: 2rem;
+                height: 2rem;
+
+                svg {
+                    stroke: var(--gray-medium);
+                }
+            }
+        }
+
+        .input-wrapper {
+            height: fit-content;
+        }
+
+        .place {
+            display: block;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ 1024*/
 
     /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1024*/
     .footer {
