@@ -540,6 +540,7 @@ svg {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo {
@@ -604,6 +605,51 @@ svg {
 }
 
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
+
+/*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ*/
+.header-white {
+    min-height: unset;
+    margin-bottom: 2.4rem;
+
+    .header-container {
+        flex-direction: row;
+    }
+
+    .back {
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .header__logo {
+        width: 10.6rem;
+        height: 2.8rem;
+    }
+
+    .header__search {
+        position: static;
+        transform: unset;
+        box-shadow: unset;
+        height: fit-content;
+        width: fit-content;
+
+        .search-input {
+            display: none;
+        }
+
+        .form-input__label {
+            position: static;
+            transform: unset;
+            width: 2.4rem;
+            height: 2.4rem;
+
+            svg {
+                stroke: var(--black-blue);
+            }
+        }
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ*/
 
 .header-white {
     background-color: var(--white);
