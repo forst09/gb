@@ -443,6 +443,11 @@
 
     .block-swipe__background {
         transition: background-color 0.3s ease;
+        z-index: 10;
+    }
+
+    .block-swipe-filters {
+        display: none;
     }
 
     /*КОНЕЦ ВСПЛЫВАШКА  1024*/
@@ -454,6 +459,8 @@
         border-radius: 2.4rem;
         right: 13.3rem;
         padding: 1.6rem 2.3rem;
+        visibility: hidden;
+        opacity: 0;
 
         .wrapper {
             padding: 0;
@@ -462,6 +469,8 @@
 
     .block-swipe-city.active {
         top: 0.5rem;
+        visibility: visible;
+        opacity: 1;
     }
 
     .choice-city__text,
