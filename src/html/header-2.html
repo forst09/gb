@@ -1,20 +1,19 @@
 <!-- НАЧАЛО ШАПКИ С КНОПКОЙ КАТАЛОГ-->
-<header class="header">
+<header class="header header-white">
     <div class="wrapper">
         <div class="header-container">
+            <a class="back header__back" href="javascript:void(0)">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#back"></use>
+                </svg>
+            </a>
             <a href="#" class="header__logo">
                 <picture>
                     <source srcset="@img/logos/gb-logo-long.svg" type="image/svg+xml" media="(min-width: 1500px)">
                     <source srcset="@img/logos/gb-logo.svg" type="image/svg+xml" media="(min-width: 1024px)">
-                    <source srcset="@img/logos/gb-logo-white.svg" type="image/svg+xml" media="(min-width: 0px)">
-                    <img src="@img/logos/gb-logo-white.svg" alt="logo">
+                    <source srcset="@img/logos/gb-logo-long.svg" type="image/svg+xml" media="(min-width: 0px)">
+                    <img src="@img/logos/gb-logo-long.svg.svg" alt="logo">
                 </picture>
-            </a>
-            <a class="btn-catalog display-none" href="javascript:void(0)">
-                <svg>
-                    <use xlink:href="@img/icons/sprite.svg#search"></use>
-                </svg>
-                <span>Каталог</span>
             </a>
             <div class="search header__search">
                 <form action="">
@@ -30,7 +29,7 @@
                     </div>
                 </form>
             </div>
-            <a class="place" href="javascript:void(0)">
+            <a class="place display-none" href="javascript:void(0)">
                 <div class="place__text letter-spacing">Вы находитесь:</div>
                 <div class="place__address ellipsis letter-spacing">ул. Центральный проезд Хорошёвско, 3А</div>
             </a>
