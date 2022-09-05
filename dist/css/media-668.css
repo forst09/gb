@@ -69,8 +69,11 @@
 .content-style ol li ol {
     margin-top: 0.8rem;
   }
-  .content-style p + p {
+  .content-style p {
     margin-top: 1.6rem;
+  }
+  .scroll-table {
+    margin: 1.6rem auto;
   }
   .wrapper-iframe {
     width: 38.8rem;

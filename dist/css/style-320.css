@@ -178,10 +178,15 @@ svg {
   color: var(--gray-dark);
 }
 .content-style ol li ol li {
-  padding-left: 2.8rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 .content-style ol li ol li::before {
   content: counters(section, ".") "";
+  margin-right: 1.2rem;
+  display: block;
+  position: static;
 }
 .content-style li {
   position: relative;
