@@ -9,36 +9,70 @@
     @@include('html/header-2.html',{})
     <!-- НАЧАЛО СЕКЦИИ КОНТАКТЫ -->
     <section class="contacts">
-        <div class="title-wrapper">
-            <h1>Контакты</h1>
-        </div>
-        <div class="desc">
-            <p>Позвоните нам по телефону или напишите в чат. Мы стараемся быть всегда на связи.</p>
-        </div>
-        <div class="info">
-            <div class="info__item">
-                <a href="tel:+79876543210" class="info__phone">+7 (987) 654-32-10</a>
+        <div class="wrapper">
+            <div class="title-wrapper">
+                <h1>Контакты</h1>
             </div>
-            <div class="info__item">
-                <div class="info__title">Наш адрес:</div>
-                <div class="info__text">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
+            <div class="desc letter-spacing">
+                <p>Позвоните нам по телефону или напишите в чат. Мы стараемся быть всегда на связи.</p>
             </div>
-            <div class="info__item">
-                <div class="info__title">Инн ООО</div>
-                <div class="info__text">Пиво, сочетающее в себе все преимущества легких сортов пива. Хорошо утоляет
-                    жажду. 123456789</div>
-            </div>
-        </div>
-        <div class="feedback">
-            <div class="feedback__map">
-                <div class="feedback__map-ymaps" id="map" data-coords="56.320788205890956, 44.00700162626882">
+            <div class="info">
+                <div class="info__item">
+                    <a href="tel:+79876543210" class="info__phone">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#phone"></use>
+                        </svg>
+                        <span>+7 (987) 654-32-10</span>
+                    </a>
+                </div>
+                <div class="info__item">
+                    <div class="info__title">Наш адрес:</div>
+                    <div class="info__text letter-spacing">ул. Центральный проезд Хорошёвского Серебряного Бора, 10
+                    </div>
+                </div>
+                <div class="info__item">
+                    <div class="info__title">Инн ООО</div>
+                    <div class="info__text letter-spacing">Пиво, сочетающее в себе все преимущества легких сортов пива.
+                        Хорошо утоляет
+                        жажду. 123456789</div>
                 </div>
             </div>
-            <div class="feedback__form">
-                <h2>Связаться с нами</h2>
-                <form action="">
-
-                </form>
+            <div class="feedback">
+                <div class="feedback__map">
+                    <div class="ymaps" id="map" data-coords="56.320788205890956, 44.00700162626882">
+                    </div>
+                </div>
+                <div class="feedback__form">
+                    <h2>Связаться с нами</h2>
+                    <form action="">
+                        <div class="feedback__wrapper">
+                            <div class="input-wrapper">
+                                <input class="form-input" type="text" id="contactsEmail">
+                                <label for="contactsEmail" class="label-transform">E-mail <span>*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="form-input input-phone" type="text" id="contactsPhone">
+                                <label for="contactsPhone" class="label-transform">Телефон <span>*</span></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <textarea class="form-input" type="text" id="contactsEmail"></textarea>
+                                <label for="contactsEmail" class="label-transform">Комментарий <span>*</span></label>
+                            </div>
+                        </div>
+                        <div class="form-file">
+                            <div class="form-file__text">Загрузите файлы, до 20 файлов (общий размер - до 20 МБ)</div>
+                            <a href="javascript:void(0)" download>
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#file"></use>
+                                </svg>
+                                <span>Загрузить файл</span>
+                            </a>
+                        </div>
+                        <div class="form__submit-wrapper">
+                            <input type="submit" value="Отправить" class="btn-blue">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

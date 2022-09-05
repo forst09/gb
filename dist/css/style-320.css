@@ -57,6 +57,10 @@ svg {
   padding: 0 1.6rem;
 }
 
+.ymaps {
+  height: 100%;
+}
+
 /*КОНТЕНТНЫЕ СТИЛИ*/
 .content-style h1 {
   margin-bottom: 2.4rem;
@@ -307,6 +311,14 @@ svg {
   display: block;
 }
 
+.desc {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: var(--gray-dark);
+  margin-bottom: 1.6rem;
+}
+
 .display-none {
   display: none;
 }
@@ -323,6 +335,13 @@ svg {
 
 .input-wrapper {
   position: relative;
+}
+.input-wrapper:hover .form-input {
+  box-shadow: 0 0 0 2px var(--gray-medium);
+}
+
+.input-wrapper.active .form-input {
+  box-shadow: 0 0 0 2px var(--gray-medium);
 }
 
 .form-input,
@@ -341,13 +360,48 @@ svg {
 }
 
 .form-input {
-  border: 1px solid var(--gray-medium);
+  border: none;
+  box-shadow: 0 0 0 1px var(--gray-medium);
   padding: 1rem 1.6rem;
   max-height: 4rem;
+  transition: all 0.3s ease;
 }
 .form-input::placeholder {
   color: var(--gray-medium);
   font-weight: 500;
+}
+
+.label-transform {
+  position: absolute;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-family: "Manrope";
+  color: var(--gray-medium);
+  font-weight: 500;
+  left: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+}
+.label-transform::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 0.8rem);
+  height: 100%;
+  background-color: var(--white);
+  z-index: -1;
+}
+.label-transform span {
+  font-weight: 400;
+  color: var(--gray-dark);
+}
+
+.label-transform.active {
+  transform: translateY(-150%);
 }
 
 .label-eye {
@@ -364,9 +418,13 @@ svg {
   height: 100%;
   object-fit: contain;
   stroke: var(--gray-medium);
+  transition: stroke 0.3s ease;
 }
 .label-eye .eye-close {
   display: none;
+}
+.label-eye:hover svg {
+  stroke: var(--gray-dark);
 }
 
 .label-eye.active .eye-close {
@@ -1153,10 +1211,6 @@ svg {
   overflow: hidden;
 }
 
-.map-view__map-ymaps {
-  height: 100%;
-}
-
 /*КОНЕЦ СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 /*######################################################################################################################################*/
 /*АВТОРИЗАЦИЯ*/
@@ -1193,3 +1247,65 @@ svg {
 }
 
 /*КОНЕЦ СТИЛЕЙ АВТОРИЗАЦИЯ*/
+/*######################################################################################################################################*/
+/*КОНТАКТЫ*/
+/*НАЧАЛО СТИЛЕЙ КОНТАКТЫ*/
+.info__item {
+  padding: 1.6rem 0;
+  position: relative;
+}
+.info__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--gray-extralight);
+}
+.info__item:nth-of-type(1) {
+  padding-top: 0;
+}
+
+.info__phone {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem;
+}
+.info__phone svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--gray-dark);
+  margin-right: 0.8rem;
+}
+.info__phone span {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  color: var(--gray-dark);
+}
+
+.info__title,
+.info__text {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.info__title {
+  color: var(--gray-dark);
+  margin-bottom: 0.6rem;
+}
+
+.feedback {
+  margin-top: 2.4rem;
+}
+
+.feedback__map {
+  width: 100%;
+  height: 28.4rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+/*КОНЕЦ СТИЛЕЙ КОНТАКТЫ*/
