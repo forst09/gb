@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title": "Контакты"
+})
+
+<body>
+    @@include('html/header-2.html',{})
+    <!-- НАЧАЛО СЕКЦИИ КОНТАКТЫ -->
+    <section class="contacts">
+        <div class="title-wrapper">
+            <h1>Контакты</h1>
+        </div>
+        <div class="desc">
+            <p>Позвоните нам по телефону или напишите в чат. Мы стараемся быть всегда на связи.</p>
+        </div>
+        <div class="info">
+            <div class="info__item">
+                <a href="tel:+79876543210" class="info__phone">+7 (987) 654-32-10</a>
+            </div>
+            <div class="info__item">
+                <div class="info__title">Наш адрес:</div>
+                <div class="info__text">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
+            </div>
+            <div class="info__item">
+                <div class="info__title">Инн ООО</div>
+                <div class="info__text">Пиво, сочетающее в себе все преимущества легких сортов пива. Хорошо утоляет
+                    жажду. 123456789</div>
+            </div>
+        </div>
+        <div class="feedback">
+            <div class="feedback__map">
+                <div class="feedback__map-ymaps" id="map" data-coords="56.320788205890956, 44.00700162626882">
+                </div>
+            </div>
+            <div class="feedback__form">
+                <h2>Связаться с нами</h2>
+                <form action="">
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- КОНЕЦ СЕКЦИИ КОНТАКТЫ -->
+    @@include('html/footer.html',{})
+    @@include('html/tabbar.html',{})
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/inputmask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
