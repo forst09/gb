@@ -22,6 +22,11 @@
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
+  /*КОНТЕНТНЫЕ СТИЛИ 1500*/
+  .content-style {
+    margin: 0 auto;
+  }
+  /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 1500*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1500*/
   .header {
     padding: 2.4rem 0 1.6rem;
