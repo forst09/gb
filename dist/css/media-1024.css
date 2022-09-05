@@ -96,6 +96,9 @@
     left: 6.4rem;
   }
   /*КОНТЕНТНЫЕ СТИЛИ 1024*/
+  .content-style {
+    max-width: 72.1rem;
+  }
   .content-style h1 {
     margin-bottom: 3.2rem;
   }
@@ -142,20 +145,6 @@
   }
   .content-style tr td {
     padding: 1rem 0 1rem 3.2rem;
-  }
-  .content-style p,
-.content-style h1,
-.content-style h2,
-.content-style h3,
-.content-style h4,
-.content-style h5,
-.content-style h6,
-.content-style ul,
-.content-style ol,
-.content-style a,
-.content-style b,
-.content-style i {
-    max-width: 72.1rem;
   }
   .wrapper-iframe {
     width: 58.6rem;
