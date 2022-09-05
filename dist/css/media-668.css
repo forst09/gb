@@ -25,12 +25,6 @@
     font-size: 1.6rem;
     line-height: 2.2rem;
   }
-  .input-wrapper:hover .form-input::placeholder {
-    color: var(--gray);
-  }
-  .input-wrapper:hover .form-input__label svg {
-    stroke: var(--gray-dark);
-  }
   .input-search {
     padding-left: 4.2rem;
   }

@@ -34,18 +34,6 @@
         line-height: 2.2rem;
     }
 
-    .input-wrapper {
-        &:hover {
-            .form-input::placeholder {
-                color: var(--gray);
-            }
-
-            .form-input__label svg {
-                stroke: var(--gray-dark);
-            }
-        }
-    }
-
     .input-search {
         padding-left: 4.2rem;
     }

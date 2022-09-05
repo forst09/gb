@@ -120,6 +120,7 @@ svg {
   position: relative;
   color: var(--black-text);
   display: inline-block;
+  transition: color 0.3s ease;
 }
 .content-style a::after {
   content: "";
@@ -129,7 +130,19 @@ svg {
   width: 100%;
   height: 1px;
   background-color: var(--black-text);
-  transition: width 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.content-style a:hover {
+  color: var(--gray-dark);
+}
+.content-style a:hover::after {
+  background-color: var(--gray-dark);
+}
+.content-style a:active, .content-style a:focus, .content-style a:focus-within {
+  color: var(--gray);
+}
+.content-style a:active::after, .content-style a:focus::after, .content-style a:focus-within::after {
+  background-color: var(--gray);
 }
 .content-style ul,
 .content-style ol {
@@ -496,6 +509,12 @@ svg {
   bottom: -1.8rem;
   box-shadow: 0px 10px 30px rgba(56, 58, 61, 0.05);
 }
+.header__search .input-wrapper:hover .search-input::placeholder {
+  color: var(--gray);
+}
+.header__search .input-wrapper:hover .form-input__label svg {
+  stroke: var(--gray-dark);
+}
 
 .place {
   color: var(--white);
@@ -538,6 +557,7 @@ svg {
 /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ*/
 .header-white {
   min-height: unset;
+  background-color: var(--white);
   margin-bottom: 2.4rem;
 }
 .header-white .header-container {
@@ -570,12 +590,11 @@ svg {
 .header-white .header__search .form-input__label svg {
   stroke: var(--black-blue);
 }
-
-/*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ*/
-.header-white {
-  background-color: var(--white);
+.header-white .place {
+  display: none;
 }
 
+/*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ*/
 /*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
 .footer {
   margin-top: auto;
