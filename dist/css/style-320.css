@@ -45,6 +45,14 @@ h1 {
   letter-spacing: 0.02em;
 }
 
+.title {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  margin-bottom: 1.6rem;
+  font-weight: 800;
+  color: var(--black-text);
+}
+
 svg {
   fill: transparent;
 }
@@ -59,6 +67,19 @@ svg {
 
 .ymaps {
   height: 100%;
+}
+
+.btn-blue {
+  border: none;
+  background-color: var(--black-blue);
+  color: var(--white);
+  border-radius: 1.2rem;
+  padding: 0.9rem;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-family: "Manrope";
 }
 
 /*КОНТЕНТНЫЕ СТИЛИ*/
@@ -1299,6 +1320,9 @@ svg {
 
 .feedback {
   margin-top: 2.4rem;
+  display: flex;
+  row-gap: 3.2rem;
+  flex-direction: column;
 }
 
 .feedback__map {
@@ -1306,6 +1330,59 @@ svg {
   height: 28.4rem;
   border-radius: 1.2rem;
   overflow: hidden;
+}
+
+.feedback__form {
+  max-width: 28.8rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.feedback__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 28.8rem);
+  grid-row-gap: 1.9rem;
+}
+
+.form-file {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+
+.form-file__text {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--gray-medium);
+}
+
+.link-download {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.6rem;
+  background-color: var(--white);
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  border-radius: 1.2rem;
+  width: fit-content;
+}
+.link-download svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke: var(--gray-dark);
+  margin-right: 1.6rem;
+}
+.link-download span {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: var(--gray-dark);
+}
+
+.form__submit-wrapper {
+  margin-top: 2.4rem;
+  text-align: center;
 }
 
 /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ*/

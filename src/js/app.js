@@ -418,12 +418,12 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "img/icons/map-geo.svg",
+                                iconImageHref: "img/logos/gb-logo-map.svg",
                                 // Размеры метки.
-                                iconImageSize: [82, 51],
+                                iconImageSize: [60, 66],
                                 // Смещение левого верхнего угла иконки относительно
                                 // её "ножки" (точки привязки).
-                                iconImageOffset: [-48, -51],
+                                iconImageOffset: [-30, -66],
 
                                 // Макет содержимого.
                                 iconContentLayout: MyIconContentLayout,
