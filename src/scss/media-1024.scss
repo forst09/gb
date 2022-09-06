@@ -421,7 +421,7 @@
 
     /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1024*/
     .footer {
-        // margin-top: 4.8rem;
+        margin-top: 4.8rem;
         padding: 3.2rem 0;
     }
 
@@ -888,6 +888,12 @@
     .feedback__map {
         max-width: 41.5rem;
         height: 45rem;
+    }
+
+    .info__item {
+        &:nth-of-type(1) {
+            padding-bottom: 2.4rem;
+        }
     }
 
     /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1024*/

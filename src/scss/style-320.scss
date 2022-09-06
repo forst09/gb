@@ -27,9 +27,9 @@ body {
     overflow-x: hidden;
     position: relative;
     padding-bottom: 5.6rem;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // height: 100vh;
 }
 
 section {
@@ -391,7 +391,7 @@ svg {
     line-height: 2rem;
     font-weight: 500;
     color: var(--gray-dark);
-    margin-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
 }
 
 .display-none {
@@ -628,11 +628,11 @@ svg {
 }
 
 /*ЕСЛИ НУЖНО ПРИЖАТЬ ФУТЕР К НИЗУ СТРАНИЦЫ - НА BODY - .body-content, НА ОБЕРТКУ ДЛЯ КОНТЕНТА - .content, НА HTML - .html-content*/
-.content {
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 5.6rem);
-}
+// .content {
+//     display: flex;
+//     flex-direction: column;
+//     height: calc(100vh - 5.6rem);
+// }
 
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
 .header {
@@ -778,8 +778,8 @@ svg {
 
 /*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
 .footer {
-    // margin-top: 2.4rem;
-    margin-top: auto;
+    margin-top: 2.4rem;
+    // margin-top: auto;
     padding: 1.6rem 0;
     box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
     border-radius: 1.2rem;
@@ -1517,7 +1517,7 @@ svg {
 
 .feedback__wrapper {
     display: grid;
-    grid-template-columns: repeat(1, 28.8rem);
+    grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 1.9rem;
 }
 

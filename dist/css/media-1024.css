@@ -318,6 +318,7 @@
   /*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ 1024*/
   /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1024*/
   .footer {
+    margin-top: 4.8rem;
     padding: 3.2rem 0;
   }
   .footer__socials-links {
@@ -684,6 +685,9 @@
   .feedback__map {
     max-width: 41.5rem;
     height: 45rem;
+  }
+  .info__item:nth-of-type(1) {
+    padding-bottom: 2.4rem;
   }
   /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1024*/
 }
