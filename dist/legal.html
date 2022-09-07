@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style-320.css">
+    <link rel="stylesheet" href="css/media-668.css">
+    <link rel="stylesheet" href="css/media-1024.css">
+    <link rel="stylesheet" href="css/media-1500.css">
+    <title>Юридическая информация</title>
+</head>
+
+<body>
+    <!-- НАЧАЛО ШАПКИ С КНОПКОЙ КАТАЛОГ-->
+<header class="header header-white">
+    <div class="wrapper">
+        <div class="header-container">
+            <a class="back" href="javascript:void(0)">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#back"></use>
+                </svg>
+            </a>
+            <a href="#" class="header__logo">
+                <picture>
+                    <source srcset="img/logos/gb-logo.svg" type="image/svg+xml" media="(min-width: 1024px)">
+                    <source srcset="img/logos/gb-logo-long.svg" type="image/svg+xml" media="(min-width: 0px)">
+                    <img src="img/logos/gb-logo-long.svg" alt="logo">
+                </picture>
+            </a>
+            <div class="search header__search">
+                <form action="">
+                    <div class="input-wrapper">
+                        <input type="text" class="search-input" id="searchHeader" placeholder="Поиск по каталогу">
+                        <label for="searchHeader" class="form-input__label">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#search"></use>
+                            </svg>
+                        </label>
+                        <input type="submit" value="Найти"
+                            class="input-submit display-none letter-spacing transition-show">
+                    </div>
+                </form>
+            </div>
+            <a class="place" href="javascript:void(0)">
+                <div class="place__text letter-spacing">Вы находитесь:</div>
+                <div class="place__address ellipsis letter-spacing">ул. Центральный проезд Хорошёвско, 3А</div>
+            </a>
+            <ul class="header__icons display-none">
+                <li class="header__icons-item">
+                    <a href="javascript:void(0)">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#box"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__icons-item">
+                    <a href="javascript:void(0)">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#cart"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__icons-item">
+                    <a href="javascript:void(0)">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#heart"></use>
+                        </svg>
+                    </a>
+                </li>
+                <!-- ДОБАВИТЬ .header__icons-item--personal-unauthorized, ЕСЛИ ПОЛЬЗОВАТЕЛЬ НЕАВТОРИЗОВАН -->
+                <li class="header__icons-item header__icons-item--personal">
+                    <a href="javascript:void(0)">
+                        <svg class="icon-personal" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 21V19C19 17.9391 18.5786 16.9217 17.8284 16.1716C17.0783 15.4214 16.0609 15 15 15H9C7.93913 15 6.92172 15.4214 6.17157 16.1716C5.42143 16.9217 5 17.9391 5 19V21"
+                                stroke="#F4A519" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path class="icon-personal__head"
+                                d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                                stroke="#F4A519" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <div class="filters__dots-window-wrapper">
+                        <div class="filters__dots-window">
+                            <a class="filters__dots-window-item letter-spacing" href="javascript:void(0)">Личные
+                                данные</a>
+                            <a class="filters__dots-window-item letter-spacing" href="javascript:void(0)">Избранные
+                                точки</a>
+                            <a class="filters__dots-window-item letter-spacing" href="javascript:void(0)">Заказы</a>
+                            <a class="filters__dots-window-item letter-spacing"
+                                href="javascript:void(0)">Безопасность</a>
+                            <a class="filters__dots-window-item letter-spacing header__icons-item-logout"
+                                href="javascript:void(0)">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#logout"></use>
+                                </svg>
+                                <span>Выйти</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- КОНЕЦ ШАПКИ -->
+
+    <section class="legal">
+        <div class="wrapper">
+            <h1>Юридическая информация</h1>
+            <div class="content-style">
+                <ol>
+                    <li>
+                        <h2>Термины и определения</h2>
+                        <ol>
+                            <li>
+                                <p>В целях настоящего документа нижеприведенные термины используются в следующем
+                                    значении:</p>
+                                <p>Приложение GetBeer — программа «GetBeer» для мобильных устройств, предоставляемая
+                                    Пользователям на условиях Лицензионного соглашения на использование программы
+                                    «GetBeer» для мобильных устройств, выложенного в открытом доступе в сети Интернет по
+                                    адресу: </p>
+                                <br>
+                                <a href="javascropt:void(0)">https://getbeer.ru</a>
+                            </li>
+                            <li>
+                                <p>В Пользовательском соглашении могут быть использованы термины, не определенные в п.
+                                    1.1 Пользовательского соглашения. В этом случае толкование такого термина
+                                    производится в соответствии с текстом Пользовательского соглашения. В случае
+                                    отсутствия однозначного толкования термина в тексте Пользовательского соглашения
+                                    следует руководствоваться толкованием термина, определенным: в первую очередь —
+                                    законодательством РФ, во вторую очередь — на Сервисе, затем — сложившимся
+                                    (общеупотребимым) в сети Интернет.</p>
+                            </li>
+                            <li>
+                                <p>Для целей настоящего документа все условия и положения, предусмотренные для
+                                    Доставщика,
+                                    Доставки, Ресторана, применяются соответственно для Сборщика, Сборки и Магазина,
+                                    если
+                                    иное не предусмотрено настоящим документом, не вытекает из существа отношений или
+                                    здравого смысла.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h2>Общие положения</h2>
+                        <ol>
+                            <li>
+                                <p>Настоящее Пользовательское соглашение представляет собой предложение Яндекса
+                                    Пользователю использовать Сервис GetBeer.</p>
+                            </li>
+                            <li>
+                                <p>Использование Пользователем Сервиса регулируется настоящим Пользовательским
+                                    соглашением,
+                                    а также:</p>
+                                <ol>
+                                    <li>Условиями использования Промокодов Сервиса,
+                                        а также документами ООО «ЯНДЕКС» (ОГРН: 1027700229193):
+                                        <br>
+                                        <a href="javascript:void(0)">https://getbeer.ru/legal</a>
+                                    </li>
+                                    <li>
+                                        <p>Пользовательским соглашением сервисов Яндекса</p>
+                                    </li>
+                                    <li>
+                                        <p>Политикой конфиденциальности</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Для целей настоящего документа все условия и положения, предусмотренные для
+                                    Доставщика, Доставки, Ресторана, применяются соответственно для Сборщика, Сборки и
+                                    Магазина, если иное не предусмотрено настоящим документом, не вытекает из существа
+                                    отношений или здравого смысла.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
