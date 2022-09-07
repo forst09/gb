@@ -689,6 +689,16 @@
   .info__item:nth-of-type(1) {
     padding-bottom: 2.4rem;
   }
+  .feedback {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .feedback__map {
+    height: 43.2rem;
+  }
+  .feedback__form {
+    margin: 0;
+  }
   /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/

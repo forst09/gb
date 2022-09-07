@@ -42,6 +42,11 @@ h1 {
   letter-spacing: 0.02em;
 }
 
+textarea {
+  resize: none;
+  min-height: 10rem;
+}
+
 .title {
   font-size: 1.8rem;
   line-height: 2.2rem;
@@ -352,10 +357,14 @@ svg {
 }
 
 .input-wrapper {
+  padding-top: 1.1rem;
   position: relative;
 }
 .input-wrapper:hover .form-input {
   box-shadow: 0 0 0 2px var(--gray-medium);
+}
+.input-wrapper + .input-wrapper {
+  margin-top: 0.8rem;
 }
 
 .input-wrapper.active .form-input {
@@ -397,8 +406,7 @@ svg {
   color: var(--gray-medium);
   font-weight: 500;
   left: 1.6rem;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 2.1rem;
   pointer-events: none;
   transition: transform 0.3s ease-in-out;
 }
@@ -419,7 +427,7 @@ svg {
 }
 
 .label-transform.active {
-  transform: translateY(-150%);
+  transform: translateY(-120%);
 }
 
 .label-eye {
@@ -429,7 +437,7 @@ svg {
   position: absolute;
   right: 1.6rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% + 0.55rem));
 }
 .label-eye svg {
   width: 100%;
@@ -1231,7 +1239,6 @@ svg {
   display: grid;
   grid-template-columns: repeat(1, 28.8rem);
   justify-content: center;
-  grid-row-gap: 1.9rem;
 }
 
 .authorization__submit-wrapper {
@@ -1332,7 +1339,6 @@ svg {
 .feedback__wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-row-gap: 1.9rem;
 }
 
 .form-file {

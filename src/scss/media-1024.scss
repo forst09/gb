@@ -896,6 +896,19 @@
         }
     }
 
+    .feedback {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .feedback__map {
+        height: 43.2rem;
+    }
+
+    .feedback__form {
+        margin: 0;
+    }
+
     /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 1024*/
 }
 
