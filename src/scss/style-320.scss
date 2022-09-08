@@ -1118,11 +1118,14 @@ svg {
 /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА*/
 
 .btn-text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.8rem;
     font-weight: 600;
     padding: 0.8rem 1.6rem;
     display: inline-block;
+    border: none;
+    background-color: transparent;
+    font-family: "Manrope";
     border-radius: 1.2rem;
 
     &--orange {
@@ -1493,16 +1496,6 @@ svg {
 .btn-text--orange-wrapper {
     margin-top: 1.6rem;
     text-align: center;
-}
-
-.btn-text--orange,
-.btn-text--black {
-    border: none;
-    background-color: transparent;
-    font-family: "Manrope";
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    font-weight: 600;
 }
 
 /*КОНЕЦ СТИЛЕЙ АВТОРИЗАЦИЯ*/

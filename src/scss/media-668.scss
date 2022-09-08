@@ -199,9 +199,6 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ ТАББАРА 668*/
-    .btn-text {
-        font-size: 1.4rem;
-    }
 
     /*ВСПЛЫВАШКИ 668*/
     .block-swipe {
@@ -212,7 +209,30 @@
         padding-bottom: 2.4rem;
     }
 
+    .block-swipe-modal {
+        height: 100vh;
+    }
+
+    .modal-title {
+        margin-bottom: 2.4rem;
+    }
+
+    .modal-close {
+        top: 1.6rem;
+        right: 4.4rem;
+
+        svg {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
     /*КОНЕЦ ВСПЛЫВАШЕК 668*/
+
+    .text {
+        margin-top: 3.2rem;
+        max-width: 39.9rem;
+    }
 
     /*ВСПЛЫВАШКА ВЫБОР ГОРОДА 668*/
     .choice-city__text,
@@ -309,7 +329,7 @@
         grid-template-columns: repeat(1, 40.2rem);
     }
 
-    .btn-text--orange {
+    .btn-text--big {
         font-size: 1.6rem;
         line-height: 2.2rem;
     }
@@ -330,6 +350,11 @@
     }
 
     /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ 668*/
+
+    /*###############################################################################################################################*/
+    /*МОДАЛКА ЗАКАЗ СОЗДАН 668*/
+
+    /*КОНЕЦ МОДАЛКА ЗАКАЗ СОЗДАН 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
