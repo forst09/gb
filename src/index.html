@@ -963,9 +963,9 @@
     <!-- КОНЕЦ ВСПЛЫВАШКА ФИЛЬТР НА МОБИЛКАХ -->
 
     <!-- ВСПЛЫВАШКА ВЫБОР ГОРОДА -->
-    <div class="block-swipe__background block-swipe__background-top block-swipe__background-city active">
+    <div class="block-swipe__background block-swipe__background-top block-swipe__background-city">
     </div>
-    <div class="block-swipe block-swipe-top block-swipe-city active">
+    <div class="block-swipe block-swipe-top block-swipe-city">
         <div class="wrapper">
             <div class="choice-city__text letter-spacing">Вы находитесь:</div>
             <div class="choice-city__address letter-spacing">ул. Центральный проезд Хорошёвского Серебряного Бора,
@@ -978,6 +978,25 @@
         <div class="block-swipe__btn block-swipe__btn--top choice-city__btn"></div>
     </div>
     <!-- КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА -->
+
+    <!-- ВСПЛЫВАШКА ЗАКАЗ СОЗДАН -->
+    <div class="block-swipe__background block-swipe__background-full block-swipe__background-order-created active">
+    </div>
+    <div class="block-swipe block-swipe-modal block-swipe-order-created active">
+        <div class="wrapper">
+            <h2 class="modal-title">Заказ создан!</h2>
+            <div class="order-status">
+                <div class="order-status__icons">
+
+                </div>
+            </div>
+            <div class="modal__buttons">
+                <a class="btn-text btn-text--black letter-spacing" href="javascript:void(0)">Детали заказа</a>
+                <a class="btn-text btn-text--orange letter-spacing" href="javascript:void(0)">Оплатить заказ</a>
+            </div>
+        </div>
+    </div>
+    <!-- КОНЕЦ ВСПЛЫВАШКА ЗАКАЗ СОЗДАН -->
 
     @@include('html/footer.html',{})
 

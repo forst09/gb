@@ -1147,6 +1147,20 @@ svg {
     }
 }
 
+@keyframes phone {
+    33% {
+        transform: rotate(15deg);
+    }
+
+    66% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -1499,6 +1513,7 @@ svg {
         height: 1.6rem;
         fill: var(--gray-dark);
         margin-right: 0.8rem;
+        transition: fill 0.3s ease;
     }
 
     span {
@@ -1506,6 +1521,34 @@ svg {
         font-size: 1.6rem;
         line-height: 1.8rem;
         color: var(--gray-dark);
+        transition: color 0.3s ease;
+    }
+
+    &:hover {
+        svg {
+            fill: var(--gray);
+
+            use {
+                transform-origin: center center;
+                animation: phone 0.8s;
+            }
+        }
+
+        span {
+            color: var(--gray);
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        svg {
+            fill: var(--black-blue);
+        }
+
+        span {
+            color: var(--black-blue);
+        }
     }
 }
 

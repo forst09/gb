@@ -990,6 +990,17 @@ svg {
   transform: scale(3);
 }
 
+@keyframes phone {
+  33% {
+    transform: rotate(15deg);
+  }
+  66% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {
@@ -1308,12 +1319,30 @@ svg {
   height: 1.6rem;
   fill: var(--gray-dark);
   margin-right: 0.8rem;
+  transition: fill 0.3s ease;
 }
 .info__phone span {
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.8rem;
   color: var(--gray-dark);
+  transition: color 0.3s ease;
+}
+.info__phone:hover svg {
+  fill: var(--gray);
+}
+.info__phone:hover svg use {
+  transform-origin: center center;
+  animation: phone 0.8s;
+}
+.info__phone:hover span {
+  color: var(--gray);
+}
+.info__phone:active svg, .info__phone:focus svg, .info__phone:focus-within svg {
+  fill: var(--black-blue);
+}
+.info__phone:active span, .info__phone:focus span, .info__phone:focus-within span {
+  color: var(--black-blue);
 }
 
 .info__title,
