@@ -193,9 +193,9 @@
         <path d="M6 12H6.01M18 12H18.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
     <symbol viewBox="0 0 24 24" id="complete">
-        <path d="M20 6L9 17L4 12" stroke="#C2CFE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M20 6L9 17L4 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
-    <symbol viewBox="0 0 24 24" id="complete">
+    <symbol viewBox="0 0 24 24" id="clock">
         <path
             d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -212,5 +212,13 @@
         <path
             d="M20 13.5V16.87C20.0004 17.2474 19.8971 17.6178 19.7013 17.9405C19.5056 18.2632 19.2249 18.5259 18.89 18.7L12.89 21.78C12.6151 21.9229 12.3098 21.9975 12 21.9975C11.6902 21.9975 11.3849 21.9229 11.11 21.78L5.11 18.7C4.77508 18.5259 4.49443 18.2632 4.29868 17.9405C4.10293 17.6178 3.99961 17.2474 4 16.87V13.5"
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="close">
+        <path d="M22 2L2 22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M2 2L22 22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="arrow-small">
+        <path
+            d="M10.0463 16.4465C9.85109 16.6418 9.85109 16.9583 10.0463 17.1536C10.2416 17.3489 10.5582 17.3489 10.7535 17.1536L10.0463 16.4465ZM15.1999 12L15.5535 12.3536L15.907 12L15.5535 11.6465L15.1999 12ZM10.7535 6.8465C10.5582 6.65123 10.2416 6.65123 10.0463 6.8465C9.85109 7.04176 9.85109 7.35834 10.0463 7.5536L10.7535 6.8465ZM10.7535 17.1536L15.5535 12.3536L14.8463 11.6465L10.0463 16.4465L10.7535 17.1536ZM15.5535 11.6465L10.7535 6.8465L10.0463 7.5536L14.8463 12.3536L15.5535 11.6465Z" />
     </symbol>
 </svg>

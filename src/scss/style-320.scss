@@ -1056,6 +1056,23 @@ svg {
     }
 }
 
+.block-swipe-modal {
+    width: 100vw;
+    height: 100vh;
+    border-radius: unset;
+    text-align: center;
+    z-index: 1001;
+    padding: 0;
+}
+
+.modal-title {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    color: var(--black-text);
+    margin-bottom: 3.5rem;
+    font-weight: 800;
+}
+
 /*КОНЕЦ ВСПЛЫВАШЕК */
 
 /*ВСПЛЫВАШКА ВЫБОР ГОРОДА*/
@@ -1113,18 +1130,40 @@ svg {
         transition: box-shadow 0.3s ease;
 
         &:hover {
-            box-shadow: 0px 4px 15px rgba(226, 236, 249, 0.6);
+            box-shadow: 0px 5px 30px rgba(226, 236, 249, 0.8);
         }
 
         &:active,
         &:focus,
         &:focus-within {
-            box-shadow: inset 0px 4px 10px rgba(226, 236, 249, 0.3);
+            box-shadow: inset 0px 4px 10px rgba(226, 236, 249, 0.5);
         }
+    }
+
+    &--black {
+        color: var(--black-blue);
     }
 
     &+& {
         margin-left: 3.9rem;
+    }
+}
+
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-close {
+    position: absolute;
+    right: 1.8rem;
+    top: 1.8rem;
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        stroke: var(--gray-medium);
     }
 }
 
@@ -1456,27 +1495,14 @@ svg {
     text-align: center;
 }
 
-.btn-text--orange {
+.btn-text--orange,
+.btn-text--black {
     border: none;
     background-color: transparent;
     font-family: "Manrope";
     font-size: 1.4rem;
     line-height: 1.8rem;
     font-weight: 600;
-    color: var(--orange);
-    padding: 0.8rem 1.6rem;
-    border-radius: 1.2rem;
-    transition: box-shadow 0.3s ease;
-
-    &:hover {
-        box-shadow: 0px 5px 30px rgba(226, 236, 249, 0.8);
-    }
-
-    &:active,
-    &:focus,
-    &:focus-within {
-        box-shadow: inset 0px 4px 10px rgba(226, 236, 249, 0.5);
-    }
 }
 
 /*КОНЕЦ СТИЛЕЙ АВТОРИЗАЦИЯ*/
@@ -1662,3 +1688,94 @@ svg {
 }
 
 /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ*/
+
+/*###############################################################################################################################*/
+/*МОДАЛКА ЗАКАЗ СОЗДАН*/
+.order-status__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 27.2rem;
+    margin: 0 auto;
+}
+
+.text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: var(--black-text);
+    max-width: 28.7rem;
+    margin: 3.9rem auto 0;
+}
+
+.modal__buttons {
+    margin-top: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-text+.btn-text {
+        margin-left: 1rem;
+    }
+}
+
+.order-status__icons-item {
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid var(--gray-extralight);
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        stroke: var(--gray-medium);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url('../img/icons/arrow-small-grey.svg');
+        background-size: 2.4rem 2.4rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        left: calc(100% + 0.8rem);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &:nth-last-of-type(1) {
+        &::after {
+            content: none;
+        }
+    }
+}
+
+.order-status__icons-item.active {
+    background-color: var(--orange-light);
+    border: none;
+
+    &::after {
+        background-image: url('../img/icons/arrow-small.svg');
+    }
+
+    svg {
+        stroke: var(--white);
+    }
+}
+
+.order-status__text {
+    margin-top: 1.6rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--gray-dark);
+}
+
+/*КОНЕЦ МОДАЛКА ЗАКАЗ СОЗДАН*/
