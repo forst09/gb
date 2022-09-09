@@ -1054,9 +1054,8 @@
     <!-- КОНЕЦ ВСПЛЫВАШКА ВЫЙТИ ИЗ ПРОФИЛЯ -->
 
     <!-- ВСПЛЫВАШКА СБРОС КОРЗИНЫ -->
-    <div class="block-swipe__background block-swipe__background-cart-cancel active">
-    </div>
-    <div class="block-swipe block-swipe-cart-cancel block-swipe-hybrid active">
+    <div class="block-swipe__background block-swipe__background-cart-cancel"></div>
+    <div class="block-swipe block-swipe-cart-cancel block-swipe-hybrid">
         <div class="wrapper vertical-center">
             <h2 class="modal-title letter-spacing">Оформить заказ из другой точки</h2>
             <div class="text">
@@ -1078,6 +1077,31 @@
         <div class="block-swipe__btn block-swipe__btn cart-cancel__btn"></div>
     </div>
     <!-- КОНЕЦ ВСПЛЫВАШКА СБРОС КОРЗИНЫ -->
+
+    <!-- ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ! -->
+    <div class="block-swipe__background block-swipe__background-thanks active">
+    </div>
+    <div class="block-swipe block-swipe-modal block-swipe-thanks active">
+        <div class="wrapper vertical-center">
+            <div class="checkmark">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#checkmark"></use>
+                </svg>
+            </div>
+            <h2 class="modal-title letter-spacing">Спасибо за обращение!</h2>
+            <div class="text">
+                <p>
+                    Ваше обращение принято в обработку. Менеджер скоро свяжется с вами для уточнения деталей.
+                </p>
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="modal-close">
+            <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+    </div>
+    <!-- КОНЕЦ ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ! -->
 
     @@include('html/footer.html',{})
 

@@ -767,6 +767,9 @@ svg {
   background-color: var(--white);
   z-index: 1000;
 }
+.tabbar--noradius {
+  border-radius: unset;
+}
 
 .tabbar__container {
   padding: 0.8rem 0;
@@ -787,6 +790,10 @@ svg {
   stroke: var(--gray-dark);
   width: 2.4rem;
   height: 2.4rem;
+}
+
+.tabbar__item.active svg {
+  stroke: var(--orange);
 }
 
 .tabbar__item-quantity span {
@@ -1039,6 +1046,13 @@ svg {
   width: 2.4rem;
   height: 2.4rem;
   stroke: var(--gray-medium);
+  transition: stroke 0.3s ease;
+}
+.modal-close:hover svg {
+  stroke: var(--gray-dark);
+}
+.modal-close:active, .modal-close:focus, .modal-close:focus-within {
+  stroke: var(--gray);
 }
 
 /*ВСПЛЫВАШКА СБРОС КОРЗИНЫ*/
@@ -1056,6 +1070,30 @@ svg {
 }
 
 /*КОНЕЦ ВСПЛЫВАШКИ, КОТОРЫЕ НА МОБИЛКАХ ЕЗДЯТ, А НА ПК МОДАЛКИ*/
+/*ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ*/
+.checkmark {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 3.5rem;
+  animation: checkmark 1.5s infinite;
+  transition: transform 0.3s ease;
+}
+.checkmark svg {
+  width: 4rem;
+  height: 4rem;
+  stroke: var(--green);
+}
+
+.block-swipe-thanks .text {
+  margin-top: 0;
+}
+
+/*КОНЕЦ ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ*/
 /* ymaps*/
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-gototaxi,
@@ -1082,6 +1120,20 @@ svg {
   }
   100% {
     transform: rotate(0);
+  }
+}
+@keyframes checkmark {
+  25% {
+    transform: scale(1.18);
+    box-shadow: 0px 11.7333px 58.6667px rgba(226, 236, 249, 0.6);
+  }
+  40% {
+    transform: scale(0.84);
+    box-shadow: 0px 8.4px 42px rgba(226, 236, 249, 0.6), 0px 8.4px 42px rgba(226, 236, 249, 0.6);
+  }
+  100% {
+    transform: scale(0.894);
+    box-shadow: 0px 8.93333px 44.6667px rgba(226, 236, 249, 0.6);
   }
 }
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
@@ -1508,6 +1560,40 @@ svg {
   text-align: center;
 }
 
+.pin {
+  padding: 1.6rem;
+  border-radius: 1.2rem 1.2rem 0 0;
+  background-color: var(--white);
+  position: fixed;
+  bottom: 5.6rem;
+  width: 100%;
+  z-index: 1000;
+}
+
+.btn-orange {
+  padding: 1rem 1.6rem;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  border-radius: 1.2rem;
+}
+.btn-orange span {
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.btn-orange svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--white);
+  margin-right: 1.6rem;
+}
+
+/*ЗАКРЕПЛЯШКА ТЕЛЕФОНА*/
 /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ*/
 /*###############################################################################################################################*/
 /*МОДАЛКА ЗАКАЗ СОЗДАН*/
