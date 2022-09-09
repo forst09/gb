@@ -35,6 +35,9 @@
     width: 2rem;
     height: 2rem;
   }
+  .pin {
+    display: none;
+  }
   /*КОНТЕНТНЫЕ СТИЛИ 668*/
   .content-style h2,
 .content-style h3,

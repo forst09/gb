@@ -130,6 +130,13 @@ $(document).ready(function () {
     //     checkDirection();
     // });
 
+    //ПРИЖАТЬ ФУТЕР К НИЗУ, ЕСЛИ МАЛО КОНТЕНА
+    let headerHeightWithMargin = $('.header').outerHeight(true);
+    let footerHeightWithMargin = $('.footer').outerHeight(true);
+    let tabbarHeightWithMargin = $('.tabbar').outerHeight(true);
+    let contentHeight = $(window).height() - headerHeightWithMargin - footerHeightWithMargin - tabbarHeightWithMargin;
+    $('.stretch').css('min-height', contentHeight);
+
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ПО КЛИКУ НА ФОН
     $(document).mouseup(function (e) {
         let container = $(".block-swipe");
