@@ -154,6 +154,13 @@ $(document).ready(function () {
         $("html").removeClass("scroll-hidden");
     });
 
+    //ПО КЛИКУ НА КРЕСТИК ЗАКРЫТЬ МОДАЛКУ
+    $(document).on('click', '.modal-close', function () {
+        $(".block-swipe").removeClass("active");
+        $(".block-swipe__background").removeClass("active");
+        $("html").removeClass("scroll-hidden");
+    });
+
     //НАПОЛНЕНИЕ ФИЛЬТРОВ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
     if ($(".filters").length !== 0) {
         const linksArr = [...$(".filters__item")];
