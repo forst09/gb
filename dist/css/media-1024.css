@@ -489,6 +489,38 @@
     line-height: 2rem;
   }
   /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 1024*/
+  /*ВСПЛЫВАШКА ВЫЙТИ ИЗ ПРОФИЛЯ 1024*/
+  .block-swipe-logout .modal-title {
+    margin-bottom: 4rem;
+  }
+  .block-swipe-logout .modal__buttons {
+    margin-top: 4rem;
+    box-shadow: unset;
+    padding: 0;
+  }
+  /*КОНЕЦ ВСПЛЫВАШКА ВЫЙТИ ИЗ ПРОФИЛЯ 1024*/
+  /*ВСПЛЫВАШКИ, КОТОРЫЕ НА МОБИЛКАХ ЕЗДЯТ, А НА ПК МОДАЛКИ 1024*/
+  .block-swipe-hybrid {
+    bottom: unset;
+    top: 50%;
+    width: fit-content;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 64.3rem;
+    border-radius: 2.4rem;
+    padding: 6.4rem 0;
+    visibility: hidden;
+    pointer-events: none;
+    height: fit-content;
+  }
+  .block-swipe-hybrid .modal-close {
+    display: inline-block;
+  }
+  .block-swipe-hybrid.active {
+    visibility: visible;
+    pointer-events: all;
+  }
+  /*КОНЕЦ ВСПЛЫВАШКИ, КОТОРЫЕ НА МОБИЛКАХ ЕЗДЯТ, А НА ПК МОДАЛКИ 1024*/
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
   .tiles {
