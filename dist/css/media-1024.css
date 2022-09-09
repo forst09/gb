@@ -439,6 +439,23 @@
     border-radius: 2.4rem;
     padding: 6.4rem 0;
   }
+  .modal-title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin-bottom: 4rem;
+  }
+  .text {
+    line-height: 2.2rem;
+  }
+  .modal__buttons {
+    margin-top: 2.4rem;
+  }
+  .modal__buttons .btn-text + .btn-text {
+    margin-left: 4.8rem;
+  }
+  .modal-close {
+    right: 1.6rem;
+  }
   /*КОНЕЦ ВСПЛЫВАШКА  1024*/
   /*ВСПЛЫВАШКА ВЫБОР ГОРОДА 1024*/
   .block-swipe-city {
