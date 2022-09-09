@@ -458,6 +458,7 @@
     .footer__socials-copy {
         font-size: 1.2rem;
         line-height: 1.8rem;
+        text-align: left;
     }
 
     .footer__container {
@@ -497,30 +498,34 @@
         font-size: 1.2rem;
         line-height: 1.8rem;
         font-weight: 700;
+        display: block;
     }
 
     .footer__links-item-wrapper {
-        display: flex;
-        flex-direction: column;
         row-gap: 0.4rem;
         max-height: 17.2rem;
         flex-wrap: wrap;
         column-gap: 3.2rem;
+        align-items: flex-start;
     }
 
-    .footer__links-link {
-        font-weight: 500;
-        font-size: 1.2rem;
-        line-height: 1.8rem;
-        transition: color 0.3s ease;
-
-        &:hover,
-        &:active,
-        &:focus,
-        &:focus-within {
-            color: var(--black-blue);
-        }
+    .footer__links-item+.footer__links-item {
+        margin-top: 0;
     }
+
+    // .footer__links-link {
+    //     font-weight: 500;
+    //     font-size: 1.2rem;
+    //     line-height: 1.8rem;
+    //     transition: color 0.3s ease;
+
+    //     &:hover,
+    //     &:active,
+    //     &:focus,
+    //     &:focus-within {
+    //         color: var(--black-blue);
+    //     }
+    // }
 
     .footer__links-item {
 
@@ -538,6 +543,12 @@
         justify-content: space-between;
         margin-top: 3.2rem;
         width: 100%;
+        flex-direction: row;
+    }
+
+    .footer__links-container,
+    .footer__socials {
+        order: unset;
     }
 
     /*КОНЕЦ СТИЛЕЙ ФУТЕРА 1024*/

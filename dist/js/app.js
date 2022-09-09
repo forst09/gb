@@ -134,7 +134,13 @@ $(document).ready(function () {
     let headerHeightWithMargin = $('.header').outerHeight(true);
     let footerHeightWithMargin = $('.footer').outerHeight(true);
     let tabbarHeightWithMargin = $('.tabbar').outerHeight(true);
-    let contentHeight = $(window).height() - headerHeightWithMargin - footerHeightWithMargin - tabbarHeightWithMargin;
+    let contentHeight;
+    if ($(window).width() < 1024) {
+        contentHeight = $(window).height() - headerHeightWithMargin - footerHeightWithMargin - tabbarHeightWithMargin;
+    }
+    else {
+        contentHeight = $(window).height() - headerHeightWithMargin - footerHeightWithMargin;
+    }
     $('.stretch').css('min-height', contentHeight);
 
     //ДОБАВИТЬ padding-bottom К body ЕСЛИ ЕСТЬ ЗАКРЕПЛЯШКИ
