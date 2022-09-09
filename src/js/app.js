@@ -137,6 +137,14 @@ $(document).ready(function () {
     let contentHeight = $(window).height() - headerHeightWithMargin - footerHeightWithMargin - tabbarHeightWithMargin;
     $('.stretch').css('min-height', contentHeight);
 
+    //ДОБАВИТЬ padding-bottom К body ЕСЛИ ЕСТЬ ЗАКРЕПЛЯШКИ
+    if ($(window).width() < 1024) {
+        if ($('.pin').length != 0) {
+            let bodyPaddingBottom = $('body').css('padding-bottom');
+            console.log(bodyPaddingBottom);
+        }
+    }
+
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ПО КЛИКУ НА ФОН
     $(document).mouseup(function (e) {
         let container = $(".block-swipe");

@@ -919,6 +919,14 @@ svg {
   text-align: center;
   z-index: 1001;
   padding: 0;
+  bottom: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.block-swipe-modal.active {
+  visibility: visible;
+  pointer-events: all;
 }
 
 .modal-title {
