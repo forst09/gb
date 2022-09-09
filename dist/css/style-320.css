@@ -932,19 +932,19 @@ svg {
 
 /*КОНЕЦ ВСПЛЫВАШЕК */
 /*ВСПЛЫВАШКА ВЫХОД ИЗ ПРОФИЛЯ*/
-.block-swipe-logout {
+.block-swipe-hybrid {
   text-align: center;
 }
-.block-swipe-logout .modal-title {
+.block-swipe-hybrid .modal-title {
   margin-bottom: 1.6rem;
 }
-.block-swipe-logout .text {
+.block-swipe-hybrid .text {
   margin-top: 0;
 }
-.block-swipe-logout .modal__buttons {
+.block-swipe-hybrid .modal__buttons {
   margin-top: 2.6rem;
 }
-.block-swipe-logout .modal__buttons .btn-text + .btn-text {
+.block-swipe-hybrid .modal__buttons .btn-text + .btn-text {
   margin-left: 3.9rem;
 }
 
@@ -1041,7 +1041,16 @@ svg {
   stroke: var(--gray-medium);
 }
 
+/*ВСПЛЫВАШКА СБРОС КОРЗИНЫ*/
+.block-swipe-cart-cancel .text {
+  max-width: 62.1rem;
+}
+
+/*ВСПЛЫВАШКА СБРОС КОРЗИНЫ*/
 /*ВСПЛЫВАШКИ, КОТОРЫЕ НА МОБИЛКАХ ЕЗДЯТ, А НА ПК МОДАЛКИ*/
+.block-swipe-hybrid {
+  text-align: center;
+}
 .block-swipe-hybrid .modal-close {
   display: none;
 }

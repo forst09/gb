@@ -637,7 +637,8 @@
     /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 1024*/
 
     /*ВСПЛЫВАШКА ВЫЙТИ ИЗ ПРОФИЛЯ 1024*/
-    .block-swipe-logout {
+    .block-swipe-logout,
+    .block-swipe-cart-cancel {
         .modal-title {
             margin-bottom: 4rem;
         }
@@ -664,9 +665,14 @@
         visibility: hidden;
         pointer-events: none;
         height: fit-content;
+        max-width: 64.3rem;
 
         .modal-close {
             display: inline-block;
+        }
+
+        .wrapper {
+            padding: 0 10.4rem;
         }
     }
 

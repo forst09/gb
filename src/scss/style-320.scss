@@ -1081,7 +1081,8 @@ svg {
 /*КОНЕЦ ВСПЛЫВАШЕК */
 
 /*ВСПЛЫВАШКА ВЫХОД ИЗ ПРОФИЛЯ*/
-.block-swipe-logout {
+// .block-swipe-logout 
+.block-swipe-hybrid {
     text-align: center;
 
     .modal-title {
@@ -1204,8 +1205,19 @@ svg {
     }
 }
 
+/*ВСПЛЫВАШКА СБРОС КОРЗИНЫ*/
+.block-swipe-cart-cancel {
+    .text {
+        max-width: 62.1rem;
+    }
+}
+
+/*ВСПЛЫВАШКА СБРОС КОРЗИНЫ*/
+
 /*ВСПЛЫВАШКИ, КОТОРЫЕ НА МОБИЛКАХ ЕЗДЯТ, А НА ПК МОДАЛКИ*/
 .block-swipe-hybrid {
+    text-align: center;
+
     .modal-close {
         display: none;
     }

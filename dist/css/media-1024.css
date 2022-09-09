@@ -490,10 +490,12 @@
   }
   /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 1024*/
   /*ВСПЛЫВАШКА ВЫЙТИ ИЗ ПРОФИЛЯ 1024*/
-  .block-swipe-logout .modal-title {
+  .block-swipe-logout .modal-title,
+.block-swipe-cart-cancel .modal-title {
     margin-bottom: 4rem;
   }
-  .block-swipe-logout .modal__buttons {
+  .block-swipe-logout .modal__buttons,
+.block-swipe-cart-cancel .modal__buttons {
     margin-top: 4rem;
     box-shadow: unset;
     padding: 0;
@@ -512,9 +514,13 @@
     visibility: hidden;
     pointer-events: none;
     height: fit-content;
+    max-width: 64.3rem;
   }
   .block-swipe-hybrid .modal-close {
     display: inline-block;
+  }
+  .block-swipe-hybrid .wrapper {
+    padding: 0 10.4rem;
   }
   .block-swipe-hybrid.active {
     visibility: visible;
