@@ -55,12 +55,18 @@ $(document).ready(function () {
     $(document).on('focus', '.form-input', function () {
         $(this).parents('.input-wrapper').addClass('active');
         $(this).parents('.input-wrapper').find('.label-transform').addClass('active');
+        if ($(this).hasClass('input-phone')) {
+            Inputmask("+7 (999) 999-99-99").mask($(this));
+        }
     });
     $(document).on('focusout', '.form-input', function () {
         if ($(this).val() == '') {
             $(this).parents('.input-wrapper').find('.label-transform').removeClass('active');
         }
         $(this).parents('.input-wrapper').removeClass('active');
+        if ($(this).hasClass('input-phone')) {
+            $(this).attr('placeholder', '');
+        }
     });
 
     //ДОБАВИТЬ В ИЗБРАННОЕ
@@ -196,12 +202,12 @@ $(document).ready(function () {
                 let htmlLink;
                 if (index < linksNum) {
                     htmlLink = `
-                < a class= "filters__item letter-spacing filters__item-js ${index === 0 ? "active" : ""}" href = "javascript:void(0)" > ${$(item).text()}</ >
+                <a class= "filters__item letter-spacing filters__item-js ${index === 0 ? "active" : ""}" href = "javascript:void(0)" > ${$(item).text()}</>
                 `;
                     $(".filters__items").append(htmlLink);
                 } else if (index === linksNum) {
                     const html = `
-            < div class= "filters__dots" >
+            <div class= "filters__dots">
                             <svg>
                                 <use xlink:href="img/icons/sprite.svg#dots"></use>
                             </svg>
@@ -209,15 +215,14 @@ $(document).ready(function () {
                                 <div class="filters__dots-window filters__dots-window-js">
                                 </div>
                             </div>
-                        </ >
+                        </>
                 `;
                     $(".filters__items").append(html);
                 }
 
                 if (index + 1 > linksNum) {
                     htmlLink = `
-                < a href = "javascript:void(0)"
-                        class= "filters__dots-window-item letter-spacing filters__item-js" > ${$(item).text()}</ >
+                <a href = "javascript:void(0)" class= "filters__dots-window-item letter-spacing filters__item-js" > ${$(item).text()}</>
             `;
                     $(".filters__dots-window-js").append(htmlLink);
                 }
@@ -225,6 +230,11 @@ $(document).ready(function () {
             });
         }
     }
+
+    //МАСКА НА ИНПУТЫ С ТЕЛЕФОНОМ
+    //  if ($(".input-phone").length !== 0) {
+    //     Inputmask("+7 (999) 999-99-99").mask(".input-phone");
+    // }
 
     //ПОКАЗАТЬ/СКРЫТЬ ПАРОЛЬ
     $(document).on('click', '.label-eye', function () {
