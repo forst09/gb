@@ -748,6 +748,44 @@ svg {
     line-clamp: 1;
 }
 
+.search-wrapper {
+    position: relative;
+}
+
+
+.transition-show {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.transition-show.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.input-submit {
+    position: absolute;
+    display: inline-block;
+    right: 0.4rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: var(--black-blue);
+    font-weight: 600;
+    font-family: "Manrope";
+    background-color: var(--gray-extralight);
+    border: none;
+    padding: 0.7rem 1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0.6rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--gray-light);
+    }
+}
+
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
 
 /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ*/
@@ -1381,6 +1419,60 @@ svg {
     // }
 }
 
+.back-span {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: var(--white);
+    }
+}
+
+/*ШАПКА ДЛЯ ТОЧЕК*/
+.header-point {
+    position: relative;
+    min-height: 17.6rem;
+    padding-top: 1.4rem;
+}
+
+.header-point__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-point__icons-list {
+    display: flex;
+    align-items: center;
+}
+
+.header-point__icons-item {
+    &+& {
+        margin-left: 1.6rem;
+    }
+}
+
+.header-point__icons-link {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        stroke: var(--white);
+    }
+}
+
+.header-point__icons-item--cart {
+    display: none;
+}
+
+/*КОНЕЦ ШАПКА ДЛЯ ТОЧЕК*/
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -1989,3 +2081,159 @@ svg {
 }
 
 /*КОНЕЦ МОДАЛКА ЗАКАЗ СОЗДАН*/
+
+/*###############################################################################################################################*/
+/*СТРАНИЦА ТОЧКИ*/
+.point-page {
+    position: relative;
+    background-color: var(--white);
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -2.7rem;
+        width: calc(100% + 6rem);
+        height: 6.6rem;
+        background-color: white;
+        border-radius: 42%;
+        z-index: -1;
+    }
+}
+
+.point-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 17.6rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        opacity: 0.5;
+        filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
+    }
+}
+
+.point__title-wrapper {
+    position: relative;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.point-logo {
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    padding: 0.8rem;
+    box-sizing: content-box;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -7.1rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.point__title-wrapper {
+    margin-bottom: 0.8rem;
+}
+
+.point__info-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.point__info-road {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+
+    svg {
+        width: 1.7rem;
+        height: 1.7rem;
+        fill: var(--orange);
+        margin-right: 0.8rem;
+    }
+
+    span {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: var(--gray-dark);
+    }
+}
+
+.point__info-phone {
+    display: flex;
+    align-items: center;
+}
+
+.alert {
+    width: 3.8rem;
+    height: 3.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 2.2rem;
+        height: 2.2rem;
+        stroke: var(--gray-medium);
+    }
+}
+
+.info__phone--hide {
+    width: 3.8rem;
+    height: 3.8rem;
+    justify-content: center;
+    margin-left: 0.4rem;
+    padding: 0;
+
+    svg {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin: 0;
+    }
+
+    span {
+        display: none;
+    }
+}
+
+.point__info-address {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.6rem 0;
+    border-top: 1px solid var(--gray-extralight);
+    border-bottom: 1px solid var(--gray-extralight);
+    margin-top: 0.8rem;
+    color: var(--black-blue);
+}
+
+/*КОНЕЦ СТРАНИЦА ТОЧКИ*/

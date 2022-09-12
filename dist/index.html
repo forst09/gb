@@ -35,7 +35,7 @@
             </a>
             <div class="search header__search">
                 <form action="">
-                    <div class="input-wrapper">
+                    <div class="search-wrapper">
                         <input type="text" class="search-input" id="searchHeader" placeholder="Поиск по каталогу">
                         <label for="searchHeader" class="form-input__label">
                             <svg>
@@ -135,13 +135,13 @@
                     <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Закуски</a>
                 </div>
                 <div class="view-btn">
-                    <div class="view-btn__item tab" data-id="view" data-tab="viewTiles">
+                    <div class="view-btn__item tab active" data-id="view" data-tab="viewTiles">
                         <svg>
                             <use xlink:href="img/icons/sprite.svg#tiles"></use>
                         </svg>
                         <div class="view-btn__item-text letter-spacing">Плитка</div>
                     </div>
-                    <div class="view-btn__item tab active" data-id="view" data-tab="viewMap">
+                    <div class="view-btn__item tab" data-id="view" data-tab="viewMap">
                         <svg>
                             <use xlink:href="img/icons/sprite.svg#map"></use>
                         </svg>
@@ -150,7 +150,7 @@
                 </div>
             </div>
             <!-- ОТОБРАЖЕНИЕ ПЛИТКОЙ -->
-            <div class="tab-content" data-id="view" data-tab="viewTiles">
+            <div class="tab-content active" data-id="view" data-tab="viewTiles">
                 <div class="tiles">
                     <div class="tiles__item">
                         <div class="tiles__item-img-wrapper">
@@ -901,7 +901,7 @@
             <!--КОНЕЦ ОТОБРАЖЕНИЕ ПЛИТКОЙ -->
 
             <!-- ОТОБРАЖЕНИЕ КАРТОЙ -->
-            <div class="tab-content active" data-id="view" data-tab="viewMap">
+            <div class="tab-content" data-id="view" data-tab="viewMap">
                 <div class="map-view">
                     <div class="map-view__stores" ss-container>
                         <div class="map-view__stores-item">
@@ -1183,9 +1183,9 @@
     <!-- КОНЕЦ ВСПЛЫВАШКА СБРОС КОРЗИНЫ -->
 
     <!-- ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ! -->
-    <div class="block-swipe__background block-swipe__background-thanks active">
+    <div class="block-swipe__background block-swipe__background-thanks">
     </div>
-    <div class="block-swipe block-swipe-modal block-swipe-thanks active">
+    <div class="block-swipe block-swipe-modal block-swipe-thanks">
         <div class="wrapper vertical-center">
             <div class="checkmark">
                 <svg>

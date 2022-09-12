@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title": "Страница точки"
+})
+
+<body>
+    @@include('html/header-3.html',{})
+
+    <section class="point-page">
+        <div class="wrapper">
+            <div class="point__title-wrapper">
+                <div class="point-logo">
+                    <img src="img/logos/logo-1.png" alt="">
+                </div>
+                <h1>Товарищество пиво- и медоваренного завода Ивана Дурдина</h1>
+            </div>
+            <div class="point__info">
+                <div class="point__info-about">
+                    <div class="point__info-road">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#human"></use>
+                        </svg>
+                        <span>5 мин пешком</span>
+                    </div>
+                    <div class="point__info-phone">
+                        <a href="javascript:void(0)" class="alert">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#alert"></use>
+                            </svg>
+                        </a>
+                        <a href="tel:+79876543210" class="info__phone info__phone--hide">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#phone"></use>
+                            </svg>
+                            <span>+7 (987) 654-32-10</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="point__info-address">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/footer.html',{})
+
+    @@include('html/tabbar.html',{})
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/inputmask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

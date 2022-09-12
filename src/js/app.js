@@ -45,9 +45,9 @@ $(document).ready(function () {
 
     //ПОИСК НА 1024 В ШАПКЕ
     $(document).on('input', '.header .search-input', function () {
-        $(this).parents('.input-wrapper').find('.input-submit').addClass('active');
+        $(this).parents('.search-wrapper').find('.input-submit').addClass('active');
         if ($(this).val() == '') {
-            $(this).parents('.input-wrapper').find('.input-submit').removeClass('active');
+            $(this).parents('.search-wrapper').find('.input-submit').removeClass('active');
         }
     });
 
@@ -144,10 +144,12 @@ $(document).ready(function () {
     $('.stretch').css('min-height', contentHeight);
 
     //ДОБАВИТЬ padding-bottom К body ЕСЛИ ЕСТЬ ЗАКРЕПЛЯШКИ
-    if ($(window).width() < 1024) {
+    if ($(window).width() < 668) {
         if ($('.pin').length != 0) {
-            let bodyPaddingBottom = $('body').css('padding-bottom');
-            console.log(bodyPaddingBottom);
+            let bodyPaddingBottom = $('body').css('padding-bottom').replace('px', '');
+            let pinHeight = $('.pin').css('height').replace('px', '');
+            let newPaddingBottom = Number(pinHeight) + Number(bodyPaddingBottom);
+            $('body').css('padding-bottom', newPaddingBottom + 'px');
         }
     }
 
@@ -194,12 +196,12 @@ $(document).ready(function () {
                 let htmlLink;
                 if (index < linksNum) {
                     htmlLink = `
-                        <a class="filters__item letter-spacing filters__item-js ${index === 0 ? "active" : ""}" href="javascript:void(0)">${$(item).text()}</a>
-                    `;
+                < a class= "filters__item letter-spacing filters__item-js ${index === 0 ? "active" : ""}" href = "javascript:void(0)" > ${$(item).text()}</ >
+                `;
                     $(".filters__items").append(htmlLink);
                 } else if (index === linksNum) {
                     const html = `
-                        <div class="filters__dots">
+            < div class= "filters__dots" >
                             <svg>
                                 <use xlink:href="img/icons/sprite.svg#dots"></use>
                             </svg>
@@ -207,16 +209,16 @@ $(document).ready(function () {
                                 <div class="filters__dots-window filters__dots-window-js">
                                 </div>
                             </div>
-                        </div>
-                    `;
+                        </ >
+                `;
                     $(".filters__items").append(html);
                 }
 
                 if (index + 1 > linksNum) {
                     htmlLink = `
-                        <a href="javascript:void(0)"
-                        class="filters__dots-window-item letter-spacing filters__item-js">${$(item).text()}</a>
-                    `;
+                < a href = "javascript:void(0)"
+                        class= "filters__dots-window-item letter-spacing filters__item-js" > ${$(item).text()}</ >
+            `;
                     $(".filters__dots-window-js").append(htmlLink);
                 }
 
@@ -268,7 +270,7 @@ $(document).ready(function () {
             let imgParentClass = img.parentNode.className;
             if (!imgParentClass.includes('__img')) {
                 let div = document.createElement('div');
-                div.innerHTML = `<img src="${img.src}" alt="${img.getAttribute('alt')}" >`;
+                div.innerHTML = `< img src = "${img.src}" alt = "${img.getAttribute('alt')}" > `;
                 div.classList.add('content-img');
                 img.parentNode.replaceChild(div, img);
             }

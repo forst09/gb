@@ -88,39 +88,6 @@
         padding: 1rem 9.4rem 1rem 4.2rem;
     }
 
-    .transition-show {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease;
-    }
-
-    .transition-show.active {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .input-submit {
-        position: absolute;
-        display: inline-block;
-        right: 0.4rem;
-        font-size: 1.2rem;
-        line-height: 2rem;
-        color: var(--black-blue);
-        font-weight: 600;
-        font-family: "Manrope";
-        background-color: var(--gray-extralight);
-        border: none;
-        padding: 0.7rem 1.6rem;
-        top: 50%;
-        transform: translateY(-50%);
-        border-radius: 0.6rem;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: var(--gray-light);
-        }
-    }
-
     .back {
         margin: 0;
         position: absolute;
