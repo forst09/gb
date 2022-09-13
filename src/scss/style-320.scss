@@ -475,6 +475,10 @@ svg {
     }
 }
 
+.input-password {
+    padding-right: 5.6rem;
+}
+
 .label-transform {
     position: absolute;
     font-size: 1.4rem;
@@ -483,8 +487,6 @@ svg {
     color: var(--gray-medium);
     font-weight: 500;
     left: 1.6rem;
-    // top: 50%;
-    // transform: translateY(calc(-50% + 0.5rem));
     top: 2.1rem;
     pointer-events: none;
     transition: transform 0.3s ease-in-out;
@@ -495,10 +497,12 @@ svg {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: calc(100% + 0.8rem);
         height: 100%;
+        width: 25%;
         background-color: var(--white);
+        display: block;
         z-index: -1;
+        transition: all 0.5s ease;
     }
 
     span {
@@ -509,6 +513,10 @@ svg {
 
 .label-transform.active {
     transform: translateY(-120%);
+
+    &::after {
+        width: calc(100% + 0.8rem);
+    }
 }
 
 .label-eye {
@@ -525,11 +533,17 @@ svg {
         height: 100%;
         object-fit: contain;
         stroke: var(--gray-medium);
-        transition: stroke 0.3s ease;
+        transition: all 0.3s ease;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
     .eye-close {
-        display: none;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        pointer-events: none;
     }
 
     &:hover {
@@ -541,11 +555,16 @@ svg {
 
 .label-eye.active {
     .eye-close {
-        display: block;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
     }
 
     .eye-open {
-        display: none;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        pointer-events: none;
     }
 }
 
@@ -1261,20 +1280,20 @@ svg {
     background-color: transparent;
     font-family: "Manrope";
     border-radius: 1.2rem;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0px 5px 30px rgba(226, 236, 249, 0.8);
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        box-shadow: inset 0px 4px 10px rgba(226, 236, 249, 0.5);
+    }
 
     &--orange {
         color: var(--orange);
-        transition: box-shadow 0.3s ease;
-
-        &:hover {
-            box-shadow: 0px 5px 30px rgba(226, 236, 249, 0.8);
-        }
-
-        &:active,
-        &:focus,
-        &:focus-within {
-            box-shadow: inset 0px 4px 10px rgba(226, 236, 249, 0.5);
-        }
     }
 
     &--black {
@@ -1764,9 +1783,11 @@ svg {
     justify-content: center;
 }
 
-.btn-text--orange-wrapper {
+.btn-text__wrapper {
     margin-top: 1.6rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*КОНЕЦ СТИЛЕЙ АВТОРИЗАЦИЯ*/
@@ -2088,6 +2109,7 @@ svg {
 .point-page {
     position: relative;
     background-color: var(--white);
+    padding-top: 0.8rem;
 
     &::before {
         content: '';
@@ -2132,8 +2154,8 @@ svg {
 
 .point__title-wrapper {
     position: relative;
-    padding-top: 1rem;
     text-align: center;
+    margin-bottom: 0.8rem;
 }
 
 .point-logo {
@@ -2149,17 +2171,13 @@ svg {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -7.1rem;
+    top: -8.1rem;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-}
-
-.point__title-wrapper {
-    margin-bottom: 0.8rem;
 }
 
 .point__info-about {
@@ -2235,6 +2253,90 @@ svg {
     border-bottom: 1px solid var(--gray-extralight);
     margin-top: 0.8rem;
     color: var(--black-blue);
+}
+
+.preferential__name {
+    display: flex;
+    align-items: center;
+
+    span {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 500;
+        color: var(--black-text);
+        margin-left: 0.8rem;
+    }
+}
+
+.label {
+    color: var(--white);
+    padding: 0.6rem;
+    width: fit-content;
+    border-radius: 3.6rem;
+    width: 3.7rem;
+    display: flex;
+    height: 2.3rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 30px rgba(56, 58, 61, 0.05);
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 800;
+    font-family: 'Gogh';
+
+    &--green {
+        background-color: var(--green);
+    }
+}
+
+.preferential__desc {
+    font-weight: 500;
+    margin-top: 0.6rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: var(--gray-dark);
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.preferential {
+    margin-top: 2.4rem;
+}
+
+.filters-light__item {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding: 0.4rem 1.2rem;
+    border-radius: 4.6rem;
+    min-width: fit-content;
+
+    &+& {
+        margin-left: 0.4rem;
+    }
+}
+
+.filters-light__item.active {
+    background-color: var(--gray-extralight);
+    color: var(--black-text);
+}
+
+.filters-light {
+    margin-top: 2.4rem;
+    padding: 0 1.6rem;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+}
+
+.filters-light__items {
+    display: inline-flex;
+    align-items: center;
 }
 
 /*КОНЕЦ СТРАНИЦА ТОЧКИ*/

@@ -55,23 +55,23 @@ $(document).ready(function () {
     $(document).on('focus', '.form-input', function () {
         $(this).parents('.input-wrapper').addClass('active');
         $(this).parents('.input-wrapper').find('.label-transform').addClass('active');
-        if ($(this).hasClass('input-phone')) {
-            Inputmask("+7 (999) 999-99-99").mask($(this));
-        }
     });
     $(document).on('focusout', '.form-input', function () {
         if ($(this).val() == '') {
             $(this).parents('.input-wrapper').find('.label-transform').removeClass('active');
         }
         $(this).parents('.input-wrapper').removeClass('active');
-        if ($(this).hasClass('input-phone')) {
-            $(this).attr('placeholder', '');
-        }
     });
 
     //ДОБАВИТЬ В ИЗБРАННОЕ
     $(document).on('click', '.tiles__item-heart', function () {
         $(this).toggleClass('active');
+    });
+
+    //МАСКА НА ИНПУТЫ С ТЕЛЕФОНОМ
+    jQuery('.input-phone').inputmask({
+        mask: '+7 (999) 999-99-99',
+        showMaskOnHover: false
     });
 
     //ОТКРЫТЬ ВСПЛЫВАШКУ ФИЛЬТРОВ
@@ -190,7 +190,7 @@ $(document).ready(function () {
         $("html").removeClass("scroll-hidden");
     });
 
-    //НАПОЛНЕНИЕ ФИЛЬТРОВ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
+    //НАПОЛНЕНИЕ ФИЛЬТРОВ НА ГЛАВНОЙ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
     if ($(".filters").length !== 0) {
         const linksArr = [...$(".filters__item")];
         let linksNum;
@@ -215,7 +215,7 @@ $(document).ready(function () {
                                 <div class="filters__dots-window filters__dots-window-js">
                                 </div>
                             </div>
-                        </>
+                        </div>
                 `;
                     $(".filters__items").append(html);
                 }
@@ -231,10 +231,47 @@ $(document).ready(function () {
         }
     }
 
-    //МАСКА НА ИНПУТЫ С ТЕЛЕФОНОМ
-    //  if ($(".input-phone").length !== 0) {
-    //     Inputmask("+7 (999) 999-99-99").mask(".input-phone");
-    // }
+    //НАПОЛНЕНИЕ ФИЛЬТРОВ НА ГЛАВНОЙ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
+    if ($(".filters-light").length !== 0) {
+        const linksArr = [...$(".filters-light__item")];
+        let linksNum;
+        if ($(window).width() >= 1024 && $(window).width() <= 1499) linksNum = 5;
+        if ($(window).width() >= 1500) linksNum = 8;
+        if (linksArr.length > linksNum) {
+            $.map(linksArr, function (item, index) {
+                $(item).remove();
+                let htmlLink;
+                if (index < linksNum) {
+                    htmlLink = `
+                <a class= "filters-light__item letter-spacing filters__item-js ${index === 0 ? "active" : ""}" href = "javascript:void(0)" > ${$(item).text()}</>
+                `;
+                    $(".filters-light__items").append(htmlLink);
+                } else if (index === linksNum) {
+                    const html = `
+            <div class="filters__dots">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="filters__dots-window-wrapper">
+                                <div class="filters__dots-window filters__dots-window-js">
+                                </div>
+                            </div>
+            </div>
+                `;
+                    $(".filters-light__items").append(html);
+                }
+
+                if (index + 1 > linksNum) {
+                    htmlLink = `
+                <a href = "javascript:void(0)" class="filters__dots-window-item letter-spacing filters__item-js"> ${$(item).text()}</>
+            `;
+                    $(".filters__dots-window-js").append(htmlLink);
+                }
+
+            });
+        }
+    }
+
 
     //ПОКАЗАТЬ/СКРЫТЬ ПАРОЛЬ
     $(document).on('click', '.label-eye', function () {
