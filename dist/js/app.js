@@ -52,9 +52,17 @@ $(document).ready(function () {
     });
 
     //ИНПУТЫ
-    $(document).on('focus', '.form-input', function () {
-        $(this).parents('.input-wrapper').addClass('active');
-        $(this).parents('.input-wrapper').find('.label-transform').addClass('active');
+    const labelUp = function (label) {
+        $(label).parents(".input-wrapper").addClass("active");
+        $(label).parents(".input-wrapper").find(".label-transform").addClass("active");
+    };
+    $(document).on("focus", ".form-input", function () {
+        labelUp(this);
+    });
+    $(document).on("input", ".form-input", function () {
+        if ($(this).val() !== "") {
+            labelUp(this);
+        }
     });
     $(document).on('focusout', '.form-input', function () {
         if ($(this).val() == '') {
@@ -218,6 +226,29 @@ $(document).ready(function () {
         $("html").removeClass("scroll-hidden");
     });
 
+    //ПО КНОПКЕ ДОБАВИТЬ ПОКАЗАТЬ ВМЕСТО НЕЕ СЧЕТЧИК
+    $(document).on('click', '.btn-add', function () {
+        $(this).addClass('hide');
+        $(this).parents('.card__btns').find('.card__btns-count').removeClass('hide');
+    });
+
+    //УМЕНЬШИТЬ СЧЕТЧИК ТОВАРА
+    $(document).on('click', '.card__btns-count-btn--minus', function () {
+        let val = $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val();
+        if (val == 1) {
+            $(this).parents('.card__btns-count').addClass('hide');
+            $(this).parents('.card__btns').find('.btn-add').removeClass('hide');
+        }
+        else {
+            $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(--val);
+        }
+    });
+
+    //УВЕЛИЧИТЬ СЧЕТЧИК ТОВАРА
+    $(document).on('click', '.card__btns-count-btn--plus', function () {
+        let val = $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val();
+        $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(++val);
+    });
 
     //НАПОЛНЕНИЕ ФИЛЬТРОВ НА ГЛАВНОЙ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
     if ($(".filters").length !== 0) {

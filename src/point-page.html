@@ -9,77 +9,279 @@
     @@include('html/header-3.html',{})
 
     <section class="point-page">
-        <div class="wrapper">
-            <div class="point__title-wrapper">
-                <div class="point-logo">
-                    <img src="img/logos/logo-1.png" alt="">
-                </div>
-                <h1>Товарищество пиво- и медоваренного завода Ивана Дурдина</h1>
-            </div>
-            <div class="point__info">
-                <div class="point__info-about">
-                    <div class="point__info-road">
-                        <svg>
-                            <use xlink:href="img/icons/sprite.svg#human"></use>
-                        </svg>
-                        <span>5 мин пешком</span>
+        <div class="point-page__wrapper">
+            <div class="point-page__items">
+                <div class="wrapper">
+                    <div class="point__title-wrapper">
+                        <div class="point-logo">
+                            <img src="img/logos/logo-1.png" alt="">
+                        </div>
+                        <h1>Товарищество пиво- и медоваренного завода Ивана Дурдина</h1>
                     </div>
-                    <div class="point__info-phone">
-                        <a href="javascript:void(0)" class="alert">
-                            <svg>
-                                <use xlink:href="img/icons/sprite.svg#alert"></use>
-                            </svg>
-                        </a>
-                        <a href="tel:+79876543210" class="info__phone info__phone--hide">
-                            <svg>
-                                <use xlink:href="img/icons/sprite.svg#phone"></use>
-                            </svg>
-                            <span>+7 (987) 654-32-10</span>
-                        </a>
+                    <div class="point__info">
+                        <div class="point__info-about">
+                            <div class="point__info-road">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#human"></use>
+                                </svg>
+                                <span>5 мин пешком</span>
+                            </div>
+                            <div class="point__info-phone">
+                                <a href="javascript:void(0)" class="alert">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#alert"></use>
+                                    </svg>
+                                </a>
+                                <a href="tel:+79876543210" class="info__phone info__phone--hide">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#phone"></use>
+                                    </svg>
+                                    <span>+7 (987) 654-32-10</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="point__info-address">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
+                    </div>
+                    <div class="preferential">
+                        <div class="preferential__name">
+                            <div class="label label--green">%</div>
+                            <span class="letter-spacing">Льготные скидки &#8381;</span>
+                        </div>
+                        <div class="preferential__desc letter-spacing ellipsis">
+                            <p>Пенсионерам и студентам скидка при покупке пива чипсов и сухариков при покупке пива
+                                чипсов и
+                                сухариков</p>
+                        </div>
                     </div>
                 </div>
-                <div class="point__info-address">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
-            </div>
-            <div class="preferential">
-                <div class="preferential__name">
-                    <div class="label label--green">%</div>
-                    <span class="letter-spacing">Льготные скидки &#8381;</span>
+                <div class="filters-light">
+                    <div class="filters-light__items">
+                        <a class="filters-light__item letter-spacing filters__item-js active"
+                            href="javascript:void(0)">Пиво</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Рыба</a>
+                        <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Б/а
+                            пиво</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Популярное</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Рыба</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Рыба</a>
+                        <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Б/а
+                            пиво</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Популярное</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Рыба</a>
+                    </div>
                 </div>
-                <div class="preferential__desc letter-spacing ellipsis">
-                    <p>Пенсионерам и студентам скидка при покупке пива чипсов и сухариков при покупке пива чипсов и
-                        сухариков</p>
+                <div class="cards">
+                    <div class="wrapper">
+                        <div class="cards__container">
+                            <div class="card">
+                                <a href="javascript:void(0)" class="card__image">
+                                    <img src="img/catalog/cards-1.jpg" alt="">
+                                    <div class="card__labels">
+                                        <div class="label label--green">%</div>
+                                        <div class="label label--red">top</div>
+                                        <div class="label label--orange">new</div>
+                                    </div>
+                                </a>
+                                <div class="card__cost">
+                                    <div class="card__cost-new letter-spacing">550 &#8381;</div>
+                                    <div class="card__cost-old">144 550</div>
+                                </div>
+                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                    золото
+                                    светлое</a>
+                                <div class="card__volume ellipsis">0,5 л</div>
+                                <div class="card__btns">
+                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+ Добавить</a>
+                                    <div class="card__btns-count hide">
+                                        <form action="">
+                                            <div class="card__btns-count-wrapper">
+                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#minus"></use>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" class="card__btns-count-value letter-spacing"
+                                                    readonly value="99">
+                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#plus"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="javascript:void(0)" class="card__image">
+                                    <img src="img/catalog/cards-1.jpg" alt="">
+                                    <div class="card__labels">
+                                        <div class="label label--green">%</div>
+                                        <div class="label label--red">top</div>
+                                        <div class="label label--orange">new</div>
+                                    </div>
+                                </a>
+                                <div class="card__cost">
+                                    <div class="card__cost-new">550 &#8381;</div>
+                                    <div class="card__cost-old">144 550</div>
+                                </div>
+                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                    золото светлое</a>
+                                <div class="card__volume ellipsis">0,5 л</div>
+                                <div class="card__btns">
+                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+ Добавить</a>
+                                    <div class="card__btns-count hide">
+                                        <form action="">
+                                            <div class="card__btns-count-wrapper">
+                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#minus"></use>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" class="card__btns-count-value" readonly value="5">
+                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#plus"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="javascript:void(0)" class="card__image">
+                                    <img src="img/catalog/cards-1.jpg" alt="">
+                                    <div class="card__labels">
+                                        <div class="label label--green">%</div>
+                                        <div class="label label--red">top</div>
+                                        <div class="label label--orange">new</div>
+                                    </div>
+                                </a>
+                                <div class="card__cost">
+                                    <div class="card__cost-new">550 &#8381;</div>
+                                    <div class="card__cost-old">144 550</div>
+                                </div>
+                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                    золото светлое</a>
+                                <div class="card__volume ellipsis">0,5 л</div>
+                                <div class="card__btns">
+                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+ Добавить</a>
+                                    <div class="card__btns-count hide">
+                                        <form action="">
+                                            <div class="card__btns-count-wrapper">
+                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#minus"></use>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" class="card__btns-count-value" readonly value="5">
+                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#plus"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="javascript:void(0)" class="card__image">
+                                    <img src="img/catalog/cards-1.jpg" alt="">
+                                    <div class="card__labels">
+                                        <div class="label label--green">%</div>
+                                        <div class="label label--red">top</div>
+                                        <div class="label label--orange">new</div>
+                                    </div>
+                                </a>
+                                <div class="card__cost">
+                                    <div class="card__cost-new">550 &#8381;</div>
+                                    <div class="card__cost-old">144 550</div>
+                                </div>
+                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                    золото светлое</a>
+                                <div class="card__volume ellipsis">0,5 л</div>
+                                <div class="card__btns">
+                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+ Добавить</a>
+                                    <div class="card__btns-count hide">
+                                        <form action="">
+                                            <div class="card__btns-count-wrapper">
+                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#minus"></use>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" class="card__btns-count-value" readonly value="5">
+                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#plus"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="javascript:void(0)" class="card__image">
+                                    <img src="img/catalog/cards-1.jpg" alt="">
+                                    <div class="card__labels">
+                                        <div class="label label--green">%</div>
+                                        <div class="label label--red">top</div>
+                                        <div class="label label--orange">new</div>
+                                    </div>
+                                </a>
+                                <div class="card__cost">
+                                    <div class="card__cost-new">550 &#8381;</div>
+                                    <div class="card__cost-old">144 550</div>
+                                </div>
+                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                    золото светлое</a>
+                                <div class="card__volume ellipsis">0,5 л</div>
+                                <div class="card__btns">
+                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+ Добавить</a>
+                                    <div class="card__btns-count hide">
+                                        <form action="">
+                                            <div class="card__btns-count-wrapper">
+                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#minus"></use>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" class="card__btns-count-value" readonly value="5">
+                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                    type="button">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#plus"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="filters-light">
-            <div class="filters-light__items">
-                <a class="filters-light__item letter-spacing filters__item-js active" href="javascript:void(0)">Пиво</a>
-                <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Рыба</a>
-                <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Б/а
-                    пиво</a>
-                <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Популярное</a>
-                <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Рыба</a>
-                <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Рыба</a>
-                <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Б/а
-                    пиво</a>
-                <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Популярное</a>
-                <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Рыба</a>
-            </div>
-        </div>
-        <div class="cards">
-            <div class="cards__container">
-                <div class="card">
-                    <a href="javascript:void(0)" class="card__image">
-                        <img src="img/catalog/cards-1.jpg" alt="">
-                    </a>
-                    <div class="card__cost">550 &#8381;</div>
-                    <a href="javascript:void(0)" class="card__name">Хадыженское золото светлое</a>
-                    <div class="card__volume">0,5 л</div>
-                    <div class="card__btns">
-                        <a href="javascript:void(0)" class="btn-add">+ Добавить</a>
+            <div class="point-page__cart">
 
-                    </div>
-                </div>
             </div>
         </div>
     </section>

@@ -311,4 +311,11 @@
         <path d="M11 7.33301V10.9997" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M11 14.667H11.0092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
+    <symbol viewBox="0 0 21 20" id="plus">
+        <path d="M10.5 4.16699V15.8337" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M4.66666 10H16.3333" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol viewBox="0 0 21 20" id="minus">
+        <path d="M4.66666 10H16.3333" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
 </svg>
