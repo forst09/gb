@@ -190,6 +190,35 @@ $(document).ready(function () {
         $("html").removeClass("scroll-hidden");
     });
 
+    //ЗАКРЫТЬ МОДАЛКУ ВЫЙТИ ИЗ ПРОФИЛЯ ПО КЛИКУ НА ДА
+    $(document).on('click', '.block-swipe-logout .btn-text--orange', function () {
+        $(".block-swipe").removeClass("active");
+        $(".block-swipe__background").removeClass("active");
+        $("html").removeClass("scroll-hidden");
+    });
+
+    //ЗАКРЫТЬ МОДАЛКУ ВЫЙТИ ИЗ ПРОФИЛЯ ПО КЛИКУ НА НЕТ
+    $(document).on('click', '.block-swipe-logout .btn-text--gray', function () {
+        $(".block-swipe").removeClass("active");
+        $(".block-swipe__background").removeClass("active");
+        $("html").removeClass("scroll-hidden");
+    });
+
+    //ЗАКРЫТЬ МОДАЛКУ СБРОС КОРЗИНЫ ПО КЛИКУ НА ОТМЕНА
+    $(document).on('click', '.block-swipe-cart-cancel .btn-text--gray', function () {
+        $(".block-swipe").removeClass("active");
+        $(".block-swipe__background").removeClass("active");
+        $("html").removeClass("scroll-hidden");
+    });
+
+    //ЗАКРЫТЬ МОДАЛКУ СБРОС КОРЗИНЫ ПО КЛИКУ НА ПРОДОЛЖИТЬ
+    $(document).on('click', '.block-swipe-logout .btn-text--orange', function () {
+        $(".block-swipe").removeClass("active");
+        $(".block-swipe__background").removeClass("active");
+        $("html").removeClass("scroll-hidden");
+    });
+
+
     //НАПОЛНЕНИЕ ФИЛЬТРОВ НА ГЛАВНОЙ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
     if ($(".filters").length !== 0) {
         const linksArr = [...$(".filters__item")];
