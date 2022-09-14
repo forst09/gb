@@ -236,7 +236,7 @@ $(document).ready(function () {
     $(document).on('click', '.card__btns-count-btn--minus', function () {
         let val = $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val();
         if (val == 1) {
-            $(this).parents('.card__btns-count').addClass('hide');
+            $(this).parents('.card__btns').find('.card__btns-count').addClass('hide');
             $(this).parents('.card__btns').find('.btn-add').removeClass('hide');
         }
         else {

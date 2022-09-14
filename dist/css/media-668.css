@@ -336,6 +336,9 @@
     margin-top: 3.2rem;
     padding: 0 4.4rem;
   }
+  .cards__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
   /*КОНЕЦ СТРАНИЦА ТОЧКИ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/

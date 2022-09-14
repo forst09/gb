@@ -1951,6 +1951,15 @@ svg {
   width: 2.2rem;
   height: 2.2rem;
   stroke: var(--gray-medium);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.alert:hover svg {
+  stroke: var(--orange-light);
+}
+.alert:active svg, .alert:focus svg, .alert:focus-within svg {
+  stroke: var(--orange);
+  transform: scale(0.82);
 }
 
 .info__phone--hide {
@@ -2072,7 +2081,7 @@ svg {
 
 /*КАРТОЧКИ ТОВАРА*/
 .cards {
-  margin-top: 1.6rem;
+  margin-top: 2.4rem;
 }
 
 .cards__container {
@@ -2169,6 +2178,13 @@ svg {
   width: 2rem;
   height: 2rem;
   stroke: var(--gray);
+  transition: stroke 0.3s ease;
+}
+.card__btns-count-btn:hover svg {
+  stroke: var(--black-blue);
+}
+.card__btns-count-btn:active svg, .card__btns-count-btn:focus svg, .card__btns-count-btn:focus-within svg {
+  stroke: var(--black-text);
 }
 
 .card__btns-count-value {
@@ -2199,7 +2215,10 @@ svg {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-add:hover {
+  background-color: var(--gray-light);
 }
 
 .card__btns-count-wrapper {
@@ -2233,6 +2252,156 @@ svg {
 }
 .card__btns-count form {
   width: 100%;
+}
+
+/*БУДЕТ ПОТОМ В КОРЗИНЕ*/
+.point-page__cart {
+  max-width: 39.6rem;
+  margin-left: 4.8rem;
+  width: 100%;
+  height: 91.5rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
+  border-radius: 2.4rem 2.4rem 0 0;
+}
+
+.point-page__cart-top {
+  padding: 2.4rem;
+}
+
+.point-page__cart-title {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  font-weight: 800;
+  color: var(--black-text);
+}
+
+.cart__container {
+  margin-top: 2.4rem;
+}
+
+.cart__item-info {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.cart__item-info .card__name {
+  margin: 0;
+}
+.cart__item-info .card__volume {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+}
+
+.cart__img {
+  width: 6.5rem;
+  height: 5.8rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  margin-right: 0.8rem;
+  flex-shrink: 0;
+}
+.cart__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart__item-text {
+  max-width: 23rem;
+  width: 100%;
+  margin-right: 0.8rem;
+}
+
+.delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  flex-shrink: 0;
+}
+.delete svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.delete:hover svg {
+  stroke: var(--gray);
+}
+.cart__item {
+  padding: 0.8rem;
+  position: relative;
+}
+.cart__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.8rem;
+  height: 1px;
+  width: 100%;
+  background-color: var(--gray-extralight);
+}
+.cart__item + .cart__item {
+  margin-top: 1.6rem;
+}
+.cart__item:nth-of-type(1) {
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--gray-extralight);
+}
+.cart__item .card__btns-count {
+  position: static;
+  max-width: 12.4rem;
+  padding: 0.8rem;
+  max-height: 3.6rem;
+}
+.cart__item .card__cost {
+  margin: 0;
+}
+.cart__item .card__cost-new {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.cart__item .card__cost-old {
+  font-size: 1.3rem;
+}
+
+.cart__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart__total {
+  margin-top: auto;
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+.cart__total .card__cost {
+  margin: 0;
+}
+.cart__total .card__cost-new {
+  line-height: 2rem;
+}
+.cart__total .btn-orange {
+  max-width: 19.2rem;
+}
+.cart__total .btn-orange span {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.cart__total-road {
+  margin-top: 0.6rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  font-weight: 500;
 }
 
 /*КОНЕЦ СТРАНИЦА ТОЧКИ*/

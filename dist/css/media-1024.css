@@ -842,6 +842,40 @@
     margin-top: 4rem;
     padding: 0 6.4rem;
   }
+  .cards__container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1.5rem;
+  }
+  .card {
+    min-height: 30.6rem;
+    max-height: 30.6rem;
+  }
+  .card__image {
+    height: 14.2rem;
+  }
+  .card__cost-new {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .card__cost-old {
+    margin-left: 0.8rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .card__volume {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .card__btns {
+    height: 4.4rem;
+  }
+  .btn-add {
+    padding: 1.2rem;
+  }
+  .card__btns-count {
+    padding: 1.2rem 0.8rem;
+    max-height: 4.4rem;
+  }
   /*КОНЕЦ СТРАНИЦА ТОЧКИ 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/

@@ -161,6 +161,21 @@
         padding: 0 8rem;
     }
 
+    .point-page__wrapper {
+        padding: 0 8rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .point-page__items {
+        max-width: 89.6rem;
+
+        .wrapper,
+        .filters-light {
+            padding: 0;
+        }
+    }
+
     /*КОНЕЦ СТРАНИЦА ТОЧКИ 1500*/
 }
 

@@ -446,6 +446,10 @@
         padding: 0 4.4rem;
     }
 
+    .cards__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     /*КОНЕЦ СТРАНИЦА ТОЧКИ 668*/
 }
 
