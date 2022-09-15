@@ -936,7 +936,7 @@ svg {
   background-color: rgba(25, 42, 62, 0);
   transition: background-color 0.7s ease-in-out;
   pointer-events: none;
-  z-index: 10;
+  z-index: 1001;
 }
 
 .block-swipe__background.active {
@@ -1019,6 +1019,9 @@ svg {
   bottom: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.block-swipe-modal .text {
+  margin-top: 0;
 }
 
 .block-swipe-modal.active {
@@ -1177,14 +1180,6 @@ svg {
 /*КОНЕЦ ВСПЛЫВАШКИ, КОТОРЫЕ НА МОБИЛКАХ ЕЗДЯТ, А НА ПК МОДАЛКИ*/
 /*ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ*/
 .checkmark {
-  width: 7.5rem;
-  height: 7.5rem;
-  border-radius: 50%;
-  box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 3.5rem;
   animation: checkmark 1.5s infinite;
   transition: transform 0.3s ease;
 }
@@ -1216,6 +1211,189 @@ svg {
   transform: scale(3);
 }
 
+.envelope-top {
+  animation: envelope 3s ease-in-out infinite;
+  transform-origin: center 25%;
+}
+
+.envelope-top-line {
+  animation: envelope-top-line 3s ease-in-out infinite;
+}
+
+.envelope-letter {
+  animation: envelope-letter 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.envelope__svg {
+  overflow: visible;
+  width: 3.9rem;
+  height: 3.9rem;
+  animation: envelope__svg 3s ease-in-out infinite;
+}
+
+.envelope-gb {
+  animation: envelope-gb 3s ease-in-out infinite;
+  transform-origin: top;
+  opacity: 0;
+}
+
+@keyframes envelope__svg {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0.2rem);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0.2rem);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes envelope {
+  0% {
+    transform: rotateX(0);
+  }
+  30% {
+    transform: rotateX(0);
+  }
+  40% {
+    transform: rotateX(180deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  80% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+@keyframes envelope-top-line {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes envelope-letter {
+  0% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  10% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  30% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  60% {
+    opacity: 1;
+    transform: scaleY(0.9);
+  }
+  70% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  80% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  90% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  95% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+}
+@keyframes envelope-gb {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes phone {
   33% {
     transform: rotate(15deg);
@@ -1305,6 +1483,17 @@ svg {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+.icon-modal {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 3.5rem;
 }
 
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */

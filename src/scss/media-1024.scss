@@ -546,6 +546,10 @@
         padding: 6.4rem 0;
         visibility: hidden;
         pointer-events: none;
+
+        .modal-title {
+            margin-bottom: 3.2rem;
+        }
     }
 
     .block-swipe-modal.active {
@@ -657,7 +661,7 @@
     /*КОНЕЦ ВСПЛЫВАШКИ, КОТОРЫЕ НА МОБИЛКАХ ЕЗДЯТ, А НА ПК МОДАЛКИ 1024*/
 
     /*ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ 1024*/
-    .checkmark {
+    .icon-modal {
         margin-bottom: 4rem;
     }
 

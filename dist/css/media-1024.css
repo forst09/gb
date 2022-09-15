@@ -408,6 +408,9 @@
     visibility: hidden;
     pointer-events: none;
   }
+  .block-swipe-modal .modal-title {
+    margin-bottom: 3.2rem;
+  }
   .block-swipe-modal.active {
     visibility: visible;
     pointer-events: all;
@@ -495,7 +498,7 @@
   }
   /*КОНЕЦ ВСПЛЫВАШКИ, КОТОРЫЕ НА МОБИЛКАХ ЕЗДЯТ, А НА ПК МОДАЛКИ 1024*/
   /*ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ 1024*/
-  .checkmark {
+  .icon-modal {
     margin-bottom: 4rem;
   }
   /*КОНЕЦ ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ 1024*/
