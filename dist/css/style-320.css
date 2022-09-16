@@ -1246,6 +1246,7 @@ svg {
   z-index: 1001;
   padding: 0;
   bottom: 0;
+  left: 0;
   visibility: hidden;
   pointer-events: none;
 }
@@ -2043,11 +2044,32 @@ svg {
   display: inline-block;
   width: 2.4rem;
   height: 2.4rem;
+  position: relative;
+  padding-left: 3.2rem;
 }
 .back-span svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 2.4rem;
   height: 2.4rem;
   fill: var(--white);
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+.back-span:hover span {
+  color: var(--orange-light);
+}
+.back-span:hover svg {
+  transform: translateY(-50%) translateX(-0.4rem);
+  fill: var(--orange-light);
+}
+.back-span:active span, .back-span:focus span, .back-span:focus-within span {
+  color: var(--orange);
+}
+.back-span:active svg, .back-span:focus svg, .back-span:focus-within svg {
+  transform: translateY(-50%) translateX(0);
+  fill: var(--orange);
 }
 
 /*ШАПКА ДЛЯ ТОЧЕК*/
@@ -2091,6 +2113,14 @@ svg {
   width: 2.4rem;
   height: 2.4rem;
   stroke: var(--white);
+  transition: stroke 0.3s ease, fill 0.3s ease;
+}
+.header-point__icons-link:hover svg {
+  stroke: var(--orange-light);
+}
+.header-point__icons-link:active svg, .header-point__icons-link:focus svg, .header-point__icons-link:focus-within svg {
+  stroke: var(--orange-light);
+  fill: var(--orange-light);
 }
 
 .header-point__icons-item--cart {
@@ -2673,6 +2703,41 @@ svg {
   -webkit-box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   border-radius: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-out 0s;
+  background: transparent;
+  z-index: 2;
+}
+.btn-orange::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--orange-light);
+  opacity: 0;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  transition: all 0.6s ease-in;
+  z-index: -1;
+}
+.btn-orange::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--orange);
+  z-index: -2;
+}
+.btn-orange:hover::before {
+  opacity: 1;
+  width: calc(100% + 10rem);
+  height: calc(100% + 10rem);
 }
 .btn-orange span {
   color: var(--white);
@@ -3065,9 +3130,13 @@ svg {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 .filters-light__item + .filters-light__item {
   margin-left: 0.4rem;
+}
+.filters-light__item:hover {
+  color: var(--black-text);
 }
 
 .filters-light__item.active {

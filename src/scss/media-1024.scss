@@ -818,7 +818,7 @@
             color: var(--white);
             font-size: 1.4rem;
             line-height: 1.8rem;
-            margin-left: 0.8rem;
+            transition: color 0.3s ease;
         }
     }
 
@@ -1046,6 +1046,15 @@
 
     .map-view__stores {
         display: block;
+    }
+
+    .ss-content {
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            background: transparent;
+        }
     }
 
     .tiles__item-road--map {
@@ -1295,6 +1304,7 @@
     }
 
     .filters-light {
+        overflow: unset;
         margin-top: 4rem;
         padding: 0 6.4rem;
     }

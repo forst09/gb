@@ -204,8 +204,12 @@
     }
 
     .cart__container {
-        max-height: calc(100% - 3.2rem - 2.4rem - 2.4rem - 2.4rem - 7.4rem);
+        max-height: calc(100vh - 23rem);
         overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 1px;
+        }
     }
 
     /*КОНЕЦ СТРАНИЦА ТОЧКИ 1500*/
