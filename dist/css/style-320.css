@@ -1194,6 +1194,12 @@ svg {
 }
 
 /*КОНЕЦ ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ*/
+/*ВСПЛЫВАШКА ОБРАТНОЙ СВЯЗИ*/
+.block-swipe-feedback {
+  padding-bottom: 1.6rem;
+}
+
+/*КОНЕЦ ВСПЛЫВАШКА ОБРАТНОЙ СВЯЗИ*/
 /* ymaps*/
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-gototaxi,
@@ -1392,6 +1398,37 @@ svg {
   }
   100% {
     opacity: 0;
+  }
+}
+.lock {
+  animation: checkmark 1.7s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.lock__icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.lock__open {
+  animation: lock__open 1.7s ease-in-out infinite;
+}
+
+@keyframes lock__open {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes phone {
@@ -1974,6 +2011,7 @@ svg {
   color: var(--black-text);
   max-width: 28.7rem;
   margin: 3.9rem auto 0;
+  letter-spacing: 0.02em;
 }
 
 .modal__buttons {

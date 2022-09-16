@@ -1103,6 +1103,47 @@
     </div>
     <!-- КОНЕЦ ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ! -->
 
+    <!-- ВСПЛЫВАШКА ОБРАТНАЯЯ СВЯЗЬ -->
+    <div class="block-swipe__background block-swipe__background-feedback active">
+    </div>
+    <div class="block-swipe block-swipe-feedback block-swipe-hybrid active">
+        <div class="wrapper">
+            <h2 class="modal-title letter-spacing">Связаться с нами</h2>
+            <div class="feedback__form">
+                <form action="">
+                    <div class="feedback__wrapper">
+                        <div class="input-wrapper">
+                            <input class="form-input" type="text" id="contactsModalName">
+                            <label for="contactsModalName" class="label-transform">Имя <span>*</span></label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="form-input input-phone" type="text" id="contactsModalPhone">
+                            <label for="contactsModalPhone" class="label-transform">Телефон <span>*</span></label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="form-input" type="text" id="contactsModalEmail">
+                            <label for="contactsModalEmail" class="label-transform">Почта для связи</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <textarea class="form-input" type="text" id="contactsModalComment"></textarea>
+                            <label for="contactsModalComment" class="label-transform">Комментарий</label>
+                        </div>
+                    </div>
+                    <div class="form__submit-wrapper">
+                        <input type="submit" value="Отправить" class="btn-blue letter-spacing">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="modal-close">
+            <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="block-swipe__btn block-swipe__btn feedback__btn"></div>
+    </div>
+    <!-- КОНЕЦ ВСПЛЫВАШКА ОБРАТНАЯЯ СВЯЗЬ -->
+
     @@include('html/footer.html',{})
 
     @@include('html/tabbar.html',{})

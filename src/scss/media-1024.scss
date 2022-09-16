@@ -651,6 +651,10 @@
         .wrapper {
             padding: 0 10.4rem;
         }
+
+        .modal-title {
+            margin-bottom: 4rem;
+        }
     }
 
     .block-swipe-hybrid.active {
@@ -666,6 +670,13 @@
     }
 
     /*КОНЕЦ ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ 1024*/
+
+    /*ВСПЛЫВАШКА ОБРАТНОЙ СВЯЗИ 1024*/
+    .block-swipe-feedback {
+        min-height: auto;
+    }
+
+    /*КОНЕЦ ВСПЛЫВАШКА ОБРАТНОЙ СВЯЗИ 1024*/
 
     /*ШАПКА ДЛЯ ТОЧЕК 1024*/
     .header-point {
@@ -989,8 +1000,8 @@
     }
 
     .feedback__map {
-        max-width: 41.5rem;
-        height: 45rem;
+        max-width: 42.8rem;
+        height: 39.2rem;
     }
 
     .info__item {
@@ -1002,10 +1013,6 @@
     .feedback {
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    .feedback__map {
-        height: 43.2rem;
     }
 
     .feedback__form {
