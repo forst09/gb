@@ -82,9 +82,9 @@ svg {
   font-size: 1.4rem;
   line-height: 2.4rem;
   font-family: "Manrope";
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  -o-transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 .btn-blue:hover {
   -webkit-box-shadow: 0px 5px 10px rgba(226, 236, 249, 0.6);
@@ -450,9 +450,9 @@ svg {
   box-shadow: 0 0 0 1px var(--gray-medium);
   padding: 1rem 1.6rem;
   max-height: 4rem;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: box-shadow 0.3s ease;
+  -o-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 .form-input::-webkit-input-placeholder {
   color: var(--gray-medium);
@@ -508,9 +508,9 @@ svg {
   background-color: var(--white);
   display: block;
   z-index: -1;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: transform 0.5s ease, width 0.5s ease;
+  -o-transition: transform 0.5s ease, width 0.5s ease;
+  transition: transform 0.5s ease, width 0.5s ease;
 }
 .label-transform span {
   font-weight: 400;
