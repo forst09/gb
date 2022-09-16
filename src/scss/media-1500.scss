@@ -81,6 +81,8 @@
     /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 1500*/
 
     .btn-catalog {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
     }
 
@@ -163,7 +165,11 @@
 
     .point-page__wrapper {
         padding: 0 8rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
@@ -181,11 +187,18 @@
         margin-left: 4.8rem;
         width: 100%;
         height: calc(100vh - 5rem);
+        position: -webkit-sticky;
         position: sticky;
         top: 2.5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         background: var(--white);
+        -webkit-box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
         box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
         border-radius: 2.4rem 2.4rem 0 0;
     }

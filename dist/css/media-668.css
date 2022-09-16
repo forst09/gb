@@ -135,6 +135,7 @@
   /*КОНЕЦ СТИЛЕЙ ФУТЕРА 668*/
   /*НАЧАЛО СТИЛЕЙ ТАББАРА 668*/
   .tabbar {
+    -webkit-box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
     box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
   }
   .tabbar__item {
@@ -224,6 +225,7 @@
     height: 2.4rem;
   }
   .view-btn__item.active {
+    -webkit-box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
     box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
   }
   .tiles {
