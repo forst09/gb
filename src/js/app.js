@@ -89,6 +89,13 @@ $(document).ready(function () {
         $("html").addClass("scroll-hidden");
     });
 
+    //ОТКРЫТЬ ВСПЛЫВАШКУ ОБРАТНОЙ СВЯЗИ
+    $(document).on("click", ".footer__sosials-feedback", function () {
+        $(".block-swipe-feedback").addClass("active");
+        $(".block-swipe__background-feedback").addClass("active");
+        $("html").addClass("scroll-hidden");
+    });
+
     //ОТКРЫТЬ ВСПЛЫВАШКУ С ВЫБОРОМ ГОРОДА
     $(document).on("click", ".place", function () {
         $(".block-swipe__background-city").addClass("active");
