@@ -1202,6 +1202,8 @@
   }
   .tiles-icon__item-content {
     flex-direction: column;
+    max-width: 23.3rem;
+    text-align: center;
   }
   .tiles-icon__item-icon {
     margin: 0 0 1.9rem 0;
@@ -1211,6 +1213,11 @@
   .tiles-icon__item-icon svg {
     width: 4.2rem;
     height: 4.2rem;
+  }
+  .tiles-icon__item-name {
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
   }
   /*КОНЕЦ ЛК ДАШБОРД 1024*/
 }
