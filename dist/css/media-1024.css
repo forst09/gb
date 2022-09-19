@@ -649,11 +649,118 @@
   }
   .header-point__icons-item--cart {
     display: block;
+    position: relative;
+  }
+  .header-point__icons-item--fav {
+    position: relative;
   }
   .point-img {
     height: 20.8rem;
   }
+  .point-img img {
+    height: 57rem;
+    transform: translateY(-30%);
+    transition: transform 0.3s ease;
+  }
+  .point-img img.active {
+    animation: point-img infinite ease-in-out 25s;
+  }
+  .point-img img.to-start {
+    animation: to-start ease 1.3s;
+  }
+  @keyframes to-start {
+    30% {
+      transform: translateY(-30%);
+    }
+    66% {
+      transform: translateY(-30%);
+    }
+  }
+  @keyframes point-img {
+    33% {
+      transform: translateY(-45%);
+    }
+    66% {
+      transform: translateY(0);
+    }
+  }
   /*КОНЕЦ ШАПКА ДЛЯ ТОЧЕК 1024*/
+  /*УВЕДОМЛЕНИЕ О ДОБАВЛЕНИИ В КОРЗИНУ*/
+  .cart__notification,
+.fav__notification {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 1.8rem);
+    transform: translateX(-50%);
+    padding: 0.8rem 1.4rem;
+    background: #192A3E;
+    border-radius: 0.8rem;
+    width: 16.5rem;
+    align-items: center;
+    height: 0;
+    transform-origin: top;
+    min-height: 4.8rem;
+  }
+  .cart__notification svg,
+.fav__notification svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    stroke: var(--green);
+    margin-right: 1.6rem;
+    flex-shrink: 0;
+  }
+  .cart__notification span,
+.fav__notification span {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: var(--white);
+  }
+  .cart__notification::after,
+.fav__notification::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1.3rem;
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-image: url("../img/icons/notification-triangle.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1.7rem 1.7rem;
+  }
+  .cart__notification.active,
+.fav__notification.active {
+    display: flex;
+    animation: notification 2s ease-in-out;
+  }
+  @keyframes notification {
+    0% {
+      transform: translateX(-50%) scale(0);
+    }
+    25% {
+      transform: translateX(-50%) scale(1);
+      min-height: 5.3rem;
+    }
+    50% {
+      transform: translateX(-50%) scale(1);
+      min-height: 4.6rem;
+    }
+    75% {
+      transform: translateX(-50%) scale(1);
+      min-height: 4.8rem;
+    }
+    90% {
+      transform: translateX(-50%) scale(1);
+      min-height: 4.8rem;
+    }
+    100% {
+      transform: translateX(-50%) scale(0);
+    }
+  }
+  /*КОНЕЦ УВЕДОМЛЕНИЕ О ДОБАВЛЕНИИ В КОРЗИНУ*/
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
   .tiles {
@@ -1077,5 +1184,34 @@
     max-height: 4.4rem;
   }
   /*КОНЕЦ СТРАНИЦА ТОЧКИ 1024*/
+  /*###############################################################################################################################*/
+  /*ЛК ДАШБОРД 1024*/
+  .tiles-icon {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    grid-column-gap: 1.867rem;
+  }
+  .tiles-icon__item {
+    max-height: 19.4rem;
+    flex-direction: column;
+    padding: 1.6rem;
+    height: 19.4rem;
+    width: 21rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .tiles-icon__item-content {
+    flex-direction: column;
+  }
+  .tiles-icon__item-icon {
+    margin: 0 0 1.9rem 0;
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+  .tiles-icon__item-icon svg {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  /*КОНЕЦ ЛК ДАШБОРД 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/

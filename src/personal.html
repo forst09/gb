@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+"title": "Личный кабинет"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <div class="stretch">
+        <section class="personal">
+            <div class="wrapper">
+                <div class="title-wrapper">
+                    <h1>Личный кабинет</h1>
+                </div>
+                <div class="tiles-icon">
+                    <a class="tiles-icon__item" href="javascript:void(0)">
+                        <div class="tiles-icon__item-content">
+                            <div class="tiles-icon__item-icon">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#personal-data"></use>
+                                </svg>
+                            </div>
+                            <div class="tiles-icon__item-name letter-spacing">Личные данные</div>
+                        </div>
+                    </a>
+                    <a class="tiles-icon__item" href="javascript:void(0)">
+                        <div class="tiles-icon__item-content">
+                            <div class="tiles-icon__item-icon">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#box"></use>
+                                </svg>
+                            </div>
+                            <div class="tiles-icon__item-name letter-spacing">Заказы</div>
+                        </div>
+                    </a>
+                    <a class="tiles-icon__item" href="javascript:void(0)">
+                        <div class="tiles-icon__item-content">
+                            <div class="tiles-icon__item-icon">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#heart"></use>
+                                </svg>
+                            </div>
+                            <div class="tiles-icon__item-name letter-spacing">Избранное</div>
+                        </div>
+                    </a>
+                    <a class="tiles-icon__item" href="javascript:void(0)">
+                        <div class="tiles-icon__item-content">
+                            <div class="tiles-icon__item-icon">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#personal-lock"></use>
+                                </svg>
+                            </div>
+                            <div class="tiles-icon__item-name letter-spacing">Безопасность</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    @@include('html/footer.html',{})
+
+    @@include('html/tabbar.html',{})
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.60/inputmask/jquery.inputmask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

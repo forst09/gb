@@ -45,6 +45,18 @@ h1 {
 textarea {
   resize: none;
   min-height: 10rem;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-medium) transparent;
+}
+textarea::-webkit-scrollbar {
+  width: 2px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--gray-medium);
+}
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .title {
@@ -1516,6 +1528,14 @@ svg {
   opacity: 0;
 }
 
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes envelope__svg {
   0% {
     -webkit-transform: translateY(0);
@@ -2751,7 +2771,27 @@ svg {
   fill: var(--white);
   margin-right: 1.6rem;
 }
+.btn-orange:active, .btn-orange:focus, .btn-orange:focus-within {
+  animation: btn-orange 0.7s ease;
+}
 
+@keyframes btn-orange {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.2rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0.2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /*ЗАКРЕПЛЯШКА ТЕЛЕФОНА*/
 /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ*/
 /*###############################################################################################################################*/
@@ -3579,3 +3619,61 @@ svg {
 }
 
 /*КОНЕЦ СТРАНИЦА ТОЧКИ*/
+/*###############################################################################################################################*/
+/*ЛК ДАШБОРД*/
+.tiles-icon {
+  display: grid;
+  grid-row-gap: 0.8rem;
+}
+
+.tiles-icon__item {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white);
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  border-radius: 3rem;
+  padding: 0.8rem 1.6rem;
+  transition: background-color 0.3s ease;
+}
+.tiles-icon__item:hover {
+  background-color: var(--gray-extralight);
+}
+.tiles-icon__item:hover svg {
+  stroke: var(--gray-dark);
+}
+.tiles-icon__item:active, .tiles-icon__item:focus, .tiles-icon__item:focus-within {
+  background-color: var(--gray-light);
+}
+.tiles-icon__item:active svg, .tiles-icon__item:focus svg, .tiles-icon__item:focus-within svg {
+  stroke: var(--gray);
+}
+
+.tiles-icon__item-content {
+  display: flex;
+  align-items: center;
+}
+
+.tiles-icon__item-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.8rem;
+}
+.tiles-icon__item-icon svg {
+  width: 2.2rem;
+  height: 2.2rem;
+  stroke: var(--gray-medium);
+  transition: stroke 0.3s ease;
+}
+
+.tiles-icon__item-name {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: var(--black-blue);
+}
+
+/*КОНЕЦ ЛК ДАШБОРД*/

@@ -73,7 +73,16 @@ $(document).ready(function () {
 
     //ДОБАВИТЬ В ИЗБРАННОЕ
     $(document).on('click', '.tiles__item-heart', function () {
-        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        }
+        else {
+            $(this).addClass('active');
+            $('.fav__notification').addClass('active');
+            setTimeout(function () {
+                $('.fav__notification').removeClass('active');
+            }, 2000);
+        }
     });
 
     //МАСКА НА ИНПУТЫ С ТЕЛЕФОНОМ
@@ -174,6 +183,20 @@ $(document).ready(function () {
         }
     }
 
+    //translate
+    $(document).on('mouseenter', '.header-point', function () {
+        $(this).find('.point-img img').removeClass('to-start');
+        $(this).find('.point-img img').addClass('active');
+    });
+    let transform;
+    $(document).on('mouseleave', '.header-point', function () {
+        transform = $(this).find('.point-img img').css('transform');
+        $(this).find('.point-img img').removeClass('active');
+        $(this).find('.point-img img').css('transform', transform);
+        // $(this).find('.point-img img').addClass('to-start');
+
+    });
+
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ПО КЛИКУ НА ФОН
     $(document).mouseup(function (e) {
         let container = $(".block-swipe");
@@ -237,6 +260,10 @@ $(document).ready(function () {
     $(document).on('click', '.btn-add', function () {
         $(this).addClass('hide');
         $(this).parents('.card__btns').find('.card__btns-count').removeClass('hide');
+        $('.cart__notification').addClass('active');
+        setTimeout(function () {
+            $('.cart__notification').removeClass('active');
+        }, 2000);
     });
 
     //УМЕНЬШИТЬ СЧЕТЧИК ТОВАРА
