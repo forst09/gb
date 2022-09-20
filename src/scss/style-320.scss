@@ -102,7 +102,10 @@ svg {
     font-family: "Manrope";
     -webkit-transition: box-shadow 0.3s ease, background-color 0.3s ease;
     -o-transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, -webkit-box-shadow 0.3s ease;
 
     &:hover {
         -webkit-box-shadow: 0px 5px 10px rgba(226, 236, 249, 0.6);
@@ -533,7 +536,10 @@ svg {
     max-height: 4rem;
     -webkit-transition: box-shadow 0.3s ease;
     -o-transition: box-shadow 0.3s ease;
+    -webkit-transition: -webkit-box-shadow 0.3s ease;
+    transition: -webkit-box-shadow 0.3s ease;
     transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 
     &::-webkit-input-placeholder {
         color: var(--gray-medium);
@@ -596,7 +602,10 @@ svg {
         z-index: -1;
         -webkit-transition: transform 0.5s ease, width 0.5s ease;
         -o-transition: transform 0.5s ease, width 0.5s ease;
+        -webkit-transition: width 0.5s ease, -webkit-transform 0.5s ease;
+        transition: width 0.5s ease, -webkit-transform 0.5s ease;
         transition: transform 0.5s ease, width 0.5s ease;
+        transition: transform 0.5s ease, width 0.5s ease, -webkit-transform 0.5s ease;
     }
 
     span {
@@ -1057,10 +1066,13 @@ svg {
     visibility: hidden;
     pointer-events: none;
     top: -9.6rem;
+    -webkit-transition: top 0.5s ease-in-out;
+    -o-transition: top 0.5s ease-in-out;
     transition: top 0.5s ease-in-out;
     z-index: 1000;
     width: 100%;
     min-height: 9.6rem;
+    -webkit-box-shadow: 0px 10px 30px rgba(56, 58, 61, 0.05);
     box-shadow: 0px 10px 30px rgba(56, 58, 61, 0.05);
     border-radius: 0px 0px 1.2rem 1.2rem;
     margin: 0;
@@ -1074,6 +1086,7 @@ svg {
 
     .header__search {
         bottom: 1.2rem;
+        -webkit-box-shadow: none;
         box-shadow: none;
     }
 
@@ -1790,6 +1803,16 @@ svg {
     opacity: 0;
 }
 
+@-webkit-keyframes fadeEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes fadeEffect {
     0% {
         opacity: 0;
@@ -2449,11 +2472,17 @@ svg {
         position: absolute;
         left: 0;
         top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         width: 2.4rem;
         height: 2.4rem;
         fill: var(--white);
+        -webkit-transition: fill 0.3s ease, -webkit-transform 0.3s ease;
+        transition: fill 0.3s ease, -webkit-transform 0.3s ease;
+        -o-transition: transform 0.3s ease, fill 0.3s ease;
         transition: transform 0.3s ease, fill 0.3s ease;
+        transition: transform 0.3s ease, fill 0.3s ease, -webkit-transform 0.3s ease;
     }
 
     &:hover {
@@ -2462,6 +2491,8 @@ svg {
         }
 
         svg {
+            -webkit-transform: translateY(-50%) translateX(-0.4rem);
+            -ms-transform: translateY(-50%) translateX(-0.4rem);
             transform: translateY(-50%) translateX(-0.4rem);
             fill: var(--orange-light);
         }
@@ -2475,6 +2506,8 @@ svg {
         }
 
         svg {
+            -webkit-transform: translateY(-50%) translateX(0);
+            -ms-transform: translateY(-50%) translateX(0);
             transform: translateY(-50%) translateX(0);
             fill: var(--orange);
         }
@@ -2524,6 +2557,8 @@ svg {
         width: 2.4rem;
         height: 2.4rem;
         stroke: var(--white);
+        -webkit-transition: stroke 0.3s ease, fill 0.3s ease;
+        -o-transition: stroke 0.3s ease, fill 0.3s ease;
         transition: stroke 0.3s ease, fill 0.3s ease;
     }
 
@@ -3182,9 +3217,13 @@ svg {
 
     position: relative;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-transition: all 1s ease-out 0s;
+    -o-transition: all 1s ease-out 0s;
     transition: all 1s ease-out 0s;
     background: transparent;
     z-index: 2;
@@ -3196,8 +3235,9 @@ svg {
         height: 10px;
         background: var(--orange-light);
         opacity: 0;
-        -webkit-border-radius: 50%;
         border-radius: 50%;
+        -webkit-transition: all 0.6s ease-in;
+        -o-transition: all 0.6s ease-in;
         transition: all 0.6s ease-in;
         z-index: -1;
     }
@@ -3238,28 +3278,61 @@ svg {
     &:active,
     &:focus,
     &:focus-within {
+        -webkit-animation: btn-orange 0.7s ease;
         animation: btn-orange 0.7s ease;
+    }
+}
+
+@-webkit-keyframes btn-orange {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    25% {
+        -webkit-transform: translateY(0.2rem);
+        transform: translateY(0.2rem);
+    }
+
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    75% {
+        -webkit-transform: translateY(0.2rem);
+        transform: translateY(0.2rem);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
 @keyframes btn-orange {
     0% {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 
     25% {
+        -webkit-transform: translateY(0.2rem);
         transform: translateY(0.2rem);
     }
 
     50% {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 
     75% {
+        -webkit-transform: translateY(0.2rem);
         transform: translateY(0.2rem);
     }
 
     100% {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 }
@@ -3426,8 +3499,8 @@ svg {
         top: 0;
         width: 100%;
         height: 100%;
-        background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(rgba(0, 0, 0, 0)));
         background: -o-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(rgba(0, 0, 0, 0)));
         background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
         opacity: 0.5;
         -webkit-filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
@@ -3676,6 +3749,8 @@ svg {
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
+    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+    -o-transition: color 0.3s ease, background-color 0.3s ease;
     transition: color 0.3s ease, background-color 0.3s ease;
 
     &+& {
@@ -4177,13 +4252,20 @@ svg {
 }
 
 .tiles-icon__item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100%;
     background-color: var(--white);
+    -webkit-box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     border-radius: 3rem;
     padding: 0.8rem 1.6rem;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
 
     &:hover {
@@ -4206,15 +4288,25 @@ svg {
 }
 
 .tiles-icon__item-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .tiles-icon__item-icon {
     width: 4rem;
     height: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-right: 0.8rem;
 
@@ -4222,6 +4314,8 @@ svg {
         width: 2.2rem;
         height: 2.2rem;
         stroke: var(--gray-medium);
+        -webkit-transition: stroke 0.3s ease;
+        -o-transition: stroke 0.3s ease;
         transition: stroke 0.3s ease;
     }
 }
