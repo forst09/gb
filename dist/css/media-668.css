@@ -123,16 +123,25 @@
     padding: 1.6rem 0;
   }
   .header-fixed .header-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
   .header-fixed .header__logo {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
     order: 3;
     width: 5rem;
     height: 4.4rem;
   }
   .header-fixed .header__search {
     position: static;
+    -webkit-transform: unset;
+    -ms-transform: unset;
     transform: unset;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
     max-width: 27.4rem;
   }
@@ -143,6 +152,8 @@
     padding: 0.7rem 1.6rem;
   }
   .header-fixed .place {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
     max-width: 20.8rem;
     height: 4.4rem;
