@@ -874,8 +874,8 @@
     position: absolute;
     left: 0;
     min-width: 19.4rem;
-    padding-top: 0.4rem;
-    top: 100%;
+    padding-top: 1rem;
+    top: calc(100% - 0.6rem);
     visibility: hidden;
     opacity: 0;
     z-index: -1;

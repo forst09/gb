@@ -670,7 +670,7 @@ svg {
 }
 
 .search-input {
-    padding: 1.2rem 1.2rem 1.2rem 3.8rem;
+    padding: 1.2rem 8rem 1.2rem 3.8rem;
     border: none;
 
     &::-webkit-input-placeholder {
@@ -1050,6 +1050,62 @@ svg {
 }
 
 /*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ*/
+
+/*НАЧАЛО СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ*/
+.header-fixed {
+    position: fixed;
+    visibility: hidden;
+    pointer-events: none;
+    top: -9.6rem;
+    transition: top 0.5s ease-in-out;
+    z-index: 1000;
+    width: 100%;
+    min-height: 9.6rem;
+    box-shadow: 0px 10px 30px rgba(56, 58, 61, 0.05);
+    border-radius: 0px 0px 1.2rem 1.2rem;
+    margin: 0;
+    padding-top: 1.2rem;
+    opacity: 0;
+
+    .header__logo {
+        width: 2.7rem;
+        height: 2.4rem;
+    }
+
+    .header__search {
+        bottom: 1.2rem;
+        box-shadow: none;
+    }
+
+    .place__text {
+        display: none;
+    }
+
+    .place__address {
+        font-size: 1.4rem;
+    }
+
+    .search-input {
+        padding: 0.8rem 8rem 0.8rem 3.8rem;
+    }
+
+    .place {
+        max-width: 34.3rem;
+    }
+
+    .input-submit {
+        padding: 0.3rem 1.6rem;
+    }
+}
+
+.header-fixed.active {
+    visibility: visible;
+    pointer-events: all;
+    top: 0;
+    opacity: 1;
+}
+
+/*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ*/
 
 /*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
 .footer {

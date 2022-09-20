@@ -173,6 +173,21 @@ $(document).ready(function () {
     }
     $('.stretch').css('min-height', contentHeight);
 
+    //ФИКСИРОВАННАЯ ШАПКА НА СКРОЛЛЕ 
+    let header = document.querySelector('.header');
+    let headerFix = document.querySelector('.header-fixed');
+    let headerHeight = header.clientHeight + 200;
+    document.onscroll = function () {
+        let scroll = window.scrollY;
+
+        if (scroll > headerHeight) {
+            headerFix.classList.add('active');
+        }
+        else {
+            headerFix.classList.remove('active');
+        }
+    };
+
     //ДОБАВИТЬ padding-bottom К body ЕСЛИ ЕСТЬ ЗАКРЕПЛЯШКИ
     if ($(window).width() < 668) {
         if ($('.pin').length != 0) {

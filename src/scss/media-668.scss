@@ -157,6 +157,53 @@
         }
     }
 
+    /*НАЧАЛО СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ 668*/
+    .header-fixed {
+        min-height: auto;
+        padding: 1.6rem 0;
+
+        .header-container {
+            flex-direction: row;
+        }
+
+        .header__logo {
+            order: 3;
+            width: 5rem;
+            height: 4.4rem;
+        }
+
+        .header__search {
+            position: static;
+            transform: unset;
+            order: 1;
+            max-width: 27.4rem;
+        }
+
+        .search-input {
+            padding: 1.2rem 8rem 1.2rem 4.2rem;
+        }
+
+        .input-submit {
+            padding: 0.7rem 1.6rem;
+        }
+
+        .place {
+            order: 2;
+            max-width: 20.8rem;
+            height: 4.4rem;
+            padding-right: 1.9rem;
+        }
+
+        .place__address {
+            height: 4.4rem;
+            -ms-line-clamp: 2;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+        }
+    }
+
+    /*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ 668*/
+
     /*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ 668*/
 
     /*НАЧАЛО СТИЛЕЙ ФУТЕРА 668*/
