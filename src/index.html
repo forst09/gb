@@ -10,25 +10,31 @@
         <div class="wrapper">
             <div class="title-wrapper">
                 <h1>Откуда забрать</h1>
-                <div class="filters__mobile-btn">
-                    <svg>
-                        <use xlink:href="img/icons/sprite.svg#filters"></use>
-                    </svg>
-                </div>
             </div>
+        </div>
+        <div class="filters__wrapper">
             <div class="filters">
-                <div class="filters__items">
-                    <a class="filters__item letter-spacing filters__item-js active" href="javascript:void(0)">Все</a>
-                    <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Только
-                        лимонады</a>
-                    <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Есть десерты</a>
-                    <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Светлое пиво</a>
-                    <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Закуски</a>
-                    <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Закуски</a>
-                    <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Закуски</a>
-                    <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Закуски</a>
-                    <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Закуски</a>
-                    <a class="filters__item letter-spacing filters__item-js" href="javascript:void(0)">Закуски</a>
+                <div class="filters-light filters-light--white">
+                    <div class="filters-light__items">
+                        <a class="filters-light__item letter-spacing filters__item-js active"
+                            href="javascript:void(0)">Пиво</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Рыба</a>
+                        <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Б/а
+                            пиво</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Популярное</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Рыба</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Рыба</a>
+                        <a class="filters-light__item letter-spacing filters__item-js" href="javascript:void(0)">Б/а
+                            пиво</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Популярное</a>
+                        <a class="filters-light__item letter-spacing filters__item-js"
+                            href="javascript:void(0)">Рыба</a>
+                    </div>
                 </div>
                 <div class="view-btn">
                     <div class="view-btn__item tab active" data-id="view" data-tab="viewTiles">
@@ -45,8 +51,10 @@
                     </div>
                 </div>
             </div>
-            <!-- ОТОБРАЖЕНИЕ ПЛИТКОЙ -->
-            <div class="tab-content active" data-id="view" data-tab="viewTiles">
+        </div>
+        <!-- ОТОБРАЖЕНИЕ ПЛИТКОЙ -->
+        <div class="tab-content active" data-id="view" data-tab="viewTiles">
+            <div class="wrapper">
                 <div class="tiles">
                     <div class="tiles__item">
                         <div class="tiles__item-img-wrapper">
@@ -794,10 +802,12 @@
                     </div>
                 </div>
             </div>
-            <!--КОНЕЦ ОТОБРАЖЕНИЕ ПЛИТКОЙ -->
+        </div>
+        <!--КОНЕЦ ОТОБРАЖЕНИЕ ПЛИТКОЙ -->
 
-            <!-- ОТОБРАЖЕНИЕ КАРТОЙ -->
-            <div class="tab-content" data-id="view" data-tab="viewMap">
+        <!-- ОТОБРАЖЕНИЕ КАРТОЙ -->
+        <div class="tab-content" data-id="view" data-tab="viewMap">
+            <div class="wrapper">
                 <div class="map-view">
                     <div class="map-view__stores" ss-container>
                         <div class="map-view__stores-item">
@@ -933,12 +943,12 @@
                     </div>
                 </div>
             </div>
-            <!-- КОНЕЦ ОТОБРАЖЕНИЕ КАРТОЙ -->
         </div>
+        <!-- КОНЕЦ ОТОБРАЖЕНИЕ КАРТОЙ -->
     </section>
 
     <!-- ВСПЛЫВАШКА ФИЛЬТР НА МОБИЛКАХ -->
-    <div class="block-swipe__background block-swipe__background-filters"></div>
+    <!-- <div class="block-swipe__background block-swipe__background-filters"></div>
     <div class="block-swipe block-swipe-filters">
         <div class="wrapper">
             <div class="block-swipe__title">По типу пива</div>
@@ -959,7 +969,7 @@
             </div>
         </div>
         <div class="block-swipe__btn"></div>
-    </div>
+    </div> -->
     <!-- КОНЕЦ ВСПЛЫВАШКА ФИЛЬТР НА МОБИЛКАХ -->
 
     <!-- ВСПЛЫВАШКА ВЫБОР ГОРОДА -->
@@ -1104,9 +1114,9 @@
     <!-- КОНЕЦ ВСПЛЫВАШКА СПАСИБО ЗА ОБРАЩЕНИЕ! -->
 
     <!-- ВСПЛЫВАШКА ОБРАТНАЯЯ СВЯЗЬ -->
-    <div class="block-swipe__background block-swipe__background-feedback active">
+    <div class="block-swipe__background block-swipe__background-feedback">
     </div>
-    <div class="block-swipe block-swipe-feedback block-swipe-hybrid active">
+    <div class="block-swipe block-swipe-feedback block-swipe-hybrid">
         <div class="wrapper">
             <h2 class="modal-title letter-spacing">Связаться с нами</h2>
             <div class="feedback__form">

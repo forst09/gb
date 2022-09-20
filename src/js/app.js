@@ -189,7 +189,7 @@ $(document).ready(function () {
     };
 
     //ДОБАВИТЬ padding-bottom К body ЕСЛИ ЕСТЬ ЗАКРЕПЛЯШКИ
-    if ($(window).width() < 668) {
+    if ($(window).width() < 668 || ($(window).width() < 1024 && !$('.pin').hasClass('phone-pin'))) {
         if ($('.pin').length != 0) {
             let bodyPaddingBottom = $('body').css('padding-bottom').replace('px', '');
             let pinHeight = $('.pin').css('height').replace('px', '');
@@ -199,16 +199,19 @@ $(document).ready(function () {
     }
 
     //translate
+    let beginTransform = $('.point-img img').css('transform');
     $(document).on('mouseenter', '.header-point', function () {
-        $(this).find('.point-img img').removeClass('to-start');
+        // $(this).find('.point-img img').removeClass('to-start');
         $(this).find('.point-img img').addClass('active');
     });
     let transform;
     $(document).on('mouseleave', '.header-point', function () {
-        transform = $(this).find('.point-img img').css('transform');
-        $(this).find('.point-img img').removeClass('active');
-        $(this).find('.point-img img').css('transform', transform);
-        // $(this).find('.point-img img').addClass('to-start');
+        transform = $('.point-img img').css('transform');
+        $('.point-img img').css('transform', transform);
+        $('.point-img img').removeClass('active');
+        requestAnimationFrame(function () {
+            $('.point-img img').css('transform', 'translateY(-30%)');
+        });
 
     });
 
