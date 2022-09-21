@@ -116,6 +116,14 @@ $(document).ready(function () {
         $("html").addClass("scroll-hidden");
     }
 
+    //ЗАКРЫТЬ КУКИ 
+    let cookieBtnClose = document.querySelector(".cookie .btn-text");
+    if (cookieBtnClose != null) {
+        cookieBtnClose.addEventListener("click", function (e) {
+            document.querySelector(".cookie").remove();
+        });
+    }
+
     //ПО СВАЙПУ УБРАТЬ POP-UP
     let touchstartY = 0;
     let touchendY = 0;
@@ -174,19 +182,21 @@ $(document).ready(function () {
     $('.stretch').css('min-height', contentHeight);
 
     //ФИКСИРОВАННАЯ ШАПКА НА СКРОЛЛЕ 
-    let header = document.querySelector('.header');
-    let headerFix = document.querySelector('.header-fixed');
-    let headerHeight = header.clientHeight + 200;
-    document.onscroll = function () {
-        let scroll = window.scrollY;
+    if ($('.header').length !== 0) {
+        let header = document.querySelector('.header');
+        let headerFix = document.querySelector('.header-fixed');
+        let headerHeight = header.clientHeight + 200;
+        document.onscroll = function () {
+            let scroll = window.scrollY;
 
-        if (scroll > headerHeight) {
-            headerFix.classList.add('active');
-        }
-        else {
-            headerFix.classList.remove('active');
-        }
-    };
+            if (scroll > headerHeight) {
+                headerFix.classList.add('active');
+            }
+            else {
+                headerFix.classList.remove('active');
+            }
+        };
+    }
 
     //ДОБАВИТЬ padding-bottom К body ЕСЛИ ЕСТЬ ЗАКРЕПЛЯШКИ
     if ($(window).width() < 668 || ($(window).width() < 1024 && !$('.pin').hasClass('phone-pin'))) {
@@ -199,21 +209,134 @@ $(document).ready(function () {
     }
 
     //translate
-    let beginTransform = $('.point-img img').css('transform');
-    $(document).on('mouseenter', '.header-point', function () {
-        // $(this).find('.point-img img').removeClass('to-start');
-        $(this).find('.point-img img').addClass('active');
-    });
-    let transform;
-    $(document).on('mouseleave', '.header-point', function () {
-        transform = $('.point-img img').css('transform');
-        $('.point-img img').css('transform', transform);
-        $('.point-img img').removeClass('active');
-        requestAnimationFrame(function () {
-            $('.point-img img').css('transform', 'translateY(-30%)');
-        });
+    // let beginTransform = $('.point-img img').css('transform');
+    // $(document).on('mouseenter', '.header-point', function () {
+    //     // $(this).find('.point-img img').removeClass('to-start');
+    //     $(this).find('.point-img img').addClass('active');
+    // });
+    // let transform;
+    // $(document).on('mouseleave', '.header-point', function () {
+    //     transform = $('.point-img img').css('transform');
+    //     $('.point-img img').css('transform', transform);
+    //     $('.point-img img').removeClass('active');
+    //     requestAnimationFrame(function () {
+    //         $('.point-img img').css('transform', 'translateY(-30%)');
+    //     });
 
-    });
+    // });
+
+
+
+
+
+
+    // $('.header-point').on('mousemove', function (e) {
+    //     console.log(e.target);
+    //     // $(this).toggleClass('test1');
+    //     if ($(e.target).hasClass('header-point')) {
+    //         $('.point-img img').addClass('active');
+    //         return;
+    //     } else {
+
+    //         let transformValue = $('.point-img img').css('transform');
+    //         $('.point-img img').css({ 'transform': transformValue })
+    //             .removeClass('active');
+
+    //         requestAnimationFrame(function () {
+    //             $('.point-img img').css({ 'transform': 'translateY(-50%)' });
+    //         });
+    //     }
+
+    // });
+
+    // $('label').hover(
+    //     function () {
+    //         $('.anim-div').addClass('anim-div_active');
+    //     },
+    //     function () {
+    //         let transformValue = $('.anim-div').css('transform');
+    //         $('.anim-div').css({ 'transform': transformValue })
+    //             .removeClass('anim-div_active');
+
+    //         requestAnimationFrame(function () {
+    //             $('.anim-div').css({ 'transform': 'translateY(0%)' });
+    //         });
+    //     });
+
+
+    // });
+
+
+
+    // $(document).on('mouseenter', 'label', function () {
+    //     // $('.anim-div').removeClass('to-start');
+    //     $('.anim-div').addClass('anim-div_active');
+    //     // return;
+    // });
+
+    // const getPopup = function (e, item, parent) {
+    //     if (
+    //         !$(item).is(e.target) &&
+    //         !$(parent).is(e.target) &&
+    //         $(item).has(e.target).length === 0 &&
+    //         $(parent).has(e.target).length === 0
+    //     ) {
+    //         var transformValue = $('.anim-div').css('transform');
+    //         $('.anim-div').css({ 'transform': transformValue })
+    //             .removeClass('anim-div_active');
+    //         requestAnimationFrame(function () {
+    //             $('.anim-div').css({ 'transform': 'translateY(0%)' });
+
+    //         });
+    //     }
+    // };
+
+    // $(document).mouseup(function (e) {
+    //     getPopup(e, ".anim-div");
+    // });
+
+    // $(document).on('mouseout', 'label', function () {
+    //     var transformValue = $('.anim-div').css('transform');
+    //     $('.anim-div').css({ 'transform': transformValue })
+    //         .removeClass('anim-div_active');
+
+    //     requestAnimationFrame(function () {
+    //         $('.anim-div').css({ 'transform': 'translateY(0%)' });
+    //         // $('.anim-div').animate({
+    //         //     step: function (now, fx) {
+    //         //         $(this).css({ 'transform': 'translateY(0)' });
+    //         //     }
+    //         // }, 1000, 'linear')
+    //         // $('.anim-div').addClass('to-start');
+    //         // $('.anim-div').removeAttr('style');
+    //     });
+    // });
+
+
+    // });
+
+    // $('img').on('mouseenter', function () {
+    //     $(this).removeAttr('style');
+    //     $('img').addClass('anim-div_active');
+    //     return;
+    // });
+
+    // $('img').on('mouseout', function () {
+    //     var transformValue = $('img').css('transform');
+    //     $('img').css({ 'transform': transformValue })
+    //     // .removeClass('anim-div_active');
+    //     requestAnimationFrame(function () {
+    //         $('img').css({ 'transform': 'translateY(0%)' });
+    //     });
+    // });
+
+
+
+
+
+
+
+
 
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ПО КЛИКУ НА ФОН
     $(document).mouseup(function (e) {

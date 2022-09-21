@@ -858,7 +858,7 @@ svg {
   font-family: "Manrope";
   background-color: var(--gray-extralight);
   border: none;
-  padding: 0.7rem 1.6rem;
+  padding: 0.6rem 1.6rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -965,7 +965,7 @@ svg {
   padding: 0.8rem 8rem 0.8rem 3.8rem;
 }
 .header-fixed .place {
-  max-width: 34.3rem;
+  max-width: 54%;
 }
 .header-fixed .input-submit {
   padding: 0.3rem 1.6rem;
@@ -2933,6 +2933,10 @@ svg {
   max-width: 28.7rem;
   margin: 3.9rem auto 0;
   letter-spacing: 0.02em;
+  text-align: center;
+}
+.text a {
+  color: var(--orange);
 }
 
 .modal__buttons {
@@ -3813,3 +3817,80 @@ svg {
 }
 
 /*КОНЕЦ ЛК ДАШБОРД*/
+/*COOKIE*/
+.cookie {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--white);
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
+  border-radius: 3.4rem 3.4rem 0px 0px;
+  padding-top: 2.4rem;
+}
+.cookie .text {
+  margin: 0;
+  max-width: none;
+}
+
+.anim-div {
+  margin-top: 50px;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+.anim-div_active {
+  -webkit-animation: moving 2s ease-in-out infinite alternate;
+  animation: moving 2s ease-in-out infinite alternate;
+}
+
+.anim-div_return {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+@-webkit-keyframes moving {
+  /*   0% { -webkit-transform: translateX(0); }
+  100% { -webkit-transform: translateX(300px); } */
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(300px);
+  }
+}
+@keyframes moving {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(300px);
+  }
+}
+.image {
+  width: 105rem;
+  height: 50rem;
+  overflow: hidden;
+  margin-bottom: 10rem;
+}
+.image img {
+  width: 200rem;
+  height: 200rem;
+  object-fit: cover;
+}
+
+.block img {
+  transition: transform 0.3s ease;
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+.to-start {
+  transform: translateY(0);
+  transition: transform 1s ease;
+}

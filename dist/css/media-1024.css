@@ -679,11 +679,12 @@
     padding-top: 2.1rem;
   }
   .header-point:hover .point-img img {
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-    -webkit-transition: all 1.5s;
-    -o-transition: all 1.5s;
-    transition: all 1.5s;
+    transform: translateY(-30%);
+    animation: point-img linear 6s !important;
+    animation-fill-mode: forwards;
+  }
+  .header-point:not(:hover) .point-img img {
+    transform: translateY(-30%);
   }
   .back-span {
     display: -webkit-inline-box;

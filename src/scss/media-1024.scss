@@ -860,14 +860,23 @@
 
         &:hover {
             .point-img img {
-                // transform: translateY(-50%);
-                // animation: point-img infinite ease-in-out 25s;
-                -webkit-animation-direction: alternate;
-                animation-direction: alternate;
-                // transform: translateY(-50%);
-                -webkit-transition: all 1.5s;
-                -o-transition: all 1.5s;
-                transition: all 1.5s;
+                transform: translateY(-30%);
+                animation: point-img linear 6s !important;
+                animation-fill-mode: forwards;
+                // -webkit-animation-direction: alternate;
+                // animation-direction: alternate;
+                // // transform: translateY(-50%);
+                // -webkit-transition: all 1.5s;
+                // -o-transition: all 1.5s;
+                // transition: all 1.5s;
+            }
+        }
+
+        &:not(:hover) {
+            .point-img img {
+                // animation: none;
+                transform: translateY(-30%);
+                // transition: transform 1s ease, -webkit-transform 1s ease;
             }
         }
     }
@@ -916,9 +925,10 @@
             -o-transition: transform 1s ease;
             transition: transform 1s ease;
             transition: transform 1s ease, -webkit-transform 1s ease;
-            // transition: all 1.5s;
         }
     }
+
+
 
     .point-img img.active {
         -webkit-animation: point-img infinite ease-in-out 25s;
