@@ -1551,6 +1551,23 @@ svg {
 }
 
 /*КОНЕЦ ВСПЛЫВАШКА ОБРАТНОЙ СВЯЗИ*/
+/*ВСПЛЫВАШКА ЛИЧНЫЕ ДАННЫЕ УСПЕШНО ИЗМЕНЕНЫ*/
+.personal-icon {
+  -webkit-animation: checkmark 1.5s infinite;
+  animation: checkmark 1.5s infinite;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.personal-icon__svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+/*КОНЕЦ ВСПЛЫВАШКА ЛИЧНЫЕ ДАННЫЕ УСПЕШНО ИЗМЕНЕНЫ*/
 /* ymaps*/
 .ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-gototaxi,
