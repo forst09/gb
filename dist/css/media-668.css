@@ -263,6 +263,11 @@
   .modal__buttons-shadow {
     margin-top: 2.4rem;
   }
+  .cart-pin,
+.pin-save {
+    display: block;
+    bottom: 7.2rem;
+  }
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
   .view-btn {
@@ -397,10 +402,6 @@
   }
   .cards__container {
     grid-template-columns: repeat(4, 1fr);
-  }
-  .cart-pin {
-    display: block;
-    bottom: 7.2rem;
   }
   .cart-pin__text {
     font-size: 1.8rem;

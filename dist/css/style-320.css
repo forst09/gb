@@ -3925,6 +3925,17 @@ svg {
   margin-top: 2.4rem;
 }
 
+.personal-data__save {
+  display: none;
+}
+
+.pin-save {
+  text-align: center;
+}
+.pin-save .btn-text {
+  font-size: 1.6rem;
+}
+
 /*КОНЕЦ ЛИЧНЫЕ ДАННЫЕ*/
 .anim-div {
   margin-top: 50px;

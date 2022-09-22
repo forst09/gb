@@ -76,6 +76,11 @@ $(document).ready(function () {
         $(this).parents('.input-wrapper').removeClass('active');
     });
 
+    //TRIGGER CLICK ПО КНОПКЕ СОХРАНИТЬ ИЗМЕНЕНИЯ НА МОБИЛКАХ НАЖАТЬ НА ИНПУТ САБМИТ В СТРАНИЦЕ ЛИЧНЫЕ ДАННЫЕ
+    $(document).on('click', '.pin-save .btn-text', function () {
+        $('.personal-data__save .btn-text').trigger('click');
+    });
+
     //ДОБАВИТЬ В ИЗБРАННОЕ
     $(document).on('click', '.tiles__item-heart', function () {
         if ($(this).hasClass('active')) {
