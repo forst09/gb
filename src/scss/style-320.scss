@@ -65,6 +65,38 @@ textarea {
     scrollbar-color: var(--gray-medium) transparent;
 }
 
+.textarea__wrapper {
+    box-shadow: 0 0 0 1px var(--gray-medium);
+    border-radius: 1.2rem;
+    max-height: 10rem;
+    padding: 0.5rem 0;
+    padding-right: 1rem;
+    overflow: hidden;
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        box-shadow: 0 0 0 2px var(--gray-medium);
+    }
+
+    .form-input {
+        padding: 0.5rem 1.6rem;
+        padding-right: 0.6rem;
+        box-shadow: none !important;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-within {
+            box-shadow: none !important;
+        }
+    }
+}
+
+.textarea__wrapper.active {
+    // box-shadow: 0 0 0 2px var(--gray-medium);
+}
+
 .title {
     font-size: 1.8rem;
     line-height: 2.2rem;
@@ -1343,7 +1375,9 @@ svg {
     }
 }
 
-.tabbar__item-quantity {
+.item-quantity {
+    position: relative;
+
     span {
         position: absolute;
         right: 0.25rem;
@@ -3207,7 +3241,7 @@ svg {
 }
 
 .pin {
-    //есть еще phone-pin
+    //есть еще phone-pin cart-pin
     padding: 1.6rem;
     border-radius: 1.2rem 1.2rem 0 0;
     background-color: var(--white);
@@ -3215,6 +3249,7 @@ svg {
     bottom: 5.6rem;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
 }
 
 .btn-orange {
@@ -3233,7 +3268,7 @@ svg {
     -webkit-box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     border-radius: 1.2rem;
-
+    color: var(--white);
     position: relative;
     overflow: hidden;
     display: -webkit-box;
@@ -3270,14 +3305,6 @@ svg {
         height: 100%;
         background-color: var(--orange);
         z-index: -2;
-    }
-
-    &:hover {
-        &::before {
-            opacity: 1;
-            width: calc(100% + 10rem);
-            height: calc(100% + 10rem);
-        }
     }
 
     span {
@@ -4264,6 +4291,44 @@ svg {
     font-size: 1.4rem;
     line-height: 1.8rem;
     font-weight: 500;
+}
+
+.cart-pin {
+    .btn-orange {
+        justify-content: space-between;
+    }
+}
+
+.cart-pin__text {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+}
+
+.cart-pin__total {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+}
+
+/*ПУСТАЯ ТОЧКА*/
+.empty__img {
+    width: 9.5rem;
+    height: 18.8rem;
+    margin: 0 auto 1.6rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.empty__text {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--black-text);
 }
 
 /*КОНЕЦ СТРАНИЦА ТОЧКИ*/

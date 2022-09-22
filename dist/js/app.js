@@ -53,7 +53,12 @@ $(document).ready(function () {
 
     //ИНПУТЫ
     const labelUp = function (label) {
-        $(label).parents(".input-wrapper").addClass("active");
+        if ($(label).is('textarea')) {
+            $(label).parents(".textarea__wrapper").addClass("active");
+        }
+        else {
+            $(label).parents(".input-wrapper").addClass("active");
+        }
         $(label).parents(".input-wrapper").find(".label-transform").addClass("active");
     };
     $(document).on("focus", ".form-input", function () {

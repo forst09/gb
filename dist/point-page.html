@@ -200,7 +200,7 @@
                         </div>
                         <div class="point__info-address">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
                     </div>
-                    <div class="preferential">
+                    <div class="preferential" style="display: none;">
                         <div class="preferential__name">
                             <div class="label label--green">%</div>
                             <span class="letter-spacing">Льготные скидки &#8381;</span>
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="filters-light">
+                <div class="filters-light" style="display: none;">
                     <div class="filters-light__items">
                         <a class="filters-light__item letter-spacing filters__item-js active"
                             href="javascript:void(0)">Пиво</a>
@@ -236,7 +236,15 @@
                 </div>
                 <div class="cards">
                     <div class="wrapper">
-                        <div class="cards__container">
+                        <div class="point-empty">
+                            <div class="empty__img">
+                                <img src="img/beer-hehe.svg" alt="">
+                            </div>
+                            <div class="empty__text">
+                                <p>Товаров пока что нет. Вы можете добавть точку в избранное и зайти немного позже</p>
+                            </div>
+                        </div>
+                        <div class="cards__container" style="display: none;">
                             <div class="card">
                                 <a href="javascript:void(0)" class="card__image">
                                     <img src="img/catalog/cards-1.jpg" alt="">
@@ -358,7 +366,7 @@
                             </div>
                             <div class="card">
                                 <a href="javascript:void(0)" class="card__image">
-                                    <img src="img/catalog/cards-1.jpg" alt="">
+                                    <img src="img/catalog/plug.jpg" alt="">
                                     <div class="card__labels">
                                         <div class="label label--green">%</div>
                                         <div class="label label--red">top</div>
@@ -1032,7 +1040,7 @@
             <div class="point-page__cart">
                 <div class="point-page__cart-top">
                     <div class="point-page__cart-title letter-spacing">Корзина</div>
-                    <div class="cart__container">
+                    <div class="cart__container" style="display: none;">
                         <div class="cart__item">
                             <div class="cart__item-info">
                                 <a class="cart__img" href="javascript:void(0)">
@@ -1395,7 +1403,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="cart__total">
+                <div class="point-page__cart--empty">
+                    <div class="empty__text">
+                        <p>В корзине пока что нет ни одного товара</p>
+                    </div>
+                </div>
+                <div class="cart__total" style="display: none;">
                     <div class="cart__total-info">
                         <div class="card__cost">
                             <div class="card__cost-new">550 &#8381;</div>
@@ -1499,6 +1512,15 @@
 </footer>
 <!-- КОНЕЦ ФУТЕРА -->
 
+    <!-- ПРИКРЕПЛЯШКА С КНОПКОЙ КОРЗИНА -->
+    <div class="pin cart-pin">
+        <a href="javascript:void(0)" class="btn-orange cart-pin__link">
+            <div class="cart-pin__text letter-spacing">Корзина</div>
+            <div class="cart-pin__total">111 111 &#8381;</div>
+        </a>
+    </div>
+    <!-- КОНЕЦ ПРИКРЕПЛЯШКА С КНОПКОЙ КОРЗИНА -->
+
     <!-- НАЧАЛО ТАББАРА -->
 <div class="tabbar">
     <div class="wrapper">
@@ -1508,7 +1530,7 @@
                     <use xlink:href="img/icons/sprite.svg#home"></use>
                 </svg>
             </a>
-            <a class="tabbar__item tabbar__item-quantity" href="javascript:void(0)">
+            <a class="tabbar__item item-quantity" href="javascript:void(0)">
                 <svg>
                     <use xlink:href="img/icons/sprite.svg#heartMini"></use>
                 </svg>

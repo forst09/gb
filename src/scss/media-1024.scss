@@ -1208,6 +1208,16 @@
 
     /*КОНЕЦ COOKIE 1024*/
 
+    .btn-orange {
+        &:hover {
+            &::before {
+                opacity: 1;
+                width: calc(100% + 10rem);
+                height: calc(100% + 10rem);
+            }
+        }
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
@@ -1759,6 +1769,16 @@
     .card__btns-count {
         padding: 1.2rem 0.8rem;
         max-height: 4.4rem;
+    }
+
+    .cart-pin {
+        display: none;
+    }
+
+    /*ПУСТАЯ ТОЧКА*/
+    .empty__img {
+        width: 14.8rem;
+        height: 29.4rem;
     }
 
     /*КОНЕЦ СТРАНИЦА ТОЧКИ 1024*/

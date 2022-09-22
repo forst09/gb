@@ -195,7 +195,7 @@
     width: 3.4rem;
     height: 3.4rem;
   }
-  .tabbar__item-quantity span {
+  .item-quantity span {
     width: 2.8rem;
     height: 2.8rem;
     font-size: 1.2rem;
@@ -397,6 +397,23 @@
   }
   .cards__container {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .cart-pin {
+    display: block;
+    bottom: 7.2rem;
+  }
+  .cart-pin__text {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  .cart-pin__total {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  /*ПУСТАЯ ТОЧКА*/
+  .empty__img {
+    width: 12rem;
+    height: 23.8rem;
   }
   /*КОНЕЦ СТРАНИЦА ТОЧКИ 668*/
   /*###############################################################################################################################*/
