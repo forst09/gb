@@ -76,6 +76,11 @@
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
+  /*COOKIE 1500*/
+  .cookie {
+    right: 8rem;
+  }
+  /*КОНЕЦ COOKIE 1500*/
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1500*/
   .tiles {

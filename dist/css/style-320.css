@@ -2253,6 +2253,23 @@ svg {
   margin: 0 auto 3.5rem;
 }
 
+/*COOKIE*/
+.cookie {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--white);
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
+  border-radius: 3.4rem 3.4rem 0px 0px;
+  padding-top: 2.4rem;
+}
+.cookie .text {
+  margin: 0;
+  max-width: none;
+}
+
+/*КОНЕЦ COOKIE*/
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {
@@ -3817,22 +3834,6 @@ svg {
 }
 
 /*КОНЕЦ ЛК ДАШБОРД*/
-/*COOKIE*/
-.cookie {
-  position: fixed;
-  bottom: 0;
-  background-color: var(--white);
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
-  border-radius: 3.4rem 3.4rem 0px 0px;
-  padding-top: 2.4rem;
-}
-.cookie .text {
-  margin: 0;
-  max-width: none;
-}
-
 .anim-div {
   margin-top: 50px;
   width: 10px;

@@ -2608,6 +2608,25 @@ svg {
     margin: 0 auto 3.5rem;
 }
 
+/*COOKIE*/
+.cookie {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--white);
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
+    border-radius: 3.4rem 3.4rem 0px 0px;
+    padding-top: 2.4rem;
+
+    .text {
+        margin: 0;
+        max-width: none;
+    }
+}
+
+/*КОНЕЦ COOKIE*/
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -4333,23 +4352,6 @@ svg {
 }
 
 /*КОНЕЦ ЛК ДАШБОРД*/
-
-/*COOKIE*/
-.cookie {
-    position: fixed;
-    bottom: 0;
-    background-color: var(--white);
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
-    border-radius: 3.4rem 3.4rem 0px 0px;
-    padding-top: 2.4rem;
-
-    .text {
-        margin: 0;
-        max-width: none;
-    }
-}
 
 
 
