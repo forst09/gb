@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Безопасность"
+})
+
+<body>
+    @@include('html/header-2.html',{})
+
+    <section class="security">
+        <div class="wrapper">
+            <div class="title-wrapper jc-center">
+                <h1>Безопасность</h1>
+            </div>
+            <form action="#">
+                <div class="input-wrapper">
+                    <input class="form-input input-password" type="password" id="securityOldPassword">
+                    <label for="securityOldPassword" class="label-eye">
+                        <svg class="eye-open">
+                            <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                        </svg>
+                        <svg class="eye-close">
+                            <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                        </svg>
+                    </label>
+                    <label class="label-transform" for="securityOldPassword">Старый пароль</label>
+                </div>
+                <div class="input-wrapper">
+                    <input class="form-input input-password" type="password" id="securityNewPassword">
+                    <label for="securityNewPassword" class="label-eye">
+                        <svg class="eye-open">
+                            <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                        </svg>
+                        <svg class="eye-close">
+                            <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                        </svg>
+                    </label>
+                    <label class="label-transform" for="securityNewPassword">Новый пароль</label>
+                </div>
+                <div class="input-wrapper">
+                    <input class="form-input input-password" type="password" id="securityRepeatNewPassword">
+                    <label for="securityRepeatNewPassword" class="label-eye">
+                        <svg class="eye-open">
+                            <use xlink:href="img/icons/sprite.svg#eyeOpen"></use>
+                        </svg>
+                        <svg class="eye-close">
+                            <use xlink:href="img/icons/sprite.svg#eyeClose"></use>
+                        </svg>
+                    </label>
+                    <label class="label-transform" for="securityRepeatNewPassword">Подтвердите новый пароль</label>
+                </div>
+                <div class="btn-text__wrapper">
+                    <input type="submit" id="recoverySubmit" value="Сохранить изменения"
+                        class="btn-text btn-text--orange btn-text--big letter-spacing">
+                </div>
+            </form>
+        </div>
+    </section>
+    @@include('html/footer.html',{})
+    @@include('html/tabbar.html',{})
+    <script src="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.60/inputmask/jquery.inputmask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
