@@ -5,13 +5,68 @@
 })
 
 <body>
-    <input type="checkbox" id="anim-input">
-    <label for="anim-input" class="test">Start / stop animation</label>
-    <div class="anim-div"></div>
+    @@include('html/header-2.html',{})
+    <section class="personal-data">
+        <div class="wrapper">
+            <div class="title-wrapper jc-center">
+                <h1>Личные данные</h1>
+            </div>
+            <div class="confirmation">
+                <div class="confirmation__text letter-spacing">Уважаемый, вы не подтвердили свой email</div>
+                <div class="btn-text__wrapper">
+                    <a class="btn-text btn-text--black letter-spacing" href="javascript:void(0)">Подтвердить</a>
+                    <a class="btn-text btn-text--gray letter-spacing" href="javascript:void(0)">Позже</a>
+                </div>
+            </div>
+            <div class="personal-data__form">
+                <form action="#">
+                    <div class="input-wrapper">
+                        <input class="form-input" type="text" id="personalName">
+                        <label for="personalName" class="label-transform">Имя</label>
+                        <label for="personalName" class="label-edit">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#edit"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="form-input" type="text" id="personalSurname">
+                        <label for="personalSurname" class="label-transform">Фамилия</label>
+                        <label for="personalSurname" class="label-edit">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#edit"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="form-input" type="text" id="personalEmail">
+                        <label for="personalEmail" class="label-transform">email</label>
+                        <label for="personalEmail" class="label-edit">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#edit"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="form-input input-phone" type="text" id="personalPhone">
+                        <label for="personalPhone" class="label-transform">Телефон</label>
+                        <label for="personalPhone" class="label-edit">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#edit"></use>
+                            </svg>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="btn-text__wrapper">
+                <a href="javascript:void(0)" class="btn-text btn-text--gray btn-text--big letter-spacing">Выйти из
+                    аккаунта</a>
+            </div>
+        </div>
+    </section>
 
-
-    <!-- <img src="img/cards/cards-1.jpg" alt=""> -->
-
+    @@include('html/footer.html',{})
+    @@include('html/tabbar.html',{})
 </body>
 
 
