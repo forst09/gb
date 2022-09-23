@@ -1478,6 +1478,10 @@
   }
   .more {
     padding-right: 4rem;
+    transition: background-color 0.3s ease;
+  }
+  .more:hover {
+    background-color: var(--gray-extralight);
   }
   .lines-item {
     margin: 0;
