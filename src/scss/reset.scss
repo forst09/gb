@@ -112,10 +112,13 @@ html {
 
 /* Responsive images and other embedded objects
 */
-img,
 object,
 embed {
     max-width: 100%;
+}
+
+img {
+    max-width: none;
 }
 
 /*
