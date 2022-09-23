@@ -2636,6 +2636,80 @@ svg {
 
 /*КОНЕЦ ШАПКА ДЛЯ ТОЧЕК*/
 
+/*ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ*/
+.bg {
+    position: relative;
+}
+
+.bg__img {
+    width: calc(100% + 5.3rem);
+    height: 23.5rem;
+    position: absolute;
+    top: -5.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 5.5rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: linear-gradient(180deg, rgba(244, 165, 25, 0.3) 0%, rgba(244, 165, 25, 0) 80.15%);
+    }
+}
+
+.header-network {
+    padding-top: 0.8rem;
+    margin-bottom: 2.4rem;
+
+    .back-span svg {
+        fill: var(--black);
+    }
+
+    .header-point__icons-link svg {
+        stroke: var(--black);
+    }
+
+    .header-point__icons-item--fav {
+        display: none;
+        margin: 0;
+    }
+
+    .header-point__icons-item+.header-point__icons-item {
+        margin-left: 0;
+    }
+}
+
+.header-network__logo {
+    width: 4.8rem;
+    height: 4.8rem;
+    padding: 0.4rem;
+    box-sizing: content-box;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*КОНЕЦ ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ*/
+
 .hide {
     opacity: 0 !important;
     visibility: hidden !important;
@@ -4486,6 +4560,96 @@ svg {
 }
 
 /*КОНЕЦ ЛИЧНЫЕ ДАННЫЕ*/
+
+/*########################################################################################################################################*/
+/*СТРАНИЦА СЕТИ*/
+.network__btns {
+    display: flex;
+    flex-direction: column;
+
+    .info__phone {
+        width: fit-content;
+    }
+}
+
+.more {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    span {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 500;
+        color: var(--black-blue);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url('../img/arrow-right-dark.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 2.4rem 2.4rem;
+    }
+}
+
+.lines-item {
+    margin-top: 0.8rem;
+    padding: 0.8rem 0;
+    border-top: 1px solid var(--gray-extralight);
+    border-bottom: 1px solid var(--gray-extralight);
+}
+
+.network__info {
+    margin-top: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+
+.point-count__title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: var(--black-blue);
+}
+
+.point-count__value {
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    margin-top: 0.4rem;
+    color: var(--gray-dark);
+}
+
+.feedback-pin {
+    .footer__sosials-feedback {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 700;
+        line-height: 2.2rem;
+        color: var(--gray-dark);
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem;
+        background-color: var(--gray-extralight);
+        border-radius: 1.2rem;
+
+        svg {
+            display: inline-block;
+            width: 1.9rem;
+            height: 1.9rem;
+            stroke: var(--gray-dark);
+            margin-left: 0.8rem;
+        }
+    }
+}
+
+/*КОНЕЦ СТРАНИЦА СЕТИ*/
 
 .anim-div {
     margin-top: 50px;

@@ -340,12 +340,26 @@
 
     /*КОНЕЦ ШАПКА ДЛЯ ТОЧЕК 668*/
 
+    /*ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ 668*/
+    .header-network {
+        padding-top: 1.6rem;
+    }
+
+    .header-network__logo {
+        width: 7.5rem;
+        height: 7.5rem;
+        padding: 0.8rem;
+    }
+
+    /*КОНЕЦ ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ 668*/
+
     .modal__buttons-shadow {
         margin-top: 2.4rem;
     }
 
     .cart-pin,
-    .pin-save {
+    .pin-save,
+    .feedback-pin {
         display: block;
         bottom: 7.2rem;
     }
@@ -560,6 +574,31 @@
     }
 
     /*КОНЕЦ ЛИЧНЫЕ ДАННЫЕ 668*/
+
+    /*########################################################################################################################################*/
+    /*СТРАНИЦА СЕТИ 668*/
+    .more {
+        padding: 0.9rem 0;
+
+        span {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+    }
+
+    .network__info {
+        margin-top: 2.4rem;
+    }
+
+    .point-count__title {
+        font-size: 1.8rem;
+    }
+
+    .point-count__value {
+        margin-top: 0.8rem;
+    }
+
+    /*КОНЕЦ СТРАНИЦА СЕТИ 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
