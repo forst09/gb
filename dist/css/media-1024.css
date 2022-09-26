@@ -15,9 +15,6 @@
     font-size: 3.2rem;
     line-height: 4.4rem;
   }
-  .desc {
-    margin-bottom: 3.2rem;
-  }
   .tabbar {
     display: none;
   }
@@ -985,6 +982,17 @@
     width: calc(100% + 75rem);
     border-radius: 50%;
   }
+  .title-medium {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+  .text-content p + p {
+    margin-top: 1.2rem;
+  }
+  .scroll {
+    padding: 0 6.4rem;
+    overflow: unset;
+  }
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
   .tiles {
@@ -1513,5 +1521,20 @@
     justify-content: space-between;
   }
   /*КОНЕЦ СТРАНИЦА СЕТИ 1024*/
+  /*########################################################################################################################################*/
+  /*ОПИСАНИЕ СЕТИ 1024*/
+  .network-about__links {
+    grid-row-gap: 0.4rem;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 19.7rem);
+    grid-row-gap: 0.8rem;
+  }
+  .gallery__item {
+    width: 19.7rem;
+    height: 13.7rem;
+  }
+  /*КОНЕЦ ОПИСАНИЕ СЕТИ 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
