@@ -401,7 +401,7 @@ svg {
   line-height: 2rem;
   font-weight: 500;
   color: var(--gray-dark);
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .display-none {
@@ -2402,6 +2402,43 @@ svg {
   padding: 0 1.6rem;
   overflow-x: auto;
 }
+.scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.border-item {
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--gray-extralight);
+  border-bottom: 1px solid var(--gray-extralight);
+}
+.border-item + .border-item {
+  border-top: none;
+}
+
+.title-medium {
+  margin: 1.6rem 0 1rem;
+  font-size: 1.9rem;
+  line-height: 2.6rem;
+  font-weight: 600;
+  color: var(--black-text);
+}
+
+.text-content {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+}
+.text-content p + p {
+  margin-top: 0.8rem;
+}
+
+/*fancybox*/
+.carousel__button.is-prev,
+.carousel__button.is-next {
+  transform: translateY(0);
+}
 
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -4119,64 +4156,41 @@ svg {
 }
 
 /*КОНЕЦ СТРАНИЦА СЕТИ*/
-.anim-div {
-  margin-top: 50px;
-  width: 10px;
-  height: 10px;
-  background: #000;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 1s ease-in-out;
+/*########################################################################################################################################*/
+/*ОПИСАНИЕ СЕТИ*/
+.gallery__item {
+  width: 13.3rem;
+  height: 9.2rem;
 }
-
-.anim-div_active {
-  -webkit-animation: moving 2s ease-in-out infinite alternate;
-  animation: moving 2s ease-in-out infinite alternate;
-}
-
-.anim-div_return {
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 1s ease-in-out;
-}
-
-@-webkit-keyframes moving {
-  /*   0% { -webkit-transform: translateX(0); }
-  100% { -webkit-transform: translateX(300px); } */
-  0% {
-    -webkit-transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(300px);
-  }
-}
-@keyframes moving {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(300px);
-  }
-}
-.image {
-  width: 105rem;
-  height: 50rem;
-  overflow: hidden;
-  margin-bottom: 10rem;
-}
-.image img {
-  width: 200rem;
-  height: 200rem;
+.gallery__item img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.block img {
-  transition: transform 0.3s ease;
+.gallery {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.8rem;
 }
 
-img {
-  transition: transform 0.3s ease;
+.documents-item__title {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--gray-dark);
+  margin-bottom: 0.6rem;
 }
 
-.to-start {
-  transform: translateY(0);
-  transition: transform 1s ease;
+.documents-item__desc {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
 }
+
+.network-about__links {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/*КОНЕЦ ОПИСАНИЕ СЕТИ*/

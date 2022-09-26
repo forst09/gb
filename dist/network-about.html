@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style-320.css">
     <link rel="stylesheet" href="css/media-668.css">
@@ -173,12 +174,14 @@
                 <div class="point-logo">
                     <img src="img/logos/logo-1.png" alt="">
                 </div>
-                <h1>О сети</h1>
+                <div class="title-wrapper">
+                    <h1>О сети </h1>
+                </div>
             </div>
-            <div class="desc">
+            <div class="desc letter-spacing">
                 <p>Описание страницы. Оно может быть или его может и не быть.</p>
             </div>
-            <h3 class="title-medium">Контакты</h3>
+            <h3 class="title-medium letter-spacing">Контакты</h3>
             <div class="network-about__links">
                 <a href="tel:+79876543210" class="info__phone">
                     <svg>
@@ -205,8 +208,8 @@
                     <span>email@mail.ru</span>
                 </a>
             </div>
-            <h3 class="title-medium">Описание сети</h3>
-            <div class="text-content">
+            <h3 class="title-medium letter-spacing">Описание сети</h3>
+            <div class="text-content letter-spacing">
                 <p>Пиво, сочетающее в себе все преимущества легких сортов пива. Хорошо утоляет жажду.
                     123456789</p>
                 <p>Пиво, сочетающее в себе все преимущества легких сортов пива. Хорошо утоляет жажду.
@@ -216,55 +219,189 @@
                 <p>Пиво, сочетающее в себе все преимущества легких сортов пива. Хорошо утоляет жажду.
                     123456789</p>
             </div>
-            <h3 class="title-medium">Галерея</h3>
+            <h3 class="title-medium letter-spacing">Галерея</h3>
         </div>
-        <div class="gallery">
-            <div class="gallery__item">
-                <img src="img/content/content-1.jpg" alt="">
-            </div>
-            <div class="gallery__item">
-                <img src="img/content/content-1.jpg" alt="">
-            </div>
-            <div class="gallery__item">
-                <img src="img/content/content-1.jpg" alt="">
-            </div>
-            <div class="gallery__item">
-                <img src="img/content/content-1.jpg" alt="">
-            </div>
-            <div class="gallery__item">
-                <img src="img/content/content-1.jpg" alt="">
-            </div>
-        </div>
-        <h3 class="title-medium">Документы</h3>
-        <div class="border-item">
-            <div class="documents-item">
-                <div class="documents-item__title">Юридическое лицо</div>
-                <div class="documents-item__desc">Пиво, сочетающее в себе все преимущества легких сортов пива. Хорошо
-                    утоляет жажду.
-                    123456789</div>
+        <div class="scroll">
+            <div class="gallery">
+                <a class="gallery__item" href="img/content/content-1.jpg" data-fancybox="gallery">
+                    <img src="img/content/content-1.jpg" alt="">
+                </a>
+                <a class="gallery__item" href="img/content/content-1.jpg" data-fancybox="gallery">
+                    <img src="img/content/content-1.jpg" alt="">
+                </a>
+                <a class="gallery__item" href="img/content/content-1.jpg" data-fancybox="gallery">
+                    <img src="img/content/content-1.jpg" alt="">
+                </a>
+                <a class="gallery__item" href="img/content/content-1.jpg" data-fancybox="gallery">
+                    <img src="img/content/content-1.jpg" alt="">
+                </a>
+                <a class="gallery__item" href="img/content/content-1.jpg" data-fancybox="gallery">
+                    <img src="img/content/content-1.jpg" alt="">
+                </a>
             </div>
         </div>
-        <div class="border-item">
-            <div class="documents-item">
-                <div class="documents-item__title">Инн ООО</div>
-                <div class="documents-item__desc">Пиво, сочетающее в себе все преимущества легких сортов пива. Хорошо
-                    утоляет жажду.
-                    123456789</div>
+        <div class="wrapper">
+            <h3 class="title-medium letter-spacing">Документы</h3>
+            <div class="border-item">
+                <div class="documents-item">
+                    <div class="documents-item__title letter-spacing">Юридическое лицо</div>
+                    <div class="documents-item__desc letter-spacing">Пиво, сочетающее в себе все преимущества легких
+                        сортов пива.
+                        Хорошо
+                        утоляет жажду.
+                        123456789</div>
+                </div>
             </div>
-        </div>
-        <div class="border-item">
-            <div class="documents-item">
-                <div class="documents-item__title">ОГРН:</div>
-                <div class="documents-item__desc">1-02-66-05-60662-0</div>
+            <div class="border-item">
+                <div class="documents-item">
+                    <div class="documents-item__title letter-spacing">Инн ООО</div>
+                    <div class="documents-item__desc letter-spacing">Пиво, сочетающее в себе все преимущества легких
+                        сортов пива.
+                        Хорошо
+                        утоляет жажду.
+                        123456789</div>
+                </div>
             </div>
-        </div>
-        <div class="border-item">
-            <div class="documents-item">
-                <div class="documents-item__title">Наш адрес регистрации:</div>
-                <div class="documents-item__desc">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
+            <div class="border-item">
+                <div class="documents-item">
+                    <div class="documents-item__title letter-spacing">ОГРН:</div>
+                    <div class="documents-item__desc letter-spacing">1-02-66-05-60662-0</div>
+                </div>
+            </div>
+            <div class="border-item">
+                <div class="documents-item">
+                    <div class="documents-item__title letter-spacing">Наш адрес регистрации:</div>
+                    <div class="documents-item__desc letter-spacing">ул. Центральный проезд Хорошёвского Серебряного
+                        Бора, 10</div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- НАЧАЛО ФУТЕРА -->
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__container">
+            <div class="footer__links">
+                <a href="#" class="footer__logo display-none">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#logoLong"></use>
+                    </svg>
+                </a>
+                <div class="footer__wrapper">
+                    <div class="footer__links-container">
+                        <div class="footer__links-item">
+                            <div class="footer__links-title letter-spacing">Пользователям</div>
+                            <div class="footer__links-item-wrapper">
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Контакты</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Личный
+                                    кабинет</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Список
+                                    товаров</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Избранное</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Контакты</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Личный
+                                    кабинет</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Список
+                                    товаров</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Избранное</a>
+                            </div>
+                        </div>
+                        <div class="footer__links-item">
+                            <div class="footer__links-title letter-spacing">Партнерам</div>
+                            <div class="footer__links-item-wrapper">
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Юридическая
+                                    информация</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">О сервисе</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">О гарантиях</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">О доставке и
+                                    оплате</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Инф страница
+                                    партнерам</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">Юридическая
+                                    информация</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">О сервисе</a>
+                                <a href="javascript:void(0)" class="footer__links-link letter-spacing">О гарантиях</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__socials">
+                        <div class="footer__socials-links">
+                            <a href="javascript:void(0)" class="footer__socials-links-item" rel="nofollow"
+                                target="_blank">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#whatsapp"></use>
+                                </svg>
+                            </a>
+                            <a href="javascript:void(0)" class="footer__socials-links-item" rel="nofollow"
+                                target="_blank">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
+                            <a href="javascript:void(0)" class="footer__socials-links-item" rel="nofollow"
+                                target="_blank">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="footer-socials__info">
+                            <a href="javascript:void(0)" class="footer__sosials-feedback">
+                                <span class="letter-spacing">Обратная связь</span>
+                                <svg class="display-none">
+                                    <use xlink:href="img/icons/sprite.svg#feedback"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__socials-copy">&copy; 2000 – 2022 ООО «Гетбир». Все права защищены.</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- КОНЕЦ ФУТЕРА -->
+
+    <!-- НАЧАЛО ТАББАРА -->
+<div class="tabbar">
+    <div class="wrapper">
+        <div class="tabbar__container">
+            <a class="tabbar__item" href="javascript:void(0)">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#home"></use>
+                </svg>
+            </a>
+            <a class="tabbar__item item-quantity" href="javascript:void(0)">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#heartMini"></use>
+                </svg>
+                <span class="letter-spacing">99+</span>
+            </a>
+            <a class="tabbar__item" href="javascript:void(0)">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#personal"></use>
+                </svg>
+            </a>
+            <a class="tabbar__item" href="javascript:void(0)">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#cart"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- КОНЕЦ ТАББАРА -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.60/inputmask/jquery.inputmask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
