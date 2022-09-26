@@ -190,7 +190,8 @@
     background: var(--white);
     -webkit-box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
     box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
-    border-radius: 2.4rem 2.4rem 0 0;
+    border-radius: 2.4rem;
+    overflow: hidden;
   }
   .cart__container {
     max-height: calc(100vh - 26rem);

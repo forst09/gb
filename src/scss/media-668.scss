@@ -351,6 +351,15 @@
         padding: 0.8rem;
     }
 
+    .bg__img {
+        width: 100%;
+        height: 29rem;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
     /*КОНЕЦ ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ 668*/
 
     .modal__buttons-shadow {

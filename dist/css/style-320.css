@@ -446,12 +446,14 @@ svg {
   border-radius: 1.2rem;
   font-family: "Manrope";
   color: var(--black-text);
+  font-weight: 500;
 }
 .form-input::-webkit-input-placeholder,
 .search-input::-webkit-input-placeholder {
   font-family: "Manrope";
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 .form-input::-moz-placeholder,
 .search-input::-moz-placeholder {
@@ -2193,13 +2195,13 @@ svg {
   transition: transform 0.3s ease, fill 0.3s ease, -webkit-transform 0.3s ease;
 }
 .back-span:hover span {
-  color: var(--orange-light);
+  color: var(--orange-light) !important;
 }
 .back-span:hover svg {
   -webkit-transform: translateY(-50%) translateX(-0.4rem);
   -ms-transform: translateY(-50%) translateX(-0.4rem);
   transform: translateY(-50%) translateX(-0.4rem);
-  fill: var(--orange-light);
+  fill: var(--orange-light) !important;
 }
 .back-span:active span, .back-span:focus span, .back-span:focus-within span {
   color: var(--orange);
@@ -2275,10 +2277,10 @@ svg {
 }
 
 .bg__img {
-  width: calc(100% + 5.3rem);
+  width: 74.1rem;
   height: 23.5rem;
   position: absolute;
-  top: -5.5rem;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
@@ -2286,12 +2288,12 @@ svg {
 .bg__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .bg__img::after {
   content: "";
   position: absolute;
-  top: 5.5rem;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -2937,8 +2939,6 @@ svg {
   -ms-flex-pack: center;
   justify-content: center;
   background-color: var(--orange);
-  -webkit-box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
-  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   border-radius: 1.2rem;
   color: var(--white);
   position: relative;

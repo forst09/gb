@@ -799,6 +799,17 @@
     padding: 0.56rem;
     margin-left: 2.3rem;
   }
+  .bg__img {
+    width: calc(100% + 15.1rem);
+    height: 31.5rem;
+    top: -4rem;
+  }
+  .bg__img::after {
+    top: -4rem;
+  }
+  .bg__img img {
+    object-fit: contain;
+  }
   /*КОНЕЦ ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ 1024*/
   /*УВЕДОМЛЕНИЕ О ДОБАВЛЕНИИ В КОРЗИНУ*/
   .cart__notification,
@@ -957,6 +968,13 @@
 .pin-save,
 .feedback-pin {
     display: none;
+  }
+  .item-quantity span {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    right: -0.3rem;
+    top: 0.3rem;
   }
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
