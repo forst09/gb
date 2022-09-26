@@ -2398,6 +2398,11 @@ svg {
   z-index: -1;
 }
 
+.scroll {
+  padding: 0 1.6rem;
+  overflow-x: auto;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {

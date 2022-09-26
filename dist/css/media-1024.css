@@ -1216,7 +1216,7 @@
     padding: 0;
     border-radius: unset;
   }
-  .tiles__item-road-window-title {
+  .map-view__stores-item .tiles__item-road-window-title {
     display: none;
   }
   .tiles__item-road-window-address {
