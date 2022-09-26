@@ -119,6 +119,15 @@
 
     /*КОНЕЦ COOKIE 1500*/
 
+    .section-white {
+        margin-top: -6rem;
+
+        &::before {
+            top: -5rem;
+            width: calc(100% + 130rem);
+        }
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1500*/
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1500*/
@@ -186,15 +195,6 @@
 
         img {
             height: 83.7rem;
-        }
-    }
-
-    .point-page {
-        margin-top: -6rem;
-
-        &::before {
-            top: -5rem;
-            width: calc(100% + 130rem);
         }
     }
 

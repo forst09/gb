@@ -1271,6 +1271,17 @@
         top: 0.3rem;
     }
 
+    .section-white {
+        padding-top: 1.6rem;
+
+        &::before {
+            height: 51.6rem;
+            top: -5rem;
+            width: calc(100% + 75rem);
+            border-radius: 50%;
+        }
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
@@ -1678,17 +1689,6 @@
         -ms-flex-negative: 0;
         flex-shrink: 0;
         margin-right: 2.4rem;
-    }
-
-    .point-page {
-        padding-top: 1.6rem;
-
-        &::before {
-            height: 51.6rem;
-            top: -5rem;
-            width: calc(100% + 75rem);
-            border-radius: 50%;
-        }
     }
 
     .point__title-wrapper {
