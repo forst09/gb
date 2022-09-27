@@ -2205,13 +2205,13 @@ svg {
   fill: var(--orange-light) !important;
 }
 .back-span:active span, .back-span:focus span, .back-span:focus-within span {
-  color: var(--orange);
+  color: var(--orange) !important;
 }
 .back-span:active svg, .back-span:focus svg, .back-span:focus-within svg {
   -webkit-transform: translateY(-50%) translateX(0);
   -ms-transform: translateY(-50%) translateX(0);
   transform: translateY(-50%) translateX(0);
-  fill: var(--orange);
+  fill: var(--orange) !important;
 }
 
 /*ШАПКА ДЛЯ ТОЧЕК*/
@@ -2260,11 +2260,10 @@ svg {
   transition: stroke 0.3s ease, fill 0.3s ease;
 }
 .header-point__icons-link:hover svg {
-  stroke: var(--orange-light);
+  stroke: var(--black-blue) !important;
 }
 .header-point__icons-link:active svg, .header-point__icons-link:focus svg, .header-point__icons-link:focus-within svg {
-  stroke: var(--orange-light);
-  fill: var(--orange-light);
+  stroke: var(--gray) !important;
 }
 
 .header-point__icons-item--cart {
@@ -2441,6 +2440,11 @@ svg {
   transform: translateY(0);
 }
 
+.filters__item-js.active {
+  cursor: default;
+  pointer-events: none;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {
@@ -2494,6 +2498,8 @@ svg {
   -webkit-box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   border-radius: 1.2rem;
+  pointer-events: none;
+  cursor: default;
 }
 .view-btn__item.active svg {
   stroke: var(--black-blue);
@@ -3445,9 +3451,6 @@ svg {
   font-size: 1.4rem;
   line-height: 2.2rem;
   color: var(--gray-dark);
-  -ms-line-clamp: 2;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
 }
 
 .preferential {

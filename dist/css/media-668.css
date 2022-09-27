@@ -418,9 +418,6 @@
     margin-top: 1.6rem;
   }
   .preferential__desc {
-    -ms-line-clamp: 1;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
     line-height: 2rem;
   }
   .filters-light {

@@ -675,14 +675,6 @@
     min-height: 20.8rem;
     padding-top: 2.1rem;
   }
-  .header-point:hover .point-img img {
-    transform: translateY(-30%);
-    animation: point-img linear 6s !important;
-    animation-fill-mode: forwards;
-  }
-  .header-point:not(:hover) .point-img img {
-    transform: translateY(-30%);
-  }
   .back-span {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -727,33 +719,6 @@
   .point-img img.active {
     -webkit-animation: point-img infinite ease-in-out 25s;
     animation: point-img infinite ease-in-out 25s;
-  }
-  .point-img img.to-start {
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  }
-  @-webkit-keyframes to-start {
-    30% {
-      -webkit-transform: translateY(-30%);
-      transform: translateY(-30%);
-    }
-    100% {
-      -webkit-transform: translateY(-30%);
-      transform: translateY(-30%);
-    }
-  }
-  @keyframes to-start {
-    30% {
-      -webkit-transform: translateY(-30%);
-      transform: translateY(-30%);
-    }
-    100% {
-      -webkit-transform: translateY(-30%);
-      transform: translateY(-30%);
-    }
   }
   @-webkit-keyframes point-img {
     33% {
@@ -1503,11 +1468,22 @@
     padding: 0.8rem 0;
   }
   .more {
-    padding-right: 4rem;
+    padding: 1.1rem 5.5rem 1.1rem 1.6rem;
     transition: background-color 0.3s ease;
+    border-radius: 1.6rem;
+  }
+  .more::after {
+    right: 0.8rem;
   }
   .more:hover {
     background-color: var(--gray-extralight);
+  }
+  .more:active, .more:focus, .more:focus-within {
+    background-color: var(--gray-light);
+  }
+  .more span {
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
   .lines-item {
     margin: 0;

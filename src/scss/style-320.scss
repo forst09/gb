@@ -2557,14 +2557,14 @@ svg {
     &:focus,
     &:focus-within {
         span {
-            color: var(--orange);
+            color: var(--orange) !important;
         }
 
         svg {
             -webkit-transform: translateY(-50%) translateX(0);
             -ms-transform: translateY(-50%) translateX(0);
             transform: translateY(-50%) translateX(0);
-            fill: var(--orange);
+            fill: var(--orange) !important;
         }
     }
 }
@@ -2619,7 +2619,7 @@ svg {
 
     &:hover {
         svg {
-            stroke: var(--orange-light);
+            stroke: var(--black-blue) !important;
         }
     }
 
@@ -2627,8 +2627,7 @@ svg {
     &:focus,
     &:focus-within {
         svg {
-            stroke: var(--orange-light);
-            fill: var(--orange-light);
+            stroke: var(--gray) !important;
         }
     }
 }
@@ -2822,6 +2821,11 @@ svg {
     transform: translateY(0);
 }
 
+.filters__item-js.active {
+    cursor: default;
+    pointer-events: none;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -2881,6 +2885,8 @@ svg {
     -webkit-box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
     box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
     border-radius: 1.2rem;
+    pointer-events: none;
+    cursor: default;
 
     svg {
         stroke: var(--black-blue);
@@ -3933,9 +3939,6 @@ svg {
     font-size: 1.4rem;
     line-height: 2.2rem;
     color: var(--gray-dark);
-    -ms-line-clamp: 2;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
 }
 
 .preferential {

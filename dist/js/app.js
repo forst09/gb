@@ -218,135 +218,18 @@ $(document).ready(function () {
         }
     }
 
-    //translate
-    // let beginTransform = $('.point-img img').css('transform');
-    // $(document).on('mouseenter', '.header-point', function () {
-    //     // $(this).find('.point-img img').removeClass('to-start');
-    //     $(this).find('.point-img img').addClass('active');
-    // });
-    // let transform;
-    // $(document).on('mouseleave', '.header-point', function () {
-    //     transform = $('.point-img img').css('transform');
-    //     $('.point-img img').css('transform', transform);
-    //     $('.point-img img').removeClass('active');
-    //     requestAnimationFrame(function () {
-    //         $('.point-img img').css('transform', 'translateY(-30%)');
-    //     });
-
-    // });
-
-
-
-
-
-
-    // $('.header-point').on('mousemove', function (e) {
-    //     console.log(e.target);
-    //     // $(this).toggleClass('test1');
-    //     if ($(e.target).hasClass('header-point')) {
-    //         $('.point-img img').addClass('active');
-    //         return;
-    //     } else {
-
-    //         let transformValue = $('.point-img img').css('transform');
-    //         $('.point-img img').css({ 'transform': transformValue })
-    //             .removeClass('active');
-
-    //         requestAnimationFrame(function () {
-    //             $('.point-img img').css({ 'transform': 'translateY(-50%)' });
-    //         });
-    //     }
-
-    // });
-
-    // $('label').hover(
-    //     function () {
-    //         $('.anim-div').addClass('anim-div_active');
-    //     },
-    //     function () {
-    //         let transformValue = $('.anim-div').css('transform');
-    //         $('.anim-div').css({ 'transform': transformValue })
-    //             .removeClass('anim-div_active');
-
-    //         requestAnimationFrame(function () {
-    //             $('.anim-div').css({ 'transform': 'translateY(0%)' });
-    //         });
-    //     });
-
-
-    // });
-
-
-
-    // $(document).on('mouseenter', 'label', function () {
-    //     // $('.anim-div').removeClass('to-start');
-    //     $('.anim-div').addClass('anim-div_active');
-    //     // return;
-    // });
-
-    // const getPopup = function (e, item, parent) {
-    //     if (
-    //         !$(item).is(e.target) &&
-    //         !$(parent).is(e.target) &&
-    //         $(item).has(e.target).length === 0 &&
-    //         $(parent).has(e.target).length === 0
-    //     ) {
-    //         var transformValue = $('.anim-div').css('transform');
-    //         $('.anim-div').css({ 'transform': transformValue })
-    //             .removeClass('anim-div_active');
-    //         requestAnimationFrame(function () {
-    //             $('.anim-div').css({ 'transform': 'translateY(0%)' });
-
-    //         });
-    //     }
-    // };
-
-    // $(document).mouseup(function (e) {
-    //     getPopup(e, ".anim-div");
-    // });
-
-    // $(document).on('mouseout', 'label', function () {
-    //     var transformValue = $('.anim-div').css('transform');
-    //     $('.anim-div').css({ 'transform': transformValue })
-    //         .removeClass('anim-div_active');
-
-    //     requestAnimationFrame(function () {
-    //         $('.anim-div').css({ 'transform': 'translateY(0%)' });
-    //         // $('.anim-div').animate({
-    //         //     step: function (now, fx) {
-    //         //         $(this).css({ 'transform': 'translateY(0)' });
-    //         //     }
-    //         // }, 1000, 'linear')
-    //         // $('.anim-div').addClass('to-start');
-    //         // $('.anim-div').removeAttr('style');
-    //     });
-    // });
-
-
-    // });
-
-    // $('img').on('mouseenter', function () {
-    //     $(this).removeAttr('style');
-    //     $('img').addClass('anim-div_active');
-    //     return;
-    // });
-
-    // $('img').on('mouseout', function () {
-    //     var transformValue = $('img').css('transform');
-    //     $('img').css({ 'transform': transformValue })
-    //     // .removeClass('anim-div_active');
-    //     requestAnimationFrame(function () {
-    //         $('img').css({ 'transform': 'translateY(0%)' });
-    //     });
-    // });
-
-
-
-
-
-
-
-
+    //БАННЕР ЕЗЖАЮЩИЙ В ШАПКЕ
+    let beginTransform = $('.point-img img').css('transform');
+    $(document).on('mouseenter', '.header-point', function () {
+        $(this).find('.point-img img').addClass('active');
+    });
+    let transform;
+    $(document).on('mouseleave', '.header-point', function () {
+        transform = $('.point-img img').css('transform');
+        $('.point-img img').css('transform', transform);
+        $('.point-img img').removeClass('active');
+        setTimeout(() => $('.point-img img').css('transform', beginTransform), 200);
+    });
 
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ПО КЛИКУ НА ФОН
     $(document).mouseup(function (e) {
@@ -587,7 +470,7 @@ $(document).ready(function () {
     const jsMap = document.querySelector("#map");
     const renderMap = function (mapId = "map") {
         if ($("#map").length !== 0) {
-            if (jsMap.classList.contains('ymaps-logos')) {
+            if ($(`#${mapId}`).hasClass("ymaps-logos")) {
                 ymaps.ready(function () {
                     let myMap = new ymaps.Map(`${mapId}`, {
                         center: [$(`#${mapId}`).attr("data-coords").split(",")[0],
@@ -807,4 +690,27 @@ $(document).ready(function () {
     //     div.innerHTML = ajax.responseText;
     //     document.body.insertBefore(div, document.body.childNodes[0]);
     // }
+
+    $(document).on("click", ".view-btn__item", function () {
+        let post = {
+            view_objects: $(this).data("view"),
+            ajax: "Y",
+        };
+        const loader = `
+       <div class="loader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+       `;
+        $(".tab-content .wrapper").append(loader);
+        BX.ajax.post(window.location.href, post, function (data) {
+            $(".tab-content").html($(data).find(".wrapper"));
+            $(".loader").remove();
+
+            //reinit js functions
+            if (typeof ymaps !== "undefined") {
+                renderMap();
+            } else {
+                creatMapsScript($(data).find(".ymaps").attr("id"));
+            }
+            SimpleScrollbar.initAll();
+        });
+    });
 });
