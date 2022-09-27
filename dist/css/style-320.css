@@ -3728,7 +3728,7 @@ svg {
 }
 
 .cart__container {
-  margin-top: 2.4rem;
+  margin-top: 1.6rem;
 }
 
 .cart__item-info {
@@ -3741,8 +3741,6 @@ svg {
   margin: 0;
 }
 .cart__item-info .card__volume {
-  font-size: 1.3rem;
-  line-height: 1.8rem;
   font-weight: 600;
 }
 
@@ -3763,12 +3761,12 @@ svg {
 }
 
 .cart__item-text {
-  max-width: 23rem;
   width: 100%;
   margin-right: 0.8rem;
 }
 
 .delete {
+  margin-left: auto;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -3858,13 +3856,6 @@ svg {
 }
 .cart__item .card__cost {
   margin: 0;
-}
-.cart__item .card__cost-new {
-  font-size: 1.4rem;
-  line-height: 2rem;
-}
-.cart__item .card__cost-old {
-  font-size: 1.3rem;
 }
 
 .cart__buttons {
@@ -4198,3 +4189,89 @@ svg {
 }
 
 /*КОНЕЦ ОПИСАНИЕ СЕТИ*/
+/*###############################################################################################################################*/
+/*КОРЗИНА*/
+.block-swipe-cart {
+  max-height: 90%;
+  text-align: initial;
+}
+
+.cart__title {
+  display: flex;
+  align-items: center;
+}
+
+.cart__title-name {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 800;
+  color: var(--black-text);
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.cart__title-img {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 1.6rem;
+}
+.cart__title-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart__address {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 500;
+  margin-top: 1.6rem;
+}
+
+.cart-top {
+  max-height: calc(100vh - 18rem);
+  overflow: auto;
+}
+
+.cart__total-pin {
+  padding: 1.5rem 1.6rem;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  border-radius: 1.2rem 1.2rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart__total-pin .card__cost {
+  margin: 0;
+}
+.cart__total-pin .card__cost-new {
+  font-size: 1.6rem;
+}
+.cart__total-pin .card__cost-old {
+  margin-left: 0.8rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+.cart__total-pin .btn-orange {
+  max-width: 12.6rem;
+}
+.cart__total-pin .btn-orange span {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+
+.cart__total-pin-road {
+  margin-top: 0.6rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
+/*КОРЗИНА*/

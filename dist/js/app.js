@@ -108,6 +108,13 @@ $(document).ready(function () {
         $("html").addClass("scroll-hidden");
     });
 
+    //ОТКРЫТЬ ВСПЛЫВАШКУ КОРЗИНА
+    $(document).on("click", ".cart-pin__link", function () {
+        $(".block-swipe-cart").addClass("active");
+        $(".block-swipe__background-cart").addClass("active");
+        $("html").addClass("scroll-hidden");
+    });
+
     //ОТКРЫТЬ ВСПЛЫВАШКУ ОБРАТНОЙ СВЯЗИ
     $(document).on("click", ".footer__sosials-feedback", function () {
         $(".block-swipe-feedback").addClass("active");
