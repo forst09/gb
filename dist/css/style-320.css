@@ -4274,4 +4274,20 @@ svg {
   font-weight: 500;
 }
 
+.cart__item--deleted .cart__item-info {
+  align-items: center;
+  margin: 0;
+}
+.cart__item--deleted .cart__img {
+  opacity: 0.3;
+}
+
+.card__return {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--black-blue);
+  margin-top: 0.8rem;
+}
+
 /*КОРЗИНА*/

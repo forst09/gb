@@ -133,10 +133,11 @@ $(document).ready(function () {
         $("html").addClass("scroll-hidden");
     }
 
-    //ЗАКРЫТЬ КУКИ 
+    //ЗАКРЫТЬ КУКИ
     let cookieBtnClose = document.querySelector(".cookie .btn-text");
     if (cookieBtnClose != null) {
         cookieBtnClose.addEventListener("click", function (e) {
+            document.cookie = "cookie-getbeer=true; path=/; expires=604800";
             document.querySelector(".cookie").remove();
         });
     }
