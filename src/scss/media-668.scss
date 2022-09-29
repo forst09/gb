@@ -634,6 +634,50 @@
     }
 
     /*КОНЕЦ ОПИСАНИЕ СЕТИ 668*/
+
+    /*###############################################################################################################################*/
+    /*КОРЗИНА 668*/
+    .cart__total-pin {
+        padding: 1.5rem 4.4rem;
+
+        .btn-orange {
+            max-width: 20.6rem;
+        }
+    }
+
+    .cart__title-img {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 2.4rem;
+    }
+
+    .cart__title-name {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
+
+    .cart__address {
+        margin-top: 2.4rem;
+    }
+
+    .cart__item {
+        padding: 1.4rem 0.8rem;
+
+        // &:nth-of-type(1) {
+        //     padding-top: 1.4rem;
+        // }
+    }
+
+    .cart__img {
+        width: 9.3rem;
+        height: 9.3rem;
+    }
+
+    .cart__item+.cart__item {
+        margin: 0;
+    }
+
+    /*КОРЗИНА 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
