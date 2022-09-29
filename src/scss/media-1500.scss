@@ -256,8 +256,19 @@
         overflow-y: auto;
 
         &::-webkit-scrollbar {
-            width: 1px;
+            width: 0.2rem;
         }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--gray-medium);
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        scrollbar-width: thin;
+        scrollbar-color: var(--gray-medium) transparent;
     }
 
 

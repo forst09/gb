@@ -3453,9 +3453,6 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
-    -webkit-transition: all 1s ease-out 0s;
-    -o-transition: all 1s ease-out 0s;
-    transition: all 1s ease-out 0s;
     background: transparent;
     z-index: 2;
 
@@ -4300,17 +4297,17 @@ svg {
 
         g,
         path {
-            -webkit-transition: all 0.4s ease;
-            -o-transition: all 0.4s ease;
-            transition: all 0.4s ease;
+            -webkit-transition: stroke 0.4s ease, transform 0.4s ease;
+            -o-transition: stroke 0.4s ease, transform 0.4s ease;
+            transition: stroke 0.4s ease, transform 0.4s ease;
         }
     }
 
     &:hover {
         svg {
-            -webkit-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
+            -webkit-transition: stroke 0.3s ease, transform 0.4s ease;
+            -o-transition: stroke 0.3s ease, transform 0.4s ease;
+            transition: stroke 0.3s ease, transform 0.4s ease;
             -webkit-transform-origin: center;
             -ms-transform-origin: center;
             transform-origin: center;
@@ -4386,14 +4383,13 @@ svg {
         margin: 0;
     }
 
-    // .card__cost-new {
-    //     font-size: 1.4rem;
-    //     line-height: 2rem;
-    // }
+    .card__cost-old {
+        margin-left: 0.8rem;
+    }
 
-    // .card__cost-old {
-    //     font-size: 1.3rem;
-    // }
+    .card__btns-count {
+        visibility: unset;
+    }
 }
 
 .cart__buttons {
@@ -4898,3 +4894,11 @@ svg {
 }
 
 /*КОРЗИНА*/
+
+.ajax_main {
+    position: relative;
+}
+
+.point-page__items {
+    width: 100%;
+}

@@ -663,9 +663,13 @@
     .cart__item {
         padding: 1.4rem 0.8rem;
 
-        // &:nth-of-type(1) {
-        //     padding-top: 1.4rem;
-        // }
+        &::after {
+            bottom: 0;
+        }
+
+        &:nth-of-type(1) {
+            padding-top: 1.4rem;
+        }
     }
 
     .cart__img {
@@ -675,6 +679,10 @@
 
     .cart__item+.cart__item {
         margin: 0;
+    }
+
+    .cart__more {
+        margin-top: 2.4rem;
     }
 
     /*КОРЗИНА 668*/

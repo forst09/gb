@@ -1512,5 +1512,79 @@
     height: 13.7rem;
   }
   /*КОНЕЦ ОПИСАНИЕ СЕТИ 1024*/
+  /*###############################################################################################################################*/
+  /*КОРЗИНА 1024*/
+  .block-swipe-cart {
+    transform: unset;
+    right: 6.4rem;
+    left: unset;
+    top: 7rem;
+    padding: 2.4rem 0 0;
+    min-width: unset;
+    width: 39.6rem;
+  }
+  .block-swipe-cart .wrapper {
+    padding: 0 2.4rem;
+  }
+  .cart__title-img {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.8rem;
+  }
+  .cart__title-name {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    font-weight: 700;
+  }
+  .cart__address {
+    margin-top: 0.4rem;
+    font-size: 1.3rem;
+  }
+  .cart__more {
+    display: none;
+  }
+  .cart__main-title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    display: block;
+    font-weight: 800;
+    color: var(--black-text);
+    margin-bottom: 2.4rem;
+  }
+  .cart__total-pin {
+    padding: 1.5rem 1.6rem;
+  }
+  .cart__total-pin .btn-orange {
+    max-width: 19.2rem;
+  }
+  .cart__img {
+    width: 6.5rem;
+    height: 5.8rem;
+  }
+  .block-swipe__background-cart .cart__img {
+    width: 6.5rem;
+    height: 5.8rem;
+  }
+  .block-swipe__background-cart .card__volume {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+  .block-swipe__background-cart .card__cost-new {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .block-swipe__background-cart .card__cost-old {
+    font-size: 1.3rem;
+  }
+  .cart__item {
+    padding: 1.6rem 0.8rem;
+  }
+  .cart__total-pin-road {
+    font-size: 1.4rem;
+  }
+  /*КОРЗИНА 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/

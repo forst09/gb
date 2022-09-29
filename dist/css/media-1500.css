@@ -196,9 +196,17 @@
   .cart__container {
     max-height: calc(100vh - 26rem);
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-medium) transparent;
   }
   .cart__container::-webkit-scrollbar {
-    width: 1px;
+    width: 0.2rem;
+  }
+  .cart__container::-webkit-scrollbar-thumb {
+    background-color: var(--gray-medium);
+  }
+  .cart__container::-webkit-scrollbar-track {
+    background-color: transparent;
   }
   /*ПУСТАЯ ТОЧКА*/
   .point-page__cart--empty {

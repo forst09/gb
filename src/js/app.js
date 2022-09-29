@@ -240,13 +240,27 @@ $(document).ready(function () {
     });
 
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ПО КЛИКУ НА ФОН
-    $(document).mouseup(function (e) {
-        let container = $(".block-swipe");
-        if (container.hasClass('active') && container.has(e.target).length === 0) {
-            $(".block-swipe").removeClass("active");
-            $(".block-swipe__background").removeClass("active");
-            $("html").removeClass("scroll-hidden");
-        }
+    // $(document).mouseup(function (e) {
+    //     let container = $(".block-swipe");
+    //     if (container.hasClass('active') && container.has(e.target).length === 0) {
+    //         $(".block-swipe").removeClass("active");
+    //         $(".block-swipe__background").removeClass("active");
+    //         $("html").removeClass("scroll-hidden");
+    //         console.log($(this));
+    //     }
+    // });
+
+    $(document).on('click', '.block-swipe__background', function (e) {
+        e.stopPropogation();
+        $(this).removeClass('active');
+        $(this).next('.block-swipe').removeClass('active');
+        $("html").removeClass("scroll-hidden");
+    });
+
+    //МОДАЛКА КОРЗИНЫ
+    $(document).on('click', '.header__cart', function (e) {
+        $(this).find('.block-swipe__background-cart').addClass('active');
+        $(this).find('.block-swipe-cart').addClass('active');
     });
 
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ВЫБОРА ГОРОДА ПО КЛИКУ НА КНОПКУ ДА, ВЕРНО
@@ -345,7 +359,7 @@ $(document).ready(function () {
                     const html = `
             <div class= "filters__dots">
                             <svg>
-                                <use xlink:href="img/icons/sprite.svg#dots"></use>
+                                <use xlink:href="/upload/images/icons/sprite.svg#dots"></use>
                             </svg>
                             <div class="filters__dots-window-wrapper">
                                 <div class="filters__dots-window filters__dots-window-js">
@@ -386,7 +400,7 @@ $(document).ready(function () {
                     const html = `
             <div class="filters__dots">
                             <svg>
-                                <use xlink:href="img/icons/sprite.svg#dots"></use>
+                                <use xlink:href="/upload/images/icons/sprite.svg#dots"></use>
                             </svg>
                             <div class="filters__dots-window-wrapper">
                                 <div class="filters__dots-window filters__dots-window-js">

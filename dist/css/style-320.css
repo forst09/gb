@@ -3017,9 +3017,6 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-transition: all 1s ease-out 0s;
-  -o-transition: all 1s ease-out 0s;
-  transition: all 1s ease-out 0s;
   background: transparent;
   z-index: 2;
 }
@@ -3791,14 +3788,14 @@ svg {
 }
 .delete svg g,
 .delete svg path {
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: stroke 0.4s ease, transform 0.4s ease;
+  -o-transition: stroke 0.4s ease, transform 0.4s ease;
+  transition: stroke 0.4s ease, transform 0.4s ease;
 }
 .delete:hover svg {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: stroke 0.3s ease, transform 0.4s ease;
+  -o-transition: stroke 0.3s ease, transform 0.4s ease;
+  transition: stroke 0.3s ease, transform 0.4s ease;
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   transform-origin: center;
@@ -3857,6 +3854,12 @@ svg {
 }
 .cart__item .card__cost {
   margin: 0;
+}
+.cart__item .card__cost-old {
+  margin-left: 0.8rem;
+}
+.cart__item .card__btns-count {
+  visibility: unset;
 }
 
 .cart__buttons {
@@ -4321,3 +4324,10 @@ svg {
 }
 
 /*КОРЗИНА*/
+.ajax_main {
+  position: relative;
+}
+
+.point-page__items {
+  width: 100%;
+}
