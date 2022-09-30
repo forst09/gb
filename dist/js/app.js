@@ -251,16 +251,21 @@ $(document).ready(function () {
     // });
 
     $(document).on('click', '.block-swipe__background', function (e) {
-        e.stopPropogation();
+        e.stopPropagation();
         $(this).removeClass('active');
         $(this).next('.block-swipe').removeClass('active');
         $("html").removeClass("scroll-hidden");
+        if ($(this).hasClass('block-swipe__background-cart')) {
+            $('.header__cart').removeClass('active');
+        }
     });
 
     //МОДАЛКА КОРЗИНЫ
     $(document).on('click', '.header__cart', function (e) {
-        $(this).find('.block-swipe__background-cart').addClass('active');
-        $(this).find('.block-swipe-cart').addClass('active');
+        $('.block-swipe__background-cart').addClass('active');
+        $('.block-swipe-cart').addClass('active');
+        $(this).addClass('active');
+        $("html").addClass("scroll-hidden");
     });
 
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ВЫБОРА ГОРОДА ПО КЛИКУ НА КНОПКУ ДА, ВЕРНО

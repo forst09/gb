@@ -2836,6 +2836,12 @@ svg {
     pointer-events: none;
 }
 
+.header__cart.active {
+    svg {
+        stroke: var(--orange) !important;
+    }
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/

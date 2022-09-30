@@ -497,6 +497,9 @@
         .place__address {
             height: 2rem;
             font-size: 1.2rem;
+            -ms-line-clamp: 1;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
         }
 
         .header__icons {
@@ -1896,6 +1899,7 @@
         padding: 2.4rem 0 0;
         min-width: unset;
         width: 39.6rem;
+        overflow: hidden;
 
         .wrapper {
             padding: 0 2.4rem;

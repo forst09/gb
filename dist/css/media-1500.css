@@ -234,5 +234,29 @@
     padding: 0;
   }
   /*КОНЕЦ ОПИСАНИЕ СЕТИ 1500*/
+  /*###############################################################################################################################*/
+  /*КОРЗИНА 1500*/
+  .block-swipe-cart {
+    right: 8rem;
+  }
+  .block-swipe-cart .card__volume {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+  .block-swipe-cart .card__cost-new {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .block-swipe-cart .card__cost-old {
+    font-size: 1.3rem;
+  }
+  .block-swipe-cart .cart__total-pin .card__cost-new {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  .block-swipe-cart .cart__total-pin .card__cost-old {
+    font-size: 1.4rem;
+  }
+  /*КОРЗИНА 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/
