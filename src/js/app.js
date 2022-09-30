@@ -487,6 +487,15 @@ $(document).ready(function () {
         }
     };
 
+    $(document).on("click", ".js-logout", function () {
+        $(".header__icons-item-logout")[0].click();
+    });
+
+    if ($(".network-page").length !== 0) {
+        const storesArr = [...$(".network-page .ajax_main-item")];
+        $(".point-count__value span").text(storesArr.length);
+    }
+
     // ПОДКЛЮЧЕНИЕ КАРТЫ
     let isMapLoaded = false;
     const jsMap = document.querySelector("#map");

@@ -968,12 +968,13 @@
 
     .bg__img {
         width: calc(100% + 15.1rem);
-        height: 31.5rem;
-        top: -4rem;
+        height: 27.5rem;
+        top: -6rem;
+        transform: translateX(-49%);
 
-        &::after {
-            top: -4rem;
-        }
+        // &::after {
+        //     top: -4rem;
+        // }
 
         img {
             object-fit: contain;

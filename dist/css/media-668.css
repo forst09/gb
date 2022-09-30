@@ -270,11 +270,13 @@
     padding: 0.8rem;
   }
   .bg__img {
-    width: 100%;
-    height: 29rem;
+    width: 211rem;
+    height: 50rem;
+    transform: translateX(-20%);
+    top: -20rem;
   }
-  .bg__img img {
-    object-fit: cover;
+  .bg__img svg {
+    height: 100%;
   }
   /*КОНЕЦ ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ 668*/
   .modal__buttons-shadow {

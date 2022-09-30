@@ -352,11 +352,13 @@
     }
 
     .bg__img {
-        width: 100%;
-        height: 29rem;
+        width: 211rem;
+        height: 50rem;
+        transform: translateX(-20%);
+        top: -20rem;
 
-        img {
-            object-fit: cover;
+        svg {
+            height: 100%;
         }
     }
 
