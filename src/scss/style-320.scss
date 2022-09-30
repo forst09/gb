@@ -67,6 +67,7 @@ textarea {
 }
 
 .textarea__wrapper {
+    -webkit-box-shadow: 0 0 0 1px var(--gray-medium);
     box-shadow: 0 0 0 1px var(--gray-medium);
     border-radius: 1.2rem;
     max-height: 10rem;
@@ -77,18 +78,21 @@ textarea {
     &:active,
     &:focus,
     &:focus-within {
+        -webkit-box-shadow: 0 0 0 2px var(--gray-medium);
         box-shadow: 0 0 0 2px var(--gray-medium);
     }
 
     .form-input {
         padding: 0.5rem 1.6rem;
         padding-right: 0.6rem;
+        -webkit-box-shadow: none !important;
         box-shadow: none !important;
 
         &:hover,
         &:active,
         &:focus,
         &:focus-within {
+            -webkit-box-shadow: none !important;
             box-shadow: none !important;
         }
     }
@@ -2649,6 +2653,8 @@ svg {
     position: absolute;
     top: -6rem;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     z-index: -1;
 
@@ -2705,16 +2711,24 @@ svg {
     width: 4.8rem;
     height: 4.8rem;
     padding: 0.4rem;
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     background-color: var(--white);
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     img {
         width: 100%;
         height: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
         border-radius: 50%;
     }
@@ -2753,6 +2767,7 @@ svg {
     background-color: var(--white);
     width: 100%;
     z-index: 1000;
+    -webkit-box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
     box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
     border-radius: 3.4rem 3.4rem 0px 0px;
     padding-top: 2.4rem;
@@ -2828,6 +2843,8 @@ svg {
 /*fancybox*/
 .carousel__button.is-prev,
 .carousel__button.is-next {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
     transform: translateY(0);
 }
 
@@ -3070,6 +3087,7 @@ svg {
     -ms-flex-pack: center;
     justify-content: center;
     border-radius: 50%;
+    -webkit-box-shadow: 0px 5px 10px rgba(56, 58, 61, 0.3);
     box-shadow: 0px 5px 10px rgba(56, 58, 61, 0.3);
 
     svg {
@@ -3113,8 +3131,14 @@ svg {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     overflow: hidden;
     border-radius: 50%;
@@ -3122,6 +3146,7 @@ svg {
     img {
         width: auto;
         height: 100%;
+        -o-object-fit: contain;
         object-fit: contain;
     }
 }
@@ -3247,6 +3272,9 @@ svg {
     -ms-flex-align: center;
     align-items: center;
     padding: 0.8rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
 
     svg {
         width: 1.6rem;
@@ -3444,6 +3472,7 @@ svg {
     bottom: 5.6rem;
     width: 100%;
     z-index: 1000;
+    -webkit-box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
 }
 
@@ -4315,7 +4344,10 @@ svg {
         path {
             -webkit-transition: stroke 0.4s ease, transform 0.4s ease;
             -o-transition: stroke 0.4s ease, transform 0.4s ease;
+            -webkit-transition: stroke 0.4s ease, -webkit-transform 0.4s ease;
+            transition: stroke 0.4s ease, -webkit-transform 0.4s ease;
             transition: stroke 0.4s ease, transform 0.4s ease;
+            transition: stroke 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
         }
     }
 
@@ -4323,7 +4355,10 @@ svg {
         svg {
             -webkit-transition: stroke 0.3s ease, transform 0.4s ease;
             -o-transition: stroke 0.3s ease, transform 0.4s ease;
+            -webkit-transition: stroke 0.3s ease, -webkit-transform 0.4s ease;
+            transition: stroke 0.3s ease, -webkit-transform 0.4s ease;
             transition: stroke 0.3s ease, transform 0.4s ease;
+            transition: stroke 0.3s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
             -webkit-transform-origin: center;
             -ms-transform-origin: center;
             transform-origin: center;
@@ -4463,6 +4498,8 @@ svg {
 
 .cart-pin {
     .btn-orange {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 }
@@ -4488,6 +4525,7 @@ svg {
     img {
         width: 100%;
         height: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
     }
 }
@@ -4614,6 +4652,7 @@ svg {
     svg {
         width: 100%;
         height: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
         fill: var(--gray-medium);
     }
@@ -4640,16 +4679,27 @@ svg {
 /*########################################################################################################################################*/
 /*СТРАНИЦА СЕТИ*/
 .network__btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     .info__phone {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
     }
 }
 
 .more {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: relative;
 
@@ -4665,6 +4715,8 @@ svg {
         position: absolute;
         right: 0;
         top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         width: 2.4rem;
         height: 2.4rem;
@@ -4704,12 +4756,18 @@ svg {
 
 .feedback-pin {
     .footer__sosials-feedback {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         font-weight: 700;
         line-height: 2.2rem;
         color: var(--gray-dark);
         width: 100%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         padding: 0.8rem;
         background-color: var(--gray-extralight);
@@ -4736,13 +4794,20 @@ svg {
     img {
         width: 100%;
         height: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
     }
 }
 
 .gallery {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-column-gap: 0.8rem;
+    -moz-column-gap: 0.8rem;
     column-gap: 0.8rem;
 }
 
@@ -4775,7 +4840,11 @@ svg {
 }
 
 .cart__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -4792,17 +4861,25 @@ svg {
 .cart__title-img {
     width: 2.8rem;
     height: 2.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border-radius: 50%;
     overflow: hidden;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     margin-right: 1.6rem;
 
     img {
         width: 100%;
         height: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
     }
 }
@@ -4821,10 +4898,17 @@ svg {
 
 .cart__total-pin {
     padding: 1.5rem 1.6rem;
+    -webkit-box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     border-radius: 1.2rem 1.2rem 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     .card__cost {
@@ -4860,6 +4944,8 @@ svg {
 
 .cart__item--deleted {
     .cart__item-info {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         margin: 0;
     }
@@ -4886,6 +4972,9 @@ svg {
     }
 
     .card__labels {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
