@@ -526,6 +526,11 @@
   .cart__more {
     margin-top: 2.4rem;
   }
+  /*ПУСТАЯ КОРЗИНА*/
+  .cart__empty {
+    margin-top: 2.4rem;
+    padding-bottom: 4.5rem;
+  }
   /*КОРЗИНА 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/

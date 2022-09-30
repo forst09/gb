@@ -1591,6 +1591,14 @@
   .cart__total-pin-road {
     font-size: 1.4rem;
   }
+  /*ПУСТАЯ КОРЗИНА*/
+  .cart__empty {
+    padding-bottom: 2.4rem;
+  }
+  .empty__img {
+    width: 9.5rem;
+    height: 19.4rem;
+  }
   /*КОРЗИНА 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/

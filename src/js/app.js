@@ -108,13 +108,6 @@ $(document).ready(function () {
         $("html").addClass("scroll-hidden");
     });
 
-    //ОТКРЫТЬ ВСПЛЫВАШКУ КОРЗИНА
-    $(document).on("click", ".cart-pin__link", function () {
-        $(".block-swipe-cart").addClass("active");
-        $(".block-swipe__background-cart").addClass("active");
-        $("html").addClass("scroll-hidden");
-    });
-
     //ОТКРЫТЬ ВСПЛЫВАШКУ ОБРАТНОЙ СВЯЗИ
     $(document).on("click", ".footer__sosials-feedback", function () {
         $(".block-swipe-feedback").addClass("active");
@@ -260,11 +253,18 @@ $(document).ready(function () {
         }
     });
 
-    //МОДАЛКА КОРЗИНЫ
+    //МОДАЛКА КОРЗИНЫ С ШАПКИ
     $(document).on('click', '.header__cart', function (e) {
         $('.block-swipe__background-cart').addClass('active');
         $('.block-swipe-cart').addClass('active');
         $(this).addClass('active');
+        $("html").addClass("scroll-hidden");
+    });
+
+    //ОТКРЫТЬ ВСПЛЫВАШКУ КОРЗИНА ПО КЛИКУ НА ЗАКРЕП КОРЗИНА
+    $(document).on("click", ".cart-pin__link", function () {
+        $('.block-swipe__background-cart').addClass('active');
+        $('.block-swipe-cart').addClass('active');
         $("html").addClass("scroll-hidden");
     });
 
