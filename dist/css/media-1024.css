@@ -1524,6 +1524,10 @@
   .block-swipe-cart .wrapper {
     padding: 0 2.4rem;
   }
+  .block-swipe-cart .cart__container {
+    max-height: calc(100vh - 34rem);
+    overflow: auto;
+  }
   .cart__title-img {
     width: 1.6rem;
     height: 1.6rem;

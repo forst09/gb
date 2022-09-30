@@ -1900,6 +1900,11 @@
         .wrapper {
             padding: 0 2.4rem;
         }
+
+        .cart__container {
+            max-height: calc(100vh - 34rem);
+            overflow: auto;
+        }
     }
 
     .cart__title-img {

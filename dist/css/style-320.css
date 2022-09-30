@@ -4238,11 +4238,6 @@ svg {
   margin-top: 1.6rem;
 }
 
-.cart-top {
-  max-height: calc(100vh - 18rem);
-  overflow: auto;
-}
-
 .cart__total-pin {
   padding: 1.5rem 1.6rem;
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
