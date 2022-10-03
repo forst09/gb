@@ -2466,6 +2466,11 @@ svg {
   stroke: var(--orange) !important;
 }
 
+.header__cart,
+.header__fav {
+  position: relative;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {
