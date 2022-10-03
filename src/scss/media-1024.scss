@@ -1167,7 +1167,8 @@
 
     .cart-pin,
     .pin-save,
-    .feedback-pin {
+    .feedback-pin,
+    .pin-repeat-order {
         display: none;
     }
 
@@ -1997,6 +1998,21 @@
     }
 
     /*КОРЗИНА 1024*/
+
+    /*###############################################################################################################################*/
+    /*СТРАНИЦА ЗАКАЗА 1024*/
+    .order__info-item {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
+    .order__status {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1.6rem;
+    }
+
+    /*КОНЕЦ СТРАНИЦА ЗАКАЗА 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/

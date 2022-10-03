@@ -4744,14 +4744,14 @@ svg {
     margin-bottom: 2.4rem;
 }
 
-.point-count__title {
+.title-count__title {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 2rem;
     color: var(--black-blue);
 }
 
-.point-count__value {
+.title-count__value {
     font-weight: 500;
     font-size: 1.3rem;
     line-height: 1.8rem;
@@ -5010,6 +5010,65 @@ svg {
 }
 
 /*КОНЕЦ КОРЗИНА*/
+
+/*###############################################################################################################################*/
+/*СТРАНИЦА ЗАКАЗА*/
+.order {
+    .title-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.order__info {
+    margin-top: 0.8rem;
+}
+
+.order__info-item {
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    color: var(--gray-dark);
+
+    &+& {
+        margin-top: 0.8rem;
+    }
+}
+
+.order__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn-orange {
+        max-width: 10rem;
+    }
+}
+
+.order__status-info {
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        stroke: var(--gray-medium);
+        margin-right: 1rem;
+    }
+
+    span {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: 500;
+        color: var(--gray-dark);
+    }
+}
+
+.pin-repeat-order {
+    text-align: center;
+}
+
+/*КОНЕЦ СТРАНИЦА ЗАКАЗА*/
 
 .ajax_main {
     position: relative;

@@ -368,7 +368,8 @@
 
     .cart-pin,
     .pin-save,
-    .feedback-pin {
+    .feedback-pin,
+    .pin-repeat-order {
         display: block;
         bottom: 7.2rem;
     }
@@ -612,11 +613,11 @@
         margin-top: 2.4rem;
     }
 
-    .point-count__title {
+    .title-count__title {
         font-size: 1.8rem;
     }
 
-    .point-count__value {
+    .title-count__value {
         margin-top: 0.8rem;
     }
 
@@ -692,6 +693,23 @@
     }
 
     /*КОРЗИНА 668*/
+
+    /*###############################################################################################################################*/
+    /*СТРАНИЦА ЗАКАЗА 668*/
+    .order__info {
+        margin-top: 1.6rem;
+    }
+
+    .order__info-item {
+        font-size: 1.4rem;
+        line-height: 2rem;
+
+        &+& {
+            margin-top: 0.4rem;
+        }
+    }
+
+    /*КОНЕЦ СТРАНИЦА ЗАКАЗА 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/
