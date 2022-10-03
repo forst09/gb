@@ -195,7 +195,7 @@
     width: 3.4rem;
     height: 3.4rem;
   }
-  .item-quantity span {
+  .item-quantity__span {
     width: 2.8rem;
     height: 2.8rem;
     font-size: 1.2rem;

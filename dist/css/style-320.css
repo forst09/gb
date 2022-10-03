@@ -1205,7 +1205,8 @@ svg {
 .item-quantity {
   position: relative;
 }
-.item-quantity span {
+
+.item-quantity__span {
   position: absolute;
   right: 0.25rem;
   top: 0.2rem;
