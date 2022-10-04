@@ -3995,6 +3995,50 @@ svg {
   color: var(--black-text);
 }
 
+.point__address-fav {
+  margin-top: 0.8rem;
+}
+
+.point__address-fav-btn {
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--gray-extralight);
+}
+
+.fav__long {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.9rem 0;
+}
+.fav__long span {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--gray-dark);
+  transition: color 0.3s ease;
+}
+.fav__long svg {
+  width: 1.9rem;
+  height: 1.7rem;
+  stroke: var(--gray-dark);
+  transition: stroke 0.3s ease, fill 0.3s ease;
+}
+.fav__long:hover span {
+  color: var(--black-blue);
+}
+.fav__long:hover svg {
+  stroke: var(--black-blue);
+}
+
+.fav__long.active span {
+  color: var(--gray-dark);
+}
+.fav__long.active svg {
+  stroke: var(--gray-dark);
+  fill: var(--gray-dark);
+}
+
 /*КОНЕЦ СТРАНИЦА ТОЧКИ*/
 /*###############################################################################################################################*/
 /*ЛК ДАШБОРД*/

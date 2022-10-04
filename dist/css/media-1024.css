@@ -1293,19 +1293,6 @@
     margin-bottom: 3.2rem;
   }
   .point__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     padding: 0.8rem 0;
     border-top: 1px solid var(--gray-extralight);
     border-bottom: 1px solid var(--gray-extralight);
@@ -1398,6 +1385,29 @@
   .card__btns-count {
     padding: 1.2rem 0.8rem;
     max-height: 4.4rem;
+  }
+  .point__address-fav {
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--gray-extralight);
+  }
+  .point__address-fav-btn {
+    padding: 0;
+    border: unset;
+  }
+  .fav__long {
+    padding: 0.9rem 0.8rem 0.9rem 0;
+  }
+  .fav__long span {
+    margin-right: 1.7rem;
+  }
+  .fav__long svg {
+    width: 1.9rem;
+    height: 1.7rem;
   }
   /*ПУСТАЯ ТОЧКА*/
   .empty__img {

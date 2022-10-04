@@ -82,7 +82,7 @@ $(document).ready(function () {
     });
 
     //ДОБАВИТЬ В ИЗБРАННОЕ
-    $(document).on('click', '.tiles__item-heart', function () {
+    $(document).on('click', '.fav-heart', function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
         }
