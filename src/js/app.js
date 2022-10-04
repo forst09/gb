@@ -186,6 +186,7 @@ $(document).ready(function () {
     let contentHeight;
     if ($(window).width() < 1024) {
         contentHeight = $(window).height() - headerHeightWithMargin - footerHeightWithMargin - tabbarHeightWithMargin;
+        console.log($('.stretch'));
     }
     else {
         contentHeight = $(window).height() - headerHeightWithMargin - footerHeightWithMargin;
@@ -527,7 +528,7 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "img/icons/map-geo.svg",
+                                iconImageHref: "/upload/images/map-geo.svg",
                                 // Размеры метки.
                                 iconImageSize: [82, 51],
                                 // Смещение левого верхнего угла иконки относительно
@@ -551,7 +552,7 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "img/icons/map-plug.svg",
+                                iconImageHref: "/upload/images/map-plug.svg",
                                 // Размеры метки.
                                 iconImageSize: [60, 66],
                                 // Смещение левого верхнего угла иконки относительно
@@ -575,7 +576,7 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "img/icons/map-dot.svg",
+                                iconImageHref: "/upload/images/map-dot.svg",
                                 // Размеры метки.
                                 iconImageSize: [39, 39],
                                 // Смещение левого верхнего угла иконки относительно
@@ -599,7 +600,7 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "img/icons/map-store.svg",
+                                iconImageHref: "/upload/images/map-store.svg",
                                 // Размеры метки.
                                 iconImageSize: [60, 66],
                                 // Смещение левого верхнего угла иконки относительно
@@ -659,7 +660,7 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "img/logos/gb-logo-map.svg",
+                                iconImageHref: "/upload/images/gb-logo-map.svg",
                                 // Размеры метки.
                                 iconImageSize: [60, 66],
                                 // Смещение левого верхнего угла иконки относительно

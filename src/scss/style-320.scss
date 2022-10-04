@@ -861,13 +861,6 @@ svg {
     }
 }
 
-/*ЕСЛИ НУЖНО ПРИЖАТЬ ФУТЕР К НИЗУ СТРАНИЦЫ - НА BODY - .body-content, НА ОБЕРТКУ ДЛЯ КОНТЕНТА - .content, НА HTML - .html-content*/
-// .content {
-//     display: flex;
-//     flex-direction: column;
-//     height: calc(100vh - 5.6rem);
-// }
-
 /*НАЧАЛО СТИЛЕЙ ШАПКИ*/
 .header {
     margin-bottom: 4.2rem;
@@ -2865,6 +2858,12 @@ svg {
 .header__cart,
 .header__fav {
     position: relative;
+}
+
+.header-point__icons-item--fav .item-quantity__span,
+.header-point__icons-item--cart .item-quantity__span {
+    right: -1.2rem;
+    top: -0.7rem;
 }
 
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
@@ -5125,6 +5124,39 @@ svg {
 }
 
 /*КОНЕЦ СТРАНИЦА ЗАКАЗА*/
+
+/*###############################################################################################################################*/
+/*404*/
+.not-found {
+    margin: 0 !important;
+    height: calc(100vh - 12.4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-orange {
+        margin: 2.4rem auto 0;
+        max-width: 11.4rem;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+}
+
+.not-found__img {
+    width: 22.4rem;
+    height: 19.5rem;
+    margin: 0 auto 2.4rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*КОНЕЦ 404*/
 
 .ajax_main {
     position: relative;
