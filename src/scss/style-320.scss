@@ -4324,6 +4324,12 @@ svg {
     margin-right: 0.8rem;
 }
 
+.trash-head {
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+}
+
 .delete {
     margin-left: auto;
     display: -webkit-inline-box;
@@ -4376,9 +4382,6 @@ svg {
         }
 
         .trash-head {
-            -webkit-transform-origin: center;
-            -ms-transform-origin: center;
-            transform-origin: center;
             -webkit-transform: rotate(-13deg) translateY(-2px) translateX(1px);
             -ms-transform: rotate(-13deg) translateY(-2px) translateX(1px);
             transform: rotate(-13deg) translateY(-2px) translateX(1px);
