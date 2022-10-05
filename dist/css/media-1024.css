@@ -617,11 +617,13 @@
   /*КОНЕЦ ВСПЛЫВАШКА ВЫБОР ГОРОДА 1024*/
   /*ВСПЛЫВАШКА ВЫЙТИ ИЗ ПРОФИЛЯ 1024*/
   .block-swipe-logout .modal-title,
-.block-swipe-cart-cancel .modal-title {
+.block-swipe-cart-cancel .modal-title,
+.block-swipe-order-cancel .modal-title {
     margin-bottom: 4rem;
   }
   .block-swipe-logout .modal__buttons,
-.block-swipe-cart-cancel .modal__buttons {
+.block-swipe-cart-cancel .modal__buttons,
+.block-swipe-order-cancel .modal__buttons {
     margin-top: 4rem;
     -webkit-box-shadow: unset;
     box-shadow: unset;
@@ -1727,9 +1729,15 @@
   .address-small {
     font-size: 1.6rem;
     line-height: 2.2rem;
+    margin-top: 1.2rem;
   }
   .search__item + .search__item {
     margin-top: 2.4rem;
+  }
+  .point__name-time-road {
+    padding: 0.2rem 0.8rem;
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
   }
   /*КОНЕЦ СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА 1024*/
 }

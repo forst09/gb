@@ -786,7 +786,8 @@
 
     /*ВСПЛЫВАШКА ВЫЙТИ ИЗ ПРОФИЛЯ 1024*/
     .block-swipe-logout,
-    .block-swipe-cart-cancel {
+    .block-swipe-cart-cancel,
+    .block-swipe-order-cancel {
         .modal-title {
             margin-bottom: 4rem;
         }
@@ -2169,6 +2170,7 @@
     .address-small {
         font-size: 1.6rem;
         line-height: 2.2rem;
+        margin-top: 1.2rem;
     }
 
     .search__item {
@@ -2176,6 +2178,13 @@
             margin-top: 2.4rem;
         }
     }
+
+    .point__name-time-road {
+        padding: 0.2rem 0.8rem;
+        margin-top: 1.2rem;
+        font-size: 1.2rem;
+    }
+
 
     /*КОНЕЦ СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА 1024*/
 }
