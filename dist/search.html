@@ -217,434 +217,719 @@
             </div>
         </div>
 
-        <div class="search__item">
-            <div class="wrapper">
-                <div class="point__name-time">
-                    <a href="javascript:void(0)" class="tiles__item-name">
-                        <div class="tiles__item-logo">
-                            <img src="img/logos/logo-1.png" alt="">
-                        </div>
-                        <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
-                            медоваренного завода
-                            Ивана Дурдина</div>
-                    </a>
-                    <div class="point__name-time-road">120 мин пешком</div>
+        <div class="search__result" style="display: none;">
+            <div class="search__item">
+                <div class="wrapper">
+                    <div class="point__name-time">
+                        <a href="javascript:void(0)" class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                                медоваренного завода
+                                Ивана Дурдина</div>
+                        </a>
+                        <div class="point__name-time-road">120 мин пешком</div>
+                    </div>
+                    <div class="address-small">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
                 </div>
-                <div class="address-small">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
-            </div>
-            <div class="scroll">
-                <div class="swiper swiper-search swiper-not-mobile">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <a href="javascript:void(0)" class="card__image">
-                                    <img src="img/catalog/cards-1.jpg" alt="">
-                                    <div class="card__labels">
-                                        <div class="label label--green">%</div>
-                                        <div class="label label--red">top</div>
-                                        <div class="label label--orange">new</div>
+                <div class="scroll scroll-swiper">
+                    <div class="swiper swiper-search swiper-not-mobile swiper-hide-buttons">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
                                     </div>
-                                </a>
-                                <div class="card__cost">
-                                    <div class="card__cost-new">550 &#8381;</div>
-                                    <div class="card__cost-old">144 550</div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
-                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
-                                    золото светлое</a>
-                                <div class="card__volume ellipsis letter-spacing">0,5 л</div>
-                                <div class="card__btns">
-                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+
-                                        Добавить</a>
-                                    <div class="card__btns-count hide">
-                                        <form action="">
-                                            <div class="card__btns-count-wrapper">
-                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#minus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                                <input type="text" class="card__btns-count-value" readonly value="5">
-                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#plus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <a href="javascript:void(0)" class="card__image">
-                                    <img src="img/catalog/cards-1.jpg" alt="">
-                                    <div class="card__labels">
-                                        <div class="label label--green">%</div>
-                                        <div class="label label--red">top</div>
-                                        <div class="label label--orange">new</div>
-                                    </div>
-                                </a>
-                                <div class="card__cost">
-                                    <div class="card__cost-new">550 &#8381;</div>
-                                    <div class="card__cost-old">144 550</div>
-                                </div>
-                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
-                                    золото светлое</a>
-                                <div class="card__volume ellipsis letter-spacing">0,5 л</div>
-                                <div class="card__btns">
-                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+
-                                        Добавить</a>
-                                    <div class="card__btns-count hide">
-                                        <form action="">
-                                            <div class="card__btns-count-wrapper">
-                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#minus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                                <input type="text" class="card__btns-count-value" readonly value="5">
-                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#plus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                        <div class="swiper-buttons">
+                            <div class="swiper-button-prev swiper-search-prev swiper-button-arrow">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#arrow-small">
+                                    </use>
+                                </svg>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <a href="javascript:void(0)" class="card__image">
-                                    <img src="img/catalog/cards-1.jpg" alt="">
-                                    <div class="card__labels">
-                                        <div class="label label--green">%</div>
-                                        <div class="label label--red">top</div>
-                                        <div class="label label--orange">new</div>
-                                    </div>
-                                </a>
-                                <div class="card__cost">
-                                    <div class="card__cost-new">550 &#8381;</div>
-                                    <div class="card__cost-old">144 550</div>
-                                </div>
-                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
-                                    золото светлое</a>
-                                <div class="card__volume ellipsis letter-spacing">0,5 л</div>
-                                <div class="card__btns">
-                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+
-                                        Добавить</a>
-                                    <div class="card__btns-count hide">
-                                        <form action="">
-                                            <div class="card__btns-count-wrapper">
-                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#minus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                                <input type="text" class="card__btns-count-value" readonly value="5">
-                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#plus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <a href="javascript:void(0)" class="card__image">
-                                    <img src="img/catalog/cards-1.jpg" alt="">
-                                    <div class="card__labels">
-                                        <div class="label label--green">%</div>
-                                        <div class="label label--red">top</div>
-                                        <div class="label label--orange">new</div>
-                                    </div>
-                                </a>
-                                <div class="card__cost">
-                                    <div class="card__cost-new">550 &#8381;</div>
-                                    <div class="card__cost-old">144 550</div>
-                                </div>
-                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
-                                    золото светлое</a>
-                                <div class="card__volume ellipsis letter-spacing">0,5 л</div>
-                                <div class="card__btns">
-                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+
-                                        Добавить</a>
-                                    <div class="card__btns-count hide">
-                                        <form action="">
-                                            <div class="card__btns-count-wrapper">
-                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#minus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                                <input type="text" class="card__btns-count-value" readonly value="5">
-                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#plus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <a href="javascript:void(0)" class="card__image">
-                                    <img src="img/catalog/cards-1.jpg" alt="">
-                                    <div class="card__labels">
-                                        <div class="label label--green">%</div>
-                                        <div class="label label--red">top</div>
-                                        <div class="label label--orange">new</div>
-                                    </div>
-                                </a>
-                                <div class="card__cost">
-                                    <div class="card__cost-new">550 &#8381;</div>
-                                    <div class="card__cost-old">144 550</div>
-                                </div>
-                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
-                                    золото светлое</a>
-                                <div class="card__volume ellipsis letter-spacing">0,5 л</div>
-                                <div class="card__btns">
-                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+
-                                        Добавить</a>
-                                    <div class="card__btns-count hide">
-                                        <form action="">
-                                            <div class="card__btns-count-wrapper">
-                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#minus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                                <input type="text" class="card__btns-count-value" readonly value="5">
-                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#plus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <a href="javascript:void(0)" class="card__image">
-                                    <img src="img/catalog/cards-1.jpg" alt="">
-                                    <div class="card__labels">
-                                        <div class="label label--green">%</div>
-                                        <div class="label label--red">top</div>
-                                        <div class="label label--orange">new</div>
-                                    </div>
-                                </a>
-                                <div class="card__cost">
-                                    <div class="card__cost-new">550 &#8381;</div>
-                                    <div class="card__cost-old">144 550</div>
-                                </div>
-                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
-                                    золото светлое</a>
-                                <div class="card__volume ellipsis letter-spacing">0,5 л</div>
-                                <div class="card__btns">
-                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+
-                                        Добавить</a>
-                                    <div class="card__btns-count hide">
-                                        <form action="">
-                                            <div class="card__btns-count-wrapper">
-                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#minus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                                <input type="text" class="card__btns-count-value" readonly value="5">
-                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#plus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <a href="javascript:void(0)" class="card__image">
-                                    <img src="img/catalog/cards-1.jpg" alt="">
-                                    <div class="card__labels">
-                                        <div class="label label--green">%</div>
-                                        <div class="label label--red">top</div>
-                                        <div class="label label--orange">new</div>
-                                    </div>
-                                </a>
-                                <div class="card__cost">
-                                    <div class="card__cost-new">550 &#8381;</div>
-                                    <div class="card__cost-old">144 550</div>
-                                </div>
-                                <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
-                                    золото светлое</a>
-                                <div class="card__volume ellipsis letter-spacing">0,5 л</div>
-                                <div class="card__btns">
-                                    <a href="javascript:void(0)" class="btn-add letter-spacing">+
-                                        Добавить</a>
-                                    <div class="card__btns-count hide">
-                                        <form action="">
-                                            <div class="card__btns-count-wrapper">
-                                                <button class="card__btns-count-btn card__btns-count-btn--minus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#minus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                                <input type="text" class="card__btns-count-value" readonly value="5">
-                                                <button class="card__btns-count-btn card__btns-count-btn--plus"
-                                                    type="button">
-                                                    <svg>
-                                                        <use xlink:href="img/icons/sprite.svg#plus">
-                                                        </use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                            <div class="swiper-button-next swiper-search-next swiper-button-arrow">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#arrow-small">
+                                    </use>
+                                </svg>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-prev swiper-search-prev swiper-button-arrow"></div>
-                    <div class="swiper-button-next swiper-search-next swiper-button-arrow"></div>
                 </div>
             </div>
-        </div>
-        <div class="search__item">
-            <div class="wrapper">
-                <div class="point__name-time">
-                    <a href="javascript:void(0)" class="tiles__item-name">
-                        <div class="tiles__item-logo">
-                            <img src="img/logos/logo-1.png" alt="">
-                        </div>
-                        <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
-                            медоваренного завода
-                            Ивана Дурдина</div>
-                    </a>
-                    <div class="point__name-time-road">120 мин пешком</div>
+            <div class="search__item">
+                <div class="wrapper">
+                    <div class="point__name-time">
+                        <a href="javascript:void(0)" class="tiles__item-name">
+                            <div class="tiles__item-logo">
+                                <img src="img/logos/logo-1.png" alt="">
+                            </div>
+                            <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                                медоваренного завода
+                                Ивана Дурдина</div>
+                        </a>
+                        <div class="point__name-time-road">120 мин пешком</div>
+                    </div>
+                    <div class="address-small">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
                 </div>
-                <div class="address-small">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
-            </div>
-            <!-- <div class="swiper"></div> -->
-        </div>
-        <div class="search__item">
-            <div class="wrapper">
-                <div class="point__name-time">
-                    <a href="javascript:void(0)" class="tiles__item-name">
-                        <div class="tiles__item-logo">
-                            <img src="img/logos/logo-1.png" alt="">
+                <div class="scroll scroll-swiper">
+                    <div class="swiper swiper-search swiper-not-mobile swiper-hide-buttons">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="javascript:void(0)" class="card__image">
+                                        <img src="img/catalog/cards-1.jpg" alt="">
+                                        <div class="card__labels">
+                                            <div class="label label--green">%</div>
+                                            <div class="label label--red">top</div>
+                                            <div class="label label--orange">new</div>
+                                        </div>
+                                    </a>
+                                    <div class="card__cost">
+                                        <div class="card__cost-new">550 &#8381;</div>
+                                        <div class="card__cost-old">144 550</div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                        золото светлое</a>
+                                    <div class="card__volume ellipsis letter-spacing">0,5 л</div>
+                                    <div class="card__btns">
+                                        <a href="javascript:void(0)" class="btn-add letter-spacing">+
+                                            Добавить</a>
+                                        <div class="card__btns-count hide">
+                                            <form action="">
+                                                <div class="card__btns-count-wrapper">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--minus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#minus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="text" class="card__btns-count-value" readonly
+                                                        value="5">
+                                                    <button class="card__btns-count-btn card__btns-count-btn--plus"
+                                                        type="button">
+                                                        <svg>
+                                                            <use xlink:href="img/icons/sprite.svg#plus">
+                                                            </use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
-                            медоваренного завода
-                            Ивана Дурдина</div>
-                    </a>
-                    <div class="point__name-time-road">120 мин пешком</div>
-                </div>
-                <div class="address-small">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
-            </div>
-            <!-- <div class="scroll">
-                <div class="swiper swiper-partners swiper-not-mobile">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/partners/partners-2.png"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/partners/partners-2.png"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/partners/partners-2.png"
-                                    alt=""></a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="partners-page.html" class="partners__logo"><img src="img/catalog/cards-1.jpg"
-                                    alt=""></a>
+                        <div class="swiper-buttons">
+                            <div class="swiper-button-prev swiper-search-prev swiper-button-arrow">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#arrow-small">
+                                    </use>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next swiper-search-next swiper-button-arrow">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#arrow-small">
+                                    </use>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
 
+        <div class="search__empty">
+            <div class="empty__img">
+                <img src="img/beer-sad.svg" alt="">
+            </div>
+            <div class="empty__text">
+                <p>Попробуйте ввести другой запрос</p>
+            </div>
+        </div>
     </section>
 
     <!-- НАЧАЛО ФУТЕРА -->

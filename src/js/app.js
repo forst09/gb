@@ -750,4 +750,26 @@ $(document).ready(function () {
             SimpleScrollbar.initAll();
         });
     });
+
+
+    //call logout modal
+    $(document).on("click", ".logout-modal", function () {
+        $(".block-swipe__background-logout").addClass("active");
+        $(".block-swipe-logout").addClass("active");
+    });
+
+    // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
+    if ($(window).width() >= 1024) {
+
+        //ПОИСК
+        const swiperRecently = new Swiper('.swiper-search', {
+            speed: 700,
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            navigation: {
+                nextEl: '.swiper-search-next',
+                prevEl: '.swiper-search-prev',
+            }
+        });
+    };
 });

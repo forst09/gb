@@ -960,6 +960,58 @@
     padding: 0 6.4rem;
     overflow: unset;
   }
+  .swiper-not-mobile {
+    display: block;
+  }
+  .swiper-not-mobile .swiper-wrapper {
+    column-gap: unset;
+  }
+  .swiper-not-mobile .swiper-buttons {
+    display: flex;
+    pointer-events: all;
+  }
+  .swiper-button-arrow {
+    position: static;
+    margin: 0;
+    box-shadow: 0px 5px 10px rgba(226, 236, 249, 0.6);
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--white);
+    border-radius: 50%;
+  }
+  .swiper-button-arrow svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    stroke: var(--black-blue);
+    transition: stroke 0.3s ease;
+  }
+  .swiper-button-arrow::after {
+    content: none;
+  }
+  .swiper-button-arrow:hover svg {
+    stroke: var(--orange);
+  }
+  .swiper-button-arrow.swiper-button-prev svg {
+    transform: rotate(180deg);
+  }
+  .swiper-buttons {
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .swiper-button-disabled {
+    opacity: 0 !important;
+  }
+  .swiper-hide-buttons:hover .swiper-buttons {
+    opacity: 1;
+  }
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
   .tiles {
@@ -1633,5 +1685,52 @@
     margin: 0 auto;
   }
   /*КОНЕЦ 404 1024*/
+  /*###############################################################################################################################*/
+  /*СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА 1024*/
+  .search {
+    /*ПУСТОЙ ПОИСК*/
+  }
+  .search .card {
+    min-height: 26.4rem;
+    max-height: 26.4rem;
+  }
+  .search .card__image {
+    height: 11.4rem;
+  }
+  .search .card__cost-new {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .search .card__cost-old {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+  .search .card__volume {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+  .search .card__btns {
+    height: 3.6rem;
+  }
+  .search .btn-add {
+    padding: 0.8rem;
+  }
+  .search .card__btns-count {
+    padding: 0.8rem;
+    max-height: 3.6rem;
+  }
+  .search .empty__img {
+    width: 14.8rem;
+    height: 30.2rem;
+    margin-bottom: 3.2rem;
+  }
+  .address-small {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  .search__item + .search__item {
+    margin-top: 2.4rem;
+  }
+  /*КОНЕЦ СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/

@@ -2875,8 +2875,7 @@ svg {
         width: auto;
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
+    .swiper-buttons {
         display: none;
         pointer-events: none;
     }
@@ -3145,6 +3144,7 @@ svg {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    width: fit-content;
 }
 
 .tiles__item-logo {
@@ -5220,6 +5220,10 @@ svg {
 
 .swiper-search {
     margin-top: 0.8rem;
+
+    .swiper-wrapper {
+        column-gap: 0.8rem;
+    }
 }
 
 .search__item {

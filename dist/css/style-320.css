@@ -2486,8 +2486,7 @@ svg {
 .swiper-not-mobile .swiper-slide {
   width: auto;
 }
-.swiper-not-mobile .swiper-button-next,
-.swiper-not-mobile .swiper-button-prev {
+.swiper-not-mobile .swiper-buttons {
   display: none;
   pointer-events: none;
 }
@@ -2731,6 +2730,7 @@ svg {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: fit-content;
 }
 
 .tiles__item-logo {
@@ -4615,6 +4615,9 @@ svg {
 
 .swiper-search {
   margin-top: 0.8rem;
+}
+.swiper-search .swiper-wrapper {
+  column-gap: 0.8rem;
 }
 
 .search__item + .search__item {
