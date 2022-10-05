@@ -272,6 +272,8 @@
   .bg__img {
     width: 211rem;
     height: 50rem;
+    -webkit-transform: translateX(-20%);
+    -ms-transform: translateX(-20%);
     transform: translateX(-20%);
     top: -20rem;
   }
@@ -576,6 +578,9 @@
     width: 14rem;
   }
   .search .card__labels {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
   .search .label + .label {

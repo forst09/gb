@@ -770,9 +770,12 @@
     width: calc(100% + 15.1rem);
     height: 27.5rem;
     top: -6rem;
+    -webkit-transform: translateX(-49%);
+    -ms-transform: translateX(-49%);
     transform: translateX(-49%);
   }
   .bg__img img {
+    -o-object-fit: contain;
     object-fit: contain;
   }
   /*КОНЕЦ ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ 1024*/
@@ -921,6 +924,7 @@
     padding: 0;
   }
   .cookie .modal__buttons-shadow {
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   /*КОНЕЦ COOKIE 1024*/
@@ -966,15 +970,20 @@
     display: block;
   }
   .swiper-not-mobile .swiper-wrapper {
+    -webkit-column-gap: unset;
+    -moz-column-gap: unset;
     column-gap: unset;
   }
   .swiper-not-mobile .swiper-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     pointer-events: all;
   }
   .swiper-button-arrow {
     position: static;
     margin: 0;
+    -webkit-box-shadow: 0px 5px 10px rgba(226, 236, 249, 0.6);
     box-shadow: 0px 5px 10px rgba(226, 236, 249, 0.6);
     width: 4rem;
     height: 4rem;
@@ -985,6 +994,8 @@
     width: 2.4rem;
     height: 2.4rem;
     stroke: var(--black-blue);
+    -webkit-transition: stroke 0.3s ease;
+    -o-transition: stroke 0.3s ease;
     transition: stroke 0.3s ease;
   }
   .swiper-button-arrow::after {
@@ -994,18 +1005,28 @@
     stroke: var(--orange);
   }
   .swiper-button-arrow.swiper-button-prev svg {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
   }
   .swiper-buttons {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     position: absolute;
     left: 0;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 100%;
     z-index: 100;
     opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
   }
   .swiper-button-disabled {
@@ -1442,9 +1463,18 @@
   }
   .point__address-fav {
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0.8rem 0;
     border-bottom: 1px solid var(--gray-extralight);
@@ -1520,14 +1550,23 @@
   /*########################################################################################################################################*/
   /*ЛИЧНЫЕ ДАННЫЕ 1024*/
   .personal-data__save {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   /*КОНЕЦ ЛИЧНЫЕ ДАННЫЕ 1024*/
   /*########################################################################################################################################*/
   /*СТРАНИЦА СЕТИ 1024*/
   .network__btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: revert;
     flex-direction: revert;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-top: 1px solid var(--gray-extralight);
     border-bottom: 1px solid var(--gray-extralight);
@@ -1535,6 +1574,8 @@
   }
   .more {
     padding: 1.1rem 5.5rem 1.1rem 1.6rem;
+    -webkit-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
     border-radius: 1.6rem;
   }
@@ -1558,8 +1599,14 @@
   }
   .network__info {
     margin-top: 3.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   /*КОНЕЦ СТРАНИЦА СЕТИ 1024*/
@@ -1581,6 +1628,8 @@
   /*###############################################################################################################################*/
   /*КОРЗИНА 1024*/
   .block-swipe-cart {
+    -webkit-transform: unset;
+    -ms-transform: unset;
     transform: unset;
     right: 6.4rem;
     left: unset;
@@ -1672,7 +1721,12 @@
     line-height: 2.2rem;
   }
   .order__status {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     row-gap: 1.6rem;
   }

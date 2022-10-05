@@ -278,9 +278,17 @@
 
     /*ПУСТАЯ ТОЧКА*/
     .point-page__cart--empty {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
         flex-grow: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         padding: 0 2.4rem;
     }

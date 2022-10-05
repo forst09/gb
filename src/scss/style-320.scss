@@ -3145,6 +3145,8 @@ svg {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -4574,8 +4576,14 @@ svg {
 }
 
 .fav__long {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
     padding: 0.9rem 0;
@@ -4585,6 +4593,8 @@ svg {
         line-height: 2rem;
         font-weight: 600;
         color: var(--gray-dark);
+        -webkit-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
         transition: color 0.3s ease;
     }
 
@@ -4592,6 +4602,8 @@ svg {
         width: 1.9rem;
         height: 1.7rem;
         stroke: var(--gray-dark);
+        -webkit-transition: stroke 0.3s ease, fill 0.3s ease;
+        -o-transition: stroke 0.3s ease, fill 0.3s ease;
         transition: stroke 0.3s ease, fill 0.3s ease;
     }
 
@@ -5090,7 +5102,12 @@ svg {
 /*СТРАНИЦА ЗАКАЗА*/
 .order {
     .title-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
     }
 }
@@ -5111,8 +5128,14 @@ svg {
 }
 
 .order__status {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     .btn-orange {
@@ -5121,7 +5144,11 @@ svg {
 }
 
 .order__status-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     svg {
@@ -5150,8 +5177,14 @@ svg {
 .not-found {
     margin: 0 !important;
     height: calc(100vh - 12.4rem);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     .btn-orange {
@@ -5172,6 +5205,7 @@ svg {
     img {
         width: 100%;
         height: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
     }
 }
@@ -5206,9 +5240,12 @@ svg {
     font-size: 1.4rem;
     line-height: 2rem;
     padding: 0.4rem 0.8rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-top: 0.2rem;
     font-weight: 600;
+    -webkit-box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
     box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
     border-radius: 12px;
 }
@@ -5225,6 +5262,8 @@ svg {
     margin-top: 0.8rem;
 
     .swiper-wrapper {
+        -webkit-column-gap: 0.8rem;
+        -moz-column-gap: 0.8rem;
         column-gap: 0.8rem;
     }
 }
