@@ -2866,6 +2866,22 @@ svg {
     top: -0.7rem;
 }
 
+.swiper-not-mobile {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+
+    .swiper-slide {
+        width: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+        pointer-events: none;
+    }
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -5160,6 +5176,60 @@ svg {
 }
 
 /*КОНЕЦ 404*/
+
+/*###############################################################################################################################*/
+/*СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА*/
+.search {
+    .tiles__item-name {
+        margin: 0;
+    }
+
+    .card {
+        width: 12.5rem;
+    }
+
+    .card__labels {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .label+.label {
+        margin-left: 0;
+        margin-top: 0.25rem;
+    }
+}
+
+.point__name-time-road {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 0.8rem;
+    width: fit-content;
+    margin-top: 0.2rem;
+    font-weight: 600;
+}
+
+.address-small {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+    margin-top: 0.4rem;
+}
+
+.swiper-search {
+    margin-top: 0.8rem;
+}
+
+.search__item {
+    &+& {
+        margin-top: 3.2rem;
+    }
+}
+
+/*КОНЕЦ СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА*/
+
 
 .ajax_main {
     position: relative;
