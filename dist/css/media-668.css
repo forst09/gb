@@ -573,6 +573,7 @@
   .order__item .card__name {
     font-size: 1.6rem;
     line-height: 2.4rem;
+    min-height: unset;
   }
   .order__item .card__volume {
     font-weight: 500;

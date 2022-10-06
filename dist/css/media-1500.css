@@ -284,6 +284,9 @@
   .order .btn-long-margin {
     text-align: left;
   }
+  .btn-long-margin {
+    margin-top: 3.2rem;
+  }
   /*КОНЕЦ СТРАНИЦА ЗАКАЗА 1500*/
 }
 /*КОНЕЦ АДАПТИВА 1500*/

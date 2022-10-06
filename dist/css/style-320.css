@@ -3656,6 +3656,11 @@ svg {
   -ms-line-clamp: 2;
   -webkit-line-clamp: 2;
   line-clamp: 2;
+  transition: color 0.3s ease;
+  min-height: 3.6rem;
+}
+.card__name:hover {
+  color: var(--black-blue);
 }
 
 .card__volume {
