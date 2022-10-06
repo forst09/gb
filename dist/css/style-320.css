@@ -4550,6 +4550,8 @@ svg {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 100%;
+  margin-top: 2.4rem;
 }
 .order__status .btn-orange {
   max-width: 10rem;
@@ -4612,6 +4614,7 @@ svg {
   flex-direction: column;
   flex-shrink: 0;
   align-items: flex-start;
+  margin-left: auto;
 }
 .order__item .card__cost-new {
   font-size: 1.3rem;

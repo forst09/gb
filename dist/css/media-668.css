@@ -557,6 +557,36 @@
   .order__info-item + .order__info-item {
     margin-top: 0.4rem;
   }
+  .order__status {
+    margin-top: 1.6rem;
+  }
+  .order__point-info {
+    margin-bottom: 3.2rem;
+  }
+  .order__items {
+    margin-top: 2.4rem;
+  }
+  .order__item .cart__img {
+    width: 6.9rem;
+    height: 6.4rem;
+  }
+  .order__item .card__name {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .order__item .card__volume {
+    font-weight: 500;
+  }
+  .order__item .card__cost-new {
+    font-size: 1.4rem;
+  }
+  .order__item .card__cost-old {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .total {
+    margin-top: 2.4rem;
+  }
   /*КОНЕЦ СТРАНИЦА ЗАКАЗА 668*/
   /*###############################################################################################################################*/
   /*404 668*/
