@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+"title": "ЛК - заказы"
+})
+
+<body>
+    @@include('html/header-2.html',{})
+
+    <section class="order-list">
+        <div class="wrapper">
+            <div class="title-wrapper">
+                <h1>По запросу “Пиво крафт” найдено 777 777 результатов</h1>
+            </div>
+        </div>
+        <div class="order-list__item">
+            <div class="wrapper">
+                <div class="order-list__item-title">
+                    <div class="order-list__item-number">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#boxOpen">
+                            </use>
+                        </svg>
+                        <!-- <svg>
+                            <use xlink:href="img/icons/sprite.svg#clock"></use>
+                        </svg> -->
+                        <!-- <svg>
+                            <use xlink:href="img/icons/sprite.svg#boxOpen"></use>
+                        </svg>-->
+                        <!-- <svg>
+                            <use xlink:href="img/icons/sprite.svg#complete"></use>
+                        </svg> -->
+                        <span>Заказ №123456</span>
+                    </div>
+                    <div class="card__cost-new">550 &#8381;</div>
+                </div>
+                <div class="order-list__item-date">29 августа 2022, 16:04</div>
+                <div class="order-list__item-info">
+                    <a href="javascript:void(0)" class="tiles__item-name">
+                        <div class="tiles__item-logo">
+                            <img src="img/logos/logo-1.png" alt="">
+                        </div>
+                        <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                            медоваренного завода
+                            Ивана Дурдина</div>
+                    </a>
+                    <div class="address-small">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
+                </div>
+            </div>
+            <div class="scroll order-list__item-goods">
+                <div class="swiper swiper-goods">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="btn-wrapper-center-left">
+                    <a href="javascript:void(0)" class="btn-text btn-text--orange btn-text--big">Повторить заказ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/footer.html',{})
+    @@include('html/tabbar.html',{})
+
+    <script src="https://cdn.jsdelivr.net/npm/simple-scrollbar@latest/simple-scrollbar.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.60/inputmask/jquery.inputmask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
