@@ -2615,6 +2615,11 @@ svg {
   padding: 0.8rem 1.6rem;
 }
 
+.btn-long-margin {
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {

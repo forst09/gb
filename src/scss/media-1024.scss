@@ -1305,6 +1305,10 @@
         }
     }
 
+    .btn-long-margin {
+        margin-top: 4.8rem;
+    }
+
     /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
 
     /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
@@ -2142,12 +2146,20 @@
 
     /*###############################################################################################################################*/
     /*СТРАНИЦА ЗАКАЗА 1024*/
+    .order__info {
+        .btn-text {
+            display: block;
+            margin-top: 1.6rem;
+        }
+    }
+
     .order__info-item {
         font-size: 1.6rem;
         line-height: 2.2rem;
     }
 
     .order__status {
+        margin-top: 3.2rem;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2156,6 +2168,49 @@
         -ms-flex-align: start;
         align-items: flex-start;
         row-gap: 1.6rem;
+    }
+
+    .order__point-info {
+        margin-bottom: 4rem;
+    }
+
+    .order__items {
+        margin-top: 3.2rem;
+    }
+
+    .order__item {
+        padding: 2.4rem 0.8rem 0.8rem 0.8rem;
+
+        &+& {
+            padding-bottom: 2.4rem;
+            margin-top: 1.6rem;
+        }
+
+        .card__name {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+
+        .card__volume {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+
+        .card__cost-new {
+            line-height: 2rem;
+        }
+    }
+
+    .total {
+        margin-top: 3.2rem;
+    }
+
+    .card__cost-new {
+        line-height: 2rem;
+    }
+
+    .card__cost-old {
+        font-size: 1.3rem;
     }
 
     /*КОНЕЦ СТРАНИЦА ЗАКАЗА 1024*/
