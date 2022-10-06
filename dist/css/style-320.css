@@ -96,6 +96,125 @@ svg {
   fill: transparent;
 }
 
+.pin {
+  padding: 1.6rem;
+  border-radius: 1.2rem 1.2rem 0 0;
+  background-color: var(--white);
+  position: fixed;
+  bottom: 5.6rem;
+  width: 100%;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+}
+
+.btn-orange {
+  padding: 1rem 1.6rem;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: var(--orange);
+  border-radius: 1.2rem;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 2;
+}
+.btn-orange::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--orange-light);
+  opacity: 0;
+  border-radius: 50%;
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+.btn-orange::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--orange);
+  z-index: -2;
+}
+.btn-orange span {
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.btn-orange svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--white);
+  margin-right: 1.6rem;
+}
+.btn-orange:active, .btn-orange:focus, .btn-orange:focus-within {
+  -webkit-animation: btn-orange 0.7s ease;
+  animation: btn-orange 0.7s ease;
+}
+
+@-webkit-keyframes btn-orange {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.2rem);
+    transform: translateY(0.2rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(0.2rem);
+    transform: translateY(0.2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes btn-orange {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.2rem);
+    transform: translateY(0.2rem);
+  }
+  50% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  75% {
+    -webkit-transform: translateY(0.2rem);
+    transform: translateY(0.2rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
 .scroll-hidden {
   overflow: hidden !important;
 }
@@ -2492,6 +2611,10 @@ svg {
   pointer-events: none;
 }
 
+.btn-orange--small {
+  padding: 0.8rem 1.6rem;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {
@@ -3045,125 +3168,6 @@ svg {
   text-align: center;
 }
 
-.pin {
-  padding: 1.6rem;
-  border-radius: 1.2rem 1.2rem 0 0;
-  background-color: var(--white);
-  position: fixed;
-  bottom: 5.6rem;
-  width: 100%;
-  z-index: 1000;
-  -webkit-box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
-  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
-}
-
-.btn-orange {
-  padding: 1rem 1.6rem;
-  width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: var(--orange);
-  border-radius: 1.2rem;
-  color: var(--white);
-  position: relative;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  z-index: 2;
-}
-.btn-orange::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: var(--orange-light);
-  opacity: 0;
-  border-radius: 50%;
-  transition: all 0.6s ease;
-  z-index: -1;
-}
-.btn-orange::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--orange);
-  z-index: -2;
-}
-.btn-orange span {
-  color: var(--white);
-  font-size: 1.4rem;
-  line-height: 2rem;
-  font-weight: 600;
-}
-.btn-orange svg {
-  width: 1.6rem;
-  height: 1.6rem;
-  fill: var(--white);
-  margin-right: 1.6rem;
-}
-.btn-orange:active, .btn-orange:focus, .btn-orange:focus-within {
-  -webkit-animation: btn-orange 0.7s ease;
-  animation: btn-orange 0.7s ease;
-}
-
-@-webkit-keyframes btn-orange {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  25% {
-    -webkit-transform: translateY(0.2rem);
-    transform: translateY(0.2rem);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  75% {
-    -webkit-transform: translateY(0.2rem);
-    transform: translateY(0.2rem);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-@keyframes btn-orange {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  25% {
-    -webkit-transform: translateY(0.2rem);
-    transform: translateY(0.2rem);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  75% {
-    -webkit-transform: translateY(0.2rem);
-    transform: translateY(0.2rem);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
 /*ЗАКРЕПЛЯШКА ТЕЛЕФОНА*/
 /*КОНЕЦ СТИЛЕЙ КОНТАКТЫ*/
 /*###############################################################################################################################*/
@@ -3620,6 +3624,7 @@ svg {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  letter-spacing: 0.02em;
 }
 
 .card__cost-new {
@@ -3633,7 +3638,6 @@ svg {
   margin-left: 0.4rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
-  font-weight: 500;
   color: var(--gray-medium);
   text-decoration: line-through;
 }
@@ -4522,6 +4526,9 @@ svg {
 .order__info {
   margin-top: 0.8rem;
 }
+.order__info .btn-text {
+  display: none;
+}
 
 .order__info-item {
   font-weight: 500;
@@ -4571,6 +4578,74 @@ svg {
 
 .pin-repeat-order {
   text-align: center;
+}
+
+.order__point-info {
+  margin: 3.2rem 0 2.4rem;
+}
+.order__point-info .tiles__item-name {
+  margin: 0;
+}
+
+.order__item {
+  display: flex;
+  padding: 1.6rem 0.8rem 0.8rem 0.8rem;
+  border-top: 1px solid var(--gray-extralight);
+}
+.order__item + .order__item {
+  margin-top: 0.8rem;
+}
+.order__item:nth-last-of-type(1) {
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--gray-extralight);
+}
+.order__item .cart__item-info {
+  margin: 0;
+}
+.order__item .cart__img {
+  width: 4rem;
+  height: 3.6rem;
+  border-radius: 0.4rem;
+}
+.order__item .card__cost {
+  margin: 0;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-start;
+}
+.order__item .card__cost-new {
+  font-size: 1.3rem;
+}
+.order__item .card__cost-old {
+  margin: 0;
+}
+
+.order__items {
+  margin-top: 1.6rem;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+}
+.total .card__cost {
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+.total .card__cost-new {
+  font-size: 1.6rem;
+}
+.total .card__cost-old {
+  margin-left: 0.8rem;
+}
+
+.total__text {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: var(--black-blue);
 }
 
 /*КОНЕЦ СТРАНИЦА ЗАКАЗА*/

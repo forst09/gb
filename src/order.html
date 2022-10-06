@@ -16,85 +16,76 @@
                 <div class="order__info">
                     <div class="order__info-item">Дата заказа: 29 августа 2022, 16:04</div>
                     <div class="order__info-item">Оплата: онлайн</div>
+                    <a href="javascript:void(0)" class="btn-text btn-text--orange">Повторить заказ</a>
                 </div>
-                <a href="javascript:void(0)" class="btn-text btn-text--orange">Повторить заказ</a>
             </div>
             <div class="order__status">
                 <div class="order__status-info">
                     <svg>
-                        <use xlink:href="img/icons/sprite.svg#money"></use>
+                        <use xlink:href="img/icons/sprite.svg#createdOrder"></use>
                     </svg>
                     <span class="letter-spacing">Ожидает оплаты</span>
+                    <!-- <svg>
+                        <use xlink:href="img/icons/sprite.svg#clock"></use>
+                    </svg>
+                    <span class="letter-spacing">Идет сборка заказа</span> -->
+                    <!-- <svg>
+                        <use xlink:href="img/icons/sprite.svg#boxOpen"></use>
+                    </svg>
+                    <span class="letter-spacing">Заказ ожидает получения</span> -->
+                    <!-- <svg>
+                        <use xlink:href="img/icons/sprite.svg#complete"></use>
+                    </svg>
+                    <span class="letter-spacing">Заказ получен</span> -->
                 </div>
-                <a href="javascript:void(0)" class="btn-orange">
+                <a href="javascript:void(0)" class="btn-orange btn-orange--small">
                     <span class="letter-spacing">Оплатить</span>
                 </a>
             </div>
-            <a href="javascript:void(0)" class="tiles__item-name">
-                <div class="tiles__item-logo">
-                    <img src="img/logos/logo-plug.svg" alt="">
-                </div>
-                <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
-                    медоваренного завода
-                    Ивана Дурдина</div>
-            </a>
+            <div class="order__point-info">
+                <a href="javascript:void(0)" class="tiles__item-name">
+                    <div class="tiles__item-logo">
+                        <img src="img/logos/logo-1.png" alt="">
+                    </div>
+                    <div class="tiles__item-name-text letter-spacing ellipsis">Товарищество пиво- и
+                        медоваренного завода
+                        Ивана Дурдина</div>
+                </a>
+                <div class="address-small">ул. Центральный проезд Хорошёвского Серебряного Бора, 10</div>
+            </div>
             <div class="title-count">
                 <div class="title-count__title letter-spacing">Состав заказа</div>
                 <div class="title-count__value">Товаров: 2</div>
             </div>
-
-            <div class="cart__item">
-                <div class="cart__item-info">
-                    <a class="cart__img" href="javascript:void(0)">
-                        <img src="img/catalog/cards-1.jpg" alt="">
-                    </a>
-                    <div class="cart__item-text">
-                        <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
-                            золото светлое</a>
-                        <div class="card__volume ellipsis letter-spacing">0,5 л
+            <div class="order__items">
+                <div class="order__item">
+                    <div class="cart__item-info">
+                        <a class="cart__img" href="javascript:void(0)">
+                            <img src="img/catalog/cards-1.jpg" alt="">
+                        </a>
+                        <div class="cart__item-text">
+                            <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                золото светлое</a>
+                            <div class="card__volume ellipsis letter-spacing">0,5 л
+                            </div>
                         </div>
                     </div>
-                    <a href="javascript:void(0)" class="delete">
-                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g opacity="0.6">
-                                <g class="trash-head">
-                                    <path d="M2.625 5.25H18.375" stroke="#90A0B7" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M7 5.25V3.5C7 2.625 7.875 1.75 8.75 1.75H12.25C13.125 1.75 14 2.625 14 3.5V5.25"
-                                        stroke="#90A0B7" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </g>
-                                <path
-                                    d="M16.625 5.25V17.5C16.625 18.375 15.75 19.25 14.875 19.25H6.125C5.25 19.25 4.375 18.375 4.375 17.5V5.25"
-                                    stroke="#90A0B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M8.75 9.625V14.875" stroke="#90A0B7" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M12.25 9.625V14.875" stroke="#90A0B7" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </g>
-                        </svg>
-                    </a>
+                    <div class="card__cost">
+                        <div class="card__cost-new">155 550 &#8381;</div>
+                        <div class="card__cost-old">144 550</div>
+                    </div>
                 </div>
-                <div class="cart__buttons">
-                    <div class="card__btns-count">
-                        <form action="#">
-                            <div class="card__btns-count-wrapper">
-                                <button class="card__btns-count-btn card__btns-count-btn--minus" type="button">
-                                    <svg>
-                                        <use xlink:href="img/icons/sprite.svg#minus">
-                                        </use>
-                                    </svg>
-                                </button>
-                                <input type="text" class="card__btns-count-value" readonly value="5">
-                                <button class="card__btns-count-btn card__btns-count-btn--plus" type="button">
-                                    <svg>
-                                        <use xlink:href="img/icons/sprite.svg#plus">
-                                        </use>
-                                    </svg>
-                                </button>
+                <div class="order__item">
+                    <div class="cart__item-info">
+                        <a class="cart__img" href="javascript:void(0)">
+                            <img src="img/catalog/cards-1.jpg" alt="">
+                        </a>
+                        <div class="cart__item-text">
+                            <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
+                                золото светлое</a>
+                            <div class="card__volume ellipsis letter-spacing">0,5 л
                             </div>
-                        </form>
+                        </div>
                     </div>
                     <div class="card__cost">
                         <div class="card__cost-new">155 550 &#8381;</div>
@@ -102,66 +93,17 @@
                     </div>
                 </div>
             </div>
-            <div class="cart__item">
-                <div class="cart__item-info">
-                    <a class="cart__img" href="javascript:void(0)">
-                        <img src="img/catalog/cards-1.jpg" alt="">
-                    </a>
-                    <div class="cart__item-text">
-                        <a href="javascript:void(0)" class="card__name letter-spacing ellipsis">Хадыженское
-                            золото светлое</a>
-                        <div class="card__volume ellipsis letter-spacing">0,5 л
-                        </div>
-                    </div>
-                    <a href="javascript:void(0)" class="delete">
-                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g opacity="0.6">
-                                <g class="trash-head">
-                                    <path d="M2.625 5.25H18.375" stroke="#90A0B7" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M7 5.25V3.5C7 2.625 7.875 1.75 8.75 1.75H12.25C13.125 1.75 14 2.625 14 3.5V5.25"
-                                        stroke="#90A0B7" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </g>
-                                <path
-                                    d="M16.625 5.25V17.5C16.625 18.375 15.75 19.25 14.875 19.25H6.125C5.25 19.25 4.375 18.375 4.375 17.5V5.25"
-                                    stroke="#90A0B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M8.75 9.625V14.875" stroke="#90A0B7" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M12.25 9.625V14.875" stroke="#90A0B7" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <div class="cart__buttons">
-                    <div class="card__btns-count">
-                        <form action="#">
-                            <div class="card__btns-count-wrapper">
-                                <button class="card__btns-count-btn card__btns-count-btn--minus" type="button">
-                                    <svg>
-                                        <use xlink:href="img/icons/sprite.svg#minus">
-                                        </use>
-                                    </svg>
-                                </button>
-                                <input type="text" class="card__btns-count-value" readonly value="5">
-                                <button class="card__btns-count-btn card__btns-count-btn--plus" type="button">
-                                    <svg>
-                                        <use xlink:href="img/icons/sprite.svg#plus">
-                                        </use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="card__cost">
-                        <div class="card__cost-new">155 550 &#8381;</div>
-                        <div class="card__cost-old">144 550</div>
-                    </div>
+            <div class="total">
+                <div class="total__text letter-spacing">Итого</div>
+                <div class="card__cost">
+                    <div class="card__cost-new">155 550 &#8381;</div>
+                    <div class="card__cost-old">144 550</div>
                 </div>
             </div>
-            <a href="javascript:void(0)" class="btn-text btn-text--big btn-text--grey">Отменить заказ</a>
+            <div class="form__submit-wrapper">
+                <a href="javascript:void(0)" class="btn-text btn-text--big btn-text--grey letter-spacing">Отменить
+                    заказ</a>
+            </div>
         </div>
     </section>
     @@include('html/footer.html',{})
