@@ -631,9 +631,9 @@
   /*КОНЕЦ СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА 668*/
   /*###############################################################################################################################*/
   /*ЛК - ЗАКАЗЫ 668*/
-  .order-list__item-number svg {
-    width: 3.2rem;
-    height: 3.2rem;
+  .order-list__item-number .order-list__item-number-svg {
+    width: 2rem;
+    height: 2rem;
   }
   .order-list__item-number span {
     font-size: 1.8rem;

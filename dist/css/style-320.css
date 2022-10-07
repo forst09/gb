@@ -4766,17 +4766,39 @@ svg {
   display: flex;
   align-items: center;
 }
-.order-list__item-number svg {
-  width: 2.4rem;
-  height: 2.4rem;
+.order-list__item-number .order-list__item-number-svg {
+  width: 1.6rem;
+  height: 1.6rem;
   stroke: var(--orange);
-  margin-right: 0.4rem;
+  margin-right: 0.8rem;
+}
+.order-list__item-number .order-list__item-number-svg--green {
+  stroke: var(--green);
 }
 .order-list__item-number span {
   font-size: 1.6rem;
   line-height: 2rem;
   color: var(--black-blue);
   font-weight: 500;
+  transition: color 0.3s ease;
+}
+.order-list__item-number:hover .order-list__item-number-arrow {
+  opacity: 1;
+  visibility: visible;
+}
+.order-list__item-number:active span, .order-list__item-number:focus span, .order-list__item-number:focus-within span {
+  color: var(--black);
+}
+.order-list__item-number:active .order-list__item-number-arrow, .order-list__item-number:focus .order-list__item-number-arrow, .order-list__item-number:focus-within .order-list__item-number-arrow {
+  stroke: var(--black);
+}
+
+.order-list__item-number-arrow {
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: stroke 0.3s ease, opacity 0.3s ease;
+  stroke: var(--black-blue);
+  margin-left: 0.4rem;
 }
 
 .order-list__item-date {
@@ -4841,6 +4863,11 @@ svg {
 .btn-wrapper-center-left {
   margin: 1.6rem auto 0;
   text-align: center;
+}
+
+.order-list__empty .empty__img {
+  width: 14.8rem;
+  height: 29.4rem;
 }
 
 /*КОНЕЦ ЛК - ЗАКАЗЫ*/

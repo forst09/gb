@@ -375,6 +375,20 @@
         margin-top: 3.2rem;
     }
 
+    .order-list__item {
+        &::before {
+            width: calc(100vw - 16rem);
+            left: 8rem;
+        }
+
+        &:nth-last-of-type(1) {
+            &::after {
+                width: calc(100vw - 16rem);
+                left: 8rem;
+            }
+        }
+    }
+
     /*КОНЕЦ СТРАНИЦА ЗАКАЗА 1500*/
 }
 

@@ -214,8 +214,8 @@
         <div class="order-list__item">
             <div class="wrapper">
                 <div class="order-list__item-title">
-                    <div class="order-list__item-number">
-                        <svg>
+                    <a href="order.html" class="order-list__item-number">
+                        <svg class="order-list__item-number-svg">
                             <use xlink:href="img/icons/sprite.svg#boxOpen">
                             </use>
                         </svg>
@@ -229,11 +229,16 @@
                             <use xlink:href="img/icons/sprite.svg#complete"></use>
                         </svg> -->
                         <span class="letter-spacing">Заказ №123456</span>
-                    </div>
+                        <svg class="order-list__item-number-arrow transition-show">
+                            <use xlink:href="img/icons/sprite.svg#arrow-small">
+                            </use>
+                        </svg>
+                    </a>
                     <div class="order-list__item-cost">
                         <span class="display-none letter-spacing">Стоимость заказа:</span>
                         <div class="card__cost-new">550 &#8381;</div>
                     </div>
+
                 </div>
                 <div class="order-list__item-date">29 августа 2022, 16:04</div>
                 <div class="order-list__item-info">
@@ -251,6 +256,46 @@
             <div class="scroll order-list__item-goods">
                 <div class="swiper swiper-goods swiper-not-mobile">
                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void(0)" class="orer-list__item-good">
+                                <img src="img/catalog/cards-1.jpg" alt="">
+                            </a>
+                        </div>
                         <div class="swiper-slide">
                             <a href="javascript:void(0)" class="orer-list__item-good">
                                 <img src="img/catalog/cards-1.jpg" alt="">
@@ -313,8 +358,8 @@
         <div class="order-list__item">
             <div class="wrapper">
                 <div class="order-list__item-title">
-                    <div class="order-list__item-number">
-                        <svg>
+                    <a href="order.html" class="order-list__item-number">
+                        <svg class="order-list__item-number-svg">
                             <use xlink:href="img/icons/sprite.svg#boxOpen">
                             </use>
                         </svg>
@@ -328,7 +373,11 @@
                             <use xlink:href="img/icons/sprite.svg#complete"></use>
                         </svg> -->
                         <span class="letter-spacing">Заказ №123456</span>
-                    </div>
+                        <svg class="order-list__item-number-arrow transition-show">
+                            <use xlink:href="img/icons/sprite.svg#arrow-small">
+                            </use>
+                        </svg>
+                    </a>
                     <div class="order-list__item-cost">
                         <span class="display-none letter-spacing">Стоимость заказа:</span>
                         <div class="card__cost-new">550 &#8381;</div>
@@ -372,6 +421,14 @@
                 <div class="btn-wrapper-center-left">
                     <a href="javascript:void(0)" class="btn-text btn-text--orange btn-text--big">Повторить заказ</a>
                 </div>
+            </div>
+        </div>
+        <div class="order-list__empty" style="display: none;">
+            <div class="empty__img">
+                <img src="img/beer-hehe.svg" alt="">
+            </div>
+            <div class="empty__text">
+                <p>Заказов пока что нет. Вы можете совершить заказ из какой-нибудь точки и зайти сюда немного позже</p>
             </div>
         </div>
     </section>
