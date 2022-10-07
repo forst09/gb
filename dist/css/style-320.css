@@ -3629,7 +3629,6 @@ svg {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  letter-spacing: 0.02em;
 }
 
 .card__cost-new {
@@ -3637,6 +3636,7 @@ svg {
   line-height: 2rem;
   font-weight: 800;
   color: var(--black-text);
+  letter-spacing: 0.02em;
 }
 
 .card__cost-old {
@@ -3645,6 +3645,7 @@ svg {
   line-height: 1.8rem;
   color: var(--gray-medium);
   text-decoration: line-through;
+  letter-spacing: 0.02em;
 }
 
 .card__name {
@@ -4753,6 +4754,78 @@ svg {
 }
 
 /*КОНЕЦ СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА*/
+/*###############################################################################################################################*/
+/*ЛК - ЗАКАЗЫ*/
+.order-list__item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-list__item-number {
+  display: flex;
+  align-items: center;
+}
+.order-list__item-number svg {
+  width: 2.4rem;
+  height: 2.4rem;
+  stroke: var(--orange);
+  margin-right: 0.4rem;
+}
+.order-list__item-number span {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: var(--black-blue);
+  font-weight: 500;
+}
+
+.order-list__item-date {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: var(--gray-dark);
+  margin-top: 0.4rem;
+}
+
+.order-list__item-info {
+  margin-top: 2.4rem;
+}
+
+.order-list__item-goods {
+  margin-top: 1.6rem;
+}
+
+.swiper-goods .swiper-wrapper {
+  column-gap: 0.4rem;
+}
+
+.orer-list__item-good {
+  display: inline-block;
+  width: 4.3rem;
+  height: 4rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.orer-list__item-good img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.order-list__item {
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--gray-extralight);
+}
+.order-list__item:nth-last-of-type(1) {
+  border-bottom: 1px solid var(--gray-extralight);
+}
+
+.btn-wrapper-center-left {
+  margin: 1.6rem auto 0;
+  text-align: center;
+}
+
+/*КОНЕЦ ЛК - ЗАКАЗЫ*/
 .ajax_main {
   position: relative;
 }
