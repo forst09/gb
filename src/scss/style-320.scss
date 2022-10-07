@@ -1308,6 +1308,14 @@ svg {
 
 /*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ*/
 
+.header .header__search-icon {
+    display: none !important;
+}
+
+.header-white .header__search-icon {
+    display: block !important;
+}
+
 /*НАЧАЛО СТИЛЕЙ ФУТЕРА*/
 .footer {
     margin-top: 2.4rem;

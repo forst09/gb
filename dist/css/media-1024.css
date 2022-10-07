@@ -403,6 +403,9 @@
     order: 4;
   }
   /*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ 1024*/
+  .header-white .header__search-icon {
+    display: none !important;
+  }
   /*НАЧАЛО СТИЛЕЙ ФУТЕРА 1024*/
   .footer {
     margin-top: 4.8rem;
