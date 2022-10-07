@@ -65,6 +65,9 @@
   .header-fixed .header__search {
     width: 63.4rem;
   }
+  .header-fixed .place {
+    max-width: 26.7rem;
+  }
   /*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ 1500*/
   /*ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ 1500*/
   .header-network {

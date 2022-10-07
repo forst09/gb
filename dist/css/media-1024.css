@@ -322,6 +322,12 @@
     box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
     width: 40.8rem;
   }
+  .header-white .header__search .header__search-icon {
+    display: none;
+  }
+  .header-white .header__search form {
+    display: block;
+  }
   .header-white .header__search .search-input {
     display: block;
   }

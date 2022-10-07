@@ -1208,7 +1208,7 @@ svg {
             display: none;
         }
 
-        .form-input__label {
+        .header__search-icon {
             position: static;
             -webkit-transform: unset;
             -ms-transform: unset;
@@ -1218,7 +1218,26 @@ svg {
 
             svg {
                 stroke: var(--black-blue);
+                width: 2.4rem;
+                height: 2.4rem;
             }
+        }
+
+        // .form-input__label {
+        //     position: static;
+        //     -webkit-transform: unset;
+        //     -ms-transform: unset;
+        //     transform: unset;
+        //     width: 2.4rem;
+        //     height: 2.4rem;
+
+        //     svg {
+        //         stroke: var(--black-blue);
+        //     }
+        // }
+
+        form {
+            display: none;
         }
     }
 

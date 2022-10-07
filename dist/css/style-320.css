@@ -1056,7 +1056,7 @@ svg {
 .header-white .header__search .search-input {
   display: none;
 }
-.header-white .header__search .form-input__label {
+.header-white .header__search .header__search-icon {
   position: static;
   -webkit-transform: unset;
   -ms-transform: unset;
@@ -1064,8 +1064,13 @@ svg {
   width: 2.4rem;
   height: 2.4rem;
 }
-.header-white .header__search .form-input__label svg {
+.header-white .header__search .header__search-icon svg {
   stroke: var(--black-blue);
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.header-white .header__search form {
+  display: none;
 }
 .header-white .place {
   display: none;

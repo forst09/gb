@@ -420,6 +420,14 @@
             box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
             width: 40.8rem;
 
+            .header__search-icon {
+                display: none;
+            }
+
+            form {
+                display: block;
+            }
+
             .search-input {
                 display: block;
             }
