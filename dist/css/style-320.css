@@ -256,40 +256,51 @@ svg {
 }
 
 /*КОНТЕНТНЫЕ СТИЛИ*/
-.content-style h1 {
+.content-style h1,
+.quick-view h1 {
   margin-bottom: 2.4rem;
 }
 .content-style h2,
 .content-style h3,
 .content-style h4,
 .content-style h5,
-.content-style h6 {
+.content-style h6,
+.quick-view h2,
+.quick-view h3,
+.quick-view h4,
+.quick-view h5,
+.quick-view h6 {
   margin-top: 1.6rem;
   margin-bottom: 1rem;
   letter-spacing: 0.02em;
   color: var(--black-text);
 }
-.content-style h2 {
+.content-style h2,
+.quick-view h2 {
   font-weight: 700;
   font-size: 2rem;
   line-height: 2.6rem;
 }
-.content-style h3 {
+.content-style h3,
+.quick-view h3 {
   font-size: 1.9rem;
   line-height: 2.6rem;
   font-weight: 600;
 }
-.content-style h4 {
+.content-style h4,
+.quick-view h4 {
   font-size: 1.8rem;
   line-height: 2.6rem;
   font-weight: 500;
 }
-.content-style h5 {
+.content-style h5,
+.quick-view h5 {
   font-size: 1.7rem;
   line-height: 2.4rem;
   font-weight: 500;
 }
-.content-style h6 {
+.content-style h6,
+.quick-view h6 {
   font-size: 1.6rem;
   line-height: 2.2rem;
   font-weight: 500;
@@ -298,22 +309,31 @@ svg {
 .content-style b,
 .content-style a,
 .content-style i,
-.content-style li {
+.content-style li,
+.quick-view p,
+.quick-view b,
+.quick-view a,
+.quick-view i,
+.quick-view li {
   font-size: 1.4rem;
   line-height: 2.2rem;
   letter-spacing: 0.02em;
 }
-.content-style p {
+.content-style p,
+.quick-view p {
   font-weight: 500;
   margin-top: 0.8rem;
 }
-.content-style b {
+.content-style b,
+.quick-view b {
   font-weight: 800;
 }
-.content-style i {
+.content-style i,
+.quick-view i {
   font-style: italic;
 }
-.content-style a {
+.content-style a,
+.quick-view a {
   font-weight: 500;
   position: relative;
   color: var(--black-text);
@@ -322,7 +342,8 @@ svg {
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.content-style a::after {
+.content-style a::after,
+.quick-view a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -334,26 +355,38 @@ svg {
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-.content-style a:hover {
+.content-style a:hover,
+.quick-view a:hover {
   color: var(--gray-dark);
 }
-.content-style a:hover::after {
+.content-style a:hover::after,
+.quick-view a:hover::after {
   background-color: var(--gray-dark);
 }
-.content-style a:active, .content-style a:focus, .content-style a:focus-within {
+.content-style a:active, .content-style a:focus, .content-style a:focus-within,
+.quick-view a:active,
+.quick-view a:focus,
+.quick-view a:focus-within {
   color: var(--gray);
 }
-.content-style a:active::after, .content-style a:focus::after, .content-style a:focus-within::after {
+.content-style a:active::after, .content-style a:focus::after, .content-style a:focus-within::after,
+.quick-view a:active::after,
+.quick-view a:focus::after,
+.quick-view a:focus-within::after {
   background-color: var(--gray);
 }
 .content-style ul,
-.content-style ol {
+.content-style ol,
+.quick-view ul,
+.quick-view ol {
   margin-top: 0.8rem;
 }
-.content-style ul li {
+.content-style ul li,
+.quick-view ul li {
   padding-left: 1.6rem;
 }
-.content-style ul li::before {
+.content-style ul li::before,
+.quick-view ul li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -363,24 +396,30 @@ svg {
   background-color: var(--gray-medium);
   border-radius: 50%;
 }
-.content-style ul li ul li {
+.content-style ul li ul li,
+.quick-view ul li ul li {
   margin-top: 0.4rem;
   padding-left: 1.4rem;
 }
-.content-style ul li ul li:nth-of-type(1) {
+.content-style ul li ul li:nth-of-type(1),
+.quick-view ul li ul li:nth-of-type(1) {
   margin-top: 0;
 }
-.content-style ul li ul li::before {
+.content-style ul li ul li::before,
+.quick-view ul li ul li::before {
   width: 0.2rem;
   height: 0.2rem;
 }
-.content-style ol {
+.content-style ol,
+.quick-view ol {
   counter-reset: section;
 }
-.content-style ol li {
+.content-style ol li,
+.quick-view ol li {
   padding-left: 3.3rem;
 }
-.content-style ol li::before {
+.content-style ol li::before,
+.quick-view ol li::before {
   content: counters(section, ".") ".";
   position: absolute;
   left: 0;
@@ -392,7 +431,8 @@ svg {
   counter-increment: section;
   color: var(--gray-dark);
 }
-.content-style ol li ol li {
+.content-style ol li ol li,
+.quick-view ol li ol li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,46 +441,58 @@ svg {
   align-items: center;
   padding: 0;
 }
-.content-style ol li ol li::before {
+.content-style ol li ol li::before,
+.quick-view ol li ol li::before {
   content: counters(section, ".") "";
   margin-right: 1.2rem;
   display: block;
   position: static;
 }
-.content-style li {
+.content-style li,
+.quick-view li {
   position: relative;
   font-weight: 500;
 }
-.content-style li + li {
+.content-style li + li,
+.quick-view li + li {
   margin-top: 0.8rem;
 }
-.content-style td {
+.content-style td,
+.quick-view td {
   font-size: 1.4rem;
   line-height: 2rem;
   font-weight: 500;
 }
-.content-style tr {
+.content-style tr,
+.quick-view tr {
   border-bottom: 1px solid var(--gray-medium);
 }
-.content-style tr td {
+.content-style tr td,
+.quick-view tr td {
   padding: 0.4rem 0 0.4rem 2.4rem;
 }
-.content-style tr td:nth-of-type(1) {
+.content-style tr td:nth-of-type(1),
+.quick-view tr td:nth-of-type(1) {
   padding-left: 0.8rem;
 }
-.content-style tr td:nth-last-of-type(1) {
+.content-style tr td:nth-last-of-type(1),
+.quick-view tr td:nth-last-of-type(1) {
   padding-right: 0.8rem;
 }
-.content-style tr:nth-of-type(1) {
+.content-style tr:nth-of-type(1),
+.quick-view tr:nth-of-type(1) {
   background-color: var(--gray-extralight);
 }
-.content-style tr:nth-of-type(1) td {
+.content-style tr:nth-of-type(1) td,
+.quick-view tr:nth-of-type(1) td {
   padding: 0.8rem 0 0.8rem 2.4rem;
 }
-.content-style tr:nth-of-type(1) td:nth-of-type(1) {
+.content-style tr:nth-of-type(1) td:nth-of-type(1),
+.quick-view tr:nth-of-type(1) td:nth-of-type(1) {
   padding-left: 0.8rem;
 }
-.content-style tr:nth-of-type(1) td:nth-last-of-type(1) {
+.content-style tr:nth-of-type(1) td:nth-last-of-type(1),
+.quick-view tr:nth-of-type(1) td:nth-last-of-type(1) {
   padding-right: 0.8rem;
 }
 

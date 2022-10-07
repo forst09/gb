@@ -178,6 +178,22 @@
 
     /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 1024*/
 
+    .quick-view {
+        li+li {
+            margin-top: 1.2rem;
+        }
+
+        ul li ul,
+        ol li ol {
+            margin-top: 1.2rem;
+        }
+
+        ul li ul li,
+        ol li ol li {
+            margin-top: 0.8rem;
+        }
+    }
+
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
     .header {
         background-color: var(--white);

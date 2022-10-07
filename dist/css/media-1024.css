@@ -131,6 +131,17 @@
     height: 31.2rem;
   }
   /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 1024*/
+  .quick-view li + li {
+    margin-top: 1.2rem;
+  }
+  .quick-view ul li ul,
+.quick-view ol li ol {
+    margin-top: 1.2rem;
+  }
+  .quick-view ul li ul li,
+.quick-view ol li ol li {
+    margin-top: 0.8rem;
+  }
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
   .header {
     background-color: var(--white);

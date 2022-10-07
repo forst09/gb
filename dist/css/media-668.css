@@ -43,33 +43,47 @@
 .content-style h3,
 .content-style h4,
 .content-style h5,
-.content-style h6 {
+.content-style h6,
+.quick-view h2,
+.quick-view h3,
+.quick-view h4,
+.quick-view h5,
+.quick-view h6 {
     margin-top: 2.4rem;
     margin-bottom: 1.6rem;
   }
-  .content-style h2 {
+  .content-style h2,
+.quick-view h2 {
     font-size: 2.2rem;
     line-height: 3rem;
   }
-  .content-style h3 {
+  .content-style h3,
+.quick-view h3 {
     font-size: 2.1rem;
     line-height: 3rem;
   }
-  .content-style h4 {
+  .content-style h4,
+.quick-view h4 {
     font-size: 2rem;
   }
-  .content-style h5 {
+  .content-style h5,
+.quick-view h5 {
     font-size: 1.8rem;
   }
   .content-style ul,
-.content-style ol {
+.content-style ol,
+.quick-view ul,
+.quick-view ol {
     margin-top: 1.6rem;
   }
   .content-style ul li ul,
-.content-style ol li ol {
+.content-style ol li ol,
+.quick-view ul li ul,
+.quick-view ol li ol {
     margin-top: 0.8rem;
   }
-  .content-style p {
+  .content-style p,
+.quick-view p {
     margin-top: 1.6rem;
   }
   .scroll-table {
