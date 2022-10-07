@@ -758,6 +758,10 @@ $(document).ready(function () {
         $(".block-swipe-logout").addClass("active");
     });
 
+    $(document).on("click", ".pin-repeat-order", function () {
+        $(".order_repeat_btn")[0].click();
+    });
+
     // ПОДКЛЮЧЕНИЕ СВАЙПЕРА В СЕКЦИИ НА ЭКРАНАХ >= 1024
     if ($(window).width() >= 1024) {
 
@@ -769,6 +773,16 @@ $(document).ready(function () {
             navigation: {
                 nextEl: '.swiper-search-next',
                 prevEl: '.swiper-search-prev',
+            }
+        });
+
+        //ЛК - ЗАКАЗЫ
+        const swiperOrders = new Swiper('.swiper-goods', {
+            speed: 700,
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            mousewheel: {
+                invert: true,
             }
         });
     };

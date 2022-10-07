@@ -2297,6 +2297,74 @@
 
 
     /*КОНЕЦ СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА 1024*/
+
+    /*###############################################################################################################################*/
+    /*ЛК - ЗАКАЗЫ 1024*/
+    .order-list__item {
+        padding: 3.2rem 0;
+
+        &::before {
+            width: calc(100vw - 12.8rem);
+            left: 6.4rem;
+        }
+
+        &:nth-last-of-type(1) {
+            &::after {
+                width: calc(100vw - 12.8rem);
+                left: 6.4rem;
+            }
+        }
+    }
+
+    .order-list__item-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-list__item-cost {
+        margin-top: 0.4rem;
+        display: flex;
+        align-items: center;
+
+        span {
+            display: inline-block;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color: var(--gray-dark);
+            font-weight: 500;
+            margin-right: 0.8rem;
+        }
+
+        .card__cost-new {
+            font-weight: 500;
+            line-height: 2.2rem;
+        }
+    }
+
+    .order-list__item-date {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
+    // .order-list__item-goods {
+    //     padding: 0;
+    // }
+
+    // .swiper-goods {
+    //     padding: 0 6.4rem;
+    // }
+
+    .orer-list__item-good {
+        width: 10rem;
+        height: 9.3rem;
+    }
+
+    .btn-wrapper-center-left {
+        margin-top: 2.4rem;
+        text-align: left;
+    }
+
+    /*КОНЕЦ ЛК - ЗАКАЗЫ 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/

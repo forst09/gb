@@ -5412,6 +5412,10 @@ svg {
 
 .order-list__item-info {
     margin-top: 2.4rem;
+
+    .tiles__item-name {
+        margin: 0 !important;
+    }
 }
 
 .order-list__item-goods {
@@ -5440,10 +5444,28 @@ svg {
 
 .order-list__item {
     padding: 1.6rem 0;
-    border-top: 1px solid var(--gray-extralight);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 1.6rem;
+        width: calc(100vw - 3.2rem);
+        height: 1px;
+        background-color: var(--gray-extralight);
+    }
 
     &:nth-last-of-type(1) {
-        border-bottom: 1px solid var(--gray-extralight);
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 1.6rem;
+            width: calc(100vw - 3.2rem);
+            height: 1px;
+            background-color: var(--gray-extralight);
+        }
     }
 }
 

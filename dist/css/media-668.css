@@ -629,5 +629,42 @@
     margin-top: 0.8rem;
   }
   /*КОНЕЦ СТРАНИЦА РЕЗУЛЬТАТОВ ПОИСКА 668*/
+  /*###############################################################################################################################*/
+  /*ЛК - ЗАКАЗЫ 668*/
+  .order-list__item-number svg {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .order-list__item-number span {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  .card__cost-new {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  .order-list__item-date {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  .order-list__item-goods {
+    margin-top: 1.2rem;
+  }
+  .order-list__item-goods .swiper-wrapper {
+    column-gap: 0.8rem;
+  }
+  .orer-list__item-good {
+    width: 6.9rem;
+    height: 6.4rem;
+  }
+  .order-list__item::before {
+    width: calc(100vw - 8.8rem);
+    left: 4.4rem;
+  }
+  .order-list__item:nth-last-of-type(1)::after {
+    width: calc(100vw - 8.8rem);
+    left: 4.4rem;
+  }
+  /*КОНЕЦ ЛК - ЗАКАЗЫ 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/
