@@ -178,22 +178,6 @@
 
     /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 1024*/
 
-    .quick-view {
-        li+li {
-            margin-top: 1.2rem;
-        }
-
-        ul li ul,
-        ol li ol {
-            margin-top: 1.2rem;
-        }
-
-        ul li ul li,
-        ol li ol li {
-            margin-top: 0.8rem;
-        }
-    }
-
     /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
     .header {
         background-color: var(--white);
@@ -2393,6 +2377,68 @@
     }
 
     /*КОНЕЦ ЛК - ЗАКАЗЫ 1024*/
+
+    /*###############################################################################################################################*/
+    /*БЫСТРЫЙ ПРОСМОТР 1024*/
+    .block-swipe-quick-view {
+        padding: 3.2rem 0;
+        max-height: 90vh;
+
+        .wrapper {
+            padding: 0 3.2rem;
+        }
+
+        .modal-title {
+            display: block;
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    .quick-view__cost {
+        display: flex;
+        align-items: center;
+        margin-top: 1.6rem;
+
+        .card__cost-new {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            margin-left: 2.4rem;
+        }
+
+        .btn-orange {
+            width: fit-content;
+            padding: 1rem 2.5rem;
+
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .quick-view__pin {
+        display: none;
+    }
+
+    .quick-view__content {
+        max-height: calc(90vh - 6rem);
+
+        &::-webkit-scrollbar {
+            width: 0.3rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--gray-medium);
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        scrollbar-width: thin;
+        scrollbar-color: var(--gray-medium) transparent;
+    }
+
+    /*КОНЕЦ БЫСТРЫЙ ПРОСМОТР 1024*/
 }
 
 /*КОНЕЦ АДАПТИВА 1024*/

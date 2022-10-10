@@ -671,6 +671,10 @@
   .block-swipe-quick-view {
     padding-top: 2.4rem;
   }
+  .block-swipe-quick-view .btn-orange span {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
   .quick-view__main {
     margin-bottom: 1.6rem;
     display: flex;

@@ -878,6 +878,11 @@
     /*БЫСТРЫЙ ПРОСМОТР 668*/
     .block-swipe-quick-view {
         padding-top: 2.4rem;
+
+        .btn-orange span {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
     }
 
     .quick-view__main {

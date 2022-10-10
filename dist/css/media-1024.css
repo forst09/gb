@@ -131,17 +131,6 @@
     height: 31.2rem;
   }
   /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 1024*/
-  .quick-view li + li {
-    margin-top: 1.2rem;
-  }
-  .quick-view ul li ul,
-.quick-view ol li ol {
-    margin-top: 1.2rem;
-  }
-  .quick-view ul li ul li,
-.quick-view ol li ol li {
-    margin-top: 0.8rem;
-  }
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 1024*/
   .header {
     background-color: var(--white);
@@ -1903,5 +1892,53 @@
     text-align: left;
   }
   /*КОНЕЦ ЛК - ЗАКАЗЫ 1024*/
+  /*###############################################################################################################################*/
+  /*БЫСТРЫЙ ПРОСМОТР 1024*/
+  .block-swipe-quick-view {
+    padding: 3.2rem 0;
+    max-height: 90vh;
+  }
+  .block-swipe-quick-view .wrapper {
+    padding: 0 3.2rem;
+  }
+  .block-swipe-quick-view .modal-title {
+    display: block;
+    margin-bottom: 1.6rem;
+  }
+  .quick-view__cost {
+    display: flex;
+    align-items: center;
+    margin-top: 1.6rem;
+  }
+  .quick-view__cost .card__cost-new {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin-left: 2.4rem;
+  }
+  .quick-view__cost .btn-orange {
+    width: fit-content;
+    padding: 1rem 2.5rem;
+  }
+  .quick-view__cost .btn-orange span {
+    font-size: 1.4rem;
+  }
+  .quick-view__pin {
+    display: none;
+  }
+  .quick-view__content {
+    max-height: calc(90vh - 6rem);
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-medium) transparent;
+  }
+  .quick-view__content::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+  .quick-view__content::-webkit-scrollbar-thumb {
+    background-color: var(--gray-medium);
+  }
+  .quick-view__content::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  /*КОНЕЦ БЫСТРЫЙ ПРОСМОТР 1024*/
 }
 /*КОНЕЦ АДАПТИВА 1024*/
