@@ -296,8 +296,7 @@ svg {
 }
 
 /*КОНТЕНТНЫЕ СТИЛИ*/
-.content-style,
-.quick-view {
+.content-style {
     h1 {
         margin-bottom: 2.4rem;
     }
@@ -5542,6 +5541,221 @@ svg {
 }
 
 /*КОНЕЦ ЛК - ЗАКАЗЫ*/
+
+/*###############################################################################################################################*/
+/*БЫСТРЫЙ ПРОСМОТР*/
+.block-swipe-quick-view {
+    text-align: unset;
+    max-height: 90%;
+    height: 100%;
+}
+
+.quick-view {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    p,
+    b,
+    i,
+    li,
+    .quick-view__item-title,
+    .calories__item {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.02em;
+    }
+
+    p {
+        font-weight: 500;
+    }
+
+    b {
+        font-weight: 800;
+    }
+
+    i {
+        font-style: italic;
+    }
+
+    ul {
+        li {
+            padding-left: 1.6rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.9rem;
+                width: 0.4rem;
+                height: 0.4rem;
+                background-color: var(--gray-medium);
+                border-radius: 50%;
+            }
+
+
+            ul {
+                li {
+                    margin-top: 0.4rem;
+                    padding-left: 1.4rem;
+
+                    &:nth-of-type(1) {
+                        margin-top: 0;
+                    }
+
+                    &::before {
+                        width: 0.2rem;
+                        height: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    ol {
+        counter-reset: section;
+
+        li {
+            padding-left: 3.3rem;
+
+            &::before {
+                content: counters(section, ".") ".";
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-family: 'Manrope';
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                counter-increment: section;
+                color: var(--gray-dark);
+            }
+
+            ol {
+                li {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    padding: 0;
+
+                    &::before {
+                        content: counters(section, ".") "";
+                        margin-right: 1.2rem;
+                        display: block;
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        position: relative;
+        font-weight: 500;
+    }
+
+    ol,
+    li,
+    .quick-view__item-title {
+        color: var(--gray-dark);
+    }
+}
+
+.quick-view__item {
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--gray-extralight);
+
+    &:nth-last-of-type(1) {
+        padding-bottom: 0;
+        border: unset;
+    }
+}
+
+.quick-view__item-title {
+    margin-bottom: 0.6rem;
+}
+
+.quick-view__content {
+    max-height: calc(100% - 8rem);
+    overflow: auto;
+}
+
+.quick-view__pin {
+    margin-top: auto;
+    background: var(--white);
+    box-shadow: 0px 10px 60px rgb(226 236 249 / 50%), 0px 0px 31px var(--white);
+    border-radius: 1.2rem 1.2rem 0 0;
+    padding: 1.6rem 0;
+}
+
+.calories {
+    display: flex;
+    align-items: center;
+    max-width: 28.8rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.quick-view__pin-info {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0.4rem;
+    margin-bottom: 0.8rem;
+
+    .card__cost-new {
+        flex-shrink: 0;
+        font-size: 1.6rem;
+    }
+}
+
+.quick-view__pin-name {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--black-text);
+    margin-right: 0.4rem;
+}
+
+.quick-view__img {
+    width: 28.5rem;
+    height: 25.7rem;
+    border-radius: 2.4rem 2.4rem 0 0;
+    overflow: hidden;
+    margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.quick-view-pagination {
+    position: static;
+    margin-top: 0.9rem;
+
+    .swiper-pagination-bullet {
+        margin: 0;
+        width: 2rem;
+        height: 0.2rem;
+        border-radius: 10%;
+        background: var(--gray-medium);
+        opacity: 1;
+
+        &+& {
+            margin-left: 0.4rem;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--gray);
+    }
+}
+
+/*КОНЕЦ БЫСТРЫЙ ПРОСМОТР*/
 
 
 .ajax_main {

@@ -786,4 +786,18 @@ $(document).ready(function () {
             }
         });
     };
+
+    //ПОДКЛЮЧЕНИЕ СВАЙПЕРА ТОЛЬКО НА МОБИЛКАХ, ПЛАНШЕТАХ
+    if ($(window).width() < 1024) {
+        //БЫСТРЫЙ ПРОСМОТР
+        const swiperQuickView = new Swiper('.swiper-quck-view', {
+            speed: 700,
+            slidesPerView: 1,
+            autoHeight: true,
+            pagination: {
+                el: '.quick-view-pagination',
+                type: 'bullets',
+            },
+        });
+    }
 });

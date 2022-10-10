@@ -256,51 +256,40 @@ svg {
 }
 
 /*КОНТЕНТНЫЕ СТИЛИ*/
-.content-style h1,
-.quick-view h1 {
+.content-style h1 {
   margin-bottom: 2.4rem;
 }
 .content-style h2,
 .content-style h3,
 .content-style h4,
 .content-style h5,
-.content-style h6,
-.quick-view h2,
-.quick-view h3,
-.quick-view h4,
-.quick-view h5,
-.quick-view h6 {
+.content-style h6 {
   margin-top: 1.6rem;
   margin-bottom: 1rem;
   letter-spacing: 0.02em;
   color: var(--black-text);
 }
-.content-style h2,
-.quick-view h2 {
+.content-style h2 {
   font-weight: 700;
   font-size: 2rem;
   line-height: 2.6rem;
 }
-.content-style h3,
-.quick-view h3 {
+.content-style h3 {
   font-size: 1.9rem;
   line-height: 2.6rem;
   font-weight: 600;
 }
-.content-style h4,
-.quick-view h4 {
+.content-style h4 {
   font-size: 1.8rem;
   line-height: 2.6rem;
   font-weight: 500;
 }
-.content-style h5,
-.quick-view h5 {
+.content-style h5 {
   font-size: 1.7rem;
   line-height: 2.4rem;
   font-weight: 500;
 }
-.content-style h6,
-.quick-view h6 {
+.content-style h6 {
   font-size: 1.6rem;
   line-height: 2.2rem;
   font-weight: 500;
@@ -309,31 +298,22 @@ svg {
 .content-style b,
 .content-style a,
 .content-style i,
-.content-style li,
-.quick-view p,
-.quick-view b,
-.quick-view a,
-.quick-view i,
-.quick-view li {
+.content-style li {
   font-size: 1.4rem;
   line-height: 2.2rem;
   letter-spacing: 0.02em;
 }
-.content-style p,
-.quick-view p {
+.content-style p {
   font-weight: 500;
   margin-top: 0.8rem;
 }
-.content-style b,
-.quick-view b {
+.content-style b {
   font-weight: 800;
 }
-.content-style i,
-.quick-view i {
+.content-style i {
   font-style: italic;
 }
-.content-style a,
-.quick-view a {
+.content-style a {
   font-weight: 500;
   position: relative;
   color: var(--black-text);
@@ -342,8 +322,7 @@ svg {
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.content-style a::after,
-.quick-view a::after {
+.content-style a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -355,38 +334,26 @@ svg {
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
-.content-style a:hover,
-.quick-view a:hover {
+.content-style a:hover {
   color: var(--gray-dark);
 }
-.content-style a:hover::after,
-.quick-view a:hover::after {
+.content-style a:hover::after {
   background-color: var(--gray-dark);
 }
-.content-style a:active, .content-style a:focus, .content-style a:focus-within,
-.quick-view a:active,
-.quick-view a:focus,
-.quick-view a:focus-within {
+.content-style a:active, .content-style a:focus, .content-style a:focus-within {
   color: var(--gray);
 }
-.content-style a:active::after, .content-style a:focus::after, .content-style a:focus-within::after,
-.quick-view a:active::after,
-.quick-view a:focus::after,
-.quick-view a:focus-within::after {
+.content-style a:active::after, .content-style a:focus::after, .content-style a:focus-within::after {
   background-color: var(--gray);
 }
 .content-style ul,
-.content-style ol,
-.quick-view ul,
-.quick-view ol {
+.content-style ol {
   margin-top: 0.8rem;
 }
-.content-style ul li,
-.quick-view ul li {
+.content-style ul li {
   padding-left: 1.6rem;
 }
-.content-style ul li::before,
-.quick-view ul li::before {
+.content-style ul li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -396,30 +363,24 @@ svg {
   background-color: var(--gray-medium);
   border-radius: 50%;
 }
-.content-style ul li ul li,
-.quick-view ul li ul li {
+.content-style ul li ul li {
   margin-top: 0.4rem;
   padding-left: 1.4rem;
 }
-.content-style ul li ul li:nth-of-type(1),
-.quick-view ul li ul li:nth-of-type(1) {
+.content-style ul li ul li:nth-of-type(1) {
   margin-top: 0;
 }
-.content-style ul li ul li::before,
-.quick-view ul li ul li::before {
+.content-style ul li ul li::before {
   width: 0.2rem;
   height: 0.2rem;
 }
-.content-style ol,
-.quick-view ol {
+.content-style ol {
   counter-reset: section;
 }
-.content-style ol li,
-.quick-view ol li {
+.content-style ol li {
   padding-left: 3.3rem;
 }
-.content-style ol li::before,
-.quick-view ol li::before {
+.content-style ol li::before {
   content: counters(section, ".") ".";
   position: absolute;
   left: 0;
@@ -431,8 +392,7 @@ svg {
   counter-increment: section;
   color: var(--gray-dark);
 }
-.content-style ol li ol li,
-.quick-view ol li ol li {
+.content-style ol li ol li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,58 +401,46 @@ svg {
   align-items: center;
   padding: 0;
 }
-.content-style ol li ol li::before,
-.quick-view ol li ol li::before {
+.content-style ol li ol li::before {
   content: counters(section, ".") "";
   margin-right: 1.2rem;
   display: block;
   position: static;
 }
-.content-style li,
-.quick-view li {
+.content-style li {
   position: relative;
   font-weight: 500;
 }
-.content-style li + li,
-.quick-view li + li {
+.content-style li + li {
   margin-top: 0.8rem;
 }
-.content-style td,
-.quick-view td {
+.content-style td {
   font-size: 1.4rem;
   line-height: 2rem;
   font-weight: 500;
 }
-.content-style tr,
-.quick-view tr {
+.content-style tr {
   border-bottom: 1px solid var(--gray-medium);
 }
-.content-style tr td,
-.quick-view tr td {
+.content-style tr td {
   padding: 0.4rem 0 0.4rem 2.4rem;
 }
-.content-style tr td:nth-of-type(1),
-.quick-view tr td:nth-of-type(1) {
+.content-style tr td:nth-of-type(1) {
   padding-left: 0.8rem;
 }
-.content-style tr td:nth-last-of-type(1),
-.quick-view tr td:nth-last-of-type(1) {
+.content-style tr td:nth-last-of-type(1) {
   padding-right: 0.8rem;
 }
-.content-style tr:nth-of-type(1),
-.quick-view tr:nth-of-type(1) {
+.content-style tr:nth-of-type(1) {
   background-color: var(--gray-extralight);
 }
-.content-style tr:nth-of-type(1) td,
-.quick-view tr:nth-of-type(1) td {
+.content-style tr:nth-of-type(1) td {
   padding: 0.8rem 0 0.8rem 2.4rem;
 }
-.content-style tr:nth-of-type(1) td:nth-of-type(1),
-.quick-view tr:nth-of-type(1) td:nth-of-type(1) {
+.content-style tr:nth-of-type(1) td:nth-of-type(1) {
   padding-left: 0.8rem;
 }
-.content-style tr:nth-of-type(1) td:nth-last-of-type(1),
-.quick-view tr:nth-of-type(1) td:nth-last-of-type(1) {
+.content-style tr:nth-of-type(1) td:nth-last-of-type(1) {
   padding-right: 0.8rem;
 }
 
@@ -4936,6 +4884,191 @@ svg {
 }
 
 /*КОНЕЦ ЛК - ЗАКАЗЫ*/
+/*###############################################################################################################################*/
+/*БЫСТРЫЙ ПРОСМОТР*/
+.block-swipe-quick-view {
+  text-align: unset;
+  max-height: 90%;
+  height: 100%;
+}
+
+.quick-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.quick-view p,
+.quick-view b,
+.quick-view i,
+.quick-view li,
+.quick-view .quick-view__item-title,
+.quick-view .calories__item {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.02em;
+}
+.quick-view p {
+  font-weight: 500;
+}
+.quick-view b {
+  font-weight: 800;
+}
+.quick-view i {
+  font-style: italic;
+}
+.quick-view ul li {
+  padding-left: 1.6rem;
+}
+.quick-view ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--gray-medium);
+  border-radius: 50%;
+}
+.quick-view ul li ul li {
+  margin-top: 0.4rem;
+  padding-left: 1.4rem;
+}
+.quick-view ul li ul li:nth-of-type(1) {
+  margin-top: 0;
+}
+.quick-view ul li ul li::before {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.quick-view ol {
+  counter-reset: section;
+}
+.quick-view ol li {
+  padding-left: 3.3rem;
+}
+.quick-view ol li::before {
+  content: counters(section, ".") ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  counter-increment: section;
+  color: var(--gray-dark);
+}
+.quick-view ol li ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+}
+.quick-view ol li ol li::before {
+  content: counters(section, ".") "";
+  margin-right: 1.2rem;
+  display: block;
+  position: static;
+}
+.quick-view li {
+  position: relative;
+  font-weight: 500;
+}
+.quick-view ol,
+.quick-view li,
+.quick-view .quick-view__item-title {
+  color: var(--gray-dark);
+}
+
+.quick-view__item {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--gray-extralight);
+}
+.quick-view__item:nth-last-of-type(1) {
+  padding-bottom: 0;
+  border: unset;
+}
+
+.quick-view__item-title {
+  margin-bottom: 0.6rem;
+}
+
+.quick-view__content {
+  max-height: calc(100% - 8rem);
+  overflow: auto;
+}
+
+.quick-view__pin {
+  margin-top: auto;
+  background: var(--white);
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5), 0px 0px 31px var(--white);
+  border-radius: 1.2rem 1.2rem 0 0;
+  padding: 1.6rem 0;
+}
+
+.calories {
+  display: flex;
+  align-items: center;
+  max-width: 28.8rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.quick-view__pin-info {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+.quick-view__pin-info .card__cost-new {
+  flex-shrink: 0;
+  font-size: 1.6rem;
+}
+
+.quick-view__pin-name {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--black-text);
+  margin-right: 0.4rem;
+}
+
+.quick-view__img {
+  width: 28.5rem;
+  height: 25.7rem;
+  border-radius: 2.4rem 2.4rem 0 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.quick-view__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quick-view-pagination {
+  position: static;
+  margin-top: 0.9rem;
+}
+.quick-view-pagination .swiper-pagination-bullet {
+  margin: 0;
+  width: 2rem;
+  height: 0.2rem;
+  border-radius: 10%;
+  background: var(--gray-medium);
+  opacity: 1;
+}
+.quick-view-pagination .swiper-pagination-bullet + .quick-view-pagination .swiper-pagination-bullet {
+  margin-left: 0.4rem;
+}
+.quick-view-pagination .swiper-pagination-bullet-active {
+  background: var(--gray);
+}
+
+/*КОНЕЦ БЫСТРЫЙ ПРОСМОТР*/
 .ajax_main {
   position: relative;
 }
