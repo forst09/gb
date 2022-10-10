@@ -330,20 +330,23 @@ $(document).ready(function () {
 
     //УМЕНЬШИТЬ СЧЕТЧИК ТОВАРА
     $(document).on('click', '.card__btns-count-btn--minus', function () {
-        let val = $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val();
-        if (val == 1) {
+        let val = +$(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val();
+        let constVal = +$(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').attr('data-value');
+        if (val == constVal) {
             $(this).parents('.card__btns').find('.card__btns-count').addClass('hide');
             $(this).parents('.card__btns').find('.btn-add').removeClass('hide');
         }
         else {
-            $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(--val);
+            $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(val -= constVal);
         }
     });
 
     //УВЕЛИЧИТЬ СЧЕТЧИК ТОВАРА
     $(document).on('click', '.card__btns-count-btn--plus', function () {
-        let val = $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val();
-        $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(++val);
+        let val = +$(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val();
+        let constVal = +$(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').attr('data-value');
+        console.log(constVal);
+        $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(val += constVal);
     });
 
     //НАПОЛНЕНИЕ ФИЛЬТРОВ НА ГЛАВНОЙ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
