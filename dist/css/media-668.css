@@ -43,47 +43,33 @@
 .content-style h3,
 .content-style h4,
 .content-style h5,
-.content-style h6,
-.quick-view h2,
-.quick-view h3,
-.quick-view h4,
-.quick-view h5,
-.quick-view h6 {
+.content-style h6 {
     margin-top: 2.4rem;
     margin-bottom: 1.6rem;
   }
-  .content-style h2,
-.quick-view h2 {
+  .content-style h2 {
     font-size: 2.2rem;
     line-height: 3rem;
   }
-  .content-style h3,
-.quick-view h3 {
+  .content-style h3 {
     font-size: 2.1rem;
     line-height: 3rem;
   }
-  .content-style h4,
-.quick-view h4 {
+  .content-style h4 {
     font-size: 2rem;
   }
-  .content-style h5,
-.quick-view h5 {
+  .content-style h5 {
     font-size: 1.8rem;
   }
   .content-style ul,
-.content-style ol,
-.quick-view ul,
-.quick-view ol {
+.content-style ol {
     margin-top: 1.6rem;
   }
   .content-style ul li ul,
-.content-style ol li ol,
-.quick-view ul li ul,
-.quick-view ol li ol {
+.content-style ol li ol {
     margin-top: 0.8rem;
   }
-  .content-style p,
-.quick-view p {
+  .content-style p {
     margin-top: 1.6rem;
   }
   .scroll-table {
@@ -680,5 +666,41 @@
     left: 4.4rem;
   }
   /*КОНЕЦ ЛК - ЗАКАЗЫ 668*/
+  /*###############################################################################################################################*/
+  /*БЫСТРЫЙ ПРОСМОТР 668*/
+  .block-swipe-quick-view {
+    padding-top: 2.4rem;
+  }
+  .quick-view__main {
+    margin-bottom: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .quick-view__swiper {
+    max-width: 18rem;
+    margin-right: 1.6rem;
+  }
+  .quick-view__img {
+    width: 17.4rem;
+    height: 17.4rem;
+    border-radius: 2.4rem;
+  }
+  .quick-view-pagination {
+    margin-top: 0.3rem;
+  }
+  .quick-view__info {
+    margin-left: auto;
+  }
+  .quick-view__info .quick-view__item {
+    padding: 0;
+    border: unset;
+  }
+  .quick-view__item:nth-child(1) {
+    border-top: 1px solid var(--gray-extralight);
+  }
+  .quick-view__info-list {
+    padding: 0;
+  }
+  /*КОНЕЦ БЫСТРЫЙ ПРОСМОТР 668*/
 }
 /*КОНЕЦ АДАПТИВА 668*/

@@ -52,8 +52,7 @@
     }
 
     /*КОНТЕНТНЫЕ СТИЛИ 668*/
-    .content-style,
-    .quick-view {
+    .content-style {
 
         h2,
         h3,
@@ -874,6 +873,54 @@
     }
 
     /*КОНЕЦ ЛК - ЗАКАЗЫ 668*/
+
+    /*###############################################################################################################################*/
+    /*БЫСТРЫЙ ПРОСМОТР 668*/
+    .block-swipe-quick-view {
+        padding-top: 2.4rem;
+    }
+
+    .quick-view__main {
+        margin-bottom: 1.6rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .quick-view__swiper {
+        max-width: 18rem;
+        margin-right: 1.6rem;
+    }
+
+    .quick-view__img {
+        width: 17.4rem;
+        height: 17.4rem;
+        border-radius: 2.4rem;
+    }
+
+    .quick-view-pagination {
+        margin-top: 0.3rem;
+    }
+
+    .quick-view__info {
+        margin-left: auto;
+
+        .quick-view__item {
+            padding: 0;
+            border: unset;
+        }
+    }
+
+    .quick-view__item {
+        &:nth-child(1) {
+            border-top: 1px solid var(--gray-extralight);
+        }
+    }
+
+    .quick-view__info-list {
+        padding: 0;
+    }
+
+    /*КОНЕЦ БЫСТРЫЙ ПРОСМОТР 668*/
 }
 
 /*КОНЕЦ АДАПТИВА 668*/

@@ -4890,6 +4890,7 @@ svg {
   text-align: unset;
   max-height: 90%;
   height: 100%;
+  padding-top: 1.6rem;
 }
 
 .quick-view {
@@ -4985,11 +4986,7 @@ svg {
 
 .quick-view__item {
   padding: 1.6rem 0;
-  border-bottom: 1px solid var(--gray-extralight);
-}
-.quick-view__item:nth-last-of-type(1) {
-  padding-bottom: 0;
-  border: unset;
+  border-top: 1px solid var(--gray-extralight);
 }
 
 .quick-view__item-title {
@@ -5054,18 +5051,19 @@ svg {
   margin-top: 0.9rem;
 }
 .quick-view-pagination .swiper-pagination-bullet {
-  margin: 0;
+  margin: 0 0.2rem !important;
   width: 2rem;
   height: 0.2rem;
   border-radius: 10%;
   background: var(--gray-medium);
   opacity: 1;
 }
-.quick-view-pagination .swiper-pagination-bullet + .quick-view-pagination .swiper-pagination-bullet {
-  margin-left: 0.4rem;
-}
 .quick-view-pagination .swiper-pagination-bullet-active {
   background: var(--gray);
+}
+
+.quick-view__info-list {
+  padding: 1.6rem 0;
 }
 
 /*КОНЕЦ БЫСТРЫЙ ПРОСМОТР*/
