@@ -1047,6 +1047,9 @@
   .btn-long-margin {
     margin-top: 4.8rem;
   }
+  .arrow-top {
+    right: 6.4rem;
+  }
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 1024*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 1024*/
   .tiles {

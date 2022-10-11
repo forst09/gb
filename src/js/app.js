@@ -344,17 +344,6 @@ $(document).ready(function () {
         return false;
     });
 
-    // $(document).on('click', '.arrow-top', function () {
-    //     $(this).addClass('active');
-    //     jQuery("html:not(:animated),body:not(:animated)").animate(
-    //         {
-    //             scrollTop: 0,
-    //         },
-    //         1000
-    //     );
-    //     console.log(document.activeElement);
-    // })
-
     //НАПОЛНЕНИЕ ФИЛЬТРОВ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
     if ($(".filters-light").length !== 0) {
         const linksArr = [...$(".filters-light__item")];

@@ -311,6 +311,9 @@
   .cart__container {
     margin-top: 2.4rem;
   }
+  .arrow-top {
+    right: 4.4rem;
+  }
   /*КОНЕЦ ОБЩИХ СТИЛЕЙ 668*/
   /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ 668*/
   .view-btn {
