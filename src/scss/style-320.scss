@@ -3055,6 +3055,41 @@ svg {
     text-align: center;
 }
 
+.arrow-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.4rem;
+    height: 6.4rem;
+    position: fixed;
+    bottom: 20rem;
+    right: 1.6rem;
+    background-color: var(--orange);
+    z-index: 1000;
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: 0.3s ease;
+
+    svg {
+        width: 4.8rem;
+        height: 4.8rem;
+        stroke: var(--white);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-within {
+        svg {
+            transform: translateY(-15%);
+        }
+    }
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -5685,6 +5720,21 @@ svg {
     box-shadow: 0px 10px 60px rgb(226 236 249 / 50%), 0px 0px 31px var(--white);
     border-radius: 1.2rem 1.2rem 0 0;
     padding: 1.6rem 0;
+
+    .card__btns {
+        height: 4.2rem;
+    }
+
+    .btn-orange span {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        ;
+    }
+
+    .card__btns-count {
+        max-height: 4.2rem;
+        height: 100%;
+    }
 }
 
 .calories {

@@ -101,25 +101,28 @@ $(document).ready(function () {
         showMaskOnHover: false
     });
 
-    //ОТКРЫТЬ ВСПЛЫВАШКУ ФИЛЬТРОВ
-    $(document).on("click", ".filters__mobile-btn", function () {
-        $(".block-swipe-filters").addClass("active");
-        $(".block-swipe__background-filters").addClass("active");
+    //ФУНКЦИЯ ОТКРЫТИЯ МОДАЛОК
+    function openModal(modal, modalBackground) {
+        $(modal).addClass("active");
+        $(modalBackground).addClass("active");
         $("html").addClass("scroll-hidden");
-    });
+    }
+
+    //ФУНКЦИЯ ЗАКРЫТИЯ МОДАЛОК
+    function closeModal(modal, modalBackground) {
+        $(modal).removeClass("active");
+        $(modalBackground).removeClass("active");
+        $("html").removeClass("scroll-hidden");
+    }
 
     //ОТКРЫТЬ ВСПЛЫВАШКУ ОБРАТНОЙ СВЯЗИ
     $(document).on("click", ".footer__sosials-feedback", function () {
-        $(".block-swipe-feedback").addClass("active");
-        $(".block-swipe__background-feedback").addClass("active");
-        $("html").addClass("scroll-hidden");
+        openModal('.block-swipe-feedback', '.block-swipe__background-feedback');
     });
 
     //ОТКРЫТЬ ВСПЛЫВАШКУ С ВЫБОРОМ ГОРОДА
     $(document).on("click", ".place", function () {
-        $(".block-swipe__background-city").addClass("active");
-        $(".block-swipe-city").addClass("active");
-        $("html").addClass("scroll-hidden");
+        openModal('.block-swipe-city', '.block-swipe__background-city');
     });
 
     if ($('.block-swipe__background').hasClass('active')) {
@@ -233,17 +236,6 @@ $(document).ready(function () {
         setTimeout(() => $('.point-img img').css('transform', beginTransform), 200);
     });
 
-    //ЗАКРЫТЬ ВСПЛЫВАШКУ ПО КЛИКУ НА ФОН
-    // $(document).mouseup(function (e) {
-    //     let container = $(".block-swipe");
-    //     if (container.hasClass('active') && container.has(e.target).length === 0) {
-    //         $(".block-swipe").removeClass("active");
-    //         $(".block-swipe__background").removeClass("active");
-    //         $("html").removeClass("scroll-hidden");
-    //         console.log($(this));
-    //     }
-    // });
-
     $(document).on('click', '.block-swipe__background', function (e) {
         e.stopPropagation();
         $(this).removeClass('active');
@@ -256,70 +248,52 @@ $(document).ready(function () {
 
     //МОДАЛКА КОРЗИНЫ С ШАПКИ
     $(document).on('click', '.header__cart', function (e) {
-        $('.block-swipe__background-cart').addClass('active');
-        $('.block-swipe-cart').addClass('active');
         $(this).addClass('active');
-        $("html").addClass("scroll-hidden");
+        openModal('.block-swipe-cart', '.block-swipe__background-cart');
     });
 
     //ОТКРЫТЬ ВСПЛЫВАШКУ КОРЗИНА ПО КЛИКУ НА ЗАКРЕП КОРЗИНА
     $(document).on("click", ".cart-pin__link", function () {
-        $('.block-swipe__background-cart').addClass('active');
-        $('.block-swipe-cart').addClass('active');
-        $("html").addClass("scroll-hidden");
+        openModal('.block-swipe-cart', '.block-swipe__background-cart');
     });
 
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ВЫБОРА ГОРОДА ПО КЛИКУ НА КНОПКУ ДА, ВЕРНО
     $(document).on('click', '.block-swipe-city .btn-text--orange', function () {
-        $(".block-swipe-city").removeClass("active");
-        $(".block-swipe__background-city").removeClass("active");
-        $("html").removeClass("scroll-hidden");
+        closeModal('.block-swipe-city', '.block-swipe__background-city');
     });
 
     //ПО КЛИКУ НА ПАЛОЧКУ ЗАКРЫТЬ ВСПЛЫВАШКУ
     $(document).on('click', '.block-swipe__btn', function () {
-        $(".block-swipe").removeClass("active");
-        $(".block-swipe__background").removeClass("active");
-        $("html").removeClass("scroll-hidden");
+        closeModal('.block-swipe', '.block-swipe__background');
     });
 
     //ПО КЛИКУ НА КРЕСТИК ЗАКРЫТЬ МОДАЛКУ
     $(document).on('click', '.modal-close', function () {
-        $(".block-swipe").removeClass("active");
-        $(".block-swipe__background").removeClass("active");
-        $("html").removeClass("scroll-hidden");
+        closeModal('.block-swipe', '.block-swipe__background');
     });
 
     //ЗАКРЫТЬ МОДАЛКУ ВЫЙТИ ИЗ ПРОФИЛЯ ПО КЛИКУ НА ДА
     $(document).on('click', '.block-swipe-logout .btn-text--orange', function () {
-        $(".block-swipe").removeClass("active");
-        $(".block-swipe__background").removeClass("active");
-        $("html").removeClass("scroll-hidden");
+        closeModal('.block-swipe-logout', '.block-swipe__background-logout');
     });
 
     //ЗАКРЫТЬ МОДАЛКУ ВЫЙТИ ИЗ ПРОФИЛЯ ПО КЛИКУ НА НЕТ
     $(document).on('click', '.block-swipe-logout .btn-text--gray', function () {
-        $(".block-swipe").removeClass("active");
-        $(".block-swipe__background").removeClass("active");
-        $("html").removeClass("scroll-hidden");
+        closeModal('.block-swipe-logout', '.block-swipe__background-logout');
     });
 
     //ЗАКРЫТЬ МОДАЛКУ СБРОС КОРЗИНЫ ПО КЛИКУ НА ОТМЕНА
     $(document).on('click', '.block-swipe-cart-cancel .btn-text--gray', function () {
-        $(".block-swipe").removeClass("active");
-        $(".block-swipe__background").removeClass("active");
-        $("html").removeClass("scroll-hidden");
+        closeModal('.block-swipe-order-cancel', '.block-swipe__background-order-cancel');
     });
 
     //ЗАКРЫТЬ МОДАЛКУ СБРОС КОРЗИНЫ ПО КЛИКУ НА ПРОДОЛЖИТЬ
     $(document).on('click', '.block-swipe-logout .btn-text--orange', function () {
-        $(".block-swipe").removeClass("active");
-        $(".block-swipe__background").removeClass("active");
-        $("html").removeClass("scroll-hidden");
+        closeModal('.block-swipe-order-cancel', '.block-swipe__background-order-cancel');
     });
 
     //ПО КНОПКЕ ДОБАВИТЬ ПОКАЗАТЬ ВМЕСТО НЕЕ СЧЕТЧИК
-    $(document).on('click', '.btn-add', function () {
+    $(document).on('click', '.btn-add-js', function () {
         $(this).addClass('hide');
         $(this).parents('.card__btns').find('.card__btns-count').removeClass('hide');
         $('.cart__notification').addClass('active');
@@ -334,7 +308,7 @@ $(document).ready(function () {
         let constVal = +$(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').attr('data-value');
         if (val == constVal) {
             $(this).parents('.card__btns').find('.card__btns-count').addClass('hide');
-            $(this).parents('.card__btns').find('.btn-add').removeClass('hide');
+            $(this).parents('.card__btns').find('.btn-add-js').removeClass('hide');
         }
         else {
             $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(val -= constVal);
@@ -349,48 +323,39 @@ $(document).ready(function () {
         $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(val += constVal);
     });
 
-    //НАПОЛНЕНИЕ ФИЛЬТРОВ НА ГЛАВНОЙ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
-    if ($(".filters").length !== 0) {
-        const linksArr = [...$(".filters__item")];
-        let linksNum;
-        if ($(window).width() >= 1024 && $(window).width() <= 1499) linksNum = 5;
-        if ($(window).width() >= 1500) linksNum = 8;
-        if (linksArr.length > linksNum) {
-            $.map(linksArr, function (item, index) {
-                $(item).remove();
-                let htmlLink;
-                if (index < linksNum) {
-                    htmlLink = `
-                <a class= "filters__item letter-spacing filters__item-js ${index === 0 ? "active" : ""}" href = "javascript:void(0)" > ${$(item).text()}</>
-                `;
-                    $(".filters__items").append(htmlLink);
-                } else if (index === linksNum) {
-                    const html = `
-            <div class= "filters__dots">
-                            <svg>
-                                <use xlink:href="/upload/images/icons/sprite.svg#dots"></use>
-                            </svg>
-                            <div class="filters__dots-window-wrapper">
-                                <div class="filters__dots-window filters__dots-window-js">
-                                </div>
-                            </div>
-                        </div>
-                `;
-                    $(".filters__items").append(html);
-                }
+    //ИЗМЕНЕНИЕ КАРТИНКИ ПРИ НАВЕДЕНИИ У БЫСТРОГО ПРОСМОТРА
+    $(document).on('mouseenter', ".swiper-quck-view .swiper-slide", function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
 
-                if (index + 1 > linksNum) {
-                    htmlLink = `
-                <a href = "javascript:void(0)" class= "filters__dots-window-item letter-spacing filters__item-js" > ${$(item).text()}</>
-            `;
-                    $(".filters__dots-window-js").append(htmlLink);
-                }
-
-            });
+    //ПОКАЗАТЬ СТРЕЛКУ НАВЕРХ
+    $(window).scroll(function () {
+        let height = $(window).scrollTop();
+        if (height > 1000) {
+            $('.arrow-top').removeClass('hide');
+        } else {
+            $('.arrow-top').addClass('hide');
         }
-    }
+    });
 
-    //НАПОЛНЕНИЕ ФИЛЬТРОВ НА ГЛАВНОЙ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
+    $(".arrow-top").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+    // $(document).on('click', '.arrow-top', function () {
+    //     $(this).addClass('active');
+    //     jQuery("html:not(:animated),body:not(:animated)").animate(
+    //         {
+    //             scrollTop: 0,
+    //         },
+    //         1000
+    //     );
+    //     console.log(document.activeElement);
+    // })
+
+    //НАПОЛНЕНИЕ ФИЛЬТРОВ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
     if ($(".filters-light").length !== 0) {
         const linksArr = [...$(".filters-light__item")];
         let linksNum;
@@ -444,8 +409,6 @@ $(document).ready(function () {
         }
     });
 
-    console.log($('iframe'));
-
     //ОБЕРНУТЬ КОНТЕНТУЮ ЧАСТЬ
     let content = document.querySelector('.content-style');
     let imgs = document.querySelectorAll('.content-style img');
@@ -462,14 +425,6 @@ $(document).ready(function () {
             let tables = content.querySelectorAll('table');
             tables.forEach(table => {
                 $(table).wrap('<div class="scroll-table" />');
-                // let wrapper = document.createElement('div');
-                // let content = document.createElement('div');
-                // wrapper.classList.add('scroll');
-                // content.classList.add('scroll-content');
-                // let parent = table.parentNode
-                // parent.replaceChild(wrapper, table)
-                // content.appendChild(table)
-                // wrapper.appendChild(content)
             })
         };
         imgs.forEach(img => {
@@ -721,16 +676,6 @@ $(document).ready(function () {
     });
     if (jsMap) mapObserver.observe(jsMap);
 
-    console.log($('.icon-map'));
-    // const ajax = new XMLHttpRequest();
-    // ajax.open("GET", "img/icons/sprite.svg", true);
-    // ajax.send();
-    // ajax.onload = function (e) {
-    //     let div = document.createElement("div");
-    //     div.innerHTML = ajax.responseText;
-    //     document.body.insertBefore(div, document.body.childNodes[0]);
-    // }
-
     $(document).on("click", ".view-btn__item", function () {
         let post = {
             view_objects: $(this).data("view"),
@@ -757,8 +702,7 @@ $(document).ready(function () {
 
     //call logout modal
     $(document).on("click", ".logout-modal", function () {
-        $(".block-swipe__background-logout").addClass("active");
-        $(".block-swipe-logout").addClass("active");
+        openModal('.block-swipe__background-logout', '.block-swipe-logout');
     });
 
     $(document).on("click", ".pin-repeat-order", function () {
