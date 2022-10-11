@@ -2661,6 +2661,15 @@ svg {
   transform: translateY(-15%);
 }
 
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-sbtw {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {
@@ -3804,9 +3813,6 @@ svg {
   left: 0;
   top: 0;
   padding: 0.8rem;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -4655,6 +4661,10 @@ svg {
 }
 .order__item .cart__item-info {
   margin: 0;
+  flex-grow: 1;
+}
+.order__item .cart__item-text {
+  flex-grow: 1;
 }
 .order__item .cart__img {
   width: 4rem;
@@ -4673,6 +4683,9 @@ svg {
 }
 .order__item .card__cost-old {
   margin: 0;
+}
+.order__item .card__name {
+  min-height: unset;
 }
 
 .order__items {

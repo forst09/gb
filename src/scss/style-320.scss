@@ -3090,6 +3090,15 @@ svg {
     }
 }
 
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-sbtw {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -4336,9 +4345,9 @@ svg {
     left: 0;
     top: 0;
     padding: 0.8rem;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
+    // opacity: 1;
+    // visibility: visible;
+    // pointer-events: all;
     -webkit-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
@@ -5275,6 +5284,11 @@ svg {
 
     .cart__item-info {
         margin: 0;
+        flex-grow: 1;
+    }
+
+    .cart__item-text {
+        flex-grow: 1;
     }
 
     .cart__img {
@@ -5297,6 +5311,10 @@ svg {
 
     .card__cost-old {
         margin: 0;
+    }
+
+    .card__name {
+        min-height: unset;
     }
 }
 

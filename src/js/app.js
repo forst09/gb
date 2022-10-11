@@ -293,7 +293,7 @@ $(document).ready(function () {
     });
 
     //ПО КНОПКЕ ДОБАВИТЬ ПОКАЗАТЬ ВМЕСТО НЕЕ СЧЕТЧИК
-    $(document).on('click', '.btn-add-js', function () {
+    $(document).on('click', '.js-basket', function () {
         $(this).addClass('hide');
         $(this).parents('.card__btns').find('.card__btns-count').removeClass('hide');
         $('.cart__notification').addClass('active');
@@ -308,7 +308,7 @@ $(document).ready(function () {
         let constVal = +$(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').attr('data-value');
         if (val == constVal) {
             $(this).parents('.card__btns').find('.card__btns-count').addClass('hide');
-            $(this).parents('.card__btns').find('.btn-add-js').removeClass('hide');
+            $(this).parents('.card__btns').find('.js-basket').removeClass('hide');
         }
         else {
             $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(val -= constVal);
