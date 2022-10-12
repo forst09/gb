@@ -1724,7 +1724,7 @@
   .cart__empty {
     padding-bottom: 2.4rem;
   }
-  .empty__img {
+  .cart__empty .empty__img {
     width: 9.5rem;
     height: 19.4rem;
   }
