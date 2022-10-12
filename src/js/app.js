@@ -69,7 +69,8 @@ $(document).ready(function () {
             labelUp(this);
         }
     });
-    $(document).on('focusout', '.form-input', function () {
+    $(document).on('focusout', '.form-input', function (e) {
+        e.stopPropagation();
         if ($(this).val() == '') {
             $(this).parents('.input-wrapper').find('.label-transform').removeClass('active');
         }
@@ -344,6 +345,13 @@ $(document).ready(function () {
         return false;
     });
 
+    //ВЫБРАТЬ ДАТУ ИЛИ ВРЕМЯ НА ОФОРМЛЕНИИ ЗАКАЗА
+    $(document).on('click', '.select-js', function () {
+        console.log($(this).text());
+        $(this).parents('.input-wrapper').find('.label-transform').addClass('active');
+        $(this).parents('.input-wrapper').find('.form-input').val($(this).text());
+    });
+
     //НАПОЛНЕНИЕ ФИЛЬТРОВ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
     if ($(".filters-light").length !== 0) {
         const linksArr = [...$(".filters-light__item")];
@@ -385,6 +393,21 @@ $(document).ready(function () {
         }
     }
 
+    //ПОКАЗАТЬ СКРЫТЫЕ ПОЛЯ
+    let inputHide = [...document.querySelectorAll('.radio__input')];
+
+    inputHide.forEach(inputHideItem => {
+
+        inputHideItem.addEventListener('change', function () {
+            if (inputHideItem !== null) {
+                if (this.classList.contains('input-hide')) {
+                    $(this).parents('.radio__wrapper').find('.select').slideDown();
+                } else {
+                    $(this).parents('.js-choice').find('.select').slideUp();
+                }
+            }
+        })
+    })
 
     //ПОКАЗАТЬ/СКРЫТЬ ПАРОЛЬ
     $(document).on('click', '.label-eye', function () {

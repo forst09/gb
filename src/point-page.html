@@ -1411,9 +1411,9 @@
 
     <!-- БЫСТРЫЙ ПРОСМОТР ТОВАРА -->
 
-    <div class="block-swipe__background block-swipe__background-quick-view active">
+    <div class="block-swipe__background block-swipe__background-quick-view">
     </div>
-    <div class="block-swipe block-swipe-quick-view block-swipe-hybrid active">
+    <div class="block-swipe block-swipe-quick-view block-swipe-hybrid">
         <div class="quick-view">
             <div class="quick-view__content">
                 <div class="wrapper">
@@ -1556,6 +1556,135 @@
         <div class="block-swipe__btn quick-view__btn"></div>
     </div>
     <!-- КОНЕЦ БЫСТРЫЙ ПРОСМОТР ТОВАРА -->
+
+
+    <!-- ВСПЛЫВАШКА ОФОРМЛЕНИЕ ЗАКАЗА -->
+    <div class="block-swipe__background block-swipe__background-checkout active">
+    </div>
+    <div class="block-swipe block-swipe-checkout block-swipe-hybrid active">
+        <div class="checkout__wrapper">
+            <div class="checkout__container">
+                <div class="wrapper">
+                    <h2 class="modal-title letter-spacing">Оформление заказа</h2>
+                    <div class="feedback__form">
+                        <form action="">
+                            <div class="feedback__wrapper">
+                                <div class="input-wrapper">
+                                    <input class="form-input" type="text" id="checkoutModalName" required>
+                                    <label for="checkoutModalName" class="label-transform">Имя <span>*</span></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="form-input" type="text" id="checkoutModalName">
+                                    <label for="checkoutModalName" class="label-transform">Фамилия</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="form-input input-phone" type="tel" id="checkoutModalPhone" required>
+                                    <label for="checkoutModalPhone" class="label-transform">Телефон
+                                        <span>*</span></label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="form-input" type="email" id="checkoutModalEmail" required>
+                                    <label for="checkoutModalEmail" class="label-transform">Email <span>*</span></label>
+                                </div>
+                            </div>
+                            <div class="form__subtitle letter-spacing">Дата и время сборки заказа</div>
+                            <div class="js-choice">
+                                <div class="radio__wrapper">
+                                    <input class="radio__input input-hide" type="radio" name="checkoutDate"
+                                        id="checkoutDateTime">
+                                    <label class="radio__label letter-spacing" for="checkoutDateTime">Ко времени</label>
+                                    <div class="select display-none">
+                                        <div class="input-wrapper">
+                                            <input class="form-input" type="text" id="checkoutModalDate" readonly>
+                                            <label for="checkoutModalDate" class="label-transform">Дата</label>
+                                            <label for="checkoutModalDate" class="label-select">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#up-down"></use>
+                                                </svg>
+                                            </label>
+                                            <div class="filters__dots-window-wrapper">
+                                                <div class="filters__dots-window">
+                                                    <a class="filters__dots-window-item letter-spacing select-js"
+                                                        href="javascript:void(0)">13 октября</a>
+                                                    <a class="filters__dots-window-item letter-spacing select-js"
+                                                        href="javascript:void(0)">14 октября</a>
+                                                    <a class="filters__dots-window-item letter-spacing select-js"
+                                                        href="javascript:void(0)">15 октября</a>
+                                                    <a class="filters__dots-window-item letter-spacing select-js"
+                                                        href="javascript:void(0)">16 октября</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-wrapper">
+                                            <input class="form-input" type="text" id="checkoutModalTime" readonly>
+                                            <label for="checkoutModalTime" class="label-transform">Время</label>
+                                            <label for="checkoutModalTime" class="label-select">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#up-down"></use>
+                                                </svg>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="radio__wrapper">
+                                    <input class="radio__input" type="radio" name="checkoutDate" id="checkoutDateFast"
+                                        checked>
+                                    <label class="radio__label letter-spacing" for="checkoutDateFast">Как можно
+                                        быстрее</label>
+                                    <div class="form__desc">Заказ будет собран в течение 30 мин</div>
+                                </div>
+                            </div>
+                            <div class="form__subtitle letter-spacing">Оплата</div>
+                            <div class="radio__wrapper">
+                                <input class="radio__input" type="radio" name="checkoutPayment" id="checkoutPaymentCash"
+                                    checked>
+                                <label class="radio__label letter-spacing" for="checkoutPaymentCash">При получении
+                                    заказа
+                                    наличными или
+                                    банковской
+                                    картой</label>
+                            </div>
+                            <div class="radio__wrapper">
+                                <input class="radio__input" type="radio" name="checkoutPayment"
+                                    id="checkoutPaymentOnline">
+                                <label class="radio__label letter-spacing" for="checkoutPaymentOnline">Оплата
+                                    онлайн</label>
+                            </div>
+                            <div class="checkout__total display-none">
+                                <div class="cart__total-pin-info">
+                                    <div class="card__cost">
+                                        <div class="card__cost-new letter-spacing">155 550 &#8381;</div>
+                                        <div class="card__cost-old letter-spacing">144 550</div>
+                                    </div>
+                                    <div class="cart__total-pin-road letter-spacing">Пешком 5 мин</div>
+                                </div>
+                                <input href="javascript:void(0)" class="btn-orange letter-spacing" value="Оформить">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="cart__total-pin">
+                <div class="cart__total-pin-info">
+                    <div class="card__cost">
+                        <div class="card__cost-new letter-spacing">155 550 &#8381;</div>
+                        <div class="card__cost-old letter-spacing">144 550</div>
+                    </div>
+                    <div class="cart__total-pin-road letter-spacing">Пешком 5 мин</div>
+                </div>
+                <a href="javascript:void(0)" class="btn-orange letter-spacing">
+                    <span>Оформить</span>
+                </a>
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="modal-close">
+            <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="block-swipe__btn block-swipe__btn checkout__btn"></div>
+    </div>
+    <!-- КОНЕЦ ВСПЛЫВАШКА ОФОРМЛЕНИЕ ЗАКАЗА -->
 
     @@include('html/tabbar.html',{})
 

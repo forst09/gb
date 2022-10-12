@@ -364,4 +364,8 @@
         <path d="M24 38V10" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M10 24L24 10L38 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
+    <symbol viewBox="0 0 24 24" id="up-down">
+        <path d="M7 15L12 20L17 15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M7 9L12 4L17 9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
 </svg>
