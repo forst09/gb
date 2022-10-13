@@ -349,6 +349,16 @@ $(document).ready(function () {
         $(this).parents('.input-wrapper').find('.form-input').val($(this).text());
     });
 
+    //ОТКРЫТЬ БЫСТРЫЙ ПРОСМОТР ПО КЛИКУ НА ФОТО ТОВАРА
+    $(document).on('click', '.card__image', function () {
+        openModal('.block-swipe__background-quick-view', '.block-swipe-quick-view');
+    });
+
+    //ОТКРЫТЬ БЫСТРЫЙ ПРОСМОТР ПО КЛИКУ НА НАЗВАНИЕ ТОВАРА
+    $(document).on('click', '.card__name', function () {
+        openModal('.block-swipe__background-quick-view', '.block-swipe-quick-view');
+    });
+
     //НАПОЛНЕНИЕ ФИЛЬТРОВ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
     if ($(".filters-light").length !== 0) {
         const linksArr = [...$(".filters-light__item")];
