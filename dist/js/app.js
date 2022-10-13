@@ -407,7 +407,13 @@ $(document).ready(function () {
                 }
             }
         })
-    })
+    });
+
+    //ТРИГГЕР КЛИК НА САБМИТ В ОФОРМЛЕНИИ ЗАКАЗА
+    $(document).on('click', '.checkout-link-sumbit', function () {
+        $('.checkout-submit').trigger('click');
+    });
+
 
     //ПОКАЗАТЬ/СКРЫТЬ ПАРОЛЬ
     $(document).on('click', '.label-eye', function () {

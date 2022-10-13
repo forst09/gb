@@ -554,16 +554,16 @@ svg {
   width: 100%;
 }
 .input-wrapper:hover .form-input {
-  -webkit-box-shadow: 0 0 0 2px var(--gray-medium);
-  box-shadow: 0 0 0 2px var(--gray-medium);
+  -webkit-box-shadow: inset 0 0 0 2px var(--gray-medium);
+  box-shadow: inset 0 0 0 2px var(--gray-medium);
 }
 .input-wrapper + .input-wrapper {
   margin-top: 0.8rem;
 }
 
 .input-wrapper.active .form-input {
-  -webkit-box-shadow: 0 0 0 2px var(--gray-medium);
-  box-shadow: 0 0 0 2px var(--gray-medium);
+  -webkit-box-shadow: inset 0 0 0 2px var(--gray-medium);
+  box-shadow: inset 0 0 0 2px var(--gray-medium);
 }
 .input-wrapper.active .filters__dots-window-wrapper {
   opacity: 1;
@@ -616,8 +616,8 @@ svg {
 
 .form-input {
   border: none;
-  -webkit-box-shadow: 0 0 0 1px var(--gray-medium);
-  box-shadow: 0 0 0 1px var(--gray-medium);
+  -webkit-box-shadow: inset 0 0 0 1px var(--gray-medium);
+  box-shadow: inset 0 0 0 1px var(--gray-medium);
   padding: 1rem 1.6rem;
   max-height: 4rem;
   -webkit-transition: box-shadow 0.3s ease;
@@ -5268,10 +5268,14 @@ svg {
   max-height: 90%;
   text-align: initial;
 }
+.block-swipe-checkout .modal-title {
+  text-align: center;
+}
 
 .checkout__container {
   max-height: calc(100vh - 18rem);
   overflow: auto;
+  padding-bottom: 3rem;
 }
 
 .form__subtitle {
@@ -5333,7 +5337,7 @@ svg {
 }
 
 .radio__wrapper + .radio__wrapper {
-  margin-top: 1.2rem;
+  margin-top: 1.6rem;
 }
 
 .select {
@@ -5345,6 +5349,23 @@ svg {
 .select .filters__dots-window-wrapper {
   width: 100%;
   padding-top: 1.6rem;
+}
+.select .filters__dots-window {
+  max-height: 20.4rem;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-medium) transparent;
+}
+.select .filters__dots-window::-webkit-scrollbar {
+  width: 0.9rem;
+}
+.select .filters__dots-window::-webkit-scrollbar-thumb {
+  border: 0.45rem solid rgba(0, 0, 0, 0);
+  background-color: var(--gray-medium);
+  background-clip: padding-box;
+}
+.select .filters__dots-window::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .label-select {
