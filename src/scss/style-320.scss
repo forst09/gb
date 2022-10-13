@@ -6005,6 +6005,8 @@ svg {
     color: var(--black-text);
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+    max-width: 28.8rem;
+    display: inline-block;
 
     &::before {
         content: '';
