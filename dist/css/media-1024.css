@@ -1978,6 +1978,17 @@
   .checkout__container .feedback__form {
     max-height: calc(90vh - 19rem);
     overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-medium) transparent;
+  }
+  .checkout__container .feedback__form::-webkit-scrollbar {
+    width: 2px;
+  }
+  .checkout__container .feedback__form::-webkit-scrollbar-thumb {
+    background-color: var(--gray-medium);
+  }
+  .checkout__container .feedback__form::-webkit-scrollbar-track {
+    background-color: transparent;
   }
   .product-list {
     margin-top: 1.6rem;
@@ -2022,7 +2033,24 @@
     line-clamp: 1;
   }
   .checkout__total {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.8rem;
+  }
+  .checkout__total .card__cost {
+    margin: 0;
+  }
+  .checkout__total .card__cost-old {
+    font-size: 1.4rem;
+    margin-left: 0.6rem;
+  }
+  .checkout__total .btn-orange {
+    max-width: 20.6rem;
+  }
+  .checkout__total .btn-orange span {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
   }
   /*КОНЕЦ ОФОРМЛЕНИЕ ЗАКАЗА 1024*/
 }

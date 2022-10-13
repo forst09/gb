@@ -190,7 +190,6 @@ $(document).ready(function () {
     let contentHeight;
     if ($(window).width() < 1024) {
         contentHeight = $(window).height() - headerHeightWithMargin - footerHeightWithMargin - tabbarHeightWithMargin;
-        console.log($('.stretch'));
     }
     else {
         contentHeight = $(window).height() - headerHeightWithMargin - footerHeightWithMargin;
@@ -320,7 +319,6 @@ $(document).ready(function () {
     $(document).on('click', '.card__btns-count-btn--plus', function () {
         let val = +$(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val();
         let constVal = +$(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').attr('data-value');
-        console.log(constVal);
         $(this).parents('.card__btns-count-wrapper').find('.card__btns-count-value').val(val += constVal);
     });
 
@@ -347,7 +345,6 @@ $(document).ready(function () {
 
     //ВЫБРАТЬ ДАТУ ИЛИ ВРЕМЯ НА ОФОРМЛЕНИИ ЗАКАЗА
     $(document).on('click', '.select-js', function () {
-        console.log($(this).text());
         $(this).parents('.input-wrapper').find('.label-transform').addClass('active');
         $(this).parents('.input-wrapper').find('.form-input').val($(this).text());
     });
@@ -410,10 +407,16 @@ $(document).ready(function () {
     });
 
     //ТРИГГЕР КЛИК НА САБМИТ В ОФОРМЛЕНИИ ЗАКАЗА
-    $(document).on('click', '.checkout-link-sumbit', function () {
+    $(document).on('click', '.checkout-link-submit', function () {
         $('.checkout-submit').trigger('click');
     });
 
+    //ОТКРЫТЬ ОФОРМЛЕНИЕ ЗАКАЗА 
+    $(document).on('click', '.open-checkout', function () {
+        closeModal('.block-swipe__background', '.block-swipe');
+        $('.header__cart').removeClass('active');
+        openModal('.block-swipe__background-checkout', '.block-swipe-checkout');
+    });
 
     //ПОКАЗАТЬ/СКРЫТЬ ПАРОЛЬ
     $(document).on('click', '.label-eye', function () {
