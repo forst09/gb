@@ -371,8 +371,11 @@ $(document).ready(function () {
     $(document).on('click', '.select-js', function () {
         $(this).parents('.input-wrapper').find('.label-transform').addClass('active');
         $(this).parents('.input-wrapper').find('.form-input').val($(this).text());
+        $(this).parents('.input-wrapper').find('.input-reset').removeClass('hide');
+        console.log($(this).text());
         if ($(this).hasClass('street-js')) {
             $(this).parents('.block-swipe').find('.modal-title').text($(this).text());
+            console.log($(this).parents('.block-swipe').find('.modal-title').text());
         }
     });
 
@@ -384,6 +387,33 @@ $(document).ready(function () {
     //ОТКРЫТЬ БЫСТРЫЙ ПРОСМОТР ПО КЛИКУ НА НАЗВАНИЕ ТОВАРА
     $(document).on('click', '.card__name', function () {
         openModal('.block-swipe__background-quick-view', '.block-swipe-quick-view');
+    });
+
+    //ВВОД ГЕОЛОКАЦИИ
+    $(".js-find").keyup(function () {
+        $(this).parents('.input-wrapper').find('.input-reset').removeClass('hide');
+        let filter = $(this).val(),
+            count = 0;
+        $(this)
+            .parents(".input-wrapper")
+            .find(".filters__dots-window-item")
+            .each(function () {
+                if ($(this).attr("title").search(new RegExp(filter, "i")) < 0) {
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                    count++;
+                }
+            });
+        if (filter == '') {
+            $(this).parents('.input-wrapper').find('.input-reset').addClass('hide');
+        }
+    });
+
+    //ОЧИСТИТЬ ИНПУТ
+    $(document).on('click', '.input-reset', function () {
+        $(this).addClass('hide');
+        $(this).parents('.input-wrapper').find('.form-input').val('');
     });
 
     //НАПОЛНЕНИЕ ФИЛЬТРОВ В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
