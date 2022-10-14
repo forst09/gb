@@ -34,7 +34,7 @@
             </a>
             <div class="header-point__icons">
                 <ul class="header-point__icons-list">
-                    <li class="header-point__icons-item header-point__icons-item--cart header__cart">
+                    <li class="header-point__icons-item header-point__icons-item--cart header__cart call-cart">
                         <a class="header-point__icons-link" href="javascript:void(0)">
                             <svg>
                                 <use xlink:href="img/icons/sprite.svg#cart"></use>
@@ -115,7 +115,7 @@
                         </svg>
                     </a>
                 </li>
-                <li class="header__icons-item header__cart">
+                <li class="header__icons-item header__cart call-cart">
                     <a href="javascript:void(0)">
                         <svg>
                             <use xlink:href="img/icons/sprite.svg#cart"></use>
@@ -2479,9 +2479,9 @@
 
 
     <!-- ВСПЛЫВАШКА ОФОРМЛЕНИЕ ЗАКАЗА -->
-    <div class="block-swipe__background block-swipe__background-checkout active">
+    <div class="block-swipe__background block-swipe__background-checkout">
     </div>
-    <div class="block-swipe block-swipe-checkout block-swipe-hybrid active">
+    <div class="block-swipe block-swipe-checkout block-swipe-hybrid">
         <div class="checkout__wrapper">
             <div class="checkout__container">
                 <div class="wrapper">
@@ -2515,7 +2515,8 @@
                                     <label class="radio__label letter-spacing" for="checkoutDateTime">Ко времени</label>
                                     <div class="select display-none">
                                         <div class="input-wrapper">
-                                            <input class="form-input" type="text" id="checkoutModalDate" readonly>
+                                            <input class="form-input select-input" type="text" id="checkoutModalDate"
+                                                readonly>
                                             <label for="checkoutModalDate" class="label-transform">Дата</label>
                                             <label for="checkoutModalDate" class="label-select">
                                                 <svg>
@@ -2536,7 +2537,8 @@
                                             </div>
                                         </div>
                                         <div class="input-wrapper">
-                                            <input class="form-input" type="text" id="checkoutModalTime" readonly>
+                                            <input class="form-input select-input" type="text" id="checkoutModalTime"
+                                                readonly>
                                             <label for="checkoutModalTime" class="label-transform">Время</label>
                                             <label for="checkoutModalTime" class="label-select">
                                                 <svg>
@@ -2664,6 +2666,127 @@
     </div>
     <!-- КОНЕЦ ВСПЛЫВАШКА ОФОРМЛЕНИЕ ЗАКАЗА -->
 
+
+    <!-- ВСПЛЫВАШКА ОПИСАНИЕ ТОЧКИ -->
+    <div class="block-swipe__background block-swipe__background-point-info">
+    </div>
+    <div class="block-swipe block-swipe-point-info block-swipe-hybrid">
+        <div class="point-info__wrapper">
+            <div class="point-info__container">
+                <div class="wrapper">
+                    <h2 class="modal-title letter-spacing">Товарищество пиво- и медоваренного завода Ивана Дурдина</h2>
+                    <div class="info__item">
+                        <div class="working-hours letter-spacing">
+                            <div class="working-hours__item">Время работы:</div>
+                            <div class="working-hours__item">
+                                <span>Пн</span>
+                                <span>9:00-21:00</span>
+                            </div>
+                            <div class="working-hours__item">
+                                <span>Вт</span>
+                                <span>9:00-21:00</span>
+                            </div>
+                            <div class="working-hours__item">
+                                <span>Ср</span>
+                                <span>9:00-21:00</span>
+                            </div>
+                            <div class="working-hours__item">
+                                <span>Чт</span>
+                                <span>9:00-21:00</span>
+                            </div>
+                            <div class="working-hours__item">
+                                <span>Пт</span>
+                                <span>9:00-21:00</span>
+                            </div>
+                            <div class="working-hours__item">
+                                <span>Сб</span>
+                                <span>9:00-21:00</span>
+                            </div>
+                            <div class="working-hours__item">
+                                <span>Вс</span>
+                                <span>9:00-21:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info__item">
+                        <ul>
+                            <li>Алкоголь</li>
+                            <li>Закуски</li>
+                            <li>Безалкогольная продукция</li>
+                        </ul>
+                    </div>
+                    <div class="info__item">
+                        <div class="network-about__links">
+                            <a href="tel:+79876543210" class="info__phone">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#phone"></use>
+                                </svg>
+                                <span>+7 (987) 654-32-10</span>
+                            </a>
+                            <a href="tel:+79876543210" class="info__phone">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#phone"></use>
+                                </svg>
+                                <span>+7 (987) 654-32-10</span>
+                            </a>
+                            <a href="mailto:email@mail.ru" class="info__phone">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#email"></use>
+                                </svg>
+                                <span>email@mail.ru</span>
+                            </a>
+                            <a href="mailto:riba_pivo2004class@yandex.ru" class="info__phone">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#email"></use>
+                                </svg>
+                                <span>riba_pivo2004class@yandex.ru</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info__item">
+                        <div class="content-style">
+                            <p>Пиво, сочетающее в себе все преимущества легких сортов пива. Хорошо утоляет жажду.
+                                Как говорит народ: «Душа прохладу любит, а плоть – пар!». И тут с ним никак не
+                                поспоришь! Что может быть лучше, чем в жаркий летний денек откупорить бутылочку пива
+                                «Пенная прохлада»? Это легкое пиво с богатой историей. Прекрасно утоляет жажду,
+                                поднимает настроение, придает силы.</p>
+                        </div>
+                    </div>
+                    <div class="info__item">
+                        <div class="info__title">Юридическое лицо</div>
+                        <div class="info__text letter-spacing">Пиво, сочетающее в себе все преимущества легких сортов
+                            пива.
+                            Хорошо утоляет
+                            жажду. 123456789</div>
+                    </div>
+                    <div class="info__item">
+                        <div class="info__title">Инн ООО</div>
+                        <div class="info__text letter-spacing">Пиво, сочетающее в себе все преимущества легких сортов
+                            пива.
+                            Хорошо утоляет
+                            жажду. 123456789</div>
+                    </div>
+                    <div class="info__item">
+                        <div class="info__title">ОГРН:</div>
+                        <div class="info__text letter-spacing">1-02-66-05-60662-0</div>
+                    </div>
+                    <div class="info__item">
+                        <div class="info__title">Наш адрес регистрации:</div>
+                        <div class="info__text letter-spacing">ул. Центральный проезд Хорошёвского Серебряного Бора, 10
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0)" class="modal-close">
+            <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="block-swipe__btn block-swipe__btn point-info__btn"></div>
+    </div>
+    <!-- КОНЕЦ ВСПЛЫВАШКА ОПИСАНИЕ ТОЧКИ -->
+
     <!-- НАЧАЛО ТАББАРА -->
 <div class="tabbar">
     <div class="wrapper">
@@ -2695,7 +2818,7 @@
                         stroke="#F4A519" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
-            <a class="tabbar__item" href="javascript:void(0)">
+            <a class="tabbar__item call-cart" href="javascript:void(0)">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M7.33366 20.1667C7.83992 20.1667 8.25033 19.7563 8.25033 19.25C8.25033 18.7438 7.83992 18.3334 7.33366 18.3334C6.8274 18.3334 6.41699 18.7438 6.41699 19.25C6.41699 19.7563 6.8274 20.1667 7.33366 20.1667Z"

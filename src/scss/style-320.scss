@@ -3192,6 +3192,10 @@ svg {
     background-color: var(--gray-light);
 }
 
+.select-input {
+    padding-right: 5.4rem;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
@@ -3590,13 +3594,106 @@ svg {
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 1px;
+        height: 0.1rem;
         width: 100%;
         background-color: var(--gray-extralight);
     }
 
     &:nth-of-type(1) {
         padding-top: 0;
+    }
+
+    &:nth-last-of-type(1) {
+        &::after {
+            content: none;
+        }
+    }
+
+
+    ul {
+        li {
+            padding-left: 1.6rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.9rem;
+                width: 0.4rem;
+                height: 0.4rem;
+                background-color: var(--gray-medium);
+                border-radius: 50%;
+            }
+
+
+            ul {
+                li {
+                    padding-left: 1.4rem;
+
+                    &:nth-of-type(1) {
+                        margin-top: 0;
+                    }
+
+                    &::before {
+                        width: 0.2rem;
+                        height: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    ol {
+        counter-reset: section;
+
+        li {
+            padding-left: 3.3rem;
+
+            &::before {
+                content: counters(section, ".") ".";
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-family: 'Manrope';
+                font-weight: 500;
+                font-size: 1.4rem;
+                line-height: 2rem;
+                counter-increment: section;
+                color: var(--gray-dark);
+            }
+
+            ol {
+                li {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    padding: 0;
+
+                    &::before {
+                        content: counters(section, ".") "";
+                        margin-right: 1.2rem;
+                        display: block;
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        position: relative;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.02em;
+        color: var(--gray-dark);
+    }
+
+    .content-style p:nth-of-type(1) {
+        margin-top: 0;
     }
 }
 
@@ -6066,10 +6163,6 @@ svg {
 .select {
     margin-top: 1.2rem;
 
-    .form-input {
-        padding-right: 5.4rem;
-    }
-
     .filters__dots-window-wrapper {
         width: 100%;
         padding-top: 1.6rem;
@@ -6116,6 +6209,109 @@ svg {
 }
 
 /*КОНЕЦ ОФОРМЛЕНИЕ ЗАКАЗА*/
+
+/*###############################################################################################################################*/
+/*ОПИСАНИЕ ТОЧКИ*/
+.block-swipe-point-info {
+    max-height: 90vh;
+    text-align: initial;
+
+    .modal-title {
+        text-align: center;
+    }
+}
+
+.point-info__wrapper {
+    max-height: calc(100vh - 11.6rem);
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--gray-medium);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-medium) transparent;
+}
+
+.working-hours {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: var(--gray-dark);
+}
+
+.working-hours__item {
+    display: flex;
+    align-items: center;
+
+    span+span {
+        margin-left: 0.8rem;
+    }
+}
+
+/*КОНЕЦ ОПИСАНИЕ ТОЧКИ*/
+
+/*######################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ МОДАЛЬНОЕ ОКНО С ВЫБОРОМ ЛОКАЦИИ*/
+.block-swipe-geolocation {
+    padding-top: 5.6rem;
+    text-align: initial;
+
+    .modal-title {
+        margin-bottom: 1.6rem;
+        text-align: center;
+    }
+
+    .map-view__map {
+        height: 38vh;
+        margin-top: 2.4rem;
+        border-radius: unset;
+    }
+
+    .vertical-center {
+        height: 100%;
+    }
+
+    .wrapper {
+        height: fit-content;
+    }
+
+    .filters__dots-window-wrapper {
+        width: 100%;
+    }
+
+    .filters__dots-window {
+        max-height: 20.4rem;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 0.9rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border: 0.45rem solid rgba(0, 0, 0, 0);
+            background-color: var(--gray-medium);
+            background-clip: padding-box;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        scrollbar-width: thin;
+        scrollbar-color: var(--gray-medium) transparent;
+    }
+}
+
+/*КОНЕЦ СТИЛЕЙ МОДАЛЬНОЕ ОКНО С ВЫБОРОМ ЛОКАЦИИ*/
 
 .ajax_main {
     position: relative;

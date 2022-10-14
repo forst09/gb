@@ -246,7 +246,7 @@
                         </svg>
                         <div class="view-btn__item-text letter-spacing">Плитка</div>
                     </div>
-                    <div class="view-btn__item tab" data-id="view" data-tab="viewMap">
+                    <div class="view-btn__item tab" data-id="view" data-tab="viewMap" data-map="#map">
                         <svg>
                             <use xlink:href="img/icons/sprite.svg#map"></use>
                         </svg>
@@ -1184,7 +1184,8 @@
             <div class="choice-city__address letter-spacing">ул. Центральный проезд Хорошёвского Серебряного Бора,
                 3А</div>
             <div class="choice-city__buttons">
-                <a class="btn-text btn-text--gray letter-spacing" href="javascript:void(0)">Нет, другой</a>
+                <a class="btn-text btn-text--gray letter-spacing" href="javascript:void(0)" data-map="#mapGeo">Нет,
+                    другой</a>
                 <a class="btn-text btn-text--orange letter-spacing" href="javascript:void(0)">Да, верно</a>
             </div>
         </div>
@@ -1383,6 +1384,91 @@
     </div>
     <!-- КОНЕЦ ВСПЛЫВАШКА ОБРАТНАЯЯ СВЯЗЬ -->
 
+    <!-- ВСПЛЫВАШКА МОДАЛЬНОЕ ОКНО С ВЫБОРОМ ЛОКАЦИИ -->
+    <div class="block-swipe__background block-swipe__background-geolocation active">
+    </div>
+    <div class="block-swipe block-swipe-modal block-swipe-geolocation active">
+        <div class="wrapper">
+            <h2 class="modal-title modal-title--icon letter-spacing">ул. Центральный проезд Хорошёвского Серебряного
+                Бора, 3А</h2>
+        </div>
+        <form action="">
+            <div class="wrapper">
+                <div class="feedback__wrapper">
+                    <div class="input-wrapper">
+                        <input class="form-input" type="text" id="checkoutModalTime">
+                        <label for="checkoutModalTime" class="label-transform">Город или населенный
+                            пункт</label>
+                        <label for="checkoutModalTime" class="label-select">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#up-down"></use>
+                            </svg>
+                        </label>
+                        <div class="filters__dots-window-wrapper">
+                            <div class="filters__dots-window">
+                                <a class="filters__dots-window-item letter-spacing select-js"
+                                    href="javascript:void(0)">г. Нижний Новгород</a>
+                                <a class="filters__dots-window-item letter-spacing select-js"
+                                    href="javascript:void(0)">г. Ухта</a>
+                                <a class="filters__dots-window-item letter-spacing select-js"
+                                    href="javascript:void(0)">г.Кстово</a>
+                                <a class="filters__dots-window-item letter-spacing select-js"
+                                    href="javascript:void(0)">г. Санкт-Петербург</a>
+                                <a class="filters__dots-window-item letter-spacing select-js"
+                                    href="javascript:void(0)">г. Печора</a>
+                                <a class="filters__dots-window-item letter-spacing select-js"
+                                    href="javascript:void(0)">г. Усинск</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="form-input" type="text" id="checkoutModalTime">
+                        <label for="checkoutModalTime" class="label-transform">Улица, дом</label>
+                        <label for="checkoutModalTime" class="label-select">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#up-down"></use>
+                            </svg>
+                        </label>
+                        <div class="filters__dots-window-wrapper">
+                            <div class="filters__dots-window">
+                                <a class="filters__dots-window-item letter-spacing select-js street-js"
+                                    href="javascript:void(0)">Ленина 1</a>
+                                <a class="filters__dots-window-item letter-spacing select-js street-js"
+                                    href="javascript:void(0)">Ленина 2</a>
+                                <a class="filters__dots-window-item letter-spacing select-js street-js"
+                                    href="javascript:void(0)">ул. Центральный проезд Хорошёвского Серебряного Бора,
+                                    3А</a>
+                                <a class="filters__dots-window-item letter-spacing select-js street-js"
+                                    href="javascript:void(0)">Ленина 4</a>
+                                <a class="filters__dots-window-item letter-spacing select-js street-js"
+                                    href="javascript:void(0)">Ленина 5</a>
+                                <a class="filters__dots-window-item letter-spacing select-js street-js"
+                                    href="javascript:void(0)">Ленина 6</a>
+                                <a class="filters__dots-window-item letter-spacing select-js street-js"
+                                    href="javascript:void(0)">Ленина 7</a>
+                                <a class="filters__dots-window-item letter-spacing select-js street-js"
+                                    href="javascript:void(0)">Ленина 8</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-view__map">
+                <div class="ymaps js-map" id="mapGeo" data-coords="56.320788205890956, 44.00700162626882">
+                </div>
+            </div>
+            <div class="form__submit-wrapper">
+                <input type="submit" value="Продолжить" class="btn-text btn-text--orange letter-spacing">
+            </div>
+        </form>
+        <a href="javascript:void(0)" class="modal-close">
+            <svg>
+                <use xlink:href="img/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+    </div>
+    <!-- КОНЕЦ ВСПЛЫВАШКА МОДАЛЬНОЕ ОКНО С ВЫБОРОМ ЛОКАЦИИ -->
+
     <!-- СТРЕЛКА НАВЕРХ -->
     <a href="#" class="arrow-top hide">
         <svg>
@@ -1507,7 +1593,7 @@
                         stroke="#F4A519" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
-            <a class="tabbar__item" href="javascript:void(0)">
+            <a class="tabbar__item call-cart" href="javascript:void(0)">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M7.33366 20.1667C7.83992 20.1667 8.25033 19.7563 8.25033 19.25C8.25033 18.7438 7.83992 18.3334 7.33366 18.3334C6.8274 18.3334 6.41699 18.7438 6.41699 19.25C6.41699 19.7563 6.8274 20.1667 7.33366 20.1667Z"

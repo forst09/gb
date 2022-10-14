@@ -2756,6 +2756,10 @@ svg {
   background-color: var(--gray-light);
 }
 
+.select-input {
+  padding-right: 5.4rem;
+}
+
 /*КОНЕЦ ОБЩИХ СТИЛЕЙ */
 /*НАЧАЛО СТИЛЕЙ ГЛАВНОЙ СТРАНИЦЫ*/
 .filters__mobile-btn svg {
@@ -3125,12 +3129,82 @@ svg {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 1px;
+  height: 0.1rem;
   width: 100%;
   background-color: var(--gray-extralight);
 }
 .info__item:nth-of-type(1) {
   padding-top: 0;
+}
+.info__item:nth-last-of-type(1)::after {
+  content: none;
+}
+.info__item ul li {
+  padding-left: 1.6rem;
+}
+.info__item ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--gray-medium);
+  border-radius: 50%;
+}
+.info__item ul li ul li {
+  padding-left: 1.4rem;
+}
+.info__item ul li ul li:nth-of-type(1) {
+  margin-top: 0;
+}
+.info__item ul li ul li::before {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.info__item ol {
+  counter-reset: section;
+}
+.info__item ol li {
+  padding-left: 3.3rem;
+}
+.info__item ol li::before {
+  content: counters(section, ".") ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  counter-increment: section;
+  color: var(--gray-dark);
+}
+.info__item ol li ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+}
+.info__item ol li ol li::before {
+  content: counters(section, ".") "";
+  margin-right: 1.2rem;
+  display: block;
+  position: static;
+}
+.info__item li {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.02em;
+  color: var(--gray-dark);
+}
+.info__item .content-style p:nth-of-type(1) {
+  margin-top: 0;
 }
 
 .info__phone {
@@ -5352,9 +5426,6 @@ svg {
 .select {
   margin-top: 1.2rem;
 }
-.select .form-input {
-  padding-right: 5.4rem;
-}
 .select .filters__dots-window-wrapper {
   width: 100%;
   padding-top: 1.6rem;
@@ -5394,6 +5465,91 @@ svg {
 }
 
 /*КОНЕЦ ОФОРМЛЕНИЕ ЗАКАЗА*/
+/*###############################################################################################################################*/
+/*ОПИСАНИЕ ТОЧКИ*/
+.block-swipe-point-info {
+  max-height: 90vh;
+  text-align: initial;
+}
+.block-swipe-point-info .modal-title {
+  text-align: center;
+}
+
+.point-info__wrapper {
+  max-height: calc(100vh - 11.6rem);
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-medium) transparent;
+}
+.point-info__wrapper::-webkit-scrollbar {
+  width: 2px;
+}
+.point-info__wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--gray-medium);
+}
+.point-info__wrapper::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.working-hours {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: var(--gray-dark);
+}
+
+.working-hours__item {
+  display: flex;
+  align-items: center;
+}
+.working-hours__item span + span {
+  margin-left: 0.8rem;
+}
+
+/*КОНЕЦ ОПИСАНИЕ ТОЧКИ*/
+/*######################################################################################################################################*/
+/*НАЧАЛО СТИЛЕЙ МОДАЛЬНОЕ ОКНО С ВЫБОРОМ ЛОКАЦИИ*/
+.block-swipe-geolocation {
+  padding-top: 5.6rem;
+  text-align: initial;
+}
+.block-swipe-geolocation .modal-title {
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+.block-swipe-geolocation .map-view__map {
+  height: 38vh;
+  margin-top: 2.4rem;
+  border-radius: unset;
+}
+.block-swipe-geolocation .vertical-center {
+  height: 100%;
+}
+.block-swipe-geolocation .wrapper {
+  height: fit-content;
+}
+.block-swipe-geolocation .filters__dots-window-wrapper {
+  width: 100%;
+}
+.block-swipe-geolocation .filters__dots-window {
+  max-height: 20.4rem;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-medium) transparent;
+}
+.block-swipe-geolocation .filters__dots-window::-webkit-scrollbar {
+  width: 0.9rem;
+}
+.block-swipe-geolocation .filters__dots-window::-webkit-scrollbar-thumb {
+  border: 0.45rem solid rgba(0, 0, 0, 0);
+  background-color: var(--gray-medium);
+  background-clip: padding-box;
+}
+.block-swipe-geolocation .filters__dots-window::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/*КОНЕЦ СТИЛЕЙ МОДАЛЬНОЕ ОКНО С ВЫБОРОМ ЛОКАЦИИ*/
 .ajax_main {
   position: relative;
 }

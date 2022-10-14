@@ -247,9 +247,16 @@ $(document).ready(function () {
     });
 
     //МОДАЛКА КОРЗИНЫ С ШАПКИ
-    $(document).on('click', '.header__cart', function (e) {
-        $(this).addClass('active');
+    $(document).on('click', '.call-cart', function (e) {
+        if ($(this).hasClass('header__cart')) {
+            $(this).addClass('active');
+        }
         openModal('.block-swipe-cart', '.block-swipe__background-cart');
+    });
+
+    //ОТКРЫТЬ МОДАЛКУ С ИНФОЙ О ТОЧКЕ
+    $(document).on('click', '.alert', function () {
+        openModal('.block-swipe__background-point-info', '.block-swipe-point-info');
     });
 
     //ОТКРЫТЬ ВСПЛЫВАШКУ КОРЗИНА ПО КЛИКУ НА ЗАКРЕП КОРЗИНА
@@ -260,6 +267,23 @@ $(document).ready(function () {
     //ЗАКРЫТЬ ВСПЛЫВАШКУ ВЫБОРА ГОРОДА ПО КЛИКУ НА КНОПКУ ДА, ВЕРНО
     $(document).on('click', '.block-swipe-city .btn-text--orange', function () {
         closeModal('.block-swipe-city', '.block-swipe__background-city');
+    });
+
+    //ОТКРЫТЬ ВСПЛЫВАШКУ С ГЕОЛОКАЦИЕЙ ПО КЛИКУ НА КНОПКУ НЕТ, ДРУГОЙ
+    $(document).on('click', '.block-swipe-city .btn-text--gray', function () {
+        closeModal('.block-swipe-city', '.block-swipe__background-city');
+        openModal('.block-swipe__background-geolocation', '.block-swipe-geolocation');
+        if (this.hasAttribute('data-map')) {
+            $.map([...$(".js-map")], function (map) {
+                $(map).empty();
+            });
+            if (!isMapLoaded) {
+                creatMapsScript($(this).attr('data-map').split("#")[1]);
+                isMapLoaded = true;
+            } else {
+                renderMap($(this).attr('data-map').split("#")[1]);
+            }
+        }
     });
 
     //ПО КЛИКУ НА ПАЛОЧКУ ЗАКРЫТЬ ВСПЛЫВАШКУ
@@ -347,6 +371,9 @@ $(document).ready(function () {
     $(document).on('click', '.select-js', function () {
         $(this).parents('.input-wrapper').find('.label-transform').addClass('active');
         $(this).parents('.input-wrapper').find('.form-input').val($(this).text());
+        if ($(this).hasClass('street-js')) {
+            $(this).parents('.block-swipe').find('.modal-title').text($(this).text());
+        }
     });
 
     //ОТКРЫТЬ БЫСТРЫЙ ПРОСМОТР ПО КЛИКУ НА ФОТО ТОВАРА
@@ -705,9 +732,21 @@ $(document).ready(function () {
         root: null,
         threshold: 0.15,
     });
+
     if (jsMap) mapObserver.observe(jsMap);
 
     $(document).on("click", ".view-btn__item", function () {
+        if (this.hasAttribute('data-map')) {
+            $.map([...$(".js-map")], function (map) {
+                $(map).empty();
+            });
+            if (!isMapLoaded) {
+                creatMapsScript($(this).attr('data-map').split("#")[1]);
+                isMapLoaded = true;
+            } else {
+                renderMap($(this).attr('data-map').split("#")[1]);
+            }
+        };
         let post = {
             view_objects: $(this).data("view"),
             ajax: "Y",
@@ -719,13 +758,23 @@ $(document).ready(function () {
         BX.ajax.post(window.location.href, post, function (data) {
             $(".tab-content").html($(data).find(".wrapper"));
             $(".loader").remove();
-
+            // if (this.hasAttribute('data-map')) {
+            //     $.map([...$(".js-map")], function (map) {
+            //         $(map).empty();
+            //     });
+            //     if (!isMapLoaded) {
+            //         creatMapsScript($(this).attr('data-map').split("#")[1]);
+            //         isMapLoaded = true;
+            //     } else {
+            //         renderMap($(this).attr('data-map').split("#")[1]);
+            //     }
+            // }
             //reinit js functions
-            if (typeof ymaps !== "undefined") {
-                renderMap();
-            } else {
-                creatMapsScript($(data).find(".ymaps").attr("id"));
-            }
+            // if (typeof ymaps !== "undefined") {
+            //     renderMap();
+            // } else {
+            //     creatMapsScript($(data).find(".ymaps").attr("id"));
+            // }
             SimpleScrollbar.initAll();
         });
     });
