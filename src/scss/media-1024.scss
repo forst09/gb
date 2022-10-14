@@ -1769,13 +1769,8 @@
     }
 
     .point__info-address {
-        padding: 0;
+        border-top: unset;
         margin: 0;
-        border: unset;
-        max-width: 50%;
-        text-align: left;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
     }
 
     .preferential {
@@ -1891,6 +1886,12 @@
             width: 1.9rem;
             height: 1.7rem;
         }
+    }
+
+    .point__address-fav-more {
+        margin: 0;
+        padding: 0;
+        border: unset;
     }
 
     /*ПУСТАЯ ТОЧКА*/
