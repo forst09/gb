@@ -370,12 +370,11 @@ $(document).ready(function () {
     //ВЫБРАТЬ ДАТУ ИЛИ ВРЕМЯ НА ОФОРМЛЕНИИ ЗАКАЗА
     $(document).on('click', '.select-js', function () {
         $(this).parents('.input-wrapper').find('.label-transform').addClass('active');
-        $(this).parents('.input-wrapper').find('.form-input').val($(this).text());
+        // $(this).parents('.input-wrapper').find('.form-input').val($(this).text());
+        this.closest('.input-wrapper').querySelector('.form-input').value = this.innerText;
         $(this).parents('.input-wrapper').find('.input-reset').removeClass('hide');
-        console.log($(this).text());
         if ($(this).hasClass('street-js')) {
             $(this).parents('.block-swipe').find('.modal-title').text($(this).text());
-            console.log($(this).parents('.block-swipe').find('.modal-title').text());
         }
     });
 
