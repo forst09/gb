@@ -5521,6 +5521,9 @@ svg {
   display: flex;
   align-items: center;
 }
+.working-hours__item span {
+  min-width: 2rem;
+}
 .working-hours__item span + span {
   margin-left: 0.8rem;
 }

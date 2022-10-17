@@ -6295,6 +6295,10 @@ svg {
     display: flex;
     align-items: center;
 
+    span {
+        min-width: 2rem;
+    }
+
     span+span {
         margin-left: 0.8rem;
     }
