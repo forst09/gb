@@ -738,6 +738,7 @@ $(document).ready(function () {
                     myMap.controls.remove("searchControl");
                     myMap.geoObjects
                         .add(myPlacemarkWithContent);
+
                 });
             }
 
