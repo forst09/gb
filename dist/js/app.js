@@ -308,11 +308,21 @@ $(document).ready(function () {
 
     //ЗАКРЫТЬ МОДАЛКУ СБРОС КОРЗИНЫ ПО КЛИКУ НА ОТМЕНА
     $(document).on('click', '.block-swipe-cart-cancel .btn-text--gray', function () {
-        closeModal('.block-swipe-order-cancel', '.block-swipe__background-order-cancel');
+        closeModal('.block-swipe-cart-cancel', '.block-swipe__background-cart-cancel');
     });
 
     //ЗАКРЫТЬ МОДАЛКУ СБРОС КОРЗИНЫ ПО КЛИКУ НА ПРОДОЛЖИТЬ
-    $(document).on('click', '.block-swipe-logout .btn-text--orange', function () {
+    $(document).on('click', '.block-swipe-cart-cancel .btn-text--orange', function () {
+        closeModal('.block-swipe-cart-cancel', '.block-swipe__background-cart-cancel');
+    });
+
+    //ЗАКРЫТЬ МОДАЛКУ ОТМЕНА ЗАКАЗА ПО КЛИКУ НА ОТМЕНА
+    $(document).on('click', '.block-swipe-order-cancel .btn-text--gray', function () {
+        closeModal('.block-swipe-order-cancel', '.block-swipe__background-order-cancel');
+    });
+
+    //ЗАКРЫТЬ МОДАЛКУ ОТМЕНА ЗАКАЗА ПО КЛИКУ НА ПРОДОЛЖИТЬ
+    $(document).on('click', '.block-swipe-order-cancel .btn-text--orange', function () {
         closeModal('.block-swipe-order-cancel', '.block-swipe__background-order-cancel');
     });
 
@@ -682,6 +692,8 @@ $(document).ready(function () {
                         $('.icon-map1').parents('.ymaps-2-1-79-image-with-content').css('transform', '');
                     },
                     );
+
+                    var myGeocoder = ymaps.geocode("Moscow");
                 });
             }
             else {
