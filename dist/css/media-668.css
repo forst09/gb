@@ -700,6 +700,7 @@
   }
   .quick-view__info {
     margin-left: auto;
+    flex-grow: 1;
   }
   .quick-view__info .quick-view__item {
     padding: 0;
