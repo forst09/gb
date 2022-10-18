@@ -1763,6 +1763,12 @@
     font-size: 1.3rem;
     line-height: 1.8rem;
   }
+  .search .card__btns {
+    height: 3.6rem;
+  }
+  .search .btn-add {
+    padding: 0.8rem;
+  }
   .search .card__btns-count {
     padding: 0.8rem;
     max-height: 3.6rem;

@@ -92,10 +92,6 @@
   .section-white {
     margin-top: -6rem;
   }
-  .section-white::before {
-    top: -5rem;
-    width: calc(100% + 130rem);
-  }
   .scroll {
     padding: 0 8rem;
   }
