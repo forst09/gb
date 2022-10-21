@@ -1720,11 +1720,9 @@ svg {
 
 /*КОНЕЦ ВСПЛЫВАШКА ЛИЧНЫЕ ДАННЫЕ УСПЕШНО ИЗМЕНЕНЫ*/
 /* ymaps*/
-.ymaps-2-1-79-copyright__content-cell,
 .ymaps-2-1-79-gototaxi,
 .ymaps-2-1-79-gotoymaps__pin,
-.ymaps-2-1-79-gototech,
-.ymaps-2-1-79-map-copyrights-promo {
+.ymaps-2-1-79-gototech {
   display: none !important;
 }
 
@@ -1734,6 +1732,18 @@ svg {
   -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+[class*=islets_balloon_layout_panel] {
+  display: none !important;
+}
+
+[class*=controls-pane] {
+  display: none !important;
+}
+
+[class*=copyrights-pane] {
+  bottom: 0 !important;
 }
 
 .icon-map1:hover {

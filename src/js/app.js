@@ -570,6 +570,7 @@ $(document).ready(function () {
                         zoom: $(window).width() > 667 ? 17 : 14,
                     }),
 
+
                         // Создаём макет содержимого ГЕОЛОКАЦИЯ.
                         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
                             '<div class="icon-map">1</div>'
@@ -583,7 +584,8 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "/upload/images/map-geo.svg",
+                                iconImageHref: "../img/icons/map-geo.svg",
+                                // iconImageHref: "/upload/images/map-geo.svg",
                                 // Размеры метки.
                                 iconImageSize: [82, 51],
                                 // Смещение левого верхнего угла иконки относительно
@@ -594,6 +596,7 @@ $(document).ready(function () {
                                 iconContentLayout: MyIconContentLayout,
                             }
                         ),
+
 
                         // Создаём макет содержимого ЗАГЛУШКА.
                         MyIconContentLayoutPlug = ymaps.templateLayoutFactory.createClass(
@@ -607,7 +610,8 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "/upload/images/map-plug.svg",
+                                // iconImageHref: "/upload/images/map-plug.svg",
+                                iconImageHref: "../img/icons/map-plug.svg",
                                 // Размеры метки.
                                 iconImageSize: [60, 66],
                                 // Смещение левого верхнего угла иконки относительно
@@ -631,7 +635,8 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "/upload/images/map-dot.svg",
+                                // iconImageHref: "/upload/images/map-dot.svg",
+                                iconImageHref: "../img/icons/map-dot.svg",
                                 // Размеры метки.
                                 iconImageSize: [39, 39],
                                 // Смещение левого верхнего угла иконки относительно
@@ -655,7 +660,8 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "/upload/images/map-store.svg",
+                                iconImageHref: "../img/icons/map-store.svg",
+                                // iconImageHref: "/upload/images/map-store.svg",
                                 // Размеры метки.
                                 iconImageSize: [60, 66],
                                 // Смещение левого верхнего угла иконки относительно
@@ -666,6 +672,7 @@ $(document).ready(function () {
                                 iconContentLayout: MyIconContentLayout1,
                             }
                         );
+
 
                     myMap.controls.remove("zoomControl");
                     myMap.controls.remove("rulerControl");
@@ -683,6 +690,23 @@ $(document).ready(function () {
                     myMap.geoObjects
                         .add(myPlacemarkWithContentDot);
 
+                    let cluster = new ymaps.Clusterer({
+                        clusterIcons: [
+                            {
+                                href: '../img/icons/map-claster.png',
+                                size: [100, 100],
+                                offset: [-50, -50]
+                            }
+                        ],
+                        clusterIconContentLayout: null
+                    });
+
+                    cluster.add(myPlacemarkWithContent);
+                    cluster.add(myPlacemarkWithContent1);
+                    cluster.add(myPlacemarkWithContentPlug);
+                    cluster.add(myPlacemarkWithContentDot);
+                    myMap.geoObjects.add(cluster);
+
                     // СДЕЛАТЬ ЦИКЛ ДЛЯ ФОРМИРОВАНИЯ МЕТКИ!!!!!!!!!!!
                     myPlacemarkWithContentPlug.events.add('mouseenter', function () {
                         $('.icon-map1').parents('.ymaps-2-1-79-image-with-content').css('transform', 'scale(2)');
@@ -692,9 +716,112 @@ $(document).ready(function () {
                         $('.icon-map1').parents('.ymaps-2-1-79-image-with-content').css('transform', '');
                     },
                     );
-
-                    var myGeocoder = ymaps.geocode("Moscow");
                 });
+            }
+            else if ($(`#${mapId}`).hasClass("map-geolocation")) {
+                ymaps.ready(function () {
+                    // Пример реализации собственного элемента управления на основе наследования от collection.Item.
+                    // Элемент управления отображает название объекта, который находится в центре карты.
+                    var map = new ymaps.Map("mapGeo", {
+                        center: [55.819543, 37.611619],
+                        zoom: 6,
+                        controls: ['searchControl']
+                    }
+                    )
+                    // ,
+
+                    //     // Создаем собственный класс.
+                    //     CustomControlClass = function (options) {
+                    //         CustomControlClass.superclass.constructor.call(this, options);
+                    //         this._$content = null;
+                    //         this._geocoderDeferred = null;
+                    //     };
+                    // // И наследуем его от collection.Item.
+                    // ymaps.util.augment(CustomControlClass, ymaps.collection.Item, {
+                    //     onAddToMap: function (map) {
+                    //         CustomControlClass.superclass.onAddToMap.call(this, map);
+                    //         this._lastCenter = null;
+                    //         this.getParent().getChildElement(this).then(this._onGetChildElement, this);
+                    //     },
+
+                    //     onRemoveFromMap: function (oldMap) {
+                    //         this._lastCenter = null;
+                    //         if (this._$content) {
+                    //             this._$content.remove();
+                    //             this._mapEventGroup.removeAll();
+                    //         }
+                    //         CustomControlClass.superclass.onRemoveFromMap.call(this, oldMap);
+                    //     },
+
+                    //     _onGetChildElement: function (parentDomContainer) {
+                    //         // Создаем HTML-элемент с текстом.
+                    //         this._$content = $('<div class="customControl"></div>').appendTo(parentDomContainer);
+                    //         this._mapEventGroup = this.getMap().events.group();
+                    //         // Запрашиваем данные после изменения положения карты.
+                    //         this._mapEventGroup.add('boundschange', this._createRequest, this);
+                    //         // Сразу же запрашиваем название места.
+                    //         this._createRequest();
+                    //     },
+
+                    //     _createRequest: function () {
+                    //         var lastCenter = this._lastCenter = this.getMap().getCenter().join(',');
+                    //         // Запрашиваем информацию о месте по координатам центра карты.
+                    //         ymaps.geocode(this._lastCenter, {
+                    //             // Указываем, что ответ должен быть в формате JSON.
+                    //             json: true,
+                    //             // Устанавливаем лимит на кол-во записей в ответе.
+                    //             results: 1
+                    //         }).then(function (result) {
+                    //             // Будем обрабатывать только ответ от последнего запроса.
+                    //             if (lastCenter == this._lastCenter) {
+                    //                 this._onServerResponse(result);
+                    //             }
+                    //         }, this);
+                    //     },
+
+                    //     _onServerResponse: function (result) {
+                    //         // Данные от сервера были получены и теперь их необходимо отобразить.
+                    //         // Описание ответа в формате JSON.
+                    //         var members = result.GeoObjectCollection.featureMember,
+                    //             geoObjectData = (members && members.length) ? members[0].GeoObject : null;
+                    //         if (geoObjectData) {
+                    //             // $('.form-input[id="checkoutGeolocationCity"]').val(geoObjectData.metaDataProperty.GeocoderMetaData.text);
+                    //             // this._$content.text(geoObjectData.metaDataProperty.GeocoderMetaData.text);
+                    //         }
+                    //     }
+                    // });
+
+                    // var customControl = new CustomControlClass();
+                    // map.controls.add(customControl, {
+                    //     float: 'none',
+                    //     position: {
+                    //         top: 10,
+                    //         left: 10
+                    //     }
+                    // });
+                    // //ПОИСК ПО КАРТЕ 
+                    var searchControl = new ymaps.control.SearchControl({
+                        options: {
+                            // Будет производиться поиск и по топонимам, и по организациям.
+                            provider: 'yandex#search'
+                        }
+                    });
+
+                    // Добавляем элемент управления на карту.
+                    map.controls.add(searchControl);
+                    let inputs = $('.js-find');
+                    console.log(inputs)
+                    $(document).on('input', '.js-find', function () {
+                        let streetValue, cityValue;
+                        let commonValue = '';
+                        for (let i = 0; i < inputs.length; i++) {
+                            commonValue = commonValue + $(inputs).eq(i).val() + ' ';
+                        }
+                        searchControl.search(commonValue);
+                        console.log(commonValue)
+                    });
+                });
+                //КОНЕЦ ПОИСК ПО КАРТЕ
             }
             else {
                 ymaps.ready(function () {
@@ -748,7 +875,7 @@ $(document).ready(function () {
     const creatMapsScript = function (id) {
         let scriptYMAPS = document.createElement("script");
         scriptYMAPS.src =
-            "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<ваш API-ключ>";
+            "https://api-maps.yandex.ru/2.1/?apikey=e2ae43d9-0c0a-49c7-9736-80d055e3dcf2&lang=ru_RU";
         scriptYMAPS.setAttribute("async", "");
         document
             .querySelector("body")

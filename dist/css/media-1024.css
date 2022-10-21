@@ -1872,6 +1872,7 @@
   .quick-view__cost .card__btns {
     width: auto;
     height: 4.2rem;
+    min-width: 12.9rem;
   }
   .quick-view__cost .card__btns-count {
     max-height: 4.2rem;
