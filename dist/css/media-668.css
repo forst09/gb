@@ -86,28 +86,79 @@
   }
   /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 668*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .header__logo {
-    width: 5.6rem;
-    height: 5rem;
+    width: 3.6rem;
+    height: 3.2rem;
+    order: 2;
+    position: static;
+    transform: unset;
   }
   .header__search {
     width: calc(100% - 8.8rem);
   }
   .place {
-    max-width: 47.6rem;
-    padding-right: 3.5rem;
+    color: var(--white);
+    position: relative;
+    max-width: 23.4rem;
+    display: inline-flex;
+    align-items: center;
+    padding-right: 2rem;
+    order: 1;
   }
   .place::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
     width: 1.1rem;
     height: 1.6rem;
     background-size: 1.1rem 1.6rem;
+    background-image: url("../img/icons/arrow-right.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .place__icon {
+    margin-right: 0.8rem;
   }
   .place__text {
     font-size: 1.4rem;
+    display: none;
+    font-weight: 700;
   }
   .place__address {
     font-size: 1.4rem;
     line-height: 2.2rem;
+  }
+  .place__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 17.9rem;
+  }
+  .header__icons {
+    display: flex;
+    align-items: center;
+    order: 3;
+  }
+  .header__icons-item--personal {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .header__icons-item--personal svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .header__icons-item--personal svg path {
+    stroke: var(--white);
   }
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 668*/
   /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ 668*/

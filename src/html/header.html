@@ -6,7 +6,8 @@
                 <picture>
                     <source srcset="@img/logos/gb-logo-long.svg" type="image/svg+xml" media="(min-width: 1500px)">
                     <source srcset="@img/logos/gb-logo.svg" type="image/svg+xml" media="(min-width: 1024px)">
-                    <source srcset="@img/logos/gb-logo-white.svg" type="image/svg+xml" media="(min-width: 0px)">
+                    <source srcset="@img/logos/gb-logo-white.svg" type="image/svg+xml" media="(min-width: 668px)">
+                    <source srcset="@img/logos/gb-logo-long-white.svg" type="image/svg+xml" media="(min-width: 0px)">
                     <img src="@img/logos/gb-logo-white.svg" alt="logo">
                 </picture>
             </a>
@@ -25,19 +26,30 @@
                 </form>
             </div>
             <a class="place" href="javascript:void(0)">
-                <div class="place__text letter-spacing">Вы находитесь:</div>
-                <div class="place__address ellipsis letter-spacing">ул. Центральный проезд Хорошёвско, 3А</div>
+                <div class="place__icon">
+                    <img src="img/icons/header-geo.svg" alt="geolocation">
+                </div>
+                <div class="place__info display-none">
+                    <div class="place__text letter-spacing">Вы находитесь:</div>
+                    <div class="place__address ellipsis letter-spacing">ул. Центральный проезд Хорошёвско, 3А</div>
+                </div>
+            </a>
+            <a href="javascript:void(0)" class="btn-cart-header display-none">
+                <svg>
+                    <use xlink:href="@img/icons/sprite.svg#headerCart"></use>
+                </svg>
+                <span>155 550 ₽</span>
             </a>
             <ul class="header__icons display-none">
-                <li class="header__icons-item">
+                <!-- <li class="header__icons-item">
                     <a href="javascript:void(0)">
                         <svg>
                             <use xlink:href="@img/icons/sprite.svg#box"></use>
                         </svg>
                     </a>
-                </li>
+                </li> -->
                 <!-- ЕСЛИ К ИКОНКЕ НУЖНО КОЛИЧЕСТВО - НА РОДИТЕЛЬСКУЮ <li> ПОВЕСИТЬ КЛАСС .item-quantity -->
-                <li class="header__icons-item item-quantity">
+                <!-- <li class="header__icons-item item-quantity">
                     <a href="javascript:void(0)">
                         <svg>
                             <use xlink:href="@img/icons/sprite.svg#cart"></use>
@@ -58,6 +70,13 @@
                         </svg>
                         <span class="letter-spacing">Точка добавлена в избранное</span>
                     </div>
+                </li> -->
+                <li class="header__icons-item header__icons-item--search display-none">
+                    <a href="javascript:void(0)">
+                        <svg>
+                            <use xlink:href="@img/icons/sprite.svg#headerSearch"></use>
+                        </svg>
+                    </a>
                 </li>
                 <!-- ДОБАВИТЬ .header__icons-item--personal-unauthorized, ЕСЛИ ПОЛЬЗОВАТЕЛЬ НЕАВТОРИЗОВАН -->
                 <li class="header__icons-item header__icons-item--personal">
