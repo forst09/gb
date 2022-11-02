@@ -77,6 +77,34 @@ $(document).ready(function () {
         $(this).parents('.input-wrapper').removeClass('active');
     });
 
+    //ПОКАЗАТЬ В ШАПКЕ СКРЫТЫЕ ЭЛЕМЕНТЫ
+    function showElements(clickElement, element) {
+        if ($(clickElement).hasClass('active')) {
+            $(clickElement).removeClass('active');
+            $('.header-fixed').removeClass('show');
+            $(`.header-fixed ${element}`).slideUp();
+        }
+        else {
+            $(clickElement).addClass('active');
+            $('.header-fixed').addClass('show');
+            $(`.header-fixed ${element}`).slideDown();
+        }
+    }
+
+    //ОТКРЫТЬ ПОИСК В ФИКС ШАПКЕ
+    $(document).on('click', '.header__icons-item--search', function () {
+        showElements($(this), '.header__search');
+        $('.place__info').css('display', 'none');
+        $('.place__icon').removeClass('active');
+    });
+
+    //ОТКРЫТЬ ГЕОЛОКАЦИЮ В ФИКС ШАПКЕ
+    $(document).on('click', '.place__icon', function () {
+        showElements($(this), '.place__info');
+        $('.header__search').css('display', 'none');
+        $('.header__icons-item--search').removeClass('active');
+    });
+
     //TRIGGER CLICK ПО КНОПКЕ СОХРАНИТЬ ИЗМЕНЕНИЯ НА МОБИЛКАХ НАЖАТЬ НА ИНПУТ САБМИТ В СТРАНИЦЕ ЛИЧНЫЕ ДАННЫЕ
     $(document).on('click', '.pin-save .btn-text', function () {
         $('.personal-data__save .btn-text').trigger('click');
@@ -122,7 +150,7 @@ $(document).ready(function () {
     });
 
     //ОТКРЫТЬ ВСПЛЫВАШКУ С ВЫБОРОМ ГОРОДА
-    $(document).on("click", ".place", function () {
+    $(document).on("click", ".place__info", function () {
         openModal('.block-swipe-city', '.block-swipe__background-city');
     });
 

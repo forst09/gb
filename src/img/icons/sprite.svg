@@ -379,4 +379,10 @@
             d="M1.87891 1.87917H3.71224L6.15057 13.2642C6.24002 13.6811 6.47202 14.0539 6.80664 14.3182C7.14126 14.5826 7.55757 14.722 7.98391 14.7125H16.9489C17.3661 14.7118 17.7707 14.5688 18.0957 14.3072C18.4207 14.0455 18.6467 13.6808 18.7364 13.2733L20.2489 6.4625H4.69307"
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
+    <symbol viewBox="0 0 24 25" id="headerSearch">
+        <path
+            d="M11 19.5C15.4183 19.5 19 15.9183 19 11.5C19 7.08172 15.4183 3.5 11 3.5C6.58172 3.5 3 7.08172 3 11.5C3 15.9183 6.58172 19.5 11 19.5Z"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M21 21.5L16.65 17.15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
 </svg>

@@ -96,6 +96,7 @@
     order: 2;
     position: static;
     transform: unset;
+    margin-left: -21rem;
   }
   .header__search {
     width: calc(100% - 8.8rem);
@@ -108,22 +109,6 @@
     align-items: center;
     padding-right: 2rem;
     order: 1;
-  }
-  .place::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    display: block;
-    width: 1.1rem;
-    height: 1.6rem;
-    background-size: 1.1rem 1.6rem;
-    background-image: url("../img/icons/arrow-right.svg");
-    background-position: center center;
-    background-repeat: no-repeat;
   }
   .place__icon {
     margin-right: 0.8rem;
@@ -145,6 +130,8 @@
   .header__icons {
     display: flex;
     align-items: center;
+  }
+  .header-right {
     order: 3;
   }
   .header__icons-item--personal {

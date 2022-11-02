@@ -1254,36 +1254,37 @@ svg {
     visibility: hidden;
     pointer-events: none;
     top: -9.6rem;
-    -webkit-transition: top 0.5s ease-in-out;
-    -o-transition: top 0.5s ease-in-out;
-    transition: top 0.5s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out, height 0.7s ease;
+    -o-transition: top 0.5s ease-in-out, height 0.7s ease;
+    transition: top 0.5s ease-in-out, height 0.7s ease;
     z-index: 1000;
     width: 100%;
-    min-height: 9.6rem;
     -webkit-box-shadow: 0px 10px 30px rgba(56, 58, 61, 0.05);
     box-shadow: 0px 10px 30px rgba(56, 58, 61, 0.05);
     border-radius: 0px 0px 1.2rem 1.2rem;
     margin: 0;
-    padding-top: 1.2rem;
+    padding: 1.2rem 0;
     opacity: 0;
-
-    .header__logo {
-        width: 2.7rem;
-        height: 2.4rem;
-    }
+    height: 6.3rem;
+    min-height: auto;
 
     .header__search {
-        bottom: 1.2rem;
+        // position: static;
         -webkit-box-shadow: none;
         box-shadow: none;
+        display: none;
+        // grid-column: 1 / -1;
+        order: 4;
+        transform: unset;
+        width: calc(100% - 3.2rem);
+        left: 1.6rem;
+        // grid-area: search;
+        bottom: unset;
+        top: 6.5rem;
     }
 
     .place__text {
         display: none;
-    }
-
-    .place__address {
-        font-size: 1.4rem;
     }
 
     .search-input {
@@ -1291,12 +1292,67 @@ svg {
     }
 
     .place {
-        max-width: 54%;
+        order: 3;
+        width: auto;
+        // grid-area: geo;
     }
 
     .input-submit {
         padding: 0.3rem 1.6rem;
     }
+
+    .header-container {
+        justify-content: space-between;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(2.2rem, 1fr));
+        // grid-template-areas:
+        //     "geo logo search-btn"
+        //     "search search search";
+    }
+
+    .header__logo {
+        order: 2;
+        position: static;
+        transform: unset;
+        // grid-area: logo;
+    }
+
+    .header-right {
+        order: 1;
+        // grid-area: search-btn;
+        // text-align: right;
+    }
+
+    .place__info {
+        position: absolute;
+        display: none;
+        color: var(--white);
+        top: 7.4rem;
+        width: fit-content;
+        max-width: calc(100% - 3.2rem);
+        left: 1.6rem;
+    }
+}
+
+.place__info {
+    padding-right: 2rem;
+}
+
+.place__info::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    width: 0.8rem;
+    height: 1.2rem;
+    background-size: 0.8rem 1.2rem;
+    background-image: url('../img/icons/arrow-right.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .header-fixed.active {
@@ -1304,6 +1360,18 @@ svg {
     pointer-events: all;
     top: 0;
     opacity: 1;
+}
+
+.header-fixed.show {
+    height: 11.1rem;
+}
+
+.header__icons-item--search {
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        stroke: var(--white);
+    }
 }
 
 /*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ*/
