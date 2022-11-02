@@ -2817,6 +2817,29 @@ svg {
     position: relative;
     min-height: 17.6rem;
     padding-top: 1.4rem;
+
+    .header__search {
+        position: static;
+        transform: unset;
+        transition: width 0.5s ease;
+        width: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .header__search.active {
+        width: 100%;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .search-input {
+        padding: 0.8rem 1.2rem 0.8rem 3.8rem;
+    }
+
+    .search-input.active {
+        padding-right: 8rem;
+    }
 }
 
 .header-point__container {

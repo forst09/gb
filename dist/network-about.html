@@ -33,9 +33,23 @@
                 </svg>
                 <span class="display-none">Назад</span>
             </a>
+            <div class="search header__search">
+                <form action="">
+                    <div class="search-wrapper">
+                        <input type="text" class="search-input" id="searchHeader" placeholder="Поиск по каталогу">
+                        <label for="searchHeader" class="form-input__label">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#search"></use>
+                            </svg>
+                        </label>
+                        <input type="submit" value="Найти"
+                            class="input-submit display-none letter-spacing transition-show">
+                    </div>
+                </form>
+            </div>
             <div class="header-point__icons">
                 <ul class="header-point__icons-list">
-                    <li class="header-point__icons-item header-point__icons-item--cart header__cart call-cart">
+                    <!-- <li class="header-point__icons-item header-point__icons-item--cart header__cart call-cart">
                         <a class="header-point__icons-link" href="javascript:void(0)">
                             <svg>
                                 <use xlink:href="img/icons/sprite.svg#cart"></use>
@@ -47,6 +61,13 @@
                             </svg>
                             <span class="letter-spacing">Товар добавлен в корзину</span>
                         </div>
+                    </li> -->
+                    <li class="header-point__icons-item header-point__search">
+                        <a class="header-point__icons-link" href="javascript:void(0)">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#search"></use>
+                            </svg>
+                        </a>
                     </li>
                     <li class="header-point__icons-item header-point__icons-item--fav header__fav">
                         <a class="header-point__icons-link" href="javascript:void(0)">
@@ -60,13 +81,6 @@
                             </svg>
                             <span class="letter-spacing">Точка добавлена в избранное</span>
                         </div>
-                    </li>
-                    <li class="header-point__icons-item">
-                        <a class="header-point__icons-link" href="javascript:void(0)">
-                            <svg>
-                                <use xlink:href="img/icons/sprite.svg#search"></use>
-                            </svg>
-                        </a>
                     </li>
                 </ul>
             </div>

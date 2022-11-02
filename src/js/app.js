@@ -58,12 +58,27 @@ $(document).ready(function () {
     });
 
     //ПОИСК НА 1024 В ШАПКЕ
-    $(document).on('input', '.header .search-input', function () {
+    $(document).on('input', '.search-input', function () {
+        $(this).addClass('active');
         $(this).parents('.search-wrapper').find('.input-submit').addClass('active');
         if ($(this).val() == '') {
             $(this).parents('.search-wrapper').find('.input-submit').removeClass('active');
+            $(this).removeClass('active');
         }
     });
+
+    //ПОКАЗАТЬ ПОИСК НА ШАПКЕ ТОЧКИ
+    $(document).on('click', '.header-point__search', function () {
+        $(this).css('display', 'none');
+        $('.header-point .header__search').addClass('active');
+    })
+
+    // $(document).on('input', '.header .search-input', function () {
+    //     $(this).parents('.search-wrapper').find('.input-submit').addClass('active');
+    //     if ($(this).val() == '') {
+    //         $(this).parents('.search-wrapper').find('.input-submit').removeClass('active');
+    //     }
+    // });
 
     //ИНПУТЫ
     const labelUp = function (label) {
