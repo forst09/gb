@@ -271,6 +271,29 @@
 
     /*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ 668*/
 
+    /* ФИКС ШАПКА ДЛЯ ТОЧЕК 668*/
+    .header-point-fix {
+        height: 7.2rem;
+    }
+
+    .header-point__info {
+        max-width: 35rem;
+        text-align: center;
+        margin-left: 4rem;
+    }
+
+    .header-fixed.header-point-fix.show {
+        height: 12rem;
+    }
+
+    .header-point__info-address {
+        margin-top: 0.8rem;
+        line-height: 1.8rem;
+        font-size: 1.2rem;
+    }
+
+    /* КОНЕЦ ФИКС ШАПКА ДЛЯ ТОЧЕК 668*/
+
     /*КОНЕЦ СТИЛЕЙ БЕЛОЙ ШАПКИ 668*/
 
     /*НАЧАЛО СТИЛЕЙ ФУТЕРА 668*/

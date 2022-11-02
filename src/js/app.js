@@ -131,6 +131,9 @@ $(document).ready(function () {
             console.log('hehe')
             showElements($(this), '.js-header-search');
         }
+        else if ($(this).parents('.header-fixed').hasClass('header-point-fix')) {
+            showElements($(this), '.js-header-search');
+        }
     });
 
     //ОТКРЫТЬ ГЕОЛОКАЦИЮ В ФИКС ШАПКЕ

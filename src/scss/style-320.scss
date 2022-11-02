@@ -2904,6 +2904,61 @@ svg {
 
 /*КОНЕЦ ШАПКА ДЛЯ ТОЧЕК*/
 
+
+/* ФИКС ШАПКА ДЛЯ ТОЧЕК */
+.header-point__info-name,
+.header-point__info-address {
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+}
+
+.header-point-fix {
+    height: 6.8rem;
+
+    .header-point__container {
+        align-items: flex-start;
+    }
+
+    .back-span {
+        flex-shrink: 0;
+        padding-left: 0;
+        margin-right: 0.8rem;
+    }
+
+    .header-right {
+        margin-left: 0.8rem;
+        order: unset;
+    }
+}
+
+.header-point__info {
+    flex-grow: 1;
+    color: var(--white);
+}
+
+.header-point__info-name {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.header-point__info-address {
+    margin-top: 0.2rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.header-fixed.header-point-fix.show {
+    height: 11.6rem;
+}
+
+.header-fixed.header-point-fix .header__search {
+    top: 7rem;
+}
+
+/* КОНЕЦ ФИКС ШАПКА ДЛЯ ТОЧЕК */
+
 /*ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ*/
 .bg {
     position: relative;
