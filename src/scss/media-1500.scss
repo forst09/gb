@@ -82,17 +82,16 @@
     .header-fixed {
         padding: 1.6rem 0;
 
-        .header__logo {
-            width: 15.6rem;
-        }
-
-        .header__search {
-            width: 63.4rem;
-        }
-
         .place {
-            max-width: 26.7rem;
+            max-width: 37.8rem;
         }
+
+        .header__logo {
+            width: 17.8rem;
+            height: 4.8rem;
+            margin-right: 3.2rem;
+        }
+
     }
 
     /*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ 1500*/

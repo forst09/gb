@@ -525,6 +525,7 @@
         -webkit-box-shadow: unset;
         box-shadow: unset;
         padding: 1.6rem 0;
+        height: auto;
 
         .header__logo {
             width: 4.8rem;
@@ -532,6 +533,7 @@
             -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
             order: 1;
+            margin-left: 0;
         }
 
         .header__search {
@@ -539,6 +541,9 @@
             -ms-flex-order: 2;
             order: 2;
             max-width: unset;
+            width: 31rem;
+            position: static;
+            display: block;
         }
 
         .search-input {
@@ -555,6 +560,13 @@
             max-width: 16.9rem;
             padding: 0;
             height: auto;
+            max-width: 19.3rem;
+        }
+
+        .place__info {
+            color: var(--gray);
+            max-width: unset;
+            padding: 0;
         }
 
         .place__text {

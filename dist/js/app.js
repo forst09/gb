@@ -1,6 +1,20 @@
 'use strict';
 
 $(document).ready(function () {
+    //ФУНКЦИЯ ОТКРЫТИЯ МОДАЛОК
+    function openModal(modal, modalBackground) {
+        $(modal).addClass("active");
+        $(modalBackground).addClass("active");
+        $("html").addClass("scroll-hidden");
+    }
+
+    //ФУНКЦИЯ ЗАКРЫТИЯ МОДАЛОК
+    function closeModal(modal, modalBackground) {
+        $(modal).removeClass("active");
+        $(modalBackground).removeClass("active");
+        $("html").removeClass("scroll-hidden");
+    }
+
     //ПЕРЕКЛЮЧЕНИЕ ФИЛЬТРОВ
     $(document).on('click', '.filters__item-js', function () {
         $('.filters__item-js').removeClass('active');
@@ -92,17 +106,32 @@ $(document).ready(function () {
     }
 
     //ОТКРЫТЬ ПОИСК В ФИКС ШАПКЕ
-    $(document).on('click', '.header__icons-item--search', function () {
-        showElements($(this), '.header__search');
-        $('.place__info').css('display', 'none');
-        $('.place__icon').removeClass('active');
+    $(document).on('click', '.header-fixed .header__icons-item--search', function () {
+        if ($(window).width() < 668) {
+            showElements($(this), '.js-header-search');
+            $('.header-fixed .place__info').css('display', 'none');
+            $('.header-fixed .place__icon').removeClass('active');
+        }
+        else if ($(window).width() < 1024) {
+            console.log('hehe')
+            showElements($(this), '.js-header-search');
+        }
     });
 
     //ОТКРЫТЬ ГЕОЛОКАЦИЮ В ФИКС ШАПКЕ
-    $(document).on('click', '.place__icon', function () {
-        showElements($(this), '.place__info');
-        $('.header__search').css('display', 'none');
-        $('.header__icons-item--search').removeClass('active');
+    $(document).on('click', '.header-fixed .place__icon', function () {
+        if ($(window).width() < 668) {
+            showElements($(this), '.place__info');
+            $('.header-fixed .header__search').css('display', 'none');
+            $('.header-fixed .header__icons-item--search').removeClass('active');
+        }
+        else {
+            openModal('.block-swipe__background-geolocation', '.block-swipe-geolocation');
+        }
+    });
+
+    $(document).on('click', '.call-geolocation', function () {
+        openModal('.block-swipe__background-geolocation', '.block-swipe-geolocation');
     });
 
     //TRIGGER CLICK ПО КНОПКЕ СОХРАНИТЬ ИЗМЕНЕНИЯ НА МОБИЛКАХ НАЖАТЬ НА ИНПУТ САБМИТ В СТРАНИЦЕ ЛИЧНЫЕ ДАННЫЕ
@@ -129,20 +158,6 @@ $(document).ready(function () {
         mask: '+7 (999) 999-99-99',
         showMaskOnHover: false
     });
-
-    //ФУНКЦИЯ ОТКРЫТИЯ МОДАЛОК
-    function openModal(modal, modalBackground) {
-        $(modal).addClass("active");
-        $(modalBackground).addClass("active");
-        $("html").addClass("scroll-hidden");
-    }
-
-    //ФУНКЦИЯ ЗАКРЫТИЯ МОДАЛОК
-    function closeModal(modal, modalBackground) {
-        $(modal).removeClass("active");
-        $(modalBackground).removeClass("active");
-        $("html").removeClass("scroll-hidden");
-    }
 
     //ОТКРЫТЬ ВСПЛЫВАШКУ ОБРАТНОЙ СВЯЗИ
     $(document).on("click", ".footer__sosials-feedback", function () {

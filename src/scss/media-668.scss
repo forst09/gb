@@ -138,7 +138,6 @@
         max-width: 23.4rem;
         display: inline-flex;
         align-items: center;
-        padding-right: 2rem;
         order: 1;
     }
 
@@ -204,8 +203,8 @@
 
     /*НАЧАЛО СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ 668*/
     .header-fixed {
-        min-height: auto;
-        padding: 1.6rem 0;
+        height: 6.3rem;
+        padding: 1.2rem 0;
 
         .header-container {
             -webkit-box-orient: horizontal;
@@ -215,46 +214,58 @@
         }
 
         .header__logo {
-            -webkit-box-ordinal-group: 4;
-            -ms-flex-order: 3;
-            order: 3;
-            width: 5rem;
-            height: 4.4rem;
+            order: 2;
+            width: 3.6rem;
+            height: 3.2rem;
+            margin-left: -17rem;
         }
+
+        // .header__search {
+        //     position: static;
+        //     -webkit-transform: unset;
+        //     -ms-transform: unset;
+        //     transform: unset;
+        //     -webkit-box-ordinal-group: 2;
+        //     -ms-flex-order: 1;
+        //     order: 1;
+        //     max-width: 27.4rem;
+        // }
 
         .header__search {
-            position: static;
-            -webkit-transform: unset;
-            -ms-transform: unset;
-            transform: unset;
-            -webkit-box-ordinal-group: 2;
-            -ms-flex-order: 1;
-            order: 1;
-            max-width: 27.4rem;
-        }
-
-        .search-input {
-            padding: 1.2rem 8rem 1.2rem 4.2rem;
+            width: calc(100% - 8.8rem);
+            left: 4.4rem;
         }
 
         .input-submit {
             padding: 0.6rem 1.6rem;
         }
 
+        .place__info {
+            position: static;
+            display: block;
+            max-width: 19.5rem;
+            width: 100%;
+        }
+
         .place {
-            -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-            order: 2;
-            max-width: 20.8rem;
-            height: 4.4rem;
-            padding-right: 1.9rem;
+            order: 1;
+            padding: 0;
+            max-width: 23.4rem;
         }
 
         .place__address {
-            height: 4.4rem;
-            -ms-line-clamp: 2;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
+            height: 2rem;
+            -ms-line-clamp: 1;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+        }
+
+        .header-right {
+            order: 3;
+        }
+
+        .header__icons-item+.header__icons-item {
+            margin-left: 1.6rem;
         }
     }
 

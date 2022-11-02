@@ -60,14 +60,13 @@
   .header-fixed {
     padding: 1.6rem 0;
   }
-  .header-fixed .header__logo {
-    width: 15.6rem;
-  }
-  .header-fixed .header__search {
-    width: 63.4rem;
-  }
   .header-fixed .place {
-    max-width: 26.7rem;
+    max-width: 37.8rem;
+  }
+  .header-fixed .header__logo {
+    width: 17.8rem;
+    height: 4.8rem;
+    margin-right: 3.2rem;
   }
   /*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ 1500*/
   /*ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ 1500*/
