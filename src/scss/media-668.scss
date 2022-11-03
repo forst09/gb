@@ -483,9 +483,10 @@
 
     .pin-save,
     .feedback-pin,
-    .pin-repeat-order {
+    .pin-repeat-order,
+    .pin-cart-not-empty {
         display: block;
-        bottom: 7.2rem;
+        bottom: 0rem;
     }
 
     .cart-pin {

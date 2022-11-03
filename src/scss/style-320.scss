@@ -122,14 +122,39 @@ svg {
     border-radius: 1.2rem 1.2rem 0 0;
     background-color: var(--white);
     position: fixed;
-    // bottom: 5.6rem;
-    bottom: -7.4rem;
+    bottom: 5.4rem;
     width: 100%;
     z-index: 1000;
     -webkit-box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     transition: bottom 0.5s ease;
 }
+
+.cart-pin {
+    bottom: -7.4rem;
+}
+
+/*ПРИКРЕПЛЯШКА ЕСЛИ КОРЗИНА НЕ ПУСТА, А ТЫ УШЕЛ СО СТРАНИЦЫ ТОЧКИ*/
+.pin-cart-not-empty {
+    .btn-orange {
+        justify-content: space-between;
+    }
+}
+
+.pin-cart-not-empty__point-name {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: var(--white);
+}
+
+.pin-cart-not-empty__point-address {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: var(--white);
+}
+
+/*КОНЕЦ ПРИКРЕПЛЯШКА ЕСЛИ КОРЗИНА НЕ ПУСТА, А ТЫ УШЕЛ СО СТРАНИЦЫ ТОЧКИ*/
 
 /*ИЗНАЧАЛЬНО ЗАКРЕПА НЕТ - ПОЯВЛЯЕТСЯ КОГДА В КОРЗИНУ ЧТО-ТО ДОБАВЛЕНО*/
 .pin.active {
@@ -3134,7 +3159,7 @@ svg {
     bottom: 0;
     background-color: var(--white);
     width: 100%;
-    z-index: 1000;
+    z-index: 1001;
     -webkit-box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
     box-shadow: 0px 10px 50px rgb(226 236 249 / 60%);
     border-radius: 3.4rem 3.4rem 0px 0px;
