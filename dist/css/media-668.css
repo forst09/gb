@@ -87,14 +87,23 @@
   /*КОНЕЦ КОНТЕНТНЫЕ СТИЛИ 668*/
   /*НАЧАЛО СТИЛЕЙ ШАПКИ 668*/
   .header-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .header__logo {
     width: 3.6rem;
     height: 3.2rem;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
     position: static;
+    -webkit-transform: unset;
+    -ms-transform: unset;
     transform: unset;
     margin-left: -19.4rem;
   }
@@ -105,8 +114,14 @@
     color: var(--white);
     position: relative;
     max-width: 23.4rem;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
   }
   .place__icon {
@@ -122,15 +137,26 @@
     line-height: 2.2rem;
   }
   .place__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     max-width: 17.9rem;
   }
   .header__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .header-right {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
     order: 3;
   }
   .header__icons-item--personal {
@@ -141,6 +167,7 @@
   .header__icons-item--personal svg {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
   .header__icons-item--personal svg path {
@@ -166,6 +193,8 @@
     flex-direction: row;
   }
   .header-fixed .header__logo {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
     width: 3.6rem;
     height: 3.2rem;
@@ -185,6 +214,8 @@
     width: 100%;
   }
   .header-fixed .place {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
     padding: 0;
     max-width: 23.4rem;
@@ -196,6 +227,8 @@
     line-clamp: 1;
   }
   .header-fixed .header-right {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
     order: 3;
   }
   .header-fixed .header__icons-item + .header__icons-item {
@@ -711,6 +744,8 @@
     margin-top: 1.2rem;
   }
   .order-list__item-goods .swiper-wrapper {
+    -webkit-column-gap: 0.8rem;
+    -moz-column-gap: 0.8rem;
     column-gap: 0.8rem;
   }
   .orer-list__item-good {
@@ -737,7 +772,11 @@
   }
   .quick-view__main {
     margin-bottom: 1.6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .quick-view__swiper {
@@ -754,6 +793,8 @@
   }
   .quick-view__info {
     margin-left: auto;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
   }
   .quick-view__info .quick-view__item {

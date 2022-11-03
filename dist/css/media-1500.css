@@ -90,6 +90,8 @@
   .header-fixed.header-point-fix .header__search {
     width: 80rem;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     margin: 0;
   }
@@ -297,6 +299,7 @@
   /*###############################################################################################################################*/
   /*СТРАНИЦА ЗАКАЗА 1500*/
   .order .wrapper {
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     max-width: 89.6rem;
   }
