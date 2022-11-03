@@ -341,6 +341,9 @@
   .header-point {
     min-height: 18rem;
   }
+  .header-point .header-right {
+    margin-left: 0;
+  }
   .point-img {
     height: 18rem;
   }

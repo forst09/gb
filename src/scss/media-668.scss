@@ -443,6 +443,10 @@
     /*ШАПКА ДЛЯ ТОЧЕК 668*/
     .header-point {
         min-height: 18rem;
+
+        .header-right {
+            margin-left: 0;
+        }
     }
 
     .point-img {

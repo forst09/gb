@@ -114,6 +114,20 @@
         .header__search {
             max-width: 80rem;
         }
+
+        .header-right {
+            margin-left: auto;
+        }
+    }
+
+    .header-point-fix {
+        .header-point__container {
+            justify-content: space-between;
+        }
+    }
+
+    .header-point__container {
+        justify-content: flex-start;
     }
 
     /*КОНЕЦ ШАПКА ДЛЯ ТОЧЕК 1500*/

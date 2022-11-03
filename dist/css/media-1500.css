@@ -84,6 +84,15 @@
   .header-point .header__search {
     max-width: 80rem;
   }
+  .header-point .header-right {
+    margin-left: auto;
+  }
+  .header-point-fix .header-point__container {
+    justify-content: space-between;
+  }
+  .header-point__container {
+    justify-content: flex-start;
+  }
   /*КОНЕЦ ШАПКА ДЛЯ ТОЧЕК 1500*/
   /* ФИКС ШАПКА ДЛЯ ТОЧЕК 1500*/
   .header-point__info {

@@ -2918,12 +2918,10 @@ svg {
         -webkit-transform: unset;
         -ms-transform: unset;
         transform: unset;
-        -webkit-transition: width 0.5s ease;
-        -o-transition: width 0.5s ease;
-        transition: width 0.5s ease;
-        width: 0;
-        opacity: 0;
-        pointer-events: none;
+    }
+
+    .header-right {
+        margin-left: 1.6rem;
     }
 
     .header__search.active {
