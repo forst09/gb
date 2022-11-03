@@ -11,9 +11,9 @@
         line-height: 3rem;
     }
 
-    body {
-        padding-bottom: 7.2rem;
-    }
+    // body {
+    //     padding-bottom: 7.2rem;
+    // }
 
     section {
         &:nth-last-of-type(1) {
@@ -353,6 +353,7 @@
     .tabbar {
         -webkit-box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
         box-shadow: 0px 10px 50px rgba(226, 236, 249, 0.6);
+        display: none;
     }
 
     .tabbar__item {
@@ -480,12 +481,16 @@
         margin-top: 2.4rem;
     }
 
-    .cart-pin,
     .pin-save,
     .feedback-pin,
     .pin-repeat-order {
         display: block;
         bottom: 7.2rem;
+    }
+
+    .cart-pin {
+        display: block;
+        bottom: -7.6rem;
     }
 
     .section-white {

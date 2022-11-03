@@ -28,7 +28,7 @@ body {
     color: var(--gray);
     overflow-x: hidden;
     position: relative;
-    padding-bottom: 5.6rem;
+    // padding-bottom: 5.6rem;
     background-color: var(--white);
 }
 
@@ -122,11 +122,18 @@ svg {
     border-radius: 1.2rem 1.2rem 0 0;
     background-color: var(--white);
     position: fixed;
-    bottom: 5.6rem;
+    // bottom: 5.6rem;
+    bottom: -7.4rem;
     width: 100%;
     z-index: 1000;
     -webkit-box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
     box-shadow: 0px 10px 60px rgb(226 236 249 / 50%);
+    transition: bottom 0.5s ease;
+}
+
+/*ИЗНАЧАЛЬНО ЗАКРЕПА НЕТ - ПОЯВЛЯЕТСЯ КОГДА В КОРЗИНУ ЧТО-ТО ДОБАВЛЕНО*/
+.pin.active {
+    bottom: 0;
 }
 
 .btn-orange {
@@ -1610,10 +1617,10 @@ svg {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
-    width: 4.8rem;
-    height: 4rem;
+    flex-direction: column;
+    width: 5.7rem;
 
     svg {
         width: 2.4rem;
@@ -1624,6 +1631,31 @@ svg {
         }
     }
 
+    span {
+        line-height: 1.4rem;
+        letter-spacing: 0.04em;
+    }
+
+}
+
+.tabbar__item.cart-not-empty {
+    position: relative;
+
+    span {
+        font-weight: 800;
+        color: var(--orange);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 1.6rem;
+        top: 0.3rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        background-color: var(--red);
+    }
 }
 
 .tabbar__item.active {

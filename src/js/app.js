@@ -277,10 +277,15 @@ $(document).ready(function () {
     //ДОБАВИТЬ padding-bottom К body ЕСЛИ ЕСТЬ ЗАКРЕПЛЯШКИ
     if ($(window).width() < 668 || ($(window).width() < 1024 && !$('.pin').hasClass('phone-pin'))) {
         if ($('.pin').length != 0) {
-            let bodyPaddingBottom = $('body').css('padding-bottom').replace('px', '');
-            let pinHeight = $('.pin').css('height').replace('px', '');
-            let newPaddingBottom = Number(pinHeight) + Number(bodyPaddingBottom);
-            $('body').css('padding-bottom', newPaddingBottom + 'px');
+            if (!($('.cart-pin').hasClass('active'))) {
+
+            }
+            else {
+                let bodyPaddingBottom = $('body').css('padding-bottom').replace('px', '');
+                let pinHeight = $('.pin').css('height').replace('px', '');
+                let newPaddingBottom = Number(pinHeight) + Number(bodyPaddingBottom);
+                $('body').css('padding-bottom', newPaddingBottom + 'px');
+            }
         }
     }
 
