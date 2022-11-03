@@ -379,6 +379,9 @@
     stroke: var(--gray-medium);
     margin-right: 0.8rem;
   }
+  .header__helper {
+    height: 10.6rem;
+  }
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 1024*/
   /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ 1024*/
   .header-white .back {

@@ -43,6 +43,9 @@
   .header__search {
     margin-right: 3.2rem;
   }
+  .header__helper {
+    height: 12.8rem;
+  }
   /*КОНЕЦ СТИЛЕЙ ШАПКИ 1500*/
   /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ 1500*/
   .header-white .header__logo {

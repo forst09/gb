@@ -366,13 +366,18 @@
     height: 100%;
   }
   /*КОНЕЦ ШАПКА ДЛЯ СТРАНИЦЫ СЕТИ 668*/
+  /*ПРИКРЕПЛЯШКА ЕСЛИ КОРЗИНА НЕ ПУСТА, А ТЫ УШЕЛ СО СТРАНИЦЫ ТОЧКИ 668*/
+  .pin-cart-not-empty {
+    display: block;
+    bottom: -9.4rem;
+  }
+  /*КОНЕЦ ПРИКРЕПЛЯШКА ЕСЛИ КОРЗИНА НЕ ПУСТА, А ТЫ УШЕЛ СО СТРАНИЦЫ ТОЧКИ*/
   .modal__buttons-shadow {
     margin-top: 2.4rem;
   }
   .pin-save,
 .feedback-pin,
-.pin-repeat-order,
-.pin-cart-not-empty {
+.pin-repeat-order {
     display: block;
     bottom: 0rem;
   }

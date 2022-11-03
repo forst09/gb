@@ -115,6 +115,9 @@ svg {
 }
 
 /*ПРИКРЕПЛЯШКА ЕСЛИ КОРЗИНА НЕ ПУСТА, А ТЫ УШЕЛ СО СТРАНИЦЫ ТОЧКИ*/
+.pin-cart-not-empty {
+  display: none;
+}
 .pin-cart-not-empty .btn-orange {
   justify-content: space-between;
 }
@@ -1048,6 +1051,20 @@ svg {
 }
 .input-submit:hover {
   background-color: var(--gray-light);
+}
+
+.header-main {
+  position: fixed;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100%;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  visibility: visible !important;
+}
+
+.header__helper {
+  height: 8.7rem;
 }
 
 /*КОНЕЦ СТИЛЕЙ ШАПКИ*/
