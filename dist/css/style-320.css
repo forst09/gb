@@ -2478,12 +2478,6 @@ svg {
   -o-transition: stroke 0.3s ease, fill 0.3s ease;
   transition: stroke 0.3s ease, fill 0.3s ease;
 }
-.header-point__icons-link:hover svg {
-  stroke: var(--black-blue) !important;
-}
-.header-point__icons-link:active svg, .header-point__icons-link:focus svg, .header-point__icons-link:focus-within svg {
-  stroke: var(--gray) !important;
-}
 
 .header-point__icons-item--cart {
   display: none;

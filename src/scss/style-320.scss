@@ -2882,20 +2882,6 @@ svg {
         -o-transition: stroke 0.3s ease, fill 0.3s ease;
         transition: stroke 0.3s ease, fill 0.3s ease;
     }
-
-    &:hover {
-        svg {
-            stroke: var(--black-blue) !important;
-        }
-    }
-
-    &:active,
-    &:focus,
-    &:focus-within {
-        svg {
-            stroke: var(--gray) !important;
-        }
-    }
 }
 
 .header-point__icons-item--cart {

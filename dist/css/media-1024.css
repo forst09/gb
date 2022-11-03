@@ -460,6 +460,9 @@
     -ms-flex-order: 4;
     order: 4;
   }
+  .header-fixed .header__icons-item + .header__icons-item {
+    margin: 0;
+  }
   /*КОНЕЦ СТИЛЕЙ ФИКСИРОВАННОЙ ШАПКИ 1024*/
   .header-white .header__search-icon {
     display: none !important;
@@ -757,6 +760,7 @@
     width: 100%;
     margin-right: 2.4rem;
     max-width: 59.2rem;
+    box-shadow: unset;
   }
   .header-point .btn-cart-header {
     flex-shrink: 0;

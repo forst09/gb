@@ -120,6 +120,13 @@
         max-width: 58rem;
     }
 
+    .header-fixed.header-point-fix .header__search {
+        width: 80rem;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
     /* КОНЕЦ ФИКС ШАПКА ДЛЯ ТОЧЕК 1500*/
 
     /*ВСПЛЫВАШКА ВЫБОР ГОРОДА 1500*/
