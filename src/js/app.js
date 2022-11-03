@@ -144,12 +144,12 @@ $(document).ready(function () {
             $('.header-fixed .header__icons-item--search').removeClass('active');
         }
         else {
-            openModal('.block-swipe__background-geolocation', '.block-swipe-geolocation');
+            openModal('.block-swipe__background-city', '.block-swipe-city');
         }
     });
 
     $(document).on('click', '.call-geolocation', function () {
-        openModal('.block-swipe__background-geolocation', '.block-swipe-geolocation');
+        openModal('.block-swipe__background-city', '.block-swipe-city');
     });
 
     //TRIGGER CLICK ПО КНОПКЕ СОХРАНИТЬ ИЗМЕНЕНИЯ НА МОБИЛКАХ НАЖАТЬ НА ИНПУТ САБМИТ В СТРАНИЦЕ ЛИЧНЫЕ ДАННЫЕ
