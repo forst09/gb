@@ -1087,12 +1087,38 @@
         }
     }
 
+    .header-point__icons-link svg {
+        transition: stroke 0.3s ease, fill 0.3s ease;
+    }
+
+    .header-point__icons-link {
+        &:hover {
+            svg {
+                stroke: var(--orange);
+            }
+        }
+    }
+
+    .header-point__icons-link.fav-heart.active {
+        svg {
+            fill: var(--orange);
+            stroke: var(--orange);
+        }
+    }
+
     /*КОНЕЦ ШАПКА ДЛЯ ТОЧЕК 1024*/
 
     /* ФИКС ШАПКА ДЛЯ ТОЧЕК 1024*/
     .header-point-fix {
         .back-span {
             padding-left: 3.2rem;
+        }
+
+        .header-point__icons-link.fav-heart.active {
+            svg {
+                fill: var(--orange);
+                stroke: var(--orange);
+            }
         }
 
         .back-span svg {
@@ -1123,6 +1149,12 @@
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
+
+            &:hover {
+                svg {
+                    stroke: var(--orange);
+                }
+            }
         }
 
         .header-point__icons-link svg {

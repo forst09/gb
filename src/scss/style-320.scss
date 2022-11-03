@@ -2967,6 +2967,13 @@ svg {
     }
 }
 
+.header-point__icons-link.fav-heart.active {
+    svg {
+        fill: var(--orange);
+        stroke: var(--orange);
+    }
+}
+
 .header-point__icons-item--cart {
     display: none;
 }
@@ -2989,6 +2996,13 @@ svg {
         -webkit-box-align: start;
         -ms-flex-align: start;
         align-items: flex-start;
+    }
+
+    .header-point__icons-link.fav-heart.active {
+        svg {
+            fill: var(--white);
+            stroke: var(--white);
+        }
     }
 
     .back-span {
