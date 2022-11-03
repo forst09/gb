@@ -392,6 +392,16 @@ $(document).ready(function () {
         closeModal('.block-swipe-order-cancel', '.block-swipe__background-order-cancel');
     });
 
+    //ВЫЗОВ МОДАЛКИ ОТМЕНА ЗАКАЗА
+    if ($(".cancel-order-modal").length !== 0) {
+        $(document).on("click", ".cancel-order-modal", function () {
+            //  $(".block-swipe-order-cancel").addClass("active");
+            //  $(".block-swipe-order-cancel").prev().addClass("active");
+            //     $("html").addClass("scroll-hidden");
+            openModal('.block-swipe__background-order-cancel', '.block-swipe-order-cancel');
+        });
+    }
+
     //ПО КНОПКЕ ДОБАВИТЬ ПОКАЗАТЬ ВМЕСТО НЕЕ СЧЕТЧИК
     $(document).on('click', '.js-btn-add', function () {
         $(this).addClass('hide');
@@ -444,16 +454,56 @@ $(document).ready(function () {
     });
 
     //ВЫБРАТЬ ДАТУ ИЛИ ВРЕМЯ НА ОФОРМЛЕНИИ ЗАКАЗА
-    $(document).on('click', '.select-js', function () {
-        $(this).parents('.input-wrapper').find('.label-transform').addClass('active');
+    let infoDateValue = "";
+    let infoTimeValue = "";
+
+    $(document).on("click", ".select-js", function () {
+        if ($(this).closest(".time-wrapper").length !== 0) {
+            infoTimeValue = this.innerText;
+        } else {
+            infoTimeValue = "";
+            infoDateValue = this.innerText;
+        }
+        $(this)
+            .parents(".input-wrapper")
+            .find(".label-transform")
+            .addClass("active");
         // $(this).parents('.input-wrapper').find('.form-input').val($(this).text());
-        this.closest('.input-wrapper').querySelector('.form-input').value = this.innerText;
-        $(this).parents('.input-wrapper').find('.input-reset').removeClass('hide');
-        if ($(this).hasClass('street-js')) {
-            $(this).parents('.block-swipe').find('.modal-title').text($(this).text());
+        this.closest(".input-wrapper").querySelector(".form-input").value =
+            this.innerText;
+
+        $("#checkoutDateTime").val(
+            `${$("#checkoutDateTime").data(
+                "label"
+            )}: ${infoDateValue}, ${infoTimeValue}`
+        );
+
+        $(this).parents(".input-wrapper").find(".input-reset").removeClass("hide");
+        if ($(this).hasClass("street-js")) {
+            $(this).parents(".block-swipe").find(".modal-title").text($(this).text());
         }
     });
-
+    //ВЫЗОВ ОФОРМЛЕНИЯ ЗАКАЗА
+    if ($(".ajax_call_order").length !== 0) {
+        $(document).on("click", ".ajax_call_order", function (event) {
+            event.preventDefault();
+            const post = {
+                key: "ajax_order",
+                location_time: $(".cart__total-road").text(),
+            };
+            $(".js-order-ajax").html();
+            BX.ajax.post(
+                "/local/components/upfly/order.simple/templates/order_ajax/ajax.php",
+                post,
+                function (data) {
+                    $(".js-order-ajax").html(data);
+                    $(".js-order-ajax").addClass("active");
+                    $(".js-order-ajax").prev().addClass("active");
+                    $("html").addClass("scroll-hidden");
+                }
+            );
+        });
+    }
     //ОТКРЫТЬ БЫСТРЫЙ ПРОСМОТР ПО КЛИКУ НА ФОТО ТОВАРА
     $(document).on('click', '.card__image', function () {
         openModal('.block-swipe__background-quick-view', '.block-swipe-quick-view');
