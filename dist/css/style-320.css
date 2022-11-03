@@ -3881,11 +3881,14 @@ svg {
   line-height: 1.8rem;
   font-weight: 500;
   text-align: center;
-  padding: 1.6rem 0;
-  border-top: 1px solid var(--gray-extralight);
-  border-bottom: 1px solid var(--gray-extralight);
-  margin-top: 0.8rem;
+  margin-top: 1.2rem;
   color: var(--black-blue);
+}
+
+.point__info {
+  margin-top: 1.6rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--gray-extralight);
 }
 
 .preferential__name {
@@ -4517,8 +4520,9 @@ svg {
 }
 
 .point__address-fav-more {
-  padding-top: 0.8rem;
+  padding: 0.8rem 0;
   border-top: 1px solid var(--gray-extralight);
+  border-bottom: 1px solid var(--gray-extralight);
   margin-top: 0.8rem;
 }
 
