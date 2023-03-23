@@ -98,22 +98,23 @@
 <!-- КОНЕЦ ШАПКИ -->
 
 <!-- НАЧАЛО ФИКСИРОВАННОЙ ШАПКИ -->
-<div class="header header-fixed">
+<header class="header header-fixed header-main">
     <div class="wrapper">
         <div class="header-container">
             <a href="index.html" class="header__logo">
                 <picture>
                     <source srcset="@img/logos/gb-logo-long.svg" type="image/svg+xml" media="(min-width: 1500px)">
                     <source srcset="@img/logos/gb-logo.svg" type="image/svg+xml" media="(min-width: 1024px)">
-                    <source srcset="@img/logos/gb-logo-white.svg" type="image/svg+xml" media="(min-width: 0px)">
+                    <source srcset="@img/logos/gb-logo-white.svg" type="image/svg+xml" media="(min-width: 668px)">
+                    <source srcset="@img/logos/gb-logo-long-white.svg" type="image/svg+xml" media="(min-width: 0px)">
                     <img src="@img/logos/gb-logo-white.svg" alt="logo">
                 </picture>
             </a>
-            <div class="search header__search">
+            <div class="search header__search js-header-search">
                 <form action="">
                     <div class="search-wrapper">
-                        <input type="text" class="search-input" id="searchHeaderFix" placeholder="Поиск по каталогу">
-                        <label for="searchHeaderFix" class="form-input__label">
+                        <input type="text" class="search-input" id="searchHeader" placeholder="Поиск по каталогу">
+                        <label for="searchHeader" class="form-input__label">
                             <svg>
                                 <use xlink:href="@img/icons/sprite.svg#search"></use>
                             </svg>
@@ -123,66 +124,65 @@
                     </div>
                 </form>
             </div>
-            <a class="place" href="javascript:void(0)">
-                <div class="place__text letter-spacing">Вы находитесь:</div>
-                <div class="place__address ellipsis letter-spacing">ул. Центральный проезд Хорошёвско, 3А</div>
-            </a>
-            <ul class="header__icons display-none">
-                <li class="header__icons-item">
-                    <a href="javascript:void(0)">
-                        <svg>
-                            <use xlink:href="@img/icons/sprite.svg#box"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="header__icons-item">
-                    <a href="javascript:void(0)">
-                        <svg>
-                            <use xlink:href="@img/icons/sprite.svg#cart"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="header__icons-item">
-                    <a href="javascript:void(0)">
-                        <svg>
-                            <use xlink:href="@img/icons/sprite.svg#heart"></use>
-                        </svg>
-                    </a>
-                </li>
-                <!-- ДОБАВИТЬ .header__icons-item--personal-unauthorized, ЕСЛИ ПОЛЬЗОВАТЕЛЬ НЕАВТОРИЗОВАН -->
-                <li class="header__icons-item header__icons-item--personal">
-                    <a href="javascript:void(0)">
-                        <svg class="icon-personal" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M19 21V19C19 17.9391 18.5786 16.9217 17.8284 16.1716C17.0783 15.4214 16.0609 15 15 15H9C7.93913 15 6.92172 15.4214 6.17157 16.1716C5.42143 16.9217 5 17.9391 5 19V21"
-                                stroke="#F4A519" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path class="icon-personal__head"
-                                d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
-                                stroke="#F4A519" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                    <div class="filters__dots-window-wrapper">
-                        <div class="filters__dots-window">
-                            <a class="filters__dots-window-item letter-spacing" href="javascript:void(0)">Личные
-                                данные</a>
-                            <a class="filters__dots-window-item letter-spacing" href="javascript:void(0)">Избранные
-                                точки</a>
-                            <a class="filters__dots-window-item letter-spacing" href="javascript:void(0)">Заказы</a>
-                            <a class="filters__dots-window-item letter-spacing"
-                                href="javascript:void(0)">Безопасность</a>
-                            <a class="filters__dots-window-item letter-spacing header__icons-item-logout"
-                                href="javascript:void(0)">
-                                <svg>
-                                    <use xlink:href="@img/icons/sprite.svg#logout"></use>
-                                </svg>
-                                <span>Выйти</span>
-                            </a>
+            <div class="place" href="javascript:void(0)">
+                <a href="javascript:void(0)" class="place__icon">
+                    <img src="img/icons/header-geo.svg" alt="geolocation">
+                </a>
+                <a href="javascript:void(0)" class="place__info display-none">
+                    <div class="place__text letter-spacing">Вы находитесь:</div>
+                    <div class="place__address ellipsis letter-spacing">ул. Центральный проезд Хорошёвско, 3А</div>
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="point-page.html" class="btn-cart-header display-none btn-orange call-cart">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#headerCart"></use>
+                    </svg>
+                    <span class="letter-spacing">155 550 &#8381;</span>
+                </a>
+                <ul class="header__icons">
+                    <li class="header__icons-item header__icons-item--search">
+                        <a href="javascript:void(0)">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#headerSearch"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <!-- ДОБАВИТЬ .header__icons-item--personal-unauthorized, ЕСЛИ ПОЛЬЗОВАТЕЛЬ НЕАВТОРИЗОВАН -->
+                    <li class="header__icons-item header__icons-item--personal display-none">
+                        <a href="javascript:void(0)">
+                            <svg class="icon-personal" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 21V19C19 17.9391 18.5786 16.9217 17.8284 16.1716C17.0783 15.4214 16.0609 15 15 15H9C7.93913 15 6.92172 15.4214 6.17157 16.1716C5.42143 16.9217 5 17.9391 5 19V21"
+                                    stroke="#F4A519" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path class="icon-personal__head"
+                                    d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                                    stroke="#F4A519" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="filters__dots-window-wrapper">
+                            <div class="filters__dots-window">
+                                <a class="filters__dots-window-item letter-spacing" href="personal-data.html">Личные
+                                    данные</a>
+                                <a class="filters__dots-window-item letter-spacing" href="fav.html">Избранные
+                                    точки</a>
+                                <a class="filters__dots-window-item letter-spacing" href="order-list.html">Заказы</a>
+                                <a class="filters__dots-window-item letter-spacing"
+                                    href="personal-security.html">Безопасность</a>
+                                <a class="filters__dots-window-item letter-spacing header__icons-item-logout"
+                                    href="javascript:void(0)">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#logout"></use>
+                                    </svg>
+                                    <span>Выйти</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+</header>
 <!-- КОНЕЦ ФИКСИРОВАННОЙ ШАПКИ -->

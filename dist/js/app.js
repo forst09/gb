@@ -960,7 +960,7 @@ $(document).ready(function () {
                                 // Необходимо указать данный тип макета.
                                 iconLayout: "default#imageWithContent",
                                 // Своё изображение иконки метки.
-                                iconImageHref: "/upload/images/gb-logo-map.svg",
+                                iconImageHref: "img/logos/gb-logo-map.svg",
                                 // Размеры метки.
                                 iconImageSize: [60, 66],
                                 // Смещение левого верхнего угла иконки относительно

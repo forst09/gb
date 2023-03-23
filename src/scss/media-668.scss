@@ -197,7 +197,7 @@
         order: 3;
     }
 
-    .header__icons-item--personal {
+    .header__icons-item {
         display: inline-block;
         width: 2.4rem;
         height: 2.4rem;
@@ -214,6 +214,23 @@
         }
     }
 
+    // .header__icons-item--personal {
+    //     display: inline-block;
+    //     width: 2.4rem;
+    //     height: 2.4rem;
+
+    //     svg {
+    //         width: 100%;
+    //         height: 100%;
+    //         -o-object-fit: cover;
+    //         object-fit: cover;
+    //     }
+
+    //     svg path {
+    //         stroke: var(--white);
+    //     }
+    // }
+
     /*КОНЕЦ СТИЛЕЙ ШАПКИ 668*/
 
     /*НАЧАЛО СТИЛЕЙ БЕЛОЙ ШАПКИ 668*/
@@ -221,10 +238,16 @@
 
         .header__logo {
             width: 9.7rem;
+            margin: 0;
+            order: unset;
         }
 
         .input-wrapper {
             height: 2.4rem;
+        }
+
+        .header__icons {
+            display: none;
         }
     }
 

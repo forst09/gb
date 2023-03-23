@@ -1231,6 +1231,7 @@ svg {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
+        justify-content: space-between;
     }
 
     .back {
@@ -1242,6 +1243,8 @@ svg {
     .header__logo {
         width: 10.6rem;
         height: 2.8rem;
+        position: static;
+        transform: unset;
     }
 
     .header__search {
