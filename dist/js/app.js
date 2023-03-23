@@ -403,7 +403,7 @@ $(document).ready(function () {
     }
 
     //ПО КНОПКЕ ДОБАВИТЬ ПОКАЗАТЬ ВМЕСТО НЕЕ СЧЕТЧИК
-    $(document).on('click', '.js-btn-add', function () {
+    $(document).on('click', '.js-basket', function () {
         $(this).addClass('hide');
         $(this).parents('.card__btns').find('.card__btns-count').removeClass('hide');
         $('.cart__notification').addClass('active');
